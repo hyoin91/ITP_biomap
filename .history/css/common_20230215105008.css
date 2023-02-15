@@ -7,8 +7,6 @@
 
 }
 body {
-  position: relative;
-  content:"test";
   font-family: 'Nanum Gothic','Noto Sans KR', sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;

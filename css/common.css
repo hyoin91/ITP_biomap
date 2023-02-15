@@ -4,11 +4,13 @@
   margin: 0;
   padding: 0;
   content:"test";
+
 }
 body {
   font-family: 'Nanum Gothic','Noto Sans KR', sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
+  position: relative;
   color: #555;
   -webkit-print-color-adjust: exact;
   font-size: 16px;

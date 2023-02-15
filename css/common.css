@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  content:"test";
 }
 body {
   font-family: 'Nanum Gothic','Noto Sans KR', sans-serif;

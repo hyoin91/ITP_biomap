@@ -1,11 +1,11 @@
 @charset "UTF-8";xt-overxt-over
 /*basic===============================*/
-* {
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
   content:"test";
-
 }
+
 body {
   position: relative;
   content:"test";
@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* p,
+p,
 span,
 h1,
 h2,
@@ -32,7 +32,7 @@ li,
 ul {
   padding:0;
   margin:0;
-} */
+}
 li {
   list-style: none;
 }
@@ -274,7 +274,103 @@ input[type="radio"]:checked:after {
 
 /*input===============================*/
 
+/*header===============================*/
+/*gnb===============================*/
+.gnb{
+  background:#54AAFD;
+}
 
+.gnb_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:0px auto;
+}
+
+.gnb ul{
+  display:flex;
+  justify-content:flex-end;
+  gap:1.5rem;
+  padding:0.5rem 0;
+}
+
+.gnb li::after{
+  content:"";
+  display:inline-block;
+  background-color:#fff;
+  width:2px;
+  height:10px;
+  margin-left:1rem;
+}
+
+.gnb .gnb_blind::after{
+  display:none;
+}
+
+.gnb li a{
+  color:#fff;
+}
+/*gnb===============================*/
+/*lnb===============================*/
+.lnb_wrap{
+  max-width:1200px;
+  width:1200px;
+  height:100px;
+  margin:0px auto;
+
+  display:flex;
+  align-items:center;
+}
+
+.lnb_wrap > div{
+  flex-basis:90px;
+  flex-shrink:0;
+}
+
+.lnb_wrap ul:nth-of-type(1){
+  flex-grow:1;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.lnb_wrap ul li{
+  font-size:1.1rem;
+  font-weight:bold;
+}
+
+.lnb_wrap ul li a{
+  color:#000
+}
+
+.lnb_wrap ul:nth-of-type(2){
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+}
+
+.lnb_wrap button{
+  display:none;
+}
+
+.lnb_wrap .icon li{
+  cursor:pointer;
+}
+
+.lnb_wrap .icon li:nth-of-type(1), .lnb_wrap .icon li:nth-of-type(2){
+  width:20px;
+  height:20px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+
+.lnb_wrap .icon li:nth-of-type(1){
+  background-image:url(/image/search_.svg);
+}
+
+.lnb_wrap .icon li:nth-of-type(2){
+  background-image:url(/image/burger\ menu_.svg);
+}
+/*lnb===============================*/
 @media screen and (max-width:px) {
 
 }

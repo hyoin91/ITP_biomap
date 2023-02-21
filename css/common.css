@@ -367,11 +367,11 @@ input[type="radio"]:checked:after {
 }
 
 .lnb_wrap .icon li:nth-of-type(1){
-  background-image:url(/image/search_.svg);
+  background-image:url(/img/sub/main_image/search.svg);
 }
 
 .lnb_wrap .icon li:nth-of-type(2){
-  background-image:url(/image/burger\ menu_.svg);
+  background-image:url(/img/sub/main_image/burger.svg);
 }
 /*lnb===============================*/
 @media screen and (max-width:px) {

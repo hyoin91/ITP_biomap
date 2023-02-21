@@ -168,7 +168,8 @@ input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-  outline: 1px solid #999;
+  outline: 2.5px dashed #bebebe;
+  box-sizing: border-box;
 }
 input::placeholder {
   font-family: inherit;
@@ -277,6 +278,10 @@ input[type="radio"]:checked:after {
           font-family: 'conL';
           src: url('../fonts/한수원_한돋음_R.woff') format('woff');
       }
+      @font-face {
+        font-family: 'conCM';
+        src: url('../fonts/esamanru-Light.woff') format('woff');
+    }
 
 .gnb_wrap{
   max-width:1200px;

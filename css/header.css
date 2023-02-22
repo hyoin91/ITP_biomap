@@ -18,6 +18,7 @@
 }
 
 .gnb li::after{
+  position:relative;
   content:"";
   display:inline-block;
   background-color:#fff;

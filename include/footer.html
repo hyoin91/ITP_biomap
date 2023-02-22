@@ -1,8 +1,32 @@
-<div>
-
-</div>
+<footer>
+  <div class="ft_wrap">
+    <ul class="ft">
+      <li><a href="#">찾아오시는 길</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">사이트맵</a></li>
+      <li><a href="#">업무별담당연락처</a></li>
+      <li class="ft_blind"><a href="#">이용약관</a></li>
+    </ul>
+    <ul class="fm">
+      <li><strong>주소</strong> : 21999 인천광역시 연수구 갯벌로 12(송도동)</li>
+      <li><strong>FAX</strong> : 032-260-0897</li>
+    </ul>
+    <div class="fb">
+      <div>copyright (c) 2026 incheon technopark all right reserved</div>
+      <div class="select_box">
+        <button type="button">관련사이트</button>
+        <ul>
+          <li><a href="#">인천테크노파크</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 <script>
-  $(document).ready(function () {
-
+  $(document).ready(function(){
+    $(".fb .select_box button").click(function(){
+      $(this).toggleClass("on");
+      $(".fb .select_box ul").slideToggle(200);
+    })
   });
 </script>

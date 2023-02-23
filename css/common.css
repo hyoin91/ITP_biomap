@@ -249,131 +249,34 @@ input[type="radio"]:checked:after {
 /*인풋관련 끝===============================*/
 
 /*input===============================*/
-
-/*header===============================*/
-/*gnb===============================*/
-.gnb{
-  background:#54AAFD;
+/*fonts===============================*/
+/*서브해딩B*/
+@font-face {
+  font-family: 'headB';
+  src: url('../fonts/바른공군체Bold.woff') format('woff');
+  font-weight: 800;
+}
+/*서브해딩M*/
+@font-face {
+  font-family: 'headM';
+  src: url('../fonts/바른공군체Medium.woff') format('woff');
+  font-weight:800;
+}
+/*콘해딩B*/
+@font-face {
+  font-family: 'conB';
+  src: url('../fonts/한수원_한돋음_B.woff') format('woff');
+}
+/*콘해딩L*/
+@font-face {
+  font-family: 'conL';
+  src: url('../fonts/한수원_한돋음_R.woff') format('woff');
+}
+@font-face {
+  font-family: 'conCM';
+  src: url('../fonts/esamanru-Light.woff') format('woff');
 }
 /*fonts===============================*/
-        /*서브해딩B*/
-        @font-face {
-          font-family: 'headB';
-          src: url('../fonts/바른공군체Bold.woff') format('woff');
-          font-weight: 800;
-      }
-      /*서브해딩M*/
-      @font-face {
-          font-family: 'headM';
-          src: url('../fonts/바른공군체Medium.woff') format('woff');
-          font-weight:800;
-      }
-      /*콘해딩B*/
-      @font-face {
-          font-family: 'conB';
-          src: url('../fonts/한수원_한돋음_B.woff') format('woff');
-      }
-      /*콘해딩L*/
-      @font-face {
-          font-family: 'conL';
-          src: url('../fonts/한수원_한돋음_R.woff') format('woff');
-      }
-      @font-face {
-        font-family: 'conCM';
-        src: url('../fonts/esamanru-Light.woff') format('woff');
-    }
-
-.gnb_wrap{
-  max-width:1200px;
-  width:1200px;
-  margin:0px auto;
-}
-
-.gnb ul{
-  display:flex;
-  justify-content:flex-end;
-  gap:1.5rem;
-  padding:0.5rem 0;
-}
-
-.gnb li::after{
-  content:"";
-  display:inline-block;
-  background-color:#fff;
-  width:2px;
-  height:10px;
-  margin-left:1rem;
-}
-
-.gnb .gnb_blind::after{
-  display:none;
-}
-
-.gnb li a{
-  color:#fff;
-}
-/*gnb===============================*/
-/*lnb===============================*/
-.lnb_wrap{
-  max-width:1200px;
-  width:1200px;
-  height:100px;
-  margin:0px auto;
-
-  display:flex;
-  align-items:center;
-}
-
-.lnb_wrap > div{
-  flex-basis:90px;
-  flex-shrink:0;
-}
-
-.lnb_wrap ul:nth-of-type(1){
-  flex-grow:1;
-  display:flex;
-  justify-content:space-evenly;
-}
-
-.lnb_wrap ul li{
-  font-size:1.1rem;
-  font-weight:bold;
-}
-
-.lnb_wrap ul li a{
-  color:#000
-}
-
-.lnb_wrap ul:nth-of-type(2){
-  display:flex;
-  align-items:center;
-  gap:1.5rem;
-}
-
-.lnb_wrap button{
-  display:none;
-}
-
-.lnb_wrap .icon li{
-  cursor:pointer;
-}
-
-.lnb_wrap .icon li:nth-of-type(1), .lnb_wrap .icon li:nth-of-type(2){
-  width:20px;
-  height:20px;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
-}
-
-.lnb_wrap .icon li:nth-of-type(1){
-  background-image:url(/img/sub/main_image/search.svg);
-}
-
-.lnb_wrap .icon li:nth-of-type(2){
-  background-image:url(/img/sub/main_image/burger.svg);
-}
-/*lnb===============================*/
 @media screen and (max-width:px) {
 
 }

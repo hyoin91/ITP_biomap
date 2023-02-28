@@ -896,6 +896,7 @@ button{
 }
 .join_type_Wrap .type_Wrap{
     position: relative;
+    border:0.5px solid #999;
 }
 .join_type_Wrap .tabBtnWrap{
     position: absolute;

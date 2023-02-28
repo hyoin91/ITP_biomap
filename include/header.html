@@ -16,7 +16,6 @@
             <ul>
                 <li><a href="/ITP_member/login.html">로그인</a></li>
                 <li><a href="/ITP_member/join01.html">회원가입</a></li>
-                <li><a href="#">이용약관</a></li>
                 <li class="gnb_blind"><a href="#">인천테크노파크</a></li>
             </ul>
         </nav>
@@ -25,7 +24,7 @@
     <div class="lnb">
         <nav class="lnb_wrap">
             <div><h1><a href="/index.html"><img src="/img/sub/main_image/logo.svg" alt="인천바이오맵 로고"></a></h1></div>
-            <ul>
+            <ul class="lnb_text">
                 <li>
                     <a href="#">기관정보(MAP)</a>
                     <div class="bg"></div>
@@ -84,8 +83,8 @@
 </section>
 <script>
     $(document).ready(function(){
-        // snb background 생성
-        $(`.lnb_wrap > ul > li`).mouseenter(function(){
+        // Snb background 생성 
+        $(`.lnb_text li`).mouseenter(function(){
             $(`.lnb`).addClass(`on`);
         });
 
@@ -93,15 +92,18 @@
             $(`.lnb`).removeClass(`on`);
         });
 
-        // lnb border 생성
-        $('.lnb_wrap > ul > li > a').mouseenter(function(){
-            $(this).next().animate({"width":"100%"});
+        // Lnb hover 글자색 변경 글자 아래 Border 추가
+        $('.lnb_wrap > ul > li').mouseenter(function(){
+            $(this).children().eq(1).stop().animate({"width":"100%"});
+            $(this).children().eq(0).css({"color":"#54AAFD"});
         })
 
-        $('.lnb_wrap > ul > li > a').mouseleave(function(){
-            $(this).next().animate({"width":"0%"});
+        $('.lnb_wrap > ul > li').mouseleave(function(){
+            $(this).children().eq(1).stop().animate({"width":"0%"});
+            $(this).children().eq(0).css({"color":"#000000"});
         })
 
+         // Lnb Search Icon 클릭 시 검색 박스 슬라이드 업다운
         $(`.icon > li:nth-of-type(1)`).on(`click`,function(){
             $(`.layer_search`).slideDown()
         })

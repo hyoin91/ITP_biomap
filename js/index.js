@@ -429,4 +429,5 @@ $(document).ready(function () {
   $(`.sns_btn`).on('click',function(){
     $(`.sns`).toggleClass(`on`)
   })
+  
 });

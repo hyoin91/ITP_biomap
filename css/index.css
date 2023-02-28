@@ -995,7 +995,7 @@
 }
 
 .map_icon_list button:focus{
-  outline:0;
+  outline:0; 
 }
 
 .map_icon_list button:nth-of-type(1){

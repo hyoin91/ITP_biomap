@@ -10,26 +10,6 @@
     </div>
 </div> -->
 <section class="header_section">
-    <div class="search_box">
-        <div class="searchBox_wrap">
-            <h2>Biomap 검색창</h2>
-            <div class="search_form">
-                <input type="text">
-                <button><img src="/img/sub/main_image/search.svg" alt="검색 아이콘"></button>
-            </div>
-            <div class="goodfind_search">
-                <h4>자주찾는 검색어</h4>
-                <ul>
-                    <li><a href="#">커뮤니티</a></li>
-                    <li><a href="#">바이오 코디네이션</a></li>
-                    <li><a href="#">포토존</a></li>
-                    <li><a href="#">Q&A</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="close_search"><button type="button"><img src="/img/sub/main_image/search_close.png" alt="검색창 닫기 아이콘"></button></div>
-    <div class="scover_wrap"></div>
     <div class="gnb">
         <nav class="gnb_wrap">
             <ul>
@@ -119,6 +99,14 @@
 
         $('.lnb_wrap > ul > li > a').mouseleave(function(){
             $(this).next().animate({"width":"0%"});
+        })
+
+        $(`.icon > li:nth-of-type(1)`).on(`click`,function(){
+            $(`.layer_search`).slideDown()
+        })
+
+        $(`.search_close_btn`).on(`click`,function(){
+            $(`.layer_search`).slideUp()
         })
     })
 </script>

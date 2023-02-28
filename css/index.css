@@ -1,12 +1,143 @@
 @charset "UTF-8";
-.scover_wrap{
-  position:absolute;
+/*search===============================*/
+.layer_search{
+  position:fixed;
+  left:0; top:0;
   width:100%;
   height:100%;
-  background-color:rgba(0,0,0,0.3);
-  z-index:10;
+  z-index:100;
+
+  display:none;
 }
 
+.layer_search::after{
+  content:"";
+  position:absolute;
+  left:0; top:0;
+  display:block;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.layer_search_wrap{
+  position:relative;
+  width:100%;
+  padding:4rem 2rem;
+  background-color:#fff;
+  z-index:200;
+}
+
+.layer_search_box{
+  width:50%;
+  margin:0 auto;
+}
+
+.search_input{
+  position:relative;
+  display:flex;
+  gap:1rem;
+  margin:1.5rem 0;
+}
+
+.search_input input{
+  padding:1rem 0;
+}
+
+.search_input input:focus{
+  outline:0;
+}
+
+.search_input input[type=search]{
+  flex:1;
+  padding-left:1rem;
+  border:1px solid #000;
+  border-radius:1rem;
+}
+
+/*search 검색창 자동 X 지우기===============================*/
+.search_input input::-ms-clear,
+
+.search_input input::-ms-reveal {display:none; width :0; height:0;}
+
+.search_input input::-webkit-search-decoration,
+
+.search_input input::-webkit-search-cancel-button,
+
+.search_input input::-webkit-search-results-button,
+
+.search_input input::-webkit-search-results-decoration {display:none;}
+/*search 검색창 자동 X 지우기===============================*/
+
+.search_input input[type=submit]{
+  position:absolute;
+  right:2%; top:50%;
+  transform:translateY(-50%);
+  width:25px;
+  height:25px;
+  background:url(/img/sub/main_image/search.svg) no-repeat center;
+  background-size:contain;
+  border:0;
+  text-indent:-1000rem;
+}
+
+.search_content{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+
+.search_content h3::before{
+  content:"";
+  display:inline-block;
+  margin-right:1rem;
+  width:20px;
+  height:20px;
+  background:url(/img/sub/main_image/goodsearch.png) no-repeat center;
+  background-size:cover;
+  transform:translateY(3px);
+}
+
+.search_content h3::after{
+  content:"|";
+  font-weight:bolder;
+  margin-left:2rem;
+  transform:translateY(3px);
+}
+
+.search_content ul{
+  display:flex;
+  gap:1.5rem;
+}
+
+.search_content ul a{
+  color:#000;
+}
+
+.search_close_btn{
+  position:absolute;
+  left:50%; bottom:-5rem;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-color:#fff;
+  border:0;
+}
+
+.search_close_btn:focus{
+  outline:0;
+}
+
+.search_close_btn a{
+  width:100%;
+  height:100%;
+}
+
+.search_close_btn img{
+  width:50%;
+  transform:translateY(1px);
+}
+/*search===============================*/
 /*index.common===============================*/
 .cm_title{
   display:flex;
@@ -786,6 +917,7 @@
 }
 
 .map_info_input form{
+  position:relative;
   flex:1;
 }
 
@@ -803,20 +935,31 @@
   border-radius:0.5rem;
 }
 
-.map_info_input label::after{
+.map_info_input input[type=submit]{
   position:absolute;
-  right:3%; top:50%;
+  right:2%; top:50%;
   transform:translateY(-50%);
-
-  content:"";
+  width:20px;
+  height:20px;
   background:url(/img/sub/main_image/search.svg) no-repeat center;
-  background-size:cover;
-  width:1rem;
-  height:1rem;
-  display:block;
-
-  cursor:pointer;
+  background-size:contain;
+  border:0;
+  text-indent:-1000rem;
 }
+
+/*search 검색창 자동 X 지우기===============================*/
+.map_info_input input::-ms-clear,
+
+.map_info_input input::-ms-reveal {display:none; width :0; height:0;}
+
+.map_info_input input::-webkit-search-decoration,
+
+.map_info_input input::-webkit-search-cancel-button,
+
+.map_info_input input::-webkit-search-results-button,
+
+.map_info_input input::-webkit-search-results-decoration {display:none;}
+/*search 검색창 자동 X 지우기===============================*/
 
 .map_info_input input:focus{
   outline:0;

@@ -43,8 +43,8 @@ $(document).ready(function(){
           });
 
         
-//납부서비스
-    const swiperPay = new Swiper('.swiper-containerPay', {
+//장비 포토존
+  const swiperPay = new Swiper('.swiper-containerPay', {
   //기본 셋팅
   //방향 셋팅 vertical 수직, horizontal 수평 설정이 없으면 수평
   direction: 'horizontal',
@@ -66,12 +66,12 @@ $(document).ready(function(){
         slidesPerView: 1.25,  
         spaceBetween: 0,
         slidesOffsetAfter:0,
-        slidesOffsetBefore :20, // 슬라이드 시작 부분 여
+        slidesOffsetBefore :20, // 슬라이드 시작 부분 여백
     },
   640:{//브라우저가 640보다 클 때
-      slidesPerView: 1,
+      slidesPerView: 1.1,
        //페이지와 페이지 사이의 간격
-      spaceBetween: 30,
+      spaceBetween: 10,
       //드레그 기능 true 사용가능 false 사용불가
   }
 
@@ -100,9 +100,9 @@ $(document).ready(function(){
     prevEl: '.swiper-button-prev',
   },
 });
-         
-//홍보존
-    const swiperStop = new Swiper('.swiper-containerStop', {
+
+//바이오 행사
+  const swiperStop = new Swiper('.swiper-containerStop', {
     
   //기본 셋팅
   //방향 셋팅 vertical 수직, horizontal 수평 설정이 없으면 수평
@@ -331,9 +331,102 @@ $(document).ready(function(){
 });
 //맞춤메뉴 탭
 function ShowTabex(val){
-        for (i=0; i<2; i++) {
-        var tb = document.getElementsByClassName('swiper-containerTab' + i)[0];
-        if (i != val) tb.style.display = "none";
-        else tb.style.display = "block";
-        }
+    for (i=0; i<2; i++) {
+    var tb = document.getElementsByClassName('swiper-containerTab' + i)[0];
+    if (i != val) tb.style.display = "none";
+    else tb.style.display = "block";
+    }
 }
+
+//바이오맵 메인페이지 기능
+$(document).ready(function () {
+  //메인 슬라이드
+  var slideBanner = $(`.slide_banner`);
+  var slides = slideBanner.find(`.slide_items li`),
+  pager = slideBanner.find(`.sb_nav li`),
+  currentIdx = 0,
+  timer;
+  
+  //슬라이드 배치
+  slides.each(function(idx){
+      $(this).css({left:`${idx*100}%`});
+  });
+
+  //페이저 슬라이드 작동시키기
+  pager.click(function(e){
+      e.preventDefault();
+      let idx = $(this).index();
+      moveSlide(idx);
+  }) 
+  
+  //moveSlide 힘수
+  function moveSlide(i){
+      if(currentIdx === i) return;
+      var currentSlide = slides.eq(currentIdx);
+      var nextSlide = slides.eq(i);
+
+      //다음슬라이드 순간 left 100%, animate 0%
+      //현재슬라이드 순간 left 0%, animate -100%
+      nextSlide.css({left:`100%`}).animate({left:`0%`});
+      currentSlide.css({left:`0%`}).animate({left:`-100%`});
+
+      currentIdx = i;
+      //모든 페이저에서 active제거 현재 번호에 맞는 요소에 active 추가
+      pager.removeClass(`active`);
+      pager.eq(currentIdx).addClass(`active`);
+  }
+  
+  
+  function autoSlide(){
+      timer = setInterval(function(){
+          let nextIdx = currentIdx + 1
+          if(nextIdx === slides.length){
+              nextIdx=0;
+          }
+          moveSlide(nextIdx);
+      },3000)
+  }
+
+  autoSlide();
+
+  slideBanner.mouseenter(function(){
+      clearInterval(timer)
+  });
+
+  slideBanner.mouseleave(function(){
+      autoSlide();
+  });
+
+  // 커뮤니티 Tab 박스 on 클릭 이벤트
+  $(`.cm_k > li`).on('click',function(){
+      const numc = $(`.cm_k > li`).index($(this));
+
+      $(`.cm_k > li`).removeClass(`on`);
+      $(`.cm_t > li`).removeClass(`on`);
+
+      $(`.cm_k > li`).eq(numc).addClass(`on`);
+      $(`.cm_t > li`).eq(numc).addClass(`on`);
+  })
+
+  // 바이오 코디네이션 Tab 박스 on 클릭 이벤트
+  $(`.bioc_k > li`).on(`click`,function(){
+      const numb = $(`.bioc_k > li`).index($(this));
+
+      $(`.bioc_k > li`).removeClass(`on`);
+      $(`.bioc_t > li`).removeClass(`on`);
+
+      $(`.bioc_k > li`).eq(numb).addClass(`on`);
+      $(`.bioc_t > li`).eq(numb).addClass(`on`);
+  })
+
+  // BEST 추천검색어 on 클릭 이벤트
+  $(`.best_k > li`).on(`click`,function(){
+    $(`.best_k > li`).removeClass(`on`);
+    $(this).addClass(`on`);
+  })
+
+  // sns 이벤트
+  $(`.sns_btn`).on('click',function(){
+    $(`.sns`).toggleClass(`on`)
+  })
+});

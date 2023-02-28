@@ -9,77 +9,78 @@
         </div>
     </div>
 </div> -->
-<div class="gnb">
-    <nav class="gnb_wrap">
-        <ul>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">회원가입</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li class="gnb_blind"><a href="#">인천테크노파크</a></li>
-        </ul>
-    </nav>
-</div>
-
-<div class="lnb">
-    <nav class="lnb_wrap">
-        <div><h1><a href="/index.html"><img src="/img/sub/main_image/logo.svg" alt="인천바이오맵 로고"></a></h1></div>
-        <ul>
-            <li>
-                <a href="#">기관정보(MAP)</a>
-                <div class="bg"></div>
-                <ul class="sub_lnb">
-                    <li><a href="#">바이오맵</a></li>
-                    <li><a href="#">관련기관</a></li>
-                    <li><a href="#">등록/관리</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">연구자원</a>
-                <div class="bg"></div>
-                <ul class="sub_lnb">
-                    <li><a href="#">바이오서비스</a></li>
-                    <li><a href="#">시설/장비</a></li>
-                    <li><a href="#">기술</a></li>
-                    <li><a href="#">교육 프로그램</a></li>
-                    <li><a href="#">바이오사업</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">커뮤니티</a>
-                <div class="bg"></div>
-                <ul class="sub_lnb">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">채용게시판</a></li>
-                    <li><a href="#">일정게시판</a></li>
-                    <li><a href="#">연구개발 Q&A</a></li>
-                    <li><a href="#">건의게시판</a></li>
-                    <li><a href="#">자유게시판</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">지원사업공고</a>
-                <div class="bg"></div>
-                <ul class="sub_lnb">
-                    <li><a href="#">지원사업공고</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">바이오맵 소개</a>
-                <div class="bg"></div>
-                <ul class="sub_lnb">
-                    <li><a href="#">바이오맵 소개</a></li>
-                    <li><a href="#">운영조직</a></li>
-                    <li><a href="#">이용정보</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="icon">
-            <li><button type="button"></button></li>
-            <li><button type="button"></button></li>
-        </ul>
-    </nav>
-</div>
-
+<section class="header_section">
+    <div class="gnb">
+        <nav class="gnb_wrap">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li class="gnb_blind"><a href="#">인천테크노파크</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="lnb">
+        <nav class="lnb_wrap">
+            <div><h1><a href="/index.html"><img src="/img/sub/main_image/logo.svg" alt="인천바이오맵 로고"></a></h1></div>
+            <ul>
+                <li>
+                    <a href="#">기관정보(MAP)</a>
+                    <div class="bg"></div>
+                    <ul class="sub_lnb">
+                        <li><a href="#">바이오맵</a></li>
+                        <li><a href="#">관련기관</a></li>
+                        <li><a href="#">등록/관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">연구자원</a>
+                    <div class="bg"></div>
+                    <ul class="sub_lnb">
+                        <li><a href="#">바이오서비스</a></li>
+                        <li><a href="#">시설/장비</a></li>
+                        <li><a href="#">기술</a></li>
+                        <li><a href="#">교육 프로그램</a></li>
+                        <li><a href="#">바이오사업</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <div class="bg"></div>
+                    <ul class="sub_lnb">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">채용게시판</a></li>
+                        <li><a href="#">일정게시판</a></li>
+                        <li><a href="#">연구개발 Q&A</a></li>
+                        <li><a href="#">건의게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">지원사업공고</a>
+                    <div class="bg"></div>
+                    <ul class="sub_lnb">
+                        <li><a href="#">지원사업공고</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">바이오맵 소개</a>
+                    <div class="bg"></div>
+                    <ul class="sub_lnb">
+                        <li><a href="#">바이오맵 소개</a></li>
+                        <li><a href="#">운영조직</a></li>
+                        <li><a href="#">이용정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="icon">
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+            </ul>
+        </nav>
+    </div>
+</section>
 <script>
     $(document).ready(function(){
         // snb background 생성
@@ -98,6 +99,14 @@
 
         $('.lnb_wrap > ul > li > a').mouseleave(function(){
             $(this).next().animate({"width":"0%"});
+        })
+
+        $(`.icon > li:nth-of-type(1)`).on(`click`,function(){
+            $(`.layer_search`).slideDown()
+        })
+
+        $(`.search_close_btn`).on(`click`,function(){
+            $(`.layer_search`).slideUp()
         })
     })
 </script>

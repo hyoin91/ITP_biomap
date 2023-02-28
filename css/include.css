@@ -39,7 +39,7 @@
 .lnb::after{
   display:none;
 }
-/*  */
+
 .lnb.on::after{
   position:absolute;
   content:"";

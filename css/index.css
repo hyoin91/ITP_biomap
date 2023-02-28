@@ -960,7 +960,7 @@
 
 .map_info_input input::-webkit-search-results-decoration {display:none;}
 /*search 검색창 자동 X 지우기===============================*/
-/*  */
+
 .map_info_input input:focus{
   outline:0;
 }

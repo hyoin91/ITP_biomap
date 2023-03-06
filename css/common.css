@@ -265,29 +265,32 @@ input[type="radio"]:checked:after {
 /*메인폰트Bold*/
 @font-face {
   font-family: 'interB';
-  src: url('../fonts/바른공군체Bold.woff') format('woff');
-  font-weight: 800;
+  src: url('../fonts/index.font/Inter-Bold.ttf') format('ttf');
+  font-weight: 700;
 }
 /*메인폰트Semibold*/
 @font-face {
   font-family: 'interS';
-  src: url('../fonts/바른공군체Medium.woff') format('woff');
-  font-weight:800;
+  src: url('../fonts/index.font/Inter-SemiBold.ttf') format('ttf');
+  font-weight:600;
 }
 /*메인폰트Medium*/
 @font-face {
   font-family: 'interM';
-  src: url('../fonts/한수원_한돋음_B.woff') format('woff');
+  src: url('../fonts/index.font/Inter-Medium.ttf') format('ttf');
+  font-weight:500;
 }
 /*메인폰트Regular*/
 @font-face {
   font-family: 'interR';
-  src: url('../fonts/한수원_한돋음_R.woff') format('woff');
+  src: url('../fonts/index.font/Inter-Regular.ttf') format('ttf');
+  font-weight:400;
 }
 /*메인폰트Light*/
 @font-face {
   font-family: 'interL';
-  src: url('../fonts/esamanru-Light.woff') format('woff');
+  src: url('../fonts/index.font/Inter-Light.ttf') format('ttf');
+  font-weight:300;
 }
 /*main_fonts===============================*/
 /*sub_fonts===============================*/

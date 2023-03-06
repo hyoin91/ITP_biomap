@@ -252,7 +252,36 @@ input[type="radio"]:checked:after {
 /*인풋관련 끝===============================*/
 
 /*input===============================*/
-/*fonts===============================*/
+/*main_fonts===============================*/
+/*메인폰트Bold*/
+@font-face {
+  font-family: 'interB';
+  src: url('../fonts/바른공군체Bold.woff') format('woff');
+  font-weight: 800;
+}
+/*메인폰트Semibold*/
+@font-face {
+  font-family: 'interS';
+  src: url('../fonts/바른공군체Medium.woff') format('woff');
+  font-weight:800;
+}
+/*메인폰트Medium*/
+@font-face {
+  font-family: 'interM';
+  src: url('../fonts/한수원_한돋음_B.woff') format('woff');
+}
+/*메인폰트Regular*/
+@font-face {
+  font-family: 'interR';
+  src: url('../fonts/한수원_한돋음_R.woff') format('woff');
+}
+/*메인폰트Light*/
+@font-face {
+  font-family: 'interL';
+  src: url('../fonts/esamanru-Light.woff') format('woff');
+}
+/*main_fonts===============================*/
+/*sub_fonts===============================*/
 /*서브해딩B*/
 @font-face {
   font-family: 'headB';
@@ -279,7 +308,7 @@ input[type="radio"]:checked:after {
   font-family: 'conCM';
   src: url('../fonts/esamanru-Light.woff') format('woff');
 }
-/*fonts===============================*/
+/*sub_fonts===============================*/
 @media screen and (max-width:px) {
 
 }

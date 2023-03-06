@@ -123,7 +123,7 @@
 
 .lnb_wrap > ul:nth-of-type(1) > li{
   padding:39.5px 0;
-  width:130px;
+  width:120px;
   font-size:1.1rem;
   font-weight:bold;
   text-align:center;
@@ -183,7 +183,7 @@
 
 .sub_lnb > li > a{
   color:#000;
-  font-size:1rem;
+  font-size:0.9rem;
 }
 
 .bg{

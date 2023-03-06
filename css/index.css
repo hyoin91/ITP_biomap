@@ -1,16 +1,20 @@
 @charset "UTF-8";
 /*search===============================*/
 .layer_search{
+  display:none;
+}
+
+.layer_search.on{
   position:fixed;
   left:0; top:0;
   width:100%;
   height:100%;
   z-index:100;
 
-  display:none;
+  display:block;
 }
 
-.layer_search::after{
+.layer_search.on::after{
   content:"";
   position:absolute;
   left:0; top:0;
@@ -54,7 +58,6 @@
   border:1px solid #000;
   border-radius:1rem;
 }
-
 /*search 검색창 자동 X 지우기===============================*/
 .search_input input::-ms-clear,
 
@@ -138,6 +141,99 @@
   transform:translateY(1px);
 }
 /*search===============================*/
+/*full_menu===============================*/
+.full_menu{
+  position:fixed;
+  left:0; top:0;
+  width:100%;
+  height:100%;
+  background-color:#fff;
+  z-index:100;
+  overflow-y:auto;
+
+  display:none;
+}
+
+.full_title{
+  position:relative;
+  width:100%;
+  height:120px;
+  border-bottom:1px solid #ccc;;
+}
+
+.full_title h2{
+  position:absolute;
+  left:5%; top:50%;
+  transform:translateY(-50%);
+  font-size:3rem;
+  color:#72bbff;
+  font-weight:bolder;
+}
+
+.full_title button{
+  position:absolute;
+  right:5%; top:50%;
+  transform:translateY(-50%);
+  width:1.5rem;
+  height:1.5rem;
+
+  border:0;
+  background-color:transparent;
+
+  background:url(/img/sub/main_image/search_close.png) center no-repeat;
+  background-size:cover;
+}
+
+.full_title button:focus{
+  outline:0;
+}
+
+.full_menu_warp{
+  position:relative;
+  margin:0px auto;
+  width:90%;
+}
+
+.full_content{
+  display:flex;
+  flex-direction:column;
+  gap:6rem;
+  margin:4rem 0;
+}
+
+.full_content_sub{
+  display:flex;
+  align-items:center;
+  gap:10rem;
+}
+
+.full_content_sub h3{
+  width:15%;
+  font-size:2rem;
+  font-weight:bolder;
+  color:#72bbff;
+}
+
+.full_content_sub ul{
+  display:flex;
+  gap:5rem;
+}
+
+.full_content_sub a{
+  display:block;
+  padding:1rem;
+  background-color:#d4eaff;
+  border-radius:0.5rem;
+  font-size:1.2rem;
+  color:#acacac;
+  font-weight:bolder;
+}
+
+.full_content_sub a:hover{
+  background-color:#72bbff;
+  color:#fff;
+}
+/*full_menu===============================*/
 /*index.common===============================*/
 .cm_title{
   display:flex;
@@ -157,59 +253,9 @@
   width:100%;
 }
 /*index.common===============================*/
-/*sns===============================*/
-.sns{
-  position:fixed;
-  left:0;
-  display:flex;
-  width:62px;
-  height:190px;
-  background-color:#e3f1ff;
-  border-radius:0 0.5rem 0.5rem 0;
-  box-shadow:0px 1px 5px 0px;
-  z-index:5;
-  transition: all 0.3s;
-}
+/*weather===============================*/
 
-.sns.on{
-  transform:translateX(-38px);
-}
-
-.sns.on .sns_btn{
-  transform:rotate(-180deg);
-}
-
-.sns_wrap{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:0.3rem;
-}
-
-.sns_wrap div{
-  width:30px;
-  height:30px;
-}
-
-.sns_wrap div button a{
-  display:block;
-  width:30px;
-  height:30px;
-}
-
-.sns_wrap div img{
-  width:100%;
-}
-
-.sns button{
-  border:0;
-  background-color:transparent;
-}
-
-.sns button:focus{
-  outline:0;
-}
-/*sns===============================*/
+/*weather===============================*/
 /*QRcode===============================*/
 .qr_code{
   position:fixed;
@@ -226,6 +272,7 @@
   flex-direction: column;
   align-items:center;
   gap:0.2rem;
+  z-index:10;
 }
 
 .qr_code strong{
@@ -408,6 +455,7 @@
   background:url(/img/sub/main_image/test_img2.jpg) no-repeat center;
   background-size:cover;
 }
+
 /*slide banner===============================*/
 /*community===============================*/
 .community{

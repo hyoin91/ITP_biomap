@@ -29,7 +29,7 @@
             <ul class="gnb_text">
                 <li><a href="/ITP_member/login.html">로그인</a></li>
                 <li><a href="/ITP_member/join01.html">회원가입</a></li>
-                <li class="gnb_blind"><a href="#">인천테크노파크</a></li>
+                <li class="gnb_blind"><a href="https://itp.or.kr/index.asp" target="_blank" title="테크노파크 새창열림">인천테크노파크</a></li>
             </ul>
         </nav>
     </div>
@@ -89,8 +89,8 @@
                 </li>
             </ul>
             <ul class="icon">
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
+                <li class="search_menu_icon"><button type="button"></button></li>
+                <li class="full_menu_icon"><button type="button"></button></li>
             </ul>
         </nav>
     </div>
@@ -107,23 +107,32 @@
         });
 
         // Lnb hover 글자색 변경 글자 아래 Border 추가
-        $('.lnb_wrap > ul > li').mouseenter(function(){
+        $('.lnb_text li').mouseenter(function(){
             $(this).children().eq(1).stop().animate({"width":"100%"});
             $(this).children().eq(0).css({"color":"#54AAFD"});
         })
 
-        $('.lnb_wrap > ul > li').mouseleave(function(){
+        $('.lnb_text li').mouseleave(function(){
             $(this).children().eq(1).stop().animate({"width":"0%"});
             $(this).children().eq(0).css({"color":"#000000"});
         })
 
          // Lnb Search Icon 클릭 시 검색 박스 슬라이드 업다운
-        $(`.icon > li:nth-of-type(1)`).on(`click`,function(){
-            $(`.layer_search`).slideDown()
+        $(`.search_menu_icon button`).on(`click`,function(){
+            $(`.layer_search`).addClass(`on`)
         })
 
         $(`.search_close_btn`).on(`click`,function(){
-            $(`.layer_search`).slideUp()
+            $(`.layer_search`).removeClass(`on`)
+        })
+
+        // full_menu icon 클릭 시 full_menu 슬라이드 업다운
+        $(`.full_menu_icon button`).on('click',function(){
+            $(`.full_menu`).slideDown()
+        })
+
+        $(`.full_title button`).on('click',function(){
+            $(`.full_menu`).slideUp()
         })
     })
 </script>

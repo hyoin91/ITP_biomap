@@ -143,6 +143,12 @@ table td {
 .subColor{
   color:#FAAC56;
 }
+.keyColor_BG{
+  background:#54AAFD;
+}
+.subColor_BG{
+  background:#FAAC56;
+}
 /*텍스트관련 끝===============================*/
 
 /*하이퍼링크/버튼관련===============================*/
@@ -191,6 +197,9 @@ textarea {
   resize: none;
 }
 /* [라벨] */
+label input{
+  vertical-align:text-bottom;
+}
 /* label {
   display: block;
   position: relative;

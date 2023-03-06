@@ -26,7 +26,9 @@
     <script src="js/include.js"></script>
     <!--script==========================================================================================-->
     <script>
+        $(document).ready(function(){
 
+        })
     </script>
 </head>
 <!--body==========================================================================================-->
@@ -123,16 +125,59 @@
         </div>
     </div>
 
-    <div class="sns">
-        <nav class="sns_wrap">
-            <div><button type="button"><a href="#"><img src="/img/sub/main_image/kakao_sns.png" alt="카카오톡 sns"></a></button></div>
-            <div><button type="button"><a href="#"><img src="/img/sub/main_image/facebook_sns.png" alt="페이스북 sns"></a></button></div>
-            <div><button type="button"><a href="#"><img src="/img/sub/main_image/instagram_sns.png" alt="인스타그램 sns"></a></button></div>
-            <div><button type="button"><a href="#"><img src="/img/sub/main_image/naver_sns.png" alt="네이버 sns"></a></button></div>
-            <div><button type="button"><a href="#"><img src="/img/sub/main_image/google_sns.png" alt="구글sns"></a></button></div>
-        </nav>
-
-        <button class="sns_btn" type="button"><img src="/img/sub/main_image/close_sns.png" alt=""></button>
+    <div class="full_menu">
+        <div class="full_title">
+            <h2>전체메뉴</h2>
+            <button></button>
+        </div>
+        <div class="full_menu_warp">
+            <ul class="full_content">
+                <li class="full_content_sub">
+                    <h3>기관정보(MAP)</h3>
+                    <ul>
+                        <li><a href="#">바이오맵</a></li>
+                        <li><a href="#">기관인력정보</a></li>
+                        <li><a href="#">등록관리</a></li>
+                    </ul>
+                </li>
+                <li class="full_content_sub">
+                    <h3>연구자원</h3>
+                    <ul>
+                        <li><a href="#">바이오서비스</a></li>
+                        <li><a href="#">시설/장비</a></li>
+                        <li><a href="#">기술</a></li>
+                        <li><a href="#">교육 프로그램</a></li>
+                        <li><a href="#">바이오사업</a></li>
+                    </ul>
+                </li>
+                <li class="full_content_sub">
+                    <h3>커뮤니티</h3>
+                    <ul>
+                        <li><a href="/ITP_sub/Bd_noti.html">공지/새소식</a></li>
+                        <li><a href="/ITP_sub/Bd_employ.html">채용공지</a></li>
+                        <li><a href="#">행사일정공지</a></li>
+                        <li><a href="#">연구개발 Q&A</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                    </ul>
+                </li>
+                <li class="full_content_sub">
+                    <h3>지원사업공고</h3>
+                    <ul>
+                        <li><a href="#">지원사업공고01</a></li>
+                        <li><a href="#">지원사업공고01</a></li>
+                    </ul>
+                </li>
+                <li class="full_content_sub">
+                    <h3>바이오맵 소개</h3>
+                    <ul>
+                        <li><a href="#">바이오맵 소개</a></li>
+                        <li><a href="#">운영조직</a></li>
+                        <li><a href="#">이용정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="qr_code">
@@ -157,19 +202,19 @@
                         <li><button type="button"></button></li>
                         <li><button type="button"></button></li>
                     </ul>
-                        <ul class="slide_items">
-                            <li class="sb1">
-                                <div>BioMap</div>
-                                <div>
-                                    <h2>바이오 연구인프라를 연계한<br>자원공유시스템</h2>
-                                    <p>Resource Sharing System Linked to Bio-Research Infrastructure</p>
-                                </div>
-                                <button><a href="#">내용보러가기</a></button>
-                                <div class="sb1_i"><img src="/img/sub/main_image/sb1.png" alt="1번 슬라이드 배너 이미지(물방울)"></div>
-                            </li>
-                            <li class="sb2"></li>
-                            <li class="sb3"></li>
-                        </ul>
+                    <ul class="slide_items">
+                        <li class="sb1">
+                            <div>BioMap</div>
+                            <div>
+                                <h2>바이오 연구인프라를 연계한<br>자원공유시스템</h2>
+                                <p>Resource Sharing System Linked to Bio-Research Infrastructure</p>
+                            </div>
+                            <button><a href="#">내용보러가기</a></button>
+                            <div class="sb1_i"><img src="/img/sub/main_image/sb1.png" alt="1번 슬라이드 배너 이미지(물방울)"></div>
+                        </li>
+                        <li class="sb2"></li>
+                        <li class="sb3"></li>
+                    </ul>
                 </div>
                 <div class="community">
                     <div class="cm_title">
@@ -178,59 +223,61 @@
                     </div>
                     <ul class="cm_k">
                         <li class="on">
-                            <button>새소식</button>
-                        </li>
-                        <li class="">
                             <button>공지사항</button>
                         </li>
-                        <li class="">
+                        <li>
+                            <button>채용공지</button>
+                        </li>
+                        <li>
+                            <button>행사일정</button>
+                        </li>
+                        <li>
+                            <button>연구개발</button>
+                        </li>
+                        <li>
                             <button>자유게시판</button>
-                        </li>
-                        <li class="">
-                            <button>일정게시판</button>
-                        </li>
-                        <li class="">
-                            <button>채용게시판</button>
                         </li>
                     </ul>
                     <ul class="cm_t">
                         <li class="on">
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
-                            </a>                            <a href="#">
+                            </a>      
+                            <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
-                            </a>                            <a href="#">
+                            </a>                            
+                            <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
-                            <a href="#">
+                            <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
@@ -246,7 +293,8 @@
                                 <h4>2025</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
-                            </a>                            <a href="#">
+                            </a>                            
+                            <a href="#">
                                 <h4>2025</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
@@ -267,7 +315,8 @@
                                 <h4>2026</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
-                            </a>                            <a href="#">
+                            </a>                            
+                            <a href="#">
                                 <h4>2026</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
@@ -288,7 +337,8 @@
                                 <h4>2027</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
-                            </a>                            <a href="#">
+                            </a>                            
+                            <a href="#">
                                 <h4>2027</h4>
                                 <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
@@ -310,21 +360,15 @@
             <div class="con_wrap">
                 <div class="bio_codi">
                     <div class="cm_title">
-                        <h2>바이오 코디네이션</h2>
+                        <h2>지원사업공고</h2>
                         <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.png" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
                     <ul class="bioc_k">
                         <li class="on">
-                            <button type="button">지원사업공고</button>
+                            <button type="button">지원사업공고01</button>
                         </li>
                         <li>
-                            <button type="button">협력모델</button>
-                        </li>
-                        <li>
-                            <button type="button">채용정보</button>
-                        </li>
-                        <li>
-                            <button type="button">서비스신청</button>
+                            <button type="button">지원사업공고02</button>
                         </li>
                     </ul>
                     <ul class="bioc_t">
@@ -370,50 +414,6 @@
                             <a href="#">
                                 <p>2024년 해양수산 신규 R&D 및 창업사업화지원사업 설명회</p>
                                 <p>2024.01</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>[재공고] 2025년 인천테크노파크 계약직 2차 채용 최종합격자 및 예비합격자 발표</p>
-                                <p>2025.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2025년 해양수산 신규 R&D 및 창업사업화지원사업 설명회</p>
-                                <p>2025.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2025년 산업부 수출지원기반활용사업(산업 글로벌 진출역량 강화 사업) 참여기업 ...</p>
-                                <p>2025.01</p>
-                            </a>
-                            <a href="#">
-                                <p>[재공고] 2025년 인천테크노파크 계약직 2차 채용 최종합격자 및 예비합격자 발표</p>
-                                <p>2025.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2025년 해양수산 신규 R&D 및 창업사업화지원사업 설명회</p>
-                                <p>2025.01</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>[재공고] 2026년 인천테크노파크 계약직 2차 채용 최종합격자 및 예비합격자 발표</p>
-                                <p>2026.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2026년 해양수산 신규 R&D 및 창업사업화지원사업 설명회</p>
-                                <p>2026.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2026년 산업부 수출지원기반활용사업(산업 글로벌 진출역량 강화 사업) 참여기업 ...</p>
-                                <p>2026.01</p>
-                            </a>
-                            <a href="#">
-                                <p>[재공고] 2026년 인천테크노파크 계약직 2차 채용 최종합격자 및 예비합격자 발표</p>
-                                <p>2026.01</p>
-                            </a>
-                            <a href="#">
-                                <p>2026년 해양수산 신규 R&D 및 창업사업화지원사업 설명회</p>
-                                <p>2026.01</p>
                             </a>
                         </li>
                     </ul>
@@ -474,7 +474,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <h4>1:1문의 연락</h4>       
+                                    <h4>1:1비공개 문의</h4>       
                                     <p><span>Biomap</span>담당자 문의</p>
                                 </div>
                                 <div><img src="/img/sub/main_image/call_i.png" alt="1:1문의 연락 아이콘"></div>
@@ -483,8 +483,8 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <h4>바이오 코디네이션</h4>  
-                                    <p><span>Biomap</span>게시글 보기</p>
+                                    <h4>기관인력정보</h4>  
+                                    <p><span>Biomap</span>검색 정보확인</p>
                                 </div>
                                 <div><img src="/img/sub/main_image/bc_i.png" alt="바이오 코디네이션 아이콘"></div>
                             </a>

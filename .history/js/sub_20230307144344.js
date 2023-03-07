@@ -3,7 +3,6 @@ history.scrollRestoration = "manual" //auto 복원
 
 //--------------////////////////jqueryWrapper
 $(document).ready(function () {
-
     //서브메뉴,콤보,토글이벤트
     const label = document.querySelectorAll('.label');
     label.forEach(function (lb) {
@@ -53,9 +52,9 @@ $(document).ready(function () {
         tabCon.hide();
         $("#" + $tabLink).show();
     });
-    //    
 
 });//--------------////////////////jqueryWrapper
+
 
 //프린트
 function content_print() {
@@ -68,22 +67,9 @@ function content_print() {
  window.print();
 }
 //셀렉트박스 
-
-
-
 function statusChange(statusItem) {
-    const strText = $(statusItem).text();
+    var strText = $(statusItem).text();
     $("#TextVal").text(strText);
-    const $Mustselect = $(statusItem).hasClass("Mustselect");
-
-    if( $Mustselect === true){
-        $(".MustselectCon").css('background','#0000002e');
-        $(".MustselectCon").attr('readonly','true');
-        $(".MustselectCon").val("");
-    }else{
-        $(".MustselectCon").css('background','none');
-        $(".MustselectCon").removeAttr('readonly');
-    }
 }
 //팝업여러개
 function ShowPop(val) {
@@ -136,6 +122,7 @@ function SnsPop(val) {
 }
 //로그인 경고창
 function login() {
+
   const strid = document.getElementById('userID');
   const strpw = document.getElementById('userPW');
 

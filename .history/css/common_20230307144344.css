@@ -158,13 +158,8 @@ table td {
 
 /*인풋관련===============================*/
 input[type='text'],
-input[type='password'],
-select{
+input[type='password']{
   text-indent: 7px;
-  height:45px;
-  font-size: 1rem;
-  border:0.5px solid #ccc;
-  border-radius: 0px;
 }
 input[type='text'],
 input[type='password'],
@@ -200,20 +195,10 @@ textarea {
   font-size: inherit;
   color: inherit;
   resize: none;
-  border:0.5px solid #ccc;
-  border-radius: 0px;
-  height: 250px;
-  width:100%;
 }
 /* [라벨] */
 label input{
   vertical-align:text-bottom;
-}
-.check_One{
-  text-align: right;
-  display: block;
-  font-weight: 500;
-  color:#000;
 }
 /* label {
   display: block;

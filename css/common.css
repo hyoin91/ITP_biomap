@@ -259,6 +259,7 @@ input[type="radio"]:checked:after {
   border-radius: 100%;
 }
 /*인풋관련 끝===============================*/
+
 /*input===============================*/
 /*fonts===============================*/
 /*서브해딩B*/
@@ -287,34 +288,6 @@ input[type="radio"]:checked:after {
   font-family: 'conCM';
   src: url('../fonts/esamanru-Light.woff') format('woff');
 }
-
-/*SpoqaHanSansNeo fonts===============================*/
-/*스포카 한 산스 네오 Bold*/
-@font-face {
-  font-family: 'spoqaB';
-  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Bold.ttf') format('TrueType');
-}
-/*스포카 한 산스 네오 Medium*/
-@font-face {
-  font-family: 'spoqaM';
-  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Medium.ttf') format('TrueType');
-}
-/*스포카 한 산스 네오 Regular*/
-@font-face {
-  font-family: 'spoqaR';
-  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Regular.ttf') format('TrueType');
-}
-/*스포카 한 산스 네오 Light*/
-@font-face {
-  font-family: 'spoqaL';
-  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Light.ttf') format('TrueType');
-}
-/*스포카 한 산스 네오 Thin*/
-@font-face {
-  font-family: 'spoqaT';
-  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Thin.ttf') format('TrueType');
-}
-/*SpoqaHanSansNeo fonts===============================*/
 /*fonts===============================*/
 @media screen and (max-width:px) {
 

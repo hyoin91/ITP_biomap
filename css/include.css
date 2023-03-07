@@ -1,4 +1,4 @@
-  /*header===============================*/
+/*header===============================*/
 /*gnb===============================*/
 .gnb{
   background:#54AAFD;
@@ -19,18 +19,18 @@
 .weather{
   display:flex;
   gap:1.5rem;
-  font-family:"spoqaL";
-  font-size:0.9rem;
 }
 
 .weahter_top{
   display:flex;
   align-items:center;
+  font-size:0.9rem;
 }
 
 .weather_bottom{
   display:flex;
   align-items:center;
+  font-size:0.9rem;
 }
 
 .weather_bottom li:nth-of-type(2):after,
@@ -56,8 +56,6 @@
 }
 
 .weather strong{
-  margin-left:0.3rem;
-  font-family:"spoqaR";
   color:#005fb8;
 }
 
@@ -65,8 +63,6 @@
   display:flex;
   flex-direction:row;
   gap:1.5rem;
-  font-family:"spoqaM";
-  font-size:1rem;
 }
 
 .gnb_text li::after{
@@ -115,7 +111,7 @@
 }
 
 .lnb_wrap > div{
-  flex-basis:100px;
+  flex-basis:90px;
   flex-shrink:0;
 }
 
@@ -127,13 +123,13 @@
 
 .lnb_wrap > ul:nth-of-type(1) > li{
   padding:39.5px 0;
-  width:120px;
+  width:130px;
+  font-size:1.1rem;
+  font-weight:bold;
   text-align:center;
 }
 
 .lnb_wrap > ul > li > a{
-  font-family:"spoqaM";
-  font-size:1.15rem;
   color:#000;
 }
 
@@ -186,7 +182,6 @@
 }
 
 .sub_lnb > li > a{
-  font-family:"spoqaL";
   color:#000;
   font-size:1rem;
 }
@@ -225,9 +220,7 @@ footer{
 }
 
 .ft a{
-  font-family:"spoqaR";
-  font-size:1.1rem;
-  color:#808080;
+  color:#222;
 }
 
 .ft li:nth-of-type(3) a{
@@ -252,23 +245,14 @@ footer{
 .fm{
   display:flex;
   gap:1.5rem;
-  margin-top:3rem;
-  font-family:"spoqaR";
-  font-size:1rem;
-  color:#808080;
+  margin-top:2rem;
 }
 /*fm===============================*/
 /*fb===============================*/
 .fb{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-}
-
-.fb div:nth-of-type(1){
-  font-family:"spoqaR";
-  font-size:1rem;
-  color:#808080;
+  margin-top:2rem;
 }
 
 .fb .select_box{
@@ -283,8 +267,6 @@ footer{
   border:0px;
   border-radius:0.3rem;
   text-align:left;
-  font-family:"spoqaR";
-  font-size:1.1rem;
   color:#fff;
   background:#555;
 }
@@ -313,9 +295,6 @@ footer{
   position:absolute;
   bottom:35px;
   width:100%;
-  font-family:"spoqaR";
-  font-size:1.1rem;
-  color:#fff;
   background-color:#555;
   border-radius:0.3rem;
 }

@@ -30,19 +30,12 @@
     <script src="../js/include.js"></script>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
     <!--script==========================================================================================-->
-    <script>
-        Kakao.init('08602e869d4eb9173fabd255da6adecd');
 
-    </script>
-    <style>
-
-    </style>
 
 </head>
 <!--body==========================================================================================-->
 
 <body>
-
     <!--BGpopup========================================-->
     <!-- <div class="popup_mask"></div>
     
@@ -105,26 +98,26 @@
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label">
-                                1:1 문의
+                                연구개발Q&A
                             </a>
                             <div class="optionList">
-                                <a class="optionItem" href="Bd_noti.html">
-                                    공지/새소식
-                                </a>
-                                <a class="optionItem" href="Bd_employ.html">
-                                    채용공지
+                                <a class="optionItem">
+                                    동향/뉴스
                                 </a>
                                 <a class="optionItem">
-                                    행사일정공지
-                                </a>
-                                <a class="optionItem">
-                                    연구개발Q&A
+                                    행사일정
                                 </a>
                                 <a class="optionItem">
                                     자유게시판
                                 </a>
-                                <a class="optionItem" href="../ITP_member/login.html">
+                                <a class="optionItem" href="Bd_bioQna.html">
+                                    연구개발Q&A
+                                </a>
+                                <a class="optionItem" href="Bd_inquiry.html">
                                     1:1문의
+                                </a>
+                                <a class="optionItem" href="Bd_noti.html">
+                                    공지사항
                                 </a>
                             </div>
                         </li>
@@ -159,11 +152,11 @@
             <div class="conWrap" id="printWrap">
                 <section class="TitleWrap">
                     <h2>
-                        나의 1:1 문의
+                        연구개발Q&A
                     </h2>
                     <div class="searchWrap">
                         <div class="searchVS"></div>
-                        <div class="inquiry_icBox"></div>
+                        <div class="noti_icBox"></div>
                         <div class="combo selectBox">
                             <button class="label" id="TextVal">
                                 ::전체::
@@ -191,8 +184,9 @@
                             <col width='70px'>
                             <col width='*'>
                             <col width='160px'>
+                            <col width='90px'>
                             <col width='160px'>
-                            <col width='70px'>
+                            <col width='100px'>
                         </colgroup>
                         <thead>
                             <tr>
@@ -203,35 +197,38 @@
                                     제목
                                 </th>
                                 <th>
-                                    답변일
+                                    작성자
+                                </th>
+                                <th>
+                                    조회수
                                 </th>
                                 <th>
                                     등록일
                                 </th>
                                 <th>
-                                    상태
+                                    공개여부
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    1
+                                <td class="notiIco sticker">
                                 </td>
                                 <td class="toLeft">
-                                    <a href="Bd_inquiryDtl.html">
-                                        문의드립니당
-
+                                    <a href="Bd_Dtl.html">
+                                        바이오맵 구축관련 공지사항입니다.
                                     </a>
                                 </td>
                                 <td>
-                                    2023.02.02
+                                    맵순이
+                                </td>
+                                <td>
+                                    1110
                                 </td>
                                 <td>
                                     2023.02.02
                                 </td>
-                                <td class="done">
-                                    완료
+                                <td class="lock">
                                 </td>
                             </tr>
                             <tr>
@@ -240,27 +237,44 @@
                                 </td>
                                 <td class="toLeft">
                                     <a>
-                                        문의두번드립니당
-
+                                        -
                                     </a>
                                 </td>
                                 <td>
+                                    맵순이
+                                </td>
+                                <td>
+                                    1110
+                                </td>
+                                <td>
                                     2023.02.02
+                                </td>
+                                <td class="Attatchfile sticker">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td class="toLeft">
+                                    <a>
+                                        -
+                                    </a>
+                                </td>
+                                <td>
+                                    맵순이
+                                </td>
+                                <td>
+                                    1110
                                 </td>
                                 <td>
                                     2023.02.02
                                 </td>
                                 <td>
-                                    접수
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="makeFlex jc_FE">
-                        <button class="subkeyBtn" onclick="location.href='Bd_inquiryWrite0.html'">
-                            글쓰기
-                        </button>
-                    </div>
                     <div class="PGnation">
                         <a class="PGarrow">〈</a>
                         <a class="PGarrow">《</a>
@@ -269,6 +283,7 @@
                         <a class="PGarrow">〉</a>
                         <a class="PGarrow">》</a>
                     </div>
+
                 </section>
             </div>
         </div>

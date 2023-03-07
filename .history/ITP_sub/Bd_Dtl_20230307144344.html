@@ -32,328 +32,8 @@
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
     <!--script==========================================================================================-->
     <script>
-        Kakao.init('08602e869d4eb9173fabd255da6adecd');
-        function fnCommentList(rows, page){
-		rows = typeof rows != 'undefined' ? rows : 10;
-		$("#commentList").load("/commentList.do?cms_menu_sn=${param.cms_menu_sn}&ntt_sn=${param.ntt_sn }&rows="+rows+"&cpage="+page, function(){
-			
-		});
-	}
-	
-	// 답글작성
-	function fnReWriteComment(event, commentSn){
-		event.preventDefault();
-		getCommentArea(commentSn, false);
-
-	}
-	
-	// 댓글수정
-	function fnModifyComment(event, commentSn){
-		event.preventDefault();
-		getCommentArea(commentSn, true);
-	}
-	
-	function getCommentArea(commentSn, isMod) {
-		$('#commentList li').find('div#reCommentArea').remove();
-		const $target = $('#commentList li[comment_sn="'+commentSn+'"]');
-		let vHtml = '<div id="reCommentArea">';
-		vHtml += '<form name="commentFrm" method="post">';
-		vHtml += '<input type="hidden" name="cms_menu_sn" value="${boardInfo.cms_menu_sn }"/>';
-		vHtml += '<input type="hidden" name="board_sn" value="${boardInfo.board_sn }"/>';
-		vHtml += '<input type="hidden" name="ntt_sn" id="nttSn" value="${param.ntt_sn }" />';
-		vHtml += '<input type="hidden" name="'+(isMod ? 'comment_sn' : 'parnt_comment_sn')+'" id="reCommentSn" value="'+commentSn+'" />';
-		vHtml += '<p>댓글내용</p>';
-		vHtml += '<textarea name="comment_cn" id="reCommentCn" title="댓글입력" placeholder="댓글을 작성해주세요"></textarea>';
-		vHtml += '</form>';
-		vHtml += '<div><p><span class="textCo">0</span> / 300</p><button id="btnCommentReWrite">'+(isMod ? '수정' : '등록')+'</button></div>';
-		vHtml += '<div id="btnCommentClose"><span>답글접기</span></div>';
-		vHtml += '</div>';
-		$target.append(vHtml);
-
-		if (isMod) {
-			const comment = $("li[comment_sn='"+commentSn+"'] div.userbox_middle").text().trim();
-			$('#reCommentCn').val(comment);
-			$('.textCo').text(comment.length);
-		}
-		
-		// 글자수제한
-        $('#reCommentCn').keyup(function (e) {
-        	let content = this.value;
-        	if (content) {
-        		if (content.length > 300) {
-        			this.value = content.substr(0, 300);
-        		}
-        		$(this).parent().next().find('.textCo').text(this.value.length);
-        	} else {
-        		$(this).parent().next().find('.textCo').text('0');
-        	}
-        });
-		// 작성
-        $('#btnCommentReWrite').click(function (event) {
-        	if (isMod) {
-        		fnModifyCommentProc(event);
-        	} else {
-        		fnReCommentWrite(event);
-        	}
-        	return false;
-        });
-        // 접기
-        $('#btnCommentClose').click(function () {
-        	$('#reCommentArea').remove();
-        	return false;
-        });
-	}
-	
-	// 댓글 등록
-	function fnCommentWrite(event){
-		event.preventDefault();
-		
-		if (!$('#comment_cn').val()) {
-			alert('댓글 내용을 입력해 주세요.');
-			return false;
-		}
-		
-		let params = {};
-		$.extend(params, $("#commentFrm").serializeObject());
-		$.extend(params, {
-			url : shorturl(location.href)
-		});
-		
-		var promise = getJSON("/commentWrite.do", params);
-		promise.then(function(data){
-			if(data.rst == "-1"){
-				alert(data.msg);
-			}else{
-				$("#comment_cn").val("");
-				fnCommentList(10, 1);
-			}
-		});
-	}
-
-	// 댓글 수정
-	function fnModifyCommentProc(event){
-		event.preventDefault();
-		
-		var bValid = true;
-		bValid = bValid && StringUtil.checkBlank($('#reCommentArea #reCommentCn'), "댓글 내용을");
-		
-		if(bValid){
-			var params = {
-				comment_sn : $("#reCommentArea #reCommentSn").val(),
-				comment_cn : $("#reCommentArea #reCommentCn").val()
-			};
-			var promise = getJSON("/commentModify.do", params);
-			promise.then(function(data){
-				if(data.rst == "-1"){
-					alert(data.msg);
-				}else if(data.rst == "0"){
-					alert("실패");
-				}else{
-					fnCommentList(10, 1);
-				}
-			});
-		}
-	}
-
-	// 답글 등록
-	function fnReCommentWrite(event){
-		event.preventDefault();
-		
-		var bValid = true;
-		bValid = bValid && StringUtil.checkBlank($('#reCommentArea #reCommentCn'), "댓글 내용을");
-		
-		if(bValid){
-			var params = {
-				parnt_comment_sn : $("#reCommentArea #reCommentSn").val(),
-				comment_cn : $("#reCommentArea #reCommentCn").val(),
-				ntt_sn: $("#reCommentArea #nttSn").val()
-			};
-			console.log(params);
-			var promise = getJSON("/reCommentWrite.do", params);
-			promise.then(function(data){
-				if(data.rst == "-1"){
-					alert(data.msg);
-				}else if(data.rst == "0"){
-					alert("실패");
-				}else{
-					fnCommentList(10, 1);
-				}
-			});
-		}
-	}
-
-	function fnDeleteComment(event, commentSn){
-		event.preventDefault();
-		if(!confirm("삭제하시겠습니까?")) return false;
-		$.getJSON('/commentDelete.do', {comment_sn:commentSn}, function(data){
-			if(data.rst == '1'){
-				fnCommentList(10, 1);
-			}
-		})
-	}
-
-	$(function(){
-        $(".comments_chat > p").click(function () {
-        	getSyncJSON('/commentCheck.do', null, function (data) {
-        		if (data.success) {
-                    $(".textarea_cover").show();
-                    $(this).hide();
-        		} else {
-        			alert(data.message);
-        			location.href = data.redirect;
-        		}
-        	});
-        });
-
-        $("html").click(function (e) {
-            if (!$(".comments_chat").has(e.target).length) {
-                $(".comments_chat > p").show();
-                $(".textarea_cover").hide();
-            	$('#comment_cn').val('');
-            }
-        });
-
-        $('#btnCommentWrite').click(function (event) {
-        	fnCommentWrite(event);
-        	return false;
-        });
-        
-        // 글자수제한
-        $('textarea[name=comment_cn]').keyup(function (e) {
-        	let content = this.value;
-        	if (content) {
-        		if (content.length > 300) {
-        			this.value = content.substr(0, 300);
-        		}
-        		$(this).parent().next().find('.textCo').text(this.value.length);
-        	} else {
-        		$(this).parent().next().find('.textCo').text('0');
-        	}
-        });
-        
-		fnCommentList(10, 1);
-	});
     </script>
     <style>
-	.person_comments .user_report a:nth-of-type(1){
-		color:#3eb5eb;
-	}
-
-	.person_comments .user_report a:nth-of-type(2){
-		margin-left:0.3rem;
-		margin-right:0.3rem;
-	}
-
-	.person_comments li:nth-child(3n-1), .ps2{
-		padding-left:2rem;
-	}
-
-	.person_comments li:nth-child(3n), .ps3{
-		padding-left:4rem;
-	}
-	
-	.comments_chat{
-		margin:0.5rem 0 3.5rem;
-	}
-	
-	.textarea_cover > div:nth-of-type(1), .textarea_cover > div:nth-of-type(2){
-		margin-top:1rem;
-	}
-	
-	.textarea_cover > div:nth-of-type(1){
-		align-items:center;
-	}
-	
-	.textarea_cover #btnCommentWrite{
-		padding:0.5rem 1.2rem;
-		color:#fff;
-		background-color:#3eb5eb;
-		border:0;
-		border-radius:0.4rem;
-	}
-	
-	.person_comments .userbox_top{
-		align-items:center;
-	}
-	
-	.person_comments .userbox_bottom{
-		margin-top:1rem;
-		font-size:0.95rem;
-		color:#3eb5eb;
-	}
-	
-	.person_comments #reCommentArea{
-		margin-top:1rem;
-	}
-	
-	.person_comments #reCommentArea textarea{
-		margin:1rem 0;
-		padding:0.5rem 1rem;
-		height:1.2rem;
-		line-height:1.2rem;
-	}
-	
-	.person_comments #reCommentArea div:nth-of-type(1){
-		display:flex;
-		justify-content:space-between;
-		align-items:center;
-	}
-	
-	.person_comments #reCommentArea #btnCommentReWrite{
-		padding:0.5rem 1.2rem;
-		color:#fff;
-		background-color:#3eb5eb;
-		border:0;
-		border-radius:0.4rem;
-	}
-	
-	.person_comments #btnCommentClose{
-		margin-top:1rem;
-		padding:1rem 0;
-		background-color:#efefef;
-		text-align:center;
-	}
-	
-	.person_comments #btnCommentClose span::after{
-		content:"▲";
-		margin-left:0.2rem;
-	}
-    .noticeDtl_Comments_box .comments_chat > p {
-    padding: 1rem 1rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 0.8rem;
-    color: #b5b5b5;
-}
-.noticeDtl_Comments_box .comments_chat .textarea_cover > div:nth-child(1) {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.noticeDtl_Comments_box .comments_chat .textarea_cover > div:nth-child(3) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.noticeDtl_Comments_box .comments_chat .textarea_cover .user_image {
-    background: url(/lib/igc/image/user.svg) center no-repeat;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.noticeDtl_Comments_box .comments_chat .chat {
-    height: 8em;
-}
-.textarea_cover #btnCommentWrite {
-    padding: 0.5rem 1.2rem;
-    color: #fff;
-    background-color: #3eb5eb;
-    border: 0;
-    border-radius: 0.4rem;
-}
     </style>
 </head>
 <!--body==========================================================================================-->
@@ -395,26 +75,26 @@
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label">
-                                공지사항
+                                공지/새소식
                             </a>
                             <div class="optionList">
                                 <a class="optionItem">
-                                    동향/뉴스
+                                    공지/새소식
                                 </a>
                                 <a class="optionItem">
-                                    행사일정
+                                    채용공지
                                 </a>
                                 <a class="optionItem">
-                                    자유게시판
+                                    행사일정공지
                                 </a>
                                 <a class="optionItem">
                                     연구개발Q&A
                                 </a>
-                                <a class="optionItem" href="Bd_inquiry.html">
-                                    1:1문의
+                                <a class="optionItem">
+                                    자유게시판
                                 </a>
-                                <a class="optionItem" href="Bd_noti.html">
-                                    공지사항
+                                <a class="optionItem" href="../ITP_member/login.html">
+                                    1:1문의
                                 </a>
                             </div>
                         </li>
@@ -621,38 +301,6 @@
                         <a class="PGarrow">〉</a>
                         <a class="PGarrow">》</a>
                     </div>
-                     <!--댓글기능-->
-                     <c:set var="commentCnt" value="0"/>
-                     <c:if test="${not empty param.comment_co}">
-                         <c:set var="commentCnt" value="${param.comment_co }"/>
-                     </c:if>
-                     <div class="noticeDtl_Comments_box">
-                         <div class="noticeDtl_Comments">
-                             <div class="Comments_amount">
-                                 <h4><span><!--${commentCnt}-->0000</span>개의 댓글</h4>
-                             </div>
-                         </div>
-                         <div class="comments_chat">
-                             <p>댓글을 입력해주세요.</p>
-                             <div class="textarea_cover">
-                                 <div>
-                                     <div class="user_image"></div>
-                                     <p>${sessionScope.member.member_nm }</p>
-                                 </div>
-                                 <form id="commentFrm" name="commentFrm" method="post">
-                                     <input type="hidden" name="cms_menu_sn" id="cms_menu_sn" value="${boardInfo.cms_menu_sn }"/>
-                                     <input type="hidden" name="board_sn" id="board_sn" value="${boardInfo.board_sn }"/>
-                                     <input type="hidden" name="ntt_sn" id="ntt_sn" value="${param.ntt_sn }"/>
-                                     <textarea name="comment_cn" id="comment_cn" class="chat" placeholder="원하시는 댓글을 입력하세요."></textarea>
-                                 </form>
-                                 <div>
-                                     <p><span class="textCo">0</span> / 300</p>
-                                     <button id="btnCommentWrite">등록</button>
-                                 </div>
-                             </div>
-                         </div>
-                         <div id="commentList"></div>
-                     </div>
                 </section>
             </div>
         </div>

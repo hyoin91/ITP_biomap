@@ -252,7 +252,8 @@ footer{
 .fb{
   display:flex;
   justify-content:space-between;
-  margin-top:2rem;
+  align-items:center;
+  margin-top:0.2rem;
 }
 
 .fb .select_box{

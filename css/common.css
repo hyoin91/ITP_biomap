@@ -259,41 +259,8 @@ input[type="radio"]:checked:after {
   border-radius: 100%;
 }
 /*인풋관련 끝===============================*/
-
 /*input===============================*/
-/*main_fonts===============================*/
-/*메인폰트Bold*/
-@font-face {
-  font-family: 'interB';
-  src: url('../fonts/index.font/Inter-Bold.ttf') format('ttf');
-  font-weight: 700;
-}
-/*메인폰트Semibold*/
-@font-face {
-  font-family: 'interS';
-  src: url('../fonts/index.font/Inter-SemiBold.ttf') format('ttf');
-  font-weight:600;
-}
-/*메인폰트Medium*/
-@font-face {
-  font-family: 'interM';
-  src: url('../fonts/index.font/Inter-Medium.ttf') format('ttf');
-  font-weight:500;
-}
-/*메인폰트Regular*/
-@font-face {
-  font-family: 'interR';
-  src: url('../fonts/index.font/Inter-Regular.ttf') format('ttf');
-  font-weight:400;
-}
-/*메인폰트Light*/
-@font-face {
-  font-family: 'interL';
-  src: url('../fonts/index.font/Inter-Light.ttf') format('ttf');
-  font-weight:300;
-}
-/*main_fonts===============================*/
-/*sub_fonts===============================*/
+/*fonts===============================*/
 /*서브해딩B*/
 @font-face {
   font-family: 'headB';
@@ -320,7 +287,35 @@ input[type="radio"]:checked:after {
   font-family: 'conCM';
   src: url('../fonts/esamanru-Light.woff') format('woff');
 }
-/*sub_fonts===============================*/
+
+/*SpoqaHanSansNeo fonts===============================*/
+/*스포카 한 산스 네오 Bold*/
+@font-face {
+  font-family: 'spoqaB';
+  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Bold.ttf') format('TrueType');
+}
+/*스포카 한 산스 네오 Medium*/
+@font-face {
+  font-family: 'spoqaM';
+  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Medium.ttf') format('TrueType');
+}
+/*스포카 한 산스 네오 Regular*/
+@font-face {
+  font-family: 'spoqaR';
+  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Regular.ttf') format('TrueType');
+}
+/*스포카 한 산스 네오 Light*/
+@font-face {
+  font-family: 'spoqaL';
+  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Light.ttf') format('TrueType');
+}
+/*스포카 한 산스 네오 Thin*/
+@font-face {
+  font-family: 'spoqaT';
+  src: url('../fonts/spoqahan/SpoqaHanSansNeo-Thin.ttf') format('TrueType');
+}
+/*SpoqaHanSansNeo fonts===============================*/
+/*fonts===============================*/
 @media screen and (max-width:px) {
 
 }

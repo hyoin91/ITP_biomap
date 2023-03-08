@@ -419,15 +419,8 @@ $(document).ready(function () {
       $(`.bioc_t > li`).eq(numb).addClass(`on`);
   })
 
-  // BEST 추천검색어 on 클릭 이벤트
-  $(`.best_k > li`).on(`click`,function(){
-    $(`.best_k > li`).removeClass(`on`);
-    $(this).addClass(`on`);
-  })
-
   // sns 이벤트
   $(`.sns_btn`).on('click',function(){
     $(`.sns`).toggleClass(`on`)
   })
-  
 });

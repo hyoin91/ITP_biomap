@@ -268,6 +268,27 @@
   color:#fff;
 }
 /*전체메뉴===============================*/
+/*1:1문의 연락===============================*/
+.call_Inquiry{
+  position:fixed;
+  left:0; top:10rem;
+  padding:1rem;
+  background-color:#FBE8D3;
+  border:0;
+  border-radius:0rem 0.5rem 0.5rem 0rem;
+  z-index:10;
+}
+
+.call_img{
+  width:15px;
+  height:15px;
+  background-color:#FFBF77
+}
+
+.call_Inquiry a{
+  color:#000;
+}
+/*1:1문의 연락===============================*/
 /*QR코드===============================*/
 .qr_code{
   position:fixed;

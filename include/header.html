@@ -44,7 +44,13 @@
                     <ul class="sub_lnb">
                         <li><a href="#">바이오맵</a></li>
                         <li><a href="#">기관인력정보</a></li>
-                        <li><a href="#">등록관리</a></li>
+                        <li>
+                            <a href="#">등록관리</a>
+                            <ul class="ssub_lnb">
+                                <li><a href="#">-연구자원 등록</a></li>
+                                <li><a href="#">-시설/장비 등록</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -52,8 +58,22 @@
                     <div class="bg"></div>
                     <ul class="sub_lnb">
                         <li><a href="#">바이오서비스</a></li>
-                        <li><a href="#">시설/장비</a></li>
-                        <li><a href="#">기술</a></li>
+                        <li>
+                            <a href="#">시설/장비</a>
+                            <ul class="ssub_lnb">
+                                <li><a href="#">-연구시설</a></li>
+                                <li><a href="#">-바이오 장비</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">기술</a>
+                            <ul class="ssub_lnb">
+                                <li><a href="#">-논문</a></li>
+                                <li><a href="#">-연구결과</a></li>
+                                <li><a href="#">-특허</a></li>
+                                <li><a href="#">-보유기술현황</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">교육 프로그램</a></li>
                         <li><a href="#">바이오사업</a></li>
                     </ul>
@@ -62,20 +82,21 @@
                     <a href="/ITP_sub/Bd_noti.html">커뮤니티</a>
                     <div class="bg"></div>
                     <ul class="sub_lnb">
-                        <li><a href="/ITP_sub/Bd_noti.html">공지/새소식</a></li>
-                        <li><a href="/ITP_sub/Bd_employ.html">채용공지</a></li>
-                        <li><a href="#">행사일정공지</a></li>
-                        <li><a href="#">연구개발Q&A</a></li>
+                        <li><a href="#">동향/뉴스</a></li>
+                        <li><a href="#">바이오행사</a></li>
                         <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">연구개발Q&A</a></li>
                         <li><a href="#">1:1문의</a></li>
+                        <li><a href="/ITP_sub/Bd_noti.html">공지/새소식</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">지원사업공고</a>
                     <div class="bg"></div>
                     <ul class="sub_lnb">
-                        <li><a href="#">지원사업공고01</a></li>
-                        <li><a href="#">지원사업공고02</a></li>
+                        <li><a href="#">정부사업</a></li>
+                        <li><a href="#">지자체사업</a></li>
+                        <li><a href="/ITP_sub/Bd_employ.html">채용게시판</a></li>
                     </ul>
                 </li>
                 <li>
@@ -107,12 +128,12 @@
         });
 
         // Lnb hover 글자색 변경 글자 아래 Border 추가
-        $('.lnb_text li').mouseenter(function(){
+        $('.lnb_text > li').mouseenter(function(){
             $(this).children().eq(1).stop().animate({"width":"100%"});
             $(this).children().eq(0).css({"color":"#54AAFD"});
         })
 
-        $('.lnb_text li').mouseleave(function(){
+        $('.lnb_text > li').mouseleave(function(){
             $(this).children().eq(1).stop().animate({"width":"0%"});
             $(this).children().eq(0).css({"color":"#000000"});
         })

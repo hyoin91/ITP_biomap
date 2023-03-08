@@ -15,7 +15,7 @@
   flex-direction:row;
   align-items:center;
 }
-
+/*GNB 좌측 날씨 메뉴===============================*/
 .weather{
   display:flex;
   gap:1.5rem;
@@ -24,25 +24,22 @@
 .weahter_top{
   display:flex;
   align-items:center;
-  font-size:0.9rem;
 }
 
 .weather_bottom{
   display:flex;
   align-items:center;
-  font-size:0.9rem;
 }
 
 .weather_bottom li:nth-of-type(2):after,
 .weather_bottom li:nth-of-type(3):after{
+  margin:0 0.8rem;
   content:"";
   display:inline-block;
-  margin:0 0.8rem;
-
-  transform: translateY(2px);
   width:1px;
-  height:13px;
+  height:12px;
   background-color:#fff;
+  transform:translateY(2px);
 }
 
 .weather li:nth-of-type(1){
@@ -55,10 +52,19 @@
   width:100%;
 }
 
-.weather strong{
-  color:#005fb8;
+.weather li a{
+  font-family:"spoqaL";
+  font-size:0.8rem;
+  color:#fff;
 }
 
+.weather strong{
+  font-family:"spoqaM";
+  font-size:0.8rem;
+  color:#005fb8;
+}
+/*GNB 좌측 날씨 메뉴===============================*/
+/*GNB 우측 메뉴===============================*/
 .gnb_text{
   display:flex;
   flex-direction:row;
@@ -66,77 +72,73 @@
 }
 
 .gnb_text li::after{
-  position:relative;
+  margin-left:1rem;
   content:"";
   display:inline-block;
-  background-color:#fff;
   width:2px;
   height:10px;
-  margin-left:1rem;
+  background-color:#fff;
 }
 
 .gnb .gnb_blind::after{
   display:none;
 }
 
-.gnb li a{
+.gnb_text li a{
+  font-family:"spoqaR";
+  font-size:1rem;
   color:#fff;
 }
+/*GNB 우측 메뉴===============================*/
 /*gnb===============================*/
+
 /*lnb===============================*/
-.lnb::after{
-  display:none;
-}
-
-.lnb.on::after{
-  position:absolute;
-  content:"";
-  width:100%;
-  height:450px;
-  min-height:450px;
-  background:#fff;
-  display:block;
-  border-top:1px solid #ccc;
-  z-index:2;
-}
-
 .lnb_wrap{
   position:relative;
+  margin:0px auto;
   max-width:1200px;
   width:1200px;
   height:100px;
-  margin:0px auto;
   display:flex;
   align-items:center;
 }
-
+/*메인 LNB 좌측 로고===============================*/
 .lnb_wrap > div{
   flex-basis:90px;
   flex-shrink:0;
 }
-
+/*메인 LNB 좌측 로고===============================*/
+/*메인 LNB 대메뉴==============================*/
 .lnb_wrap > ul:nth-of-type(1){
   flex-grow:1;
   display:flex;
   justify-content:space-evenly;
 }
 
-.lnb_wrap > ul:nth-of-type(1) > li{
+.lnb_wrap > ul:nth-of-type(1) > li > a{
   padding:39.5px 0;
   width:130px;
+  font-family:"spoqaM";
   font-size:1.1rem;
-  font-weight:bold;
+  color:#000;
   text-align:center;
 }
-
-.lnb_wrap > ul > li > a{
-  color:#000;
+/*메인 LNB 대메뉴==============================*/
+/*메인 LNB 대메뉴 라인==============================*/
+.bg{
+  position:relative;
+  transform: translateY(2.5rem);
+  width:0%;
+  height:2px;
+  background:#54AAFD;
+  z-index:3;
 }
-
+/*메인 LNB 대메뉴 라인==============================*/
+/*메인 LNB 우측 아이콘===============================*/
 .lnb_wrap ul:nth-of-type(2){
   display:flex;
   align-items:center;
-  gap:1.5rem;
+  gap:1.2rem;
 }
 
 .search_menu_icon, .full_menu_icon{
@@ -163,8 +165,28 @@
 .search_menu_icon button:focus, .full_menu_icon button:focus{
   outline:0;
 }
+/*메인 LNB 우측 아이콘===============================*/
 /*lnb===============================*/
-/*sub_lnb===============================*/
+
+/*서브 LNB===============================*/
+/*SUB_LNB 배경===============================*/
+.lnb.on::after{
+  position:absolute;
+  content:"";
+  display:block;
+  width:100%;
+  height:400px;
+  min-height:400px;
+  background:#fff;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  z-index:2;
+}
+
+.lnb::after{
+  display:none;
+}
+/*SUB_LNB 배경===============================*/
 .sub_lnb{
   display:none;
   z-index:3;
@@ -172,47 +194,50 @@
 
 .lnb.on .sub_lnb{
   position:absolute;
-  top:6.4rem;
-  padding-top:2rem;
+  top:8.5rem;
   width:130px;
-  min-height:418px;
+  height:364px;
   display:flex;
   flex-direction:column;
-  gap:3rem;
+  gap:1.2rem;
 }
 
 .sub_lnb > li > a{
+  font-family:"spoqaR";
   color:#000;
-  font-size:1rem;
+  font-size:1.05rem;
 }
 
-.bg{
-  position:relative;
-  transform: translateY(2.5rem);
-  width:0%;
-  height:2px;
-  background:#54AAFD;
-  z-index:3;
+.sub_lnb li a:hover{
+  color:#54AAFD;
+}
+/*서브 LNB===============================*/
+
+/*서서브 LNB===============================*/
+.ssub_lnb{
+  margin-top:0.5rem;
 }
 
-.sub_lnb > li > a:hover{
+.ssub_lnb a{
+  font-family:"spoqaL";
+  font-size:0.9rem;
   color:#000;
 }
-/*sub_lnb===============================*/
+/*서서브 LNB===============================*/
 /*header===============================*/
+
 /*footer===============================*/
 footer{
   border-top:1px solid #AFCEFD;
   background-color:#f9f9f9;
 }
-/*ft===============================*/
 .ft_wrap{
   max-width:1200px;
   width:1200px;
   margin:0px auto;
   padding:2rem 0;
 }
-
+/*ft===============================*/
 .ft{
   display:flex;
   align-items:center;
@@ -220,12 +245,12 @@ footer{
 }
 
 .ft a{
-  color:#222;
+  font-family:"spoqaR";
+  color:#000;
 }
 
 .ft li:nth-of-type(3) a{
   color:#54AAFD;
-  font-weight:bolder;
 }
 
 .ft li::after{
@@ -247,12 +272,25 @@ footer{
   gap:1.5rem;
   margin-top:2rem;
 }
+
+.fm{
+  font-family:"spoqaL";
+  font-size:1rem;
+  color:#000;
+}
 /*fm===============================*/
 /*fb===============================*/
 .fb{
   display:flex;
   justify-content:space-between;
-  margin-top:2rem;
+  align-items:center;
+  margin-top:0.2rem;
+
+}
+
+.fb > div{
+  font-family:"spoqaL";
+  font-size:1rem;
 }
 
 .fb .select_box{
@@ -262,13 +300,14 @@ footer{
 
 .fb .select_box button{
   position:relative;
-  width:100%;
   padding:0.4rem 1rem;
+  width:100%;
   border:0px;
   border-radius:0.3rem;
   text-align:left;
   color:#fff;
   background:#555;
+  font-family:"spoqaR";
 }
 
 .fb .select_box button:focus{
@@ -277,12 +316,11 @@ footer{
 
 .fb .select_box button::after{
   content:"▼";
+  position:absolute;
+  right:20px; top:50%;
+  transform:translateY(-50%);
   font-size:1rem;
   color:#fff;
-  position:absolute;
-  right:20px;
-  top:50%;
-  transform:translateY(-50%);
 }
 
 .fb .select_box button.on::after{
@@ -291,8 +329,8 @@ footer{
 }
 
 .fb .select_box ul{
-  display:none;
   position:absolute;
+  display:none;
   bottom:35px;
   width:100%;
   background-color:#555;
@@ -304,6 +342,7 @@ footer{
 }
 
 .fb .select_box a{
+  font-family:"spoqaR";
   color:#fff;
 }
 /*fb===============================*/

@@ -1321,6 +1321,36 @@ font-family:"headM";
 .txtloginBtn a:hover{
     color:#54aafd;
 }
+
+/*동향/뉴스-------------------------*/
+.wz_num1{
+    width:100%;
+    border-top:2px solid #000;
+}
+
+.wz_num1 td{
+    padding:20px 0;
+    border-bottom:1px solid #ccc;
+}
+
+.wz_nb div{
+    margin:0px auto;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    background-color:#54AAFD;
+    border-radius:0.5rem;
+    text-align:center;
+}
+
+.wz_ib div{
+    width:300px;
+    height:180px;
+    background-color:#EAEAEA;
+    border-radius:0.5rem;
+}
+/*동향/뉴스-------------------------*/
 /*sub▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 /*sub▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 

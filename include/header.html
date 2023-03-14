@@ -75,7 +75,13 @@
                             </ul>
                         </li>
                         <li><a href="#">교육 프로그램</a></li>
-                        <li><a href="#">바이오사업</a></li>
+                        <li>
+                            <a href="#">바이오사업</a>
+                            <ul class="ssub_lnb">
+                                <li><a href="#">-창업프로그램</a></li>
+                                <li><a href="#">-투자/자본 정보</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -141,19 +147,33 @@
          // Lnb Search Icon 클릭 시 검색 박스 슬라이드 업다운
         $(`.search_menu_icon button`).on(`click`,function(){
             $(`.layer_search`).addClass(`on`)
+            $(`body`).addClass(`lock`);
         })
 
         $(`.search_close_btn`).on(`click`,function(){
             $(`.layer_search`).removeClass(`on`)
+            $(`body`).removeClass(`lock`);
         })
 
         // full_menu icon 클릭 시 full_menu 슬라이드 업다운
         $(`.full_menu_icon button`).on('click',function(){
-            $(`.full_menu`).slideDown()
+            $(`.full_menu`).slideDown();
         })
 
         $(`.full_title button`).on('click',function(){
             $(`.full_menu`).slideUp()
+        })
+
+
+
+
+        // full_menu icon 클릭 시 body에 스크롤 제거
+        $(`.full_menu_icon button`).on('click',function(){
+            $(`body`).addClass(`lock`);
+        })
+        // full_menu close button 클릭 시 body에 스크롤 생성
+        $(`.full_title button`).on('click',function(){
+            $(`body`).removeClass(`lock`);
         })
     })
 </script>

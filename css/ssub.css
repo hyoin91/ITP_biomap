@@ -1,0 +1,62 @@
+/*동향/뉴스-------------------------*/
+.wt_gallery{
+  width:100%;
+  border-top:2px solid #000;
+}
+
+.wt_number1{
+  padding:20px 0;
+  display:flex;
+  border-bottom:1px solid #ccc;
+}
+
+.wz_textbox1 .wz_ibox div{
+  width:300px;
+  height:180px;
+  background-color:#EAEAEA;
+  border-radius:0.5rem;
+}
+
+.wz_textbox1 .wz_tb_wrap{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.wz_textbox1 .wz_tt > ul{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.wz_textbox1 .wz_tt li:nth-of-type(1){
+  padding:0.3rem 0.5rem;
+  color:#fff;
+  background-color:#AAD5FF;
+  border-radius:0.5rem;
+}
+
+.wz_textbox1 .wz_tt li:nth-of-type(2){
+  flex:1;
+  margin-left:1rem;
+}
+
+.wz_textbox1 .wz_tt li:nth-of-type(3) button{
+  margin-right:1rem;
+  width:16px;
+  height:18px;
+  background:url(/img/sub/main_image/wz_download.png) no-repeat center;
+  background-size:cover;
+  background-color:transparent;
+  border:0;
+}
+
+.wz_textbox1 .wz_tb{
+  display:flex;
+  justify-content:space-between;
+}
+
+.wz_textbox1 .wz_tb ul{
+    display:flex;
+}
+/*동향/뉴스-------------------------*/

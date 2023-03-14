@@ -762,7 +762,8 @@ td.done{
 .cmTbDtl tbody tr.Bd_info td:last-child:before{
     background: url(../img/sub/ic_calendar.svg) no-repeat;
     content: "";
-1    
+    width: 19px;
+    
     height: 19px;
     background-size: contain;
     vertical-align: middle;

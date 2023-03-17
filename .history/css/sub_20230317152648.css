@@ -1684,35 +1684,35 @@ font-family:"headM";
     gap:5px;
 }
 /*회원가입,로그인▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
-/*동향/뉴스-------------------------*/
-.wz_num1{
-    width:100%;
-    border-top:2px solid #000;
+/*동향/뉴스----------*/
+. wz_num1 {
+    너비 : 100 % ;
+    테두리 상단 : 2 픽셀 솔리드 # 000 ;
 }
 
-.wz_num1 td{
-    padding:20px 0;
-    border-bottom:1px solid #ccc;
+. wz_num1  td {
+    패딩 : 20 픽셀  0 ;
+    border- bottom : 1px 솔리드 # ccc ;
 }
 
-.wz_nb div{
-    margin:0px auto;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    color:#fff;
-    background-color:#54AAFD;
-    border-radius:0.5rem;
-    text-align:center;
+. wz_nb  사업부 {
+    여백 : 0px 자동 ;
+    너비 : 40 픽셀 ;
+    높이 : 40 픽셀 ;
+    선 높이 : 40px ;
+    색상 : # fff ;
+    배경색 : # 54AAFD ;
+    경계 반경 : 0.5 rem ;
+    텍스트 정렬 : 가운데;
 }
 
-.wz_ib div{
-    width:300px;
-    height:180px;
-    background-color:#EAEAEA;
-    border-radius:0.5rem;
+. wz_ib  사업부 {
+    너비 : 300 픽셀 ;
+    높이 : 180 픽셀 ;
+    배경색 : # EAEAEA ;
+    경계 반경 : 0.5 rem ;
 }
-/*동향/뉴스-------------------------*/
+/*동향/뉴스----------*/
 /*sub▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 /*sub▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 

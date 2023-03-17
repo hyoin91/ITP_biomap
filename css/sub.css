@@ -110,6 +110,21 @@ img{
     position: absolute; 
     transform: rotate(10deg);
 }
+.Map_icoBox{
+    width: 252px;
+    height: 166px;
+    top: -50px;
+    right: 14px;
+    position: absolute;  
+}
+.Map_icoBox:after{
+    position: absolute;
+    width:100%;
+    height:100%;
+    content: "";
+    background: url(../img/sub/3D_map.svg) no-repeat 100% 0;
+    background-size:contain;
+}
 .bioQna_icBox:after{
     position: absolute;
     width:100%;
@@ -196,23 +211,32 @@ img{
     transform: rotate(90deg) scaleY(1.8);
 }
 /*첨부파일*/
-.ic_ppt{   
+.ic_File{
+    background: url(../img/sub/AT_ppt.svg) no-repeat left;
+    background-size: contain;
+} 
+.ic_ppt,
+.ic_File.ic_ppt{   
     background: url(../img/sub/AT_ppt.svg) no-repeat left;
     background-size: contain;
 }
-.ic_excel{   
+.ic_excel,
+.ic_File.ic_excel{   
     background: url(../img/sub/AT_excel.svg) no-repeat left;
     background-size: contain;
 }  
-.ic_pdf{   
+.ic_pdf,
+.ic_File.ic_pdf{   
     background: url(../img/sub/AT_pdf.svg) no-repeat left;
     background-size: contain;
 }  
-.ic_word{   
+.ic_word,
+.ic_File.ic_word{   
     background: url(../img/sub/AT_word.svg) no-repeat left;
     background-size: contain;
 }     
-.ic_hangle{
+.ic_hangle,
+.ic_File.ic_hangle{
     background: url(../img/sub/AT_hangle.svg) no-repeat left;
     background-size: contain;
 }
@@ -242,8 +266,6 @@ img{
 /*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 /*02.영역-------------------------*/
 .subWrap{
-    font-family:"sans-serif";
-    font-weight: 200;
     font-size: 16px;
 }
 .conWrap{
@@ -270,6 +292,66 @@ img{
 
 
 /*03.버튼-------------------------*/
+/*라디오버튼*/
+.rdoWrap {
+    position: relative;
+}
+
+.rdoWrap label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1.15rem;
+}
+
+.rdoWrap label:hover {
+    cursor: pointer;
+}
+
+.rdoWrap label span {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.rdoWrap>*::before,
+.rdoWrap>*::after {
+    box-sizing: border-box;
+}
+
+.rdoWrap [type="radio"] {
+    vertical-align: middle;
+    appearance: none;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: border 0.1s ease-in-out;
+}
+
+.rdoWrap [type="radio"]:checked {
+    border: 0.4em solid #0075ff;
+}
+
+.rdoWrap [type="radio"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) dotted #0075ff;
+}
+
+.rdoWrap [type="radio"]:hover {
+    box-shadow: 0 0 0 max(3px, 0.2em) lightgray;
+}
+
+.rdoWrap [type="radio"]:disabled {
+    background-color: lightgray;
+    box-shadow: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.rdoWrap [type="radio"]:disabled+span {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+/*라디오버튼 끝*/
 .ckWrap{
     display:inline-flex;
     align-items: center;
@@ -602,9 +684,14 @@ button{
     margin-top:1.25rem;
     font-size: 16px;
     display: flex;
+    flex-direction: column;
     position: relative;
     background: #f9f9f9;
-} 
+    gap:1.5rem;
+}
+.search{
+    display: flex;
+}
 .searchWrap .combo{
     width:26%;
     margin-right:10px;  
@@ -799,6 +886,34 @@ td.done{
     width: 18px;
     height: 18px;
     display: inline-block;
+}
+.clear {
+    color: #000;
+    margin-left: 0.5rem;
+    width: 18px;
+    height: 17px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #f1f1f1;
+    border: 1.5px solid #ccc;
+}
+
+.fileBox .fileDrop {
+    height: 70px;
+    border: 0.5px solid #ccc;
+    display: block;
+    padding: 0.5rem;
+}
+.fileDrop .fileName {
+    font-size: 0.9rem;
+}
+.fileDrop .fileSize {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
 }
 .cmTb.cmTbDtl tbody tr:nth-last-of-type(1):hover,
 .cmTb.cmTbDtl tbody tr:nth-last-of-type(2):hover{

@@ -309,12 +309,9 @@ function login(val) {
   const strpw = document.getElementById('userPW');
   const strpwChk = document.getElementById('userChk');
 
-
   let $id = /^(?=.*[0-9]+)[a-zA-Z][a-zA-Z0-9]{5,20}$/g
   let $pw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{10,20}$/ //최소한개숫자,특문포함
   let $Exp = /\s/g;
-
-
     if(strid.value == '' || strpw.value == '') {
         alert('아이디/비밀번호를 입력해주세요');
         return false;
@@ -333,7 +330,6 @@ function login(val) {
         alert('아이디/비밀번호를 입력해주세요');
         return false;
         } 
-
 
     switch (val) {
         case 'loginE'://로그인

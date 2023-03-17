@@ -1668,8 +1668,15 @@ font-family:"headM";
 .txtloginBtn a:hover{
     color:#54aafd;
 }
-
 /*기관*/
+.EWrap button{
+    
+    width:100px;
+    height:140px;
+    border: none;
+    padding: 0 0.5rem;
+    flex: none;
+}
 .Coformbox{
  display: flex;
  flex-direction: column;
@@ -1681,7 +1688,7 @@ font-family:"headM";
 }
 .ECertiWrap{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap:5px;
 }
 /*회원가입,로그인▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/

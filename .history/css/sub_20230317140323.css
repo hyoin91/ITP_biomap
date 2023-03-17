@@ -1668,8 +1668,13 @@ font-family:"headM";
 .txtloginBtn a:hover{
     color:#54aafd;
 }
-
 /*기관*/
+.EWrap button{
+    height: 45px;
+    border: none;
+    padding: 0 0.5rem;
+    flex: none;
+}
 .Coformbox{
  display: flex;
  flex-direction: column;

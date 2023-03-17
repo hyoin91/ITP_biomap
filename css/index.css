@@ -1,7 +1,4 @@
 @charset "UTF-8";
-a:focus:not(:focus-visible) {
-  outline: 0;
-}
 /*index.html 공통css===============================*/
 .cm_title{
   display:flex;

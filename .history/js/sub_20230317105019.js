@@ -118,6 +118,63 @@ $(document).ready(function () {
             });
         }
     });
+//상단 메인 배너 슬라이더
+    $('.joinSlider > .page-btns > .page-btn').click(function () {
+        const $clicked = $(this);
+        const $slider = $(this).closest('.joinSlider');
+        const index = $(this).index();
+        const isLeft = index == 0;
+        const $current = $slider.find('.slides > .bn.active');
+        let $post;
+
+        if (isLeft) {
+            $post = $current.prev();
+        }
+        else {
+            $post = $current.next();
+        }
+        if ($post.length == 0) {
+            if (isLeft) {
+                $post = $slider.find('.slides > .bn:last-child');
+            }
+            else {
+                $post = $slider.find('.slides > .bn:first-child');
+            }
+        }
+
+        $current.removeClass('active');
+        $post.addClass('active');
+
+        updateCurrentPageNumber();
+    });
+
+    setInterval(function () {
+        $('.joinSlider > .page-btns > .next-btn').click();
+    }, 3000);
+
+    //페이지 번호 지정
+    function pageNumber__Init() {
+        const totalSlideNo = $('.joinSlider > .slides > .bn').length;
+
+        $('.joinSlider').attr('data-slide-total', totalSlideNo);
+
+        $('.joinSlider > .slides > .bn').each(function (index, node) {
+            $(node).attr('data-slide-no', index + 1);
+        });
+    };
+
+    pageNumber__Init();
+
+    // 페이지 번호 변경
+    function updateCurrentPageNumber() {
+        const totalSlideNo = $('.joinSlider').attr('data-slide-total');
+        const currentSlideNo = $('.joinSlider > .slides > .bn.active').attr('data-slide-no');
+
+        $('.joinSlider > .page-btns > .page-no > .total-slide-no').html(totalSlideNo);
+        $('.joinSlider > .page-btns > .page-no > .current-slide-no').html(currentSlideNo);
+    };
+
+    updateCurrentPageNumber();
 
 });//--------------////////////////jqueryWrapper
 // 문의하기
@@ -214,18 +271,46 @@ function SnsPop(val) {
             break;
     }
 }
-//로그인 경고창
-function login() {
+
+//로그인,회원가입 경고창
+// function login(){
+//   const strid = document.getElementById('userID');
+//   const strpw = document.getElementById('userPW');
+//   const strpwChk = document.getElementById('userChk');
+
+//   const $id = /^[a-zA-Z0-9]{6,10}$/
+//   const $pw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{10,}$/ //최소한개숫자,특문포함
+
+//   if(strid.value == '' || strpw.value == '' || strid.value == null || strpwChk.value == '') {
+//       alert('아이디/비밀번호를 입력해주세요');
+//       return false;
+//   } 
+//   if (strid.value.search($id)) {
+//       alert('아이디형식이 올바르지 않습니다.');
+//       strid.focus();
+//       return false;
+//   }
+//   if (strpw.value.search($pw)) {
+//     alert('비밀번호 형식이 올바르지 않습니다.');
+//     strpw.focus();
+//     return false;
+//   }
+//   if(strpw.value != strpwChk.value){
+//     alert('비밀번호 확인이 일치하지 않습니다.');
+//     return false;
+//   }
+
+
+
+//   login(location.href = '../index.html');
+// }
+function login(val) {
   const strid = document.getElementById('userID');
   const strpw = document.getElementById('userPW');
+  const strpwChk = document.getElementById('userChk');
 
-<<<<<<< Updated upstream
-  const $id = /^[a-zA-Z0-9]{4,12}$/
-  const $pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\w)).{6,20}$/ //최소한개숫자,특문포함
-=======
   let $id = /^(?=.*[0-9]+)[a-zA-Z][a-zA-Z0-9]{5,20}$/g
   let $pw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{10,20}$/ //최소한개숫자,특문포함
-  let $Exp = /\s/g;
     if(strid.value == '' || strpw.value == '') {
         alert('아이디/비밀번호를 입력해주세요');
         return false;
@@ -244,22 +329,30 @@ function login() {
         alert('아이디/비밀번호를 입력해주세요');
         return false;
         } 
->>>>>>> Stashed changes
 
-  if (strid.value == '' || strpw.value == '' || strid.value == null) {
-      alert('아이디/비밀번호를 입력해주세요');
-      return false;
-  } if (strid.value.search($id)) {
-      alert('아이디형식이 올바르지 않습니다.');
-      strid.focus();
-      return false;
-  }
-  if (strpw.value.search($pw)) {
-      alert('비밀번호 형식이 올바르지 않습니다.');
-      strpw.focus();
-      return false;
-  }
-  login(location.href = '../index.html');
+    switch (val) {
+        case 'loginE'://로그인
+            login(location.href = '../index.html');
+            break;
+        case 'joinper'://회원가입
+            if(strpw.value != strpwChk.value){
+                alert('비밀번호 확인이 일치하지 않습니다.');
+                return false;
+            }
+            login(
+                alert('아이바이오맵 회원가입을 완료하였습니다.'),
+                location.href = '../index.html'
+              );
+            break;
+        case 'joinCo':
+            Kakao.Story.share({
+                url: pageUrl,
+                text: sendText
+            });
+            break;
+        default:
+            break;
+    }
 }
 //이미지전환
 let n = 0;

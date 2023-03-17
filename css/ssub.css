@@ -4,80 +4,77 @@
   border-top:2px solid #000;
 }
 
-.wZ1{
+.wZ{
   padding:20px 0 20px 20px;
-  height:180px;
   display:flex;
   align-items:center;
   gap:2rem;
   border-bottom:1px solid #ccc;
 }
 
-.wZ1 > li:nth-of-type(1){
+.wZ > li:nth-of-type(1){
   flex-shrink:0;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  text-align:center;
-  color:#fff;
-  background-color:#54AAFD;
+  width:250px;
+  height:150px;
+  overflow:hidden;
   border-radius:0.5rem;
 }
 
-.wZ1 > li:nth-of-type(2){
-  flex-shrink:0;
-  width:300px;
-  height:180px;
-  background-color:#EAEAEA;
-  border-radius:0.5rem;
+.wZ > li:nth-of-type(1) img{
+  width:100%;
 }
 
-.wZ1 > li:nth-of-type(3){
-  height:100%;
+.wZ > li:nth-of-type(2){
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   gap:1rem;
 }
 
-.wZ1 .wZ_top{
+.wZ .wZ_top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:1rem
+  gap:0.4rem
 }
 
-.wZ1 .wZ_top p{
-  width:50px;
+.wZ .wZ_top p{
+  width:40px;
   height:25px;
   line-height:25px;
   text-align:center;
   color:#fff;
   background-color:#AAD5FF;
-  border-radius:0.5rem;
+  border-radius:0.3rem;
 }
 
-.wZ1 .wZ_top h3{
+.wZ .wZ_top h3{
   flex:1;
 }
 
-.wZ1 .wZ_top button{
-  margin-right:1rem;
-  width:16px;
-  height:18px;
-  background:url(/img/sub/wz_image/wz_download.png) center no-repeat;
-  background-size:cover;
-  background-color:transparent;
+.wZ .wZ_top h3 a{
+  color:#000;
+}
+
+.wZ_top span{
+  margin-left:0.1rem;
+  color:#6AA8F3;
+}
+
+.wZ_top .wz_down{
+  width:20px;
+  height:20px;
+  background:url(/img/sub/wz_image/wz_download.png) no-repeat center;
+  background-size:contain;
   border:0;
-} 
+  background-color:transparent
+}
 
 .wZ_middle{
   flex:1;
 }
 
 .wZ_middle p{
-  -webkit-line-clamp:3;
-  -webkit-box-orient: vertical;
   height:63px;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -134,10 +131,5 @@
   height:14px;
   display:inline-block;
   background-color:#a3a3a3;
-}
-
-.wZ_bottom span{
-  margin-left:0.1rem;
-  color:#6AA8F3;
 }
 /*동향/뉴스-------------------------*/

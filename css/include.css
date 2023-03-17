@@ -94,6 +94,10 @@
 /*gnb===============================*/
 
 /*lnb===============================*/
+.lnb{
+  border-bottom:1px solid #ccc;
+}
+
 .lnb_wrap{
   position:relative;
   margin:0px auto;

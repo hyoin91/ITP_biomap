@@ -10,6 +10,15 @@
   align-items:center;
 }
 
+.total_search_view P{
+  font-size:1rem;
+  font-family:'spoqaR';
+}
+
+.total_search_view span{
+  font-family:'spoqaM';
+}
+
 .total_search_view p:nth-of-type(2){
   margin-left:0.5rem;
   flex:1;
@@ -17,8 +26,9 @@
 
 .total_search_view .num_select{
   width:7rem;
-  font-size:0.8rem;
   border-radius:0.5rem;
+  font-size:0.8rem;
+  font-family:'spoqaR';
 }
 
 .total_search_view span{
@@ -48,6 +58,7 @@
   height:150px;
   overflow:hidden;
   border-radius:0.5rem;
+
 }
 
 .wZ > li:nth-of-type(1) img{
@@ -59,13 +70,15 @@
   flex-direction:column;
   justify-content:space-between;
   gap:1rem;
+  
 }
 
 .wZ_general .wZ_top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:0.4rem
+  gap:0.4rem;
+  font-family:'spoqaB';
 }
 
 .wZ_general .wZ_top p{
@@ -176,6 +189,7 @@
   display:flex;
   justify-content:space-between;
   align-items:center;
+  font-family:'spoqaB';
 }
 
 .wZ_top_title{
@@ -219,3 +233,51 @@
   background-color:#a3a3a3;
 }
 /*바이오 연구시설 웹진게시판-------------------------*/
+/*바이오 서비스 웹진게시판-------------------------*/
+.wZbio_service{
+  width:100%;
+  height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.wZbio_service .wZ_top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.wZbio_service .wZ_top h3 a{
+  color:#000;
+}
+
+.wZbio_service .wZ_top .wz_down{
+  width:20px;
+  height:20px;
+  background:url(/img/sub/wz_image/wz_download.png) no-repeat center;
+  background-size:contain;
+  border:0;
+  background-color:transparent
+}
+
+.wZbio_service .wZ_middle{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.wZbio_service .wZ_bottom{
+  display:flex;
+  align-items:center;
+}
+
+.wZbio_service .wZ_bottom p:nth-of-type(1):after{
+  content:"";
+  margin:0 0.7rem;
+  width:2px;
+  height:14px;
+  display:inline-block;
+  background-color:#a3a3a3;
+}
+/*바이오 서비스 웹진게시판-------------------------*/

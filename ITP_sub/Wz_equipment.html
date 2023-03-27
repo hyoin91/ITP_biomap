@@ -88,14 +88,13 @@
                                 연구자원
                             </a>
                             <div class="optionList">
-
                                 <a class="optionItem">
                                     기관정보(MAP)
                                 </a>
-                                <a class="optionItem">
+                                <a class="optionItem" href="Wz_service.html">
                                     연구자원
                                 </a>
-                                <a class="optionItem">
+                                <a class="optionItem" href="Wz_news.html">
                                     커뮤니티
                                 </a>
                                 <a class="optionItem">
@@ -111,7 +110,7 @@
                                 시설/장비
                             </a>
                             <div class="optionList">
-                                <a class="optionItem" href="/ITP_sub/Wz_service.html">
+                                <a class="label" href="Wz_service.html">
                                     바이오서비스
                                 </a>
                                 <a class="optionItem">
@@ -159,70 +158,173 @@
             <div class="conWrap" id="printWrap">
                 <section class="TitleWrap">
                     <h2>
-                        연구시설
+                        바이오 장비
                     </h2>
 
                     <div class="searchWrap">
                         <div class="searchVS"></div>
                         <div class="Map_icoBox"></div>
-                        <div class="rdoWrap">
-                            <label>
-                                <span>전체</span>
-                                <input type="radio" name="facility" checked>
-                            </label>
-                            <label>
-                                <span>대형장비운영시설</span>
-                                <input type="radio" name="facility">
-                            </label>
-                            <label>
-                                <span>연구장비운영시설</span>
-                                <input type="radio" name="facility">
-                            </label>
-                            <label>
-                                <span>과학시료관리시설</span>
-                                <input type="radio" name="facility">
-                            </label>
-                            <label>
-                                <span> 데이터센터</span>
-                                <input type="radio" name="facility">
-                            </label>
-                            <label>
-                                <span> 관측/측정시설</span>
-                                <input type="radio" name="facility">
-                            </label>
-                        </div>
-                        <div class="search">
-                            <div class="combo selectBox">
-                                <button class="label" id="TextVal">
-                                    ::전체::
-                                </button>
-                                <ul class="optionList">
-                                    <li onclick="statusChange(this)">
-                                        ::전체::
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        시설명
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        기관명
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        주소
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        업종
-                                    </li>
-                                </ul>
-                            </div>
-                            <input type="text" placeholder="검색어를 입력하세요.">
-                            <button class="searchBtn keyColor_BG" onClick="">
+                        <div class="equipment_classification">
+                          <h3>장비 분류</h3>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::대분류::
                             </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::대분류전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                            </ul>
+                          </div>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::중분류::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::중분류전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                            </ul>
+                          </div>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::소분류::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::소분류전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    소분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    소분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    소분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    소분류명
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="location_classification">
+                          <h3>지역별</h3>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::대분류::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::대분류전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    대분류명
+                                </li>
+                            </ul>
+                          </div>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::중분류::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::중분류전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    중분류명
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="operational_status">
+                          <h3>가동상태</h3>
+                          <div class="combo selectBox">
+                            <button class="label" id="TextVal">
+                                ::전체::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    ::전체::
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    하위메뉴
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    하위메뉴
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    하위메뉴
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    하위메뉴
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="model_facility">
+                          <div class="model_name">
+                            <h3>모델명</h3>
+                            <div>
+                              <input type="text" placeholder="검색어를 입력하세요.">
+                              <button class="searchBtn keyColor_BG" onClick="">
+                            </div>
+                          </div>
+
+                          <div class="facility_name">
+                            <h3>기관명</h3>
+                            <div>
+                              <input type="text" placeholder="검색어를 입력하세요.">
+                              <button class="searchBtn keyColor_BG" onClick="">
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <div id="map" style="width:100%;height:650px;background:#ccc"></div>
-
                     <div class="total_search_view">
                         <p>총 <span>3</span>개 시설</p>
                         <p>(<span>1</span> / 3페이지)</p>
@@ -237,69 +339,51 @@
                     <div class="wZine_gallery">
                         <ul class="wZ">
                             <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지1"></a></li>
-                            <li class="wZbio_research">
+                            <li class="wZbio_service">
                                 <div class="wZ_top">
-                                    <div class="wZ_top_title">
-                                        <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
-                                        <div>바이오산업</div>
-                                    </div>
+                                    <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
                                     <button class="wz_down"></button>
                                 </div>
                                 <div class="wZ_middle">
-                                    <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다.
-                                    </p>
+                                    <p><b>분류</b> : 서비스 업종 > 000 > 00000</p>
+                                    <p><b>적용제품군</b> : 세포파쇄기</p>
                                 </div>
                                 <div class="wZ_bottom">
-                                    <p>서울시 금천구</p>
+                                    <p>담당자 : 한상윤</p>
                                     <b>한국전자기술연구원</b>
                                 </div>
                             </li>
                         </ul>
                         <ul class="wZ">
-                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지2"></a></li>
-                            <li class="wZbio_research">
+                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지1"></a></li>
+                            <li class="wZbio_service">
                                 <div class="wZ_top">
-                                    <div class="wZ_top_title">
-                                        <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
-                                        <div>바이오산업</div>
-                                    </div>
+                                    <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
                                     <button class="wz_down"></button>
                                 </div>
                                 <div class="wZ_middle">
-                                    <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다.
-                                    </p>
+                                    <p><b>분류</b> : 서비스 업종 > 000 > 00000</p>
+                                    <p><b>적용제품군</b> : 세포파쇄기</p>
                                 </div>
                                 <div class="wZ_bottom">
-                                    <p>서울시 금천구</p>
+                                    <p>담당자 : 한상윤</p>
                                     <b>한국전자기술연구원</b>
                                 </div>
                             </li>
                         </ul>
                         <ul class="wZ">
-                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
-                            <li class="wZbio_research">
+                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지1"></a></li>
+                            <li class="wZbio_service">
                                 <div class="wZ_top">
-                                    <div class="wZ_top_title">
-                                        <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
-                                        <div>바이오산업</div>
-                                    </div>
+                                    <h3><a href="/ITP_sub/Bd_Dtl.html">바이오산업센터</a></h3>
                                     <button class="wz_down"></button>
                                 </div>
                                 <div class="wZ_middle">
-                                    <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다.
-                                    </p>
+                                    <p><b>분류</b> : 서비스 업종 > 000 > 00000</p>
+                                    <p><b>적용제품군</b> : 세포파쇄기</p>
                                 </div>
                                 <div class="wZ_bottom">
-                                    <p>서울시 금천구</p>
+                                    <p>담당자 : 한상윤</p>
                                     <b>한국전자기술연구원</b>
                                 </div>
                             </li>

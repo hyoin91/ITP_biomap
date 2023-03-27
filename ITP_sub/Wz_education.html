@@ -156,34 +156,36 @@
                         교육프로그램
                     </h2>
                     <div class="searchWrap">
-                        <div class="searchVS"></div>
-                        <div class="noti_icBox"></div>
-                        <div class="combo selectBox">
-                            <button class="label" id="TextVal">
-                                ::전체::
-                            </button>
-                            <ul class="optionList">
-                                <li onclick="statusChange(this)">
+                        <div class="search_sort">
+                            <div class="searchVS"></div>
+                            <div class="noti_icBox"></div>
+                            <div class="combo selectBox">
+                                <button class="label" id="TextVal">
                                     ::전체::
-                                </li>
-                                <li onclick="statusChange(this)">
-                                    제목 + 내용
-                                </li>
-                                <li onclick="statusChange(this)">
-                                    작성자
-                                </li>
-                            </ul>
+                                </button>
+                                <ul class="optionList">
+                                    <li onclick="statusChange(this)">
+                                        ::전체::
+                                    </li>
+                                    <li onclick="statusChange(this)">
+                                        제목 + 내용
+                                    </li>
+                                    <li onclick="statusChange(this)">
+                                        작성자
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="searchBtn keyColor_BG" onClick="">
+                            </button>
                         </div>
-                        <input type="text" placeholder="검색어를 입력하세요.">
-                        <button class="searchBtn keyColor_BG" onClick="">
-                        </button>
                     </div>
                 </section>
                 <section>
                     <div class="wZine_gallery">
                         <ul class="wZ">
                             <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지1"></a></li>
-                            <li>
+                            <li class="wZ_general">
                                 <div class="wZ_top">
                                     <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
                                     <button class="wz_down"></button>
@@ -206,7 +208,7 @@
                         </ul>
                         <ul class="wZ">
                             <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지2"></a></li>
-                            <li>
+                            <li class="wZ_general">
                                 <div class="wZ_top">
                                     <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
                                     <button class="wz_down"></button>
@@ -229,7 +231,7 @@
                         </ul>
                         <ul class="wZ">
                             <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
-                            <li>
+                            <li class="wZ_general">
                                 <div class="wZ_top">
                                     <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
                                     <button class="wz_down"></button>

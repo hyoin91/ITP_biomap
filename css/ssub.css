@@ -281,3 +281,68 @@
   background-color:#a3a3a3;
 }
 /*바이오 서비스 웹진게시판-------------------------*/
+/*바이오 장비 웹진게시판-------------------------*/
+.equipment_classification,
+.location_classification,
+.operational_status{
+  display:flex;
+  align-items:center;
+}
+
+.equipment_classification h3,
+.location_classification h3,
+.operational_status h3
+{
+  width:100px;
+}
+
+.searchWrap .equipment_classification .combo{
+  width:20%;
+}
+
+.equipment_classification .combo>button{
+  height:40px;
+}
+
+.location_classification .combo{
+  width:20%;
+}
+
+.location_classification .combo>button{
+  height:40px;
+}
+
+.model_facility{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+
+.model_name{
+  display:flex;
+  align-items:center;
+}
+
+.model_name h3{
+  width:100px;
+}
+
+.model_name div{
+  display:flex;
+  align-items:center;
+}
+
+.facility_name{
+  display:flex;
+  align-items:center;
+}
+
+.facility_name h3{
+  width:100px;
+}
+
+.facility_name div{
+  display:flex;
+  align-items:center;
+}
+/*바이오 장비 웹진게시판-------------------------*/

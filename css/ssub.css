@@ -81,16 +81,6 @@
   font-family:'spoqaB';
 }
 
-.wZ_general .wZ_top p{
-  width:40px;
-  height:25px;
-  line-height:25px;
-  text-align:center;
-  color:#fff;
-  background-color:#AAD5FF;
-  border-radius:0.3rem;
-}
-
 .wZ_general .wZ_top h3{
   flex:1;
 }
@@ -104,10 +94,19 @@
   color:#6AA8F3;
 }
 
-.wZ_general .wZ_top .wz_down{
+.wz_down{
   width:20px;
   height:20px;
   background:url(/img/sub/wz_image/wz_download.png) no-repeat center;
+  background-size:contain;
+  border:0;
+  background-color:transparent
+}
+
+.wz_clip{
+  width:20px;
+  height:20px;
+  background:url(/img/sub/wz_image/clip_blue.svg) no-repeat center;
   background-size:contain;
   border:0;
   background-color:transparent
@@ -136,7 +135,7 @@
   gap:1.2rem;
 }
 
-.wZ_general .wZ_bottom p:nth-of-type(1)::before{
+.calendar_bicon::before{
   content:"";
   margin-right:0.5rem;
   display:inline-block;
@@ -147,16 +146,7 @@
   transform: translateY(2px);
 }
 
-.wZ_general .wZ_bottom p:nth-of-type(1):after{
-  content:"";
-  margin-left:1rem;
-  width:2px;
-  height:14px;
-  display:inline-block;
-  background-color:#a3a3a3;
-}
-
-.wZ_general .wZ_bottom p:nth-of-type(3)::before{
+.view_bicon::before{
   content:"";
   margin-right:0.5rem;
   display:inline-block;
@@ -167,13 +157,17 @@
   transform: translateY(1px);
 }
 
-.wZ_general .wZ_bottom p:nth-of-type(2):after{
+.wZ_general .wZ_bottom p::after{
   content:"";
   margin-left:1rem;
   width:2px;
   height:14px;
   display:inline-block;
   background-color:#a3a3a3;
+}
+
+.wZ_general .wZ_bottom p:last-child::after{
+  display:none;
 }
 /*기본 웹진게시판-------------------------*/
 
@@ -195,15 +189,15 @@
 .wZ_top_title{
   display:flex;
   align-items:center;
+  gap:0.5rem;
 }
 
 .wZ_top_title div{
-  margin-left:0.5rem;
   background-color:#8abfff;
   color:#fff;
-  padding:0.3rem;
+  padding:0.3rem 0.5rem;
   border-radius:0.3rem;
-  font-size:0.7rem
+  font-size:0.8rem
 }
 
 .wZbio_research .wZ_top a{
@@ -282,67 +276,74 @@
 }
 /*바이오 서비스 웹진게시판-------------------------*/
 /*바이오 장비 웹진게시판-------------------------*/
-.equipment_classification,
-.location_classification,
-.operational_status{
+.searchWrap .equipment_classification,
+.searchWrap .location_classification,
+.searchWrap .operational_status,
+.searchWrap .model_facility_name,
+.searchWrap .full_search,
+.searchWrap .full_button{
   display:flex;
   align-items:center;
 }
 
-.equipment_classification h3,
-.location_classification h3,
-.operational_status h3
-{
-  width:100px;
+.searchWrap h3{
+  width:120px;
+  flex-shrink:0;
 }
 
-.searchWrap .equipment_classification .combo{
-  width:20%;
+.model_facility_name .subkeyBtn2{
+  margin-top:0;
+  width:200px;
+  height:45px;
 }
 
-.equipment_classification .combo>button{
-  height:40px;
+.searchWrap .full_search input{
+  border-right:1px solid #999;
 }
 
-.location_classification .combo{
-  width:20%;
+.full_button{
+  justify-content:end;
 }
 
-.location_classification .combo>button{
-  height:40px;
+.full_button button{
+  margin-top:0;
+} 
+
+.wZ_equipment{
+  width:100%;
+  height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
-.model_facility{
+.wZ_equipment .wZ_top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:'spoqaB';
+}
+
+.wZ_equipment .wZ_top h3 a{
+  color:#000;
+}
+
+.wZ_equipment .wZ_top span{
+  margin-left:0.1rem;
+  color:#6AA8F3;
+}
+
+.wZ_equipment .wZ_bottom{
   display:flex;
   align-items:center;
-  gap:2rem;
 }
 
-.model_name{
-  display:flex;
-  align-items:center;
-}
-
-.model_name h3{
-  width:100px;
-}
-
-.model_name div{
-  display:flex;
-  align-items:center;
-}
-
-.facility_name{
-  display:flex;
-  align-items:center;
-}
-
-.facility_name h3{
-  width:100px;
-}
-
-.facility_name div{
-  display:flex;
-  align-items:center;
+.wZ_equipment .wZ_bottom p:nth-of-type(1):after{
+  content:"";
+  margin:0 0.7rem;
+  width:2px;
+  height:14px;
+  display:inline-block;
+  background-color:#a3a3a3;
 }
 /*바이오 장비 웹진게시판-------------------------*/

@@ -15,12 +15,12 @@
         <nav class="gnb_wrap">
             <div class="weather">
                 <ul class="weahter_top">
-                    <li><a href="#"><img src="/img/sub/main_image/weather1.png" alt="날씨 맑음 이미지"></a></li>
+                    <li><a href="#"><img src="/img/sub/main_image/weather1.svg" alt="날씨 맑음 이미지"></a></li>
                     <li><a href="#">0.7℃</a></li>
                     <li><a href="#"><strong>맑음</strong></a></li>
                 </ul>
                 <ul class="weather_bottom">
-                    <li><a href="#"><img src="/img/sub/main_image/weather2.png" alt="날씨 맑음 이미지"></a></li>
+                    <li><a href="#"><img src="/img/sub/main_image/weather2.svg" alt="날씨 맑음 이미지"></a></li>
                     <li><a href="#">미세먼지<strong>(보통)</strong></a></li>
                     <li><a href="#">초미세먼지<strong>(좋음)</strong></a></li>
                     <li class="no_after"><a href="#">강수량<strong>10mm</strong></a></li>
@@ -126,8 +126,8 @@
     <div class="full_menu">
         <div class="full_wrap">
             <div class="full_top">
-                <h1><a href="#"><img src="" alt="biomap_logo"></a></h1>
-                <button class="full_close_box"><img src="" alt="full_menu_close"></button>
+                <h1 class="full_top_logo"><a href="#"><img src="/img/sub/logo warp2.png" alt="biomap_logo"></a></h1>
+                <button class="full_close_box"></button>
             </div>
             <ul class="full_lnb">
                 <li class="full_slnb">
@@ -226,7 +226,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="search_close_btn"><img src="/img/sub/main_image/search_close.png" alt=""></button>
+            <button class="search_close_btn"><img src="/img/sub/main_image/search_close.svg" alt=""></button>
         </div>
     </div>
 </section>
@@ -265,20 +265,20 @@
 
         // full_menu icon 클릭 시 full_menu 슬라이드 업다운
         $(`.full_menu_icon button`).on('click',function(){
-            $(`.full_menu`).slideDown();
+            $(`.full_menu`).animate({"right":"0%"},600)
         })
 
         $(`.full_close_box`).on('click',function(){
-            $(`.full_menu`).slideUp()
+            $(`.full_menu`).animate({"right":"-90%"},600)
         })
 
-        // full_menu icon 클릭 시 body에 스크롤 제거
-        $(`.full_menu_icon button`).on('click',function(){
-            $(`body`).addClass(`active`);
-        })
-        // full_menu close button 클릭 시 body에 스크롤 생성
-        $(`.full_close_box`).on('click',function(){
-            $(`body`).removeClass(`active`);
-        })
+        // // full_menu icon 클릭 시 body에 스크롤 제거
+        // $(`.full_menu_icon button`).on('click',function(){
+        //     $(`body`).addClass(`active`);
+        // })
+        // // full_menu close button 클릭 시 body에 스크롤 생성
+        // $(`.full_close_box`).on('click',function(){
+        //     $(`body`).removeClass(`active`);
+        // })
     })
 </script>

@@ -815,7 +815,7 @@ footer{
   .full_slnb > a{
     position:relative;
 
-    font-size:1.4rem;
+    font-size:1.2rem;
     font-family:"spoqaM";
   }
 
@@ -842,7 +842,9 @@ footer{
   }
 
   .full_sslnb{
+    margin-top:1.3rem;
     flex-direction:column;
+    display:none;
   }
 
   .most_lnb_wrap{

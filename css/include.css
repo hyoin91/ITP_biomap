@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*header===============================*/
 /*전체메뉴===============================*/
 body.active{
@@ -591,8 +592,365 @@ footer{
 }
 
 .fb .select_box a{
+  display:block;
+  width:100%;
+  height:100%;
+
   font-family:"spoqaR";
   color:#fff;
 }
 /*fb===============================*/
 /*footer===============================*/
+
+/*header & footer 반응형===============================*/
+@media screen and (max-width:1450px) {
+  /*full_menu===============================*/
+  .full_slnb > a{
+    width:160px;
+    font-size:1.4rem;
+  }
+
+  .full_sslnb{
+    gap:1.5rem;
+  }
+
+  .full_sslnb a{
+    font-size:1.2rem;
+  }
+
+  .full_most_lnb{
+    margin-top:1rem;
+  }
+
+  .full_most_lnb a{
+    font-size:1rem;
+  }
+  /*full_menu===============================*/
+}
+
+@media screen and (max-width:1400px) {
+  /*header lnb&gnb===============================*/
+  .gnb_wrap{
+    max-width:90%;
+    width:90%;
+    margin:0px auto;
+    padding:0.4rem 0;
+  
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .lnb_wrap{
+    position:relative;
+    margin:0px auto;
+    max-width:90%;
+    width:90%;
+    height:100px;
+    display:flex;
+    align-items:center;
+  }
+  /*header lnb&gnb===============================*/
+
+  /*footer===============================*/
+  .ft_wrap{
+    max-width:90%;
+    width:90%;
+    margin:0px auto;
+    padding:2rem 0;
+  }
+  /*footer===============================*/
+}
+
+@media screen and (max-width:1200px) {
+  /*header lnb&gnb===============================*/
+  .lnb_wrap > ul:nth-of-type(1) > li > a{
+    font-size:1rem;
+  }
+  /*header lnb&gnb===============================*/
+}
+
+@media screen and (max-width:1150px) {
+  /*full_menu===============================*/
+  .full_slnb > a{
+    font-size:1.2rem;
+    width:130px;
+  }
+
+  .full_sslnb{
+    margin-top:1.8rem;
+  }
+
+  .full_sslnb a{
+    font-size:1.1rem;
+  }
+
+  .full_most_lnb a{
+    font-size:1rem;
+  }
+  /*full_menu===============================*/
+}
+
+@media screen and (max-width:1100px) {
+  /*header lnb&gnb===============================*/
+  .lnb_wrap > ul:nth-of-type(1) > li > a{
+    font-size:1rem;
+  }
+
+  .lnb.on .sub_lnb{
+    gap:1.1rem;
+  }
+
+  .sub_lnb > li > a{
+    font-size:0.95rem;
+  }
+  /*header lnb&gnb===============================*/
+}
+
+@media screen and (max-width:1000px) {
+  /*header lnb&gnb===============================*/
+  .gnb_text{
+    gap:1rem;
+  }
+
+  .gnb_text li a{
+    font-size:0.9rem;
+  }
+
+  .sub_lnb > li > a{
+    font-size:0.8rem;
+  }
+  /*header lnb&gnb===============================*/
+
+  /*full_menu===============================*/
+  .full_slnb > a{
+    width:100%;
+  }
+  /*full_menu===============================*/
+}
+
+@media screen and (max-width:900px) {
+  /*header lnb&gnb===============================*/
+  .weather{
+    gap:0.8rem;
+  }
+  /*header lnb&gnb===============================*/
+}
+
+@media screen and (max-width:860px) {
+  /*header lnb&gnb===============================*/
+  .weather{
+    display:none;
+  }
+
+  .gnb_wrap{
+    justify-content:end;
+  }
+
+  .lnb_wrap{
+    justify-content:space-between;
+  }
+
+  .lnb_wrap > ul:nth-of-type(1){
+    flex:0;
+  }
+
+  .lnb_wrap > ul:nth-of-type(1) > li > a{
+    display:none;
+  }
+
+  .lnb.on .sub_lnb{
+    display:none;
+  }
+
+  .lnb.on::after{
+    display:none;
+  }
+  /*header lnb&gnb===============================*/
+
+  /*footer===============================*/
+  .ft{
+    gap:1rem;
+    font-size:0.9rem;
+  }
+
+  .ft li::after{
+    height:12px;
+  }
+
+  .fm li{
+    font-size:0.9rem
+  }
+
+  .fm strong{
+    font-size:0.9rem;
+  }
+
+  .fb div:nth-of-type(1){
+    font-size:0.8rem;
+  }
+
+  .fb .select_box{
+    font-size:0.9rem;
+    width:150px;
+  }
+
+  .fb .select_box button{
+    padding:0.4rem 0.8rem;
+  }
+
+  .fb .select_box button::after{
+    font-size:0.7rem;
+  }
+  /*footer===============================*/
+}
+
+@media screen and (max-width: 800px) {
+  /*full_menu===============================*/
+  .full_top{
+    padding-top:1.2rem;
+  }
+
+  .full_slnb > a{
+    position:relative;
+
+    font-size:1.4rem;
+    font-family:"spoqaM";
+  }
+
+  .full_slnb > a::after{
+    position:absolute;
+    right:2%; top:40%;
+    transform:translateY(-50%);
+
+    width:18px;
+    height:18px;
+    content:"";
+    background:url(/img/sub/main_image/allow_under_white.svg) center no-repeat;
+    background-size:cover;
+  }
+
+  .full_slnb.on a::after{
+    transform:rotate(180deg);
+  }
+
+  .full_lnb{
+    padding-bottom:3rem;
+    flex-direction:column;
+    gap:3rem;
+  }
+
+  .full_sslnb{
+    flex-direction:column;
+  }
+
+  .most_lnb_wrap{
+    display:flex;
+  }
+
+  .most_lnb_wrap > a{
+    width:120px;
+  }
+
+  .full_most_lnb{
+    margin-top:0;
+    flex-direction:row;
+  }
+  /*full_menu===============================*/
+}
+
+@media screen and (max-width: 750px) {
+  /*footer===============================*/
+  .ft_wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .fm{
+    margin-top:1.2rem;
+  }
+
+  .fb{
+    margin-top:1.2rem;
+    flex-direction:column-reverse;
+  }
+
+  .fb .select_box{
+    width:100%;
+  }
+
+  .fb div:nth-of-type(1){
+    margin-top:1.2rem;
+    text-align:center;
+  }
+
+  .fb .select_box{
+    width:280px;
+  }
+  /*footer===============================*/
+}
+
+@media screen and (max-width: 540px) {
+  /*footer===============================*/
+  .ft{
+    width:100%;
+
+    flex-direction:column;
+    gap:0.5rem;
+
+    text-align:center;
+  }
+
+  .ft li::after{
+    display:none;
+  }
+
+  .fm{
+    flex-direction:column;
+    text-align:center;
+
+    gap:0.5rem;
+  }
+  /*footer===============================*/
+}
+
+@media screen and (max-width: 500px) {
+  /*header lnb&gnb===============================*/
+  .gnb_text li:nth-child(2)::after{
+    display:none;
+  }
+
+  .gnb_blind{
+    display:none;
+  }
+  /*header lnb&gnb===============================*/
+
+  /*full_menu===============================*/
+  .full_top{
+    padding-bottom:1.8rem;
+  }
+
+  .full_top_logo img{
+    width:90%;
+  }
+
+  .full_slnb > a{
+    font-size:1.2rem;
+  }
+
+  .full_sslnb > li > a{
+    font-size:1.05rem;
+  }
+
+  .most_lnb_wrap > a{
+    width:110px;
+  }
+
+  .full_most_lnb{
+    flex-direction:column;
+  }
+  /*full_menu===============================*/
+}
+/*header & footer 반응형===============================*/

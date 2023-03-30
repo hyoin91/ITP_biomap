@@ -34,7 +34,10 @@
     <!--script==========================================================================================-->
     <script>
         $(document).ready(function(){
-
+            $(".best_k li").on("mousemove",function(){
+                $(".best_k li").removeClass("on")
+                $(this).addClass("on")
+            });
         })
     </script>
 </head>
@@ -108,24 +111,30 @@
     <!--INCLUED========================================-->
     <header data-include="include/header.html"></header>
     <!--INCLUED========================================-->
-    <button class="call_Inquiry">
-        <a href="#">
-            <div>1:1 문의 <br>연락</div>
-            <div class="call_img"><img src="/img/sub/main_image/call_i.png"></div>
-        </a>
-    </button>
+    <div class="inquiry">
+        <div class="inquiry_circle">
+            <a href="#">
+                <img src="/img/sub/main_image/call_i.svg" alt="1:1문의 이미지">
+                <p>1:1문의</p>
+            </a>
+        </div>
+    </div>
 
     <div class="qr_code">
-        <strong>Scan Me</strong>
-        <div><img src="/img/sub/main_image/double right.png" alt="Scan Me 화살표 아이콘"></div>
-        <ul>
-            <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="안드로이드 전용 QR코드"></a></button></li>
-            <li>Android</li>
-        </ul>
-        <ul>
-            <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="아이폰 전용 QR코드"></a></button></li>
-            <li>Iphone</li>
-        </ul>
+        <div class="qr_text">
+            <strong>Scan Me</strong>
+            <div><img src="/img/sub/main_image/under_double_allow.svg" alt="Scan Me 화살표 아이콘"></div>
+        </div>
+        <div class="qr_info">
+            <ul>
+                <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="안드로이드 전용 QR코드"></a></button></li>
+                <li>Android</li>
+            </ul>
+            <ul>
+                <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="아이폰 전용 QR코드"></a></button></li>
+                <li>Iphone</li>
+            </ul>
+        </div>
     </div>
 
     <div class="visual">

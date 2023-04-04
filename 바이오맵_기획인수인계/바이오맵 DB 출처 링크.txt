@@ -1,0 +1,13 @@
+연구자원_서비스
+https://www.itube.or.kr/aplct/pckg/normalServiceList.do
+http://bioitp.or.kr/
+
+연구자원_기술
+https://www.skecoplant.com/contents/technology?menuCode=M4000
+https://www.ibric.org/hanbitsa/treatise_index.php?ttype=2
+https://www.kimm.re.kr/sub010902
+https://seoul.rnbd.kr/client/c041000/c041000_02.jsp
+
+연구자원_시설/장비
+https://www.itube.or.kr/aplctmain/mainIndex.do
+https://www.zeus.go.kr/main

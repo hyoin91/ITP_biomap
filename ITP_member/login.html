@@ -71,7 +71,7 @@
             </section>
             <!--로그인========================================-->
             <section class="login_form_Wrap">
-                <div class="tabBtnWrap">
+                <div class="tabBtnWrap TbtnWrap">
                     <button data-tab="tab1" class="on">
                         개인회원
                     </button>
@@ -79,16 +79,22 @@
                         기관회원
                     </button>
                 </div>
-                <div class="tabConWrap">
-                    <div id="tab1" class="userPsbox on">
+                <div class="tabConWrap TconWrap">
+                    <div class="userPsbox tab1 on">
                         <h1 class="logoWrap">
                             <a href="../index.html">
 
                             </a>
                         </h1>
-                        <div class="userForm">
-                            <input id="userID" type="text" placeholder="아이디 입력">
-                            <input id="userPW" type="password" placeholder="비밀번호 입력">
+                        <div class="form userForm">
+                            <label>
+                                <span style="display:none;">아이디</span>
+                                <input id="userID" type="text" placeholder="아이디 입력" value="">
+                            </label>
+                            <label>
+                                <span style="display:none;">비밀번호</span>
+                                <input id="userPW" type="password" placeholder="비밀번호 입력">
+                            </label>
                             <label>
                                 로그인상태유지
                                 <input type="checkbox">
@@ -120,8 +126,26 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab2">
-                        test
+                    <div class="userPsbox tab2">
+                        <h1 class="logoWrap">
+                            <a href="../index.html">
+
+                            </a>
+                        </h1>
+                        <div class="userForm">
+                            <input id="userBID" type="text" placeholder="아이디 입력" value="">
+                            <input id="userBPW" type="password" placeholder="비밀번호 입력">
+                            <label>
+                                로그인상태유지
+                                <input type="checkbox">
+                            </label>
+                            <button class="keyBtn" onClick="login('loginB')">
+                                로그인
+                            </button>
+                            <a>
+                                <strong>아이디 비밀번호</strong>를 잊으셨나요?
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <a class="joinBtn" href="join.html">

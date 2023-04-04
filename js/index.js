@@ -398,24 +398,29 @@ $(document).ready(function () {
   });
 
   // 커뮤니티 Tab 박스 on 클릭 이벤트
-  $(".cm_k > li").on("click",function(){
-      const numc = $(".cm_k > li").index($(this));
+  $(`.cm_k > li`).on('click',function(){
+      const numc = $(`.cm_k > li`).index($(this));
 
-      $(".cm_k > li").removeClass("on");
-      $(".cm_t > li").removeClass("on");
+      $(`.cm_k > li`).removeClass(`on`);
+      $(`.cm_t > li`).removeClass(`on`);
 
-      $(".cm_k > li").eq(numc).addClass("on");
-      $(".cm_t > li").eq(numc).addClass("on");
-  });
+      $(`.cm_k > li`).eq(numc).addClass(`on`);
+      $(`.cm_t > li`).eq(numc).addClass(`on`);
+  })
 
   // 바이오 코디네이션 Tab 박스 on 클릭 이벤트
-  $(".bioc_k > li").on("click",function(){
-      const numb = $(".bioc_k > li").index($(this));
+  $(`.bioc_k > li`).on(`click`,function(){
+      const numb = $(`.bioc_k > li`).index($(this));
 
-      $(".bioc_k > li").removeClass("on");
-      $(".bioc_t > li").removeClass("on");
+      $(`.bioc_k > li`).removeClass(`on`);
+      $(`.bioc_t > li`).removeClass(`on`);
 
-      $(".bioc_k > li").eq(numb).addClass("on");
-      $(".bioc_t > li").eq(numb).addClass("on");
-  });
+      $(`.bioc_k > li`).eq(numb).addClass(`on`);
+      $(`.bioc_t > li`).eq(numb).addClass(`on`);
+  })
+
+  // sns 이벤트
+  $(`.sns_btn`).on('click',function(){
+    $(`.sns`).toggleClass(`on`)
+  })
 });

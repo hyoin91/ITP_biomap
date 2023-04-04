@@ -159,7 +159,7 @@ select{
   text-indent: 7px;
   height:45px;
   font-size: 1rem;
-  border:0.5px solid #ccc;
+  border:0.5px solid #999;
   border-radius: 0px;
 }
 input[type='text'],
@@ -327,6 +327,11 @@ input[type="radio"]:checked:after {
   src: url('/fonts/spoqahan/SpoqaHanSansNeo-Thin.ttf') format('TrueType');
 }
 /*fonts===============================*/
-@media screen and (max-width:px) {
-
+@media screen and (max-width:1300px) {
+/*basic===============================*/
+/*class===============================*/
+/*영역관련===============================*/
+/*텍스트관련===============================*/
+/*인풋관련===============================*/
+/* [라벨] */
 }

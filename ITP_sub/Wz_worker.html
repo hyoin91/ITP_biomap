@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <title>인천시 바이오맵</title>
     <link rel=" shortcut icon" href="image/favicon1.ico">
@@ -29,13 +30,18 @@
     <script src="../js/sub.js"></script>
     <script src="../js/include.js"></script>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
+    <script>Kakao.init('08602e869d4eb9173fabd255da6adecd');</script>
     <!--script==========================================================================================-->
+
     <script>
-        Kakao.init('08602e869d4eb9173fabd255da6adecd');
+        //--------------////////////////jqueryWrapper
+        $(document).ready(function () {
+        });       
     </script>
     <style>
 
     </style>
+
 </head>
 <!--body==========================================================================================-->
 
@@ -79,17 +85,16 @@
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label">
-                                연구자원
+                                기관정보(MAP)
                             </a>
                             <div class="optionList">
-                                
                                 <a class="optionItem">
                                     기관정보(MAP)
                                 </a>
-                                <a class="optionItem">
+                                <a class="optionItem" href="Wz_service.html">
                                     연구자원
                                 </a>
-                                <a class="optionItem">
+                                <a class="optionItem" href="Wz_news.html">
                                     커뮤니티
                                 </a>
                                 <a class="optionItem">
@@ -102,22 +107,22 @@
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label">
-                                교육프로그램
+                                바이오서비스
                             </a>
                             <div class="optionList">
-                                <a class="optionItem" href="">
+                                <a class="label" href="Wz_service.html">
                                     바이오서비스
                                 </a>
                                 <a class="optionItem">
                                     시설/장비
                                 </a>
-                                <a class="optionItem" href="">
+                                <a class="optionItem">
                                     기술
                                 </a>
                                 <a class="optionItem" href="/ITP_sub/Wz_education.html">
                                     교육프로그램
                                 </a>
-                                <a class="optionItem" href="">
+                                <a class="optionItem">
                                     바이오사업
                                 </a>
                             </div>
@@ -153,102 +158,134 @@
             <div class="conWrap" id="printWrap">
                 <section class="TitleWrap">
                     <h2>
-                        교육프로그램
+                        인력정보
                     </h2>
-                    <div class="searchWrap">
-                        <div class="search_sort">
-                            <div class="searchVS"></div>
-                            <div class="noti_icBox"></div>
-                            <div class="combo selectBox">
-                                <button class="label" id="TextVal">
-                                    ::전체::
-                                </button>
-                                <ul class="optionList">
-                                    <li onclick="statusChange(this)">
+                    <div class="searchBox">
+                        <div class="searchTit_Wrap">
+                            <h3>
+                                인력정보검색
+                            </h3>
+                            <p>
+                                인천테크노파크에서는 지역경제 발전과 산업구조의 고도화를 목표로 인천광역시 내
+                                소재한 기업,연구소 및 관련기관에 인력정보를 지원합니다.   
+                            </p>
+                        </div>
+                        <div class="searchWrap">
+                            <div class="search">
+                                <!-- <div class="combo selectBox">
+                                    <button class="label" id="TextVal">
                                         ::전체::
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        제목 + 내용
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        작성자
-                                    </li>
-                                </ul>
+                                    </button>
+                                    <ul class="optionList">
+                                        <li onclick="statusChange(this)">
+                                            ::전체::
+                                        </li>
+                                        <li onclick="statusChange(this)">
+                                            제목 + 내용
+                                        </li>
+                                        <li onclick="statusChange(this)">
+                                            작성자
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button class="searchBtn keyColor_BG" onClick="">
+                                </button>
                             </div>
-                            <input type="text" placeholder="검색어를 입력하세요.">
-                            <button class="searchBtn keyColor_BG" onClick="">
-                            </button>
+                            <div class="searchTip">
+                                <span>TIP</span>
+                                소속기관/소속유형/연구분야를 검색하시면 빠르게 찾으실 수 있습니다.
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <div class="wZine_gallery">
+                    <div class="total_search_view">
+                        <p>총 <span>3</span>개</p>
+                        <p>(<span>1</span> / 3페이지)</p>
+                        <select class="num_select" name="" id="number_select">
+                            <option value="">10개씩 보기</option>
+                            <option value="">20개씩 보기</option>
+                            <option value="">30개씩 보기</option>
+                            <option value="">40개씩 보기</option>
+                        </select>
+                    </div>
+
+                    <div class="wZine_gallery wZine_noGallery">
                         <ul class="wZ">
-                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지1"></a></li>
-                            <li class="wZ_general">
-                                <div class="wZ_top">
-                                    <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
-                                    <button class="wz_down"></button>
+                            <li class="wZbio_service">
+                                <div class="wZ_top">                                
+                                    <h3>
+                                        <a href="/ITP_sub/Wz_workerDtl.html">
+                                            김**
+                                        <span class="smallTit">
+                                            
+                                        </span>
+                                        </a>
+                                    </h3>
                                 </div>
                                 <div class="wZ_middle">
-                                    <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다.
+                                    <p>연구자원 : 
+                                        장비(
+                                        <b>25</b>
+                                        )
+                                        논문(
+                                            <b>25</b>
+                                        )
+                                        특허(
+                                            <b>25</b>
+                                        )
                                     </p>
                                 </div>
                                 <div class="wZ_bottom">
-                                    <div>
-                                        <p>2023.03.13</p>
-                                        <p>작성자 맵돌이</p>
-                                        <p>1110</p>
-                                    </div>
+                                    <p>
+                                        <b>소속기관 : 연구기관</b>
+                                    </p>
+                                    <p> 
+                                        소속유형 : 병원/대학병원
+                                    </p>
+                                    <p> 
+                                        연구분야 : 생명공학 > 식품연구
+                                    </p>
                                 </div>
+                                </a>
                             </li>
                         </ul>
                         <ul class="wZ">
-                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지2"></a></li>
-                            <li class="wZ_general">
+                            <li class="wZbio_service">
                                 <div class="wZ_top">
-                                    <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
-                                    <button class="wz_down"></button>
+                                    <h3>
+                                        <a href="/ITP_sub/Bd_Dtl.html">
+                                            김**
+                                        <span class="smallTit">
+                                            
+                                        </span>
+                                        </a>
+                                    </h3>
                                 </div>
                                 <div class="wZ_middle">
-                                    <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    <p>연구자원 : 
+                                        장비(
+                                        <b>25</b>
+                                        )
+                                        논문(
+                                            <b>25</b>
+                                        )
+                                        특허(
+                                            <b>25</b>
+                                        )
                                     </p>
                                 </div>
                                 <div class="wZ_bottom">
-                                    <div>
-                                        <p>2023.03.13</p>
-                                        <p>작성자 맵돌이</p>
-                                        <p>1110</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="wZ">
-                            <li><a href="/ITP_sub/Bd_Dtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
-                            <li class="wZ_general">
-                                <div class="wZ_top">
-                                    <h3><a href="/ITP_sub/Bd_Dtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
-                                    <button class="wz_down"></button>
-                                </div>
-                                <div class="wZ_middle">
                                     <p>
-                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
-                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 인공신경망 학습 규모가 해마
-                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                        <b>소속기관 : 연구기관</b>
                                     </p>
-                                </div>
-                                <div class="wZ_bottom">
-                                    <div>
-                                        <p>2023.03.13</p>
-                                        <p>작성자 맵돌이</p>
-                                        <p>1110</p>
-                                    </div>
+                                    <p> 
+                                        소속유형 : 병원/대학병원
+                                    </p>
+                                    <p> 
+                                        연구분야 : 생명공학 > 식품연구
+                                    </p>
                                 </div>
                             </li>
                         </ul>

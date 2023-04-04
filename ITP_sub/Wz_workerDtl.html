@@ -36,24 +36,7 @@
     <script>
         //--------------////////////////jqueryWrapper
         $(document).ready(function () {
-                // 탭 컨텐츠 숨기기
-$(".tab_content").hide();
 
-// 첫번째 탭콘텐츠 보이기
-$(".tab_container").each(function () {
-   $(this).children(".tabs li:first").addClass("active"); //Activate first tab
-   $(this).children(".tab_content").first().show();
-});
-//탭메뉴 클릭 이벤트
-$(".tabs li button").click(function () {
-  
-  $(this).parent().siblings("li").removeClass("active");
-  $(this).parent().addClass("active"); 
-  $(this).parent().parent().parent().parent().find(".tab_content").hide();
-  
-  var activeTab = $(this).attr("rel");
-   $("." + activeTab).show();
-});
         });       
     </script>
     <style>
@@ -194,11 +177,9 @@ $(".tabs li button").click(function () {
                 </section>
                 <section class="Wz_DtlWrap">
                     <div class="Wz_PhotoWrap Wz_workerWrap">
-                        <div class="PhotoWrap noimg">
-                        </div>
                         <div class="Photo_infoWrap">
                             <h3 class="ic_worker">
-                                 김종식
+                                 김**
                             </h3>
                             <div class="tbFlex0">
                                 <div class="trF_Wrap">
@@ -206,7 +187,7 @@ $(".tabs li button").click(function () {
                                         소속기관
                                     </p>
                                     <div>
-                                        아주대학교 
+                                        연구기관
                                     </div>
                                     <p> 
                                         연구분야
@@ -217,10 +198,10 @@ $(".tabs li button").click(function () {
                                 </div>
                                 <div class="trF_Wrap">
                                     <p> 
-                                        연락처
+                                        소속유형
                                     </p>
                                     <div>
-                                        -
+                                        병원/대학병원
                                     </div>
                                     <p> 
                                        이메일주소
@@ -308,150 +289,143 @@ $(".tabs li button").click(function () {
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    
-                    
+                    </div>           
                     <div class="tab_container">
                         <h3 class="tit_Bullet_M">연구자원</h3>
                       <!--탭 메뉴 영역 -->
-                      <div class="tabs">
-                        <ul class="conTab_btnWrap">
-                          <li class="active">
-                            <button  rel="tab1">
-                                장비 
-                                <span>(25)</span>
-                            </button>
-                           </li>
-                          <li>
-                            <button rel="tab2">
-                                논문
-                                <span>(15)</span>
-                            </button>
-                           </li>
-                           <li>
-                            <button rel="tab3">
-                                특허
-                                <span>(3)</span>
-                            </button>
-                           </li>
-                        </ul>
-                      </div>
-                      <div class="tab_content tab1">
-                        <div class="wZine_gallery wZine_noGallery">
-                            <ul class="wZ">
-                                <li class="wZ_general">
-                                    <div class="wZ_top">
-                                        <h3>
-                                            <a href="/ITP_sub/Bd_Dtl.html">
-                                                <span>02.</span>
-                                                장비명 
-                                            </a>
-                                            <a download class="Attatchfile sticker"></a>
-                                        </h3>
-                                      
-                                    </div>
-                                    <div class="wZ_bottom">
-                                        <div>
-                                            <p>장비번호: 0000-000-000</p>
-                                            <p>설치기관: ○○○○연구원</p>
-                                            <p>활용범위: 바이오 장비 정보 서비스</p>
+                      <div class="conTab_btnWrap TbtnWrap">
+                        <button class="on" data-tab="contab1">
+                            장비 
+                            <span>(25)</span>
+                        </button>
+                    
+                        <button data-tab="contab2">
+                            논문
+                            <span>(15)</span>
+                        </button>
+                    
+                    
+                        <button data-tab="contab3">
+                            특허
+                            <span>(3)</span>
+                        </button>
+                    </div>
+                    <div  class="TconWrap">
+                        <div class="contab1 on">
+                            <div class="wZine_gallery wZine_noGallery">
+                                <ul class="wZ">
+                                    <li class="wZ_general">
+                                        <div class="wZ_top">
+                                            <h3>
+                                                <a href="/ITP_sub/Bd_Dtl.html">
+                                                    <span>02.</span>
+                                                    장비명 
+                                                </a>
+                                                <a download class="Attatchfile sticker"></a>
+                                            </h3>
+                                        
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="wZ">
-                                <li class="wZ_general">
-                                    <div class="wZ_top">
-                                        <h3>
-                                            <a href="/ITP_sub/Bd_Dtl.html">
-                                                <span>01.</span>
-                                                장비명 
-                                            </a>
-                                            <a download class="Attatchfile sticker"></a>
-                                        </h3>
-                                      
-                                    </div>
-                                    <div class="wZ_bottom">
-                                        <div>
-                                            <p>장비번호: 0000-000-000</p>
-                                            <p>설치기관: ○○○○연구원</p>
-                                            <p>활용범위: 바이오 장비 정보 서비스</p>
+                                        <div class="wZ_bottom">
+                                            <div>
+                                                <p>장비번호: 0000-000-000</p>
+                                                <p>설치기관: ○○○○연구원</p>
+                                                <p>활용범위: 바이오 장비 정보 서비스</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                                <ul class="wZ">
+                                    <li class="wZ_general">
+                                        <div class="wZ_top">
+                                            <h3>
+                                                <a href="/ITP_sub/Bd_Dtl.html">
+                                                    <span>01.</span>
+                                                    장비명 
+                                                </a>
+                                                <a download class="Attatchfile sticker"></a>
+                                            </h3>
+                                        
+                                        </div>
+                                        <div class="wZ_bottom">
+                                            <div>
+                                                <p>장비번호: 0000-000-000</p>
+                                                <p>설치기관: ○○○○연구원</p>
+                                                <p>활용범위: 바이오 장비 정보 서비스</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
-                      <div class="tab_content tab2">
-                        <div class="wZine_gallery wZine_noGallery">
-                            <ul class="wZ">
-                                <li class="wZ_general">
-                                    <div class="wZ_top">
-                                        <h3>
-                                            <a href="/ITP_sub/Bd_Dtl.html">
-                                                <span>02.</span>
-                                                바이오EMP의 실용 위험성 및 대량 양산의 효율 증가를 위한 연구 
-                                            </a>
-                                            <a download class="Attatchfile sticker"></a>
-                                        </h3>
-                                      
-                                    </div>
-                                    <div class="wZ_bottom">
-                                        <div>
-                                            <p>한국생물공학회</p>
-                                            <p>2015</p>
+                        <div class="contab2">
+                            <div class="wZine_gallery wZine_noGallery">
+                                <ul class="wZ">
+                                    <li class="wZ_general">
+                                        <div class="wZ_top">
+                                            <h3>
+                                                <a href="/ITP_sub/Bd_Dtl.html">
+                                                    <span>02.</span>
+                                                    바이오EMP의 실용 위험성 및 대량 양산의 효율 증가를 위한 연구 
+                                                </a>
+                                                <a download class="Attatchfile sticker"></a>
+                                            </h3>
+                                        
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="wZ">
-                                <li class="wZ_general">
-                                    <div class="wZ_top">
-                                        <h3>
-                                            <a href="/ITP_sub/Bd_Dtl.html">
-                                                <span>01.</span>
-                                                바이오EMP의 지속적인 연구 투자를 위한 자세 
-                                            </a>
-                                            <a download class="Attatchfile sticker"></a>
-                                        </h3>
-                                      
-                                    </div>
-                                    <div class="wZ_bottom">
-                                        <div>
-                                            <p>한국생물공학회</p>
-                                            <p>2014</p>
-                                            <p>KCI등재후보</p>
+                                        <div class="wZ_bottom">
+                                            <div>
+                                                <p>한국생물공학회</p>
+                                                <p>2015</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                                <ul class="wZ">
+                                    <li class="wZ_general">
+                                        <div class="wZ_top">
+                                            <h3>
+                                                <a href="/ITP_sub/Bd_Dtl.html">
+                                                    <span>01.</span>
+                                                    바이오EMP의 지속적인 연구 투자를 위한 자세 
+                                                </a>
+                                                <a download class="Attatchfile sticker"></a>
+                                            </h3>
+                                        
+                                        </div>
+                                        <div class="wZ_bottom">
+                                            <div>
+                                                <p>한국생물공학회</p>
+                                                <p>2014</p>
+                                                <p>KCI등재후보</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
-                      <div class="tab_content tab3">
-                        <div class="wZine_gallery wZine_noGallery">
-                            <ul class="wZ">
-                                <li class="wZ_general">
-                                    <div class="wZ_top">
-                                        <h3>
-                                            <a href="/ITP_sub/Bd_Dtl.html">
-                                                <span>01.</span>
-                                                바이오EMP의 지속적인 연구 투자를 위한 자세 
-                                            </a>
-                                            <a download class="Attatchfile sticker"></a>
-                                        </h3>
-                                      
-                                    </div>
-                                    <div class="wZ_bottom">
-                                        <div>
-                                            <p>한국생물공학회</p>
-                                            <p>2014</p>
-                                            <p>KCI등재후보</p>
+                        <div class="contab3">
+                            <div class="wZine_gallery wZine_noGallery">
+                                <ul class="wZ">
+                                    <li class="wZ_general">
+                                        <div class="wZ_top">
+                                            <h3>
+                                                <a href="/ITP_sub/Bd_Dtl.html">
+                                                    <span>01.</span>
+                                                    바이오 특허 명 
+                                                </a>
+                                                <a download class="Attatchfile sticker"></a>
+                                            </h3>
+                                        
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                        <div class="wZ_bottom">
+                                            <div>
+                                                <p>특허번호:0000-0000-0000</p>
+                                                <p>2014</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
                     </div>
                 </section>
             </div>

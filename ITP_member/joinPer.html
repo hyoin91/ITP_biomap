@@ -37,12 +37,16 @@
 
     <!--script==========================================================================================-->
     <script>
-
+    //  window.addEventListener('load', function(){
+    //   var c = document.querySelector('.header'); 
+    //   var pc = c.parentNode.parentNode.querySelector('.dd'); 
+      
+    //   console.log(pc);
+    // });
     </script>
     <style>
 
     </style>
-</head>
 <!--body==========================================================================================-->
 
 <body>
@@ -93,9 +97,6 @@
                         <button class="on">
                             개인회원
                         </button>
-                        <button>
-                            기관회원
-                        </button>
                     </div>
                     <div class="tabConWrap">
                         <div class="userPsbox on">
@@ -106,24 +107,145 @@
                                     </strong>
                                 </p>
                             </div>
-                            <div class="form">
-                                <label>
-                                    <span>아이디</span>
-                                    <input id="userID" type="text" placeholder="영문,숫자포함 6-10자리까지 가능">
-                                </label>
-                                <label>
-                                    <span>비밀번호</span>
-                                    <input id="userPW" type="password" placeholder="영문,숫자,특수문자를 포함하여 20자리까지 가능">
-                                </label>
-                                <label>
-                                    <span>비밀번호 확인</span>
-                                    <input id="userChk" type="password" placeholder="영문,숫자,특수문자를 포함하여 10자리이상 가능">
-                                </label>
-                            </div>
+                            <div class="form userCobox on">
 
-                            <button class="joinFormBtn" onClick="login('joinper');">
-                                아이바이오맵 회원가입
-                            </button>
+                                <!-- <div class="Coformbox">
+                                    <h4 class="line_Bullet">신청인 정보</h4>
+                                    <div class="formBtn_Wrap">
+                                        <label>
+                                            <span>회사메일주소</span>
+                                            <div class="addBtn_Wrap">
+                                                <input type="text" Name="mail" id="mail"placeholder="abc123@abcd.com">
+                                                <button class="subkeyBtn2">
+                                                    메일인증
+                                                </button>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <span class="hidden">인증번호</span>
+                                            <div class="Ecerti ECertiWrap">
+                                                <input id="EcertiNum" type="text" placeholder="">
+                                                <button class="subkeyBtn2" onclick="sendAuthNum()">
+                                                    인증확인
+                                                </button>
+                                            </div>
+                                            <div id="timer"></div>
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <span>이름</span>
+                                        <input id="name" class="" type="text" placeholder="">
+                                    </label>
+                                    <label>
+                                        <span>소속 부서</span>
+                                        <input id="part" class="" type="text" placeholder="">
+                                    </label>
+                                </div> -->
+                                <div class="Coformbox">
+                                    <h4 class="line_Bullet">개인 정보</h4>
+                                    <div>
+                                        <span>소속</span>
+                                        <div class="combo selectBox ">
+                                            <button class="label joinCombo">
+                                                ::소속종류::
+                                            </button>
+                                            <ul class="optionList">
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        산업계
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        학계
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        연구기관
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        병원
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        관공서
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>소속유형</span>
+                                        <div class="combo selectBox ">
+                                            <button class="label joinCombo">
+                                                ::소속종류::
+                                            </button>
+                                            <ul class="optionList">
+                                                <li onclick="statusChange(this)">
+                                                    <button class='Mustselect'>
+                                                        기업/기업연구소
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        병원/대학병원
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        대학/대학연구소
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        정부/지자체 기관
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        정부출연연구기관
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        연구소
+                                                    </button>
+                                                </li>
+                                                <li onclick="statusChange(this)">
+                                                    <button>
+                                                        기타
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <label>
+                                        <span>소속명</span>
+                                        <input id="" type="text" placeholder="">
+                                    </label>
+                                    <label>
+                                        <span>아이디</span>
+                                        <input id="userID" type="text" placeholder="영문,숫자포함 6-10자리까지 가능">
+                                    </label>
+                                    <label>
+                                        <span>비밀번호</span>
+                                        <input id="userPW" type="password" placeholder="영문,숫자,특수문자를 포함하여 20자리까지 가능">
+                                    </label>
+                                    <label>
+                                        <span>비밀번호 확인</span>
+                                        <input id="userChk" type="password" placeholder="영문,숫자,특수문자를 포함하여 10자리이상 가능">
+                                    </label>
+
+                                </div> 
+    
+                                <button class="joinFormBtn" onClick="login('joinper');">
+                                    아이바이오맵 회원가입
+                                </button>
+                            </div>
                         </div>
                 </section>
             </div>

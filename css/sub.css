@@ -58,6 +58,23 @@ img{
     justify-content:start;
 }
 /*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.ing{
+    position: relative;
+}
+.ing:before{
+    content: "진행중";
+    font-size: 0.6rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #faac56;
+    /* padding: 0.2rem 0.3rem; */
+    width: 41px;
+    vertical-align: bottom;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    line-height: 20px;
+}
 .tit_Bullet_M{
     position: relative;
     padding-left:31px;
@@ -100,6 +117,22 @@ img{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+.S_Bullet{
+    position: relative;
+    padding-left:15px;
+    margin:5px;
+}
+.S_Bullet:after{
+    position: absolute;
+    content:"";
+    top:50%;
+    left:0;
+    transform: translateY(-50% );
+    border-radius: 18px;
+    border:3px solid #3fa1ff;
+    width:5px;
+    height:5px;
 }
 .Bullet{
     position: relative;
@@ -278,6 +311,8 @@ img{
     background: url(../img/sub/ic_noti.svg) no-repeat center;
     background-size: contain;
     left: 50%;
+    position: absolute;
+    display: block;
     transform: translate(-50%, -50%);
 }
 .Addarrow{
@@ -528,6 +563,15 @@ button{
     height:50px;
     margin-top:0.5rem;
 }
+.subkeyBtn3{
+    background:#e5e5e5;
+    border:none;
+    color:#000;
+    width:150px;
+    height:50px;
+    margin-top:0.5rem;  
+}
+.SmallBtn.subkeyBtn3,
 .SmallBtn.subkeyBtn2,
 .SmallBtn.subkeyBtn,
 .SmallBtn.keyBtn{
@@ -808,6 +852,82 @@ button{
 .imforWrap{
     border:2px solid #000;
     padding:1.5rem;
+}
+/*인력장비검색*/
+.searchBox{
+    position: relative;
+    overflow: hidden;
+}
+.searchBox.instiBox:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../img/sub/BGsearch4.svg)no-repeat right 15%;
+    background-size: 26%;
+    top: 2%;
+    right: 0;
+}
+.searchBox:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../img/sub/BGsearch3.svg)no-repeat right 15%;
+    background-size: 26%;
+    top: 2%;
+    right: 0;
+}
+.searchTit_Wrap{
+    position: relative;
+    color: #000;
+    padding: 3rem 0rem 6rem 5rem;
+    background: linear-gradient(88deg, #e1f0ff, white 80%);
+}
+.searchBox.instiBox .searchTit_Wrap{
+    background: linear-gradient(88deg, #e0fbff, white 80%);
+}
+.searchTit_Wrap h3{
+    font-size: 3rem;
+    font-family:'conB';
+}
+.searchTit_Wrap p{
+    width:55%;
+    margin-top:0.5rem;
+    font-weight:600;
+    word-break:keep-all;
+}
+.searchBox .searchWrap{
+    width: 550px;
+    background-color: #fff;
+    padding: 1.2rem 1.5rem;
+    gap: 0.5rem;
+    transform: translateY(-92px);
+    z-index: 2;
+    border: 3px solid #ccc;
+    margin-left: 3rem;
+    border-radius: 0 15px 0 0px;
+}
+.searchBox .searchWrap input[type="text"],
+.searchBox .searchBtn{
+    height: 55px;
+}
+
+.searchTip{
+    background:#efefef;
+    line-height:2.2rem;
+    padding:0 1rem;
+    font-weight: 600;
+    /* font-family: 'conL'; */
+    color:#999;
+    font-size: 0.85rem;
+}
+.searchTip span{
+   color:#fff;
+   font-weight:bold;
+   padding:0.2rem 0.5rem;
+   background:#faac56; 
+   margin-right:0.5rem;
 }
 /*----08.게시판-----*/
 .cmTb{
@@ -1205,12 +1325,12 @@ font-family:"headM";
     border-bottom:none;
     border-left:none;
 }
-.conTab_btnWrap .active button{
+.conTab_btnWrap button.on{
     background: #6a6a6a;
     border:none;
     color:#fff;
 }
-/*----11.콘텐츠탭-----*/
+
 /*subCommon▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 
 /*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
@@ -1225,10 +1345,44 @@ font-family:"headM";
     display: inline-block;
 }
 /*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
-.wZine_gallery{
+.titleCon{
+    padding:2rem;
+    background:#f0f0f0;
+    position: relative;
+    margin-bottom:0.5rem;
+}
+.VS_titCon{
+    position:absolute;
     width:100%;
-    border-top:2px solid #000;
-  }
+    height:100%;
+    top: 0;
+    right: 0;
+}
+.VS_titCon:after{
+    content: '';
+    background: url(../img/sub/BGtit1.svg) no-repeat bottom right;
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+    opacity: 0.2;
+    position: absolute;
+    filter: grayscale(1);
+}
+.VS_titCon:before{
+    content: '';
+    background: url(../img/sub/BGtit2.svg) no-repeat top left;
+    background-size:contain;
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+    opacity: 0.15;
+    position: absolute;
+    filter: grayscale(1);
+}
+.wZ li a{
+    display: block;
+}
   /*사진없는웹진01*/
   .wZ_general .wZ_top a.Attatchfile{
     width:23px;
@@ -1250,138 +1404,26 @@ font-family:"headM";
 .wZine_noGallery .wZ_general .wZ_top h3 a{
     font-size:1.2rem;
   }
-  /*사진없는웹진01*/
-  .wZ:hover{
-    background-color:#f9f9f9;
-  }
-  
-  .wZ{
-    padding:20px 0 20px 20px;
-    display:flex;
-    align-items:center;
-    gap:2rem;
-    border-bottom:1px solid #ccc;
-  }
-  
-  .wZ > li:nth-of-type(1){
-    flex-shrink:0;
-    width:250px;
+  /*프로필웹진02*/
+  .wZine_noGallery .wZ.profile > li:nth-of-type(1){
+    width:120px;
     height:150px;
-    overflow:hidden;
-    border-radius:0.5rem;
   }
-
-  .wZ > li:nth-of-type(1) img{
-    width:100%;
+  .profile .wZ_top h3 a{
+    font-size: 1.75rem;
+    font-weight: 600;
   }
-  
-  .wZ > .wZ_general{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    gap:1rem;
-    
+  .profile li{
+    justify-content: center;
+    gap: 0.5rem;
   }
-  
-  .wZ_general .wZ_top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:0.4rem;
-    font-family:'spoqaB';
+  .profile .noimg {
+    background-size: 50%;
+}
+.profile.wZ{
+    padding:10px 0 10px 0;
   }
-  
-  .wZ_general .wZ_top p{
-    width:40px;
-    height:25px;
-    line-height:25px;
-    text-align:center;
-    color:#fff;
-    background-color:#AAD5FF;
-    border-radius:0.3rem;
-  }
-  
-  .wZ_general .wZ_top h3{
-    flex:1;
-  }
-  .wZ_general .wZ_top span{
-    margin-left:0.1rem;
-    color:#6AA8F3;
-  }
-  
-  .wZ_general .wZ_top .wz_down{
-    width:20px;
-    height:20px;
-    background:url(/img/sub/wz_image/wz_download.png) no-repeat center;
-    background-size:contain;
-    border:0;
-    background-color:transparent
-  }
-  
-  .wZ_general .wZ_middle{
-    flex:1;
-  }
-  
-  .wZ_general .wZ_middle p{
-    height:63px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    word-break:break-all;
-  }
-  
-  .wZ_general .wZ_bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  
-  .wZ_general .wZ_bottom div:nth-of-type(1){
-    display:flex;
-    align-items:center;
-    gap:1.2rem;
-  }
-  
-  .wZ_general .wZ_bottom p:nth-of-type(1)::before{
-    content:"";
-    margin-right:0.5rem;
-    display:inline-block;
-    width:15px;
-    height:15px;
-    background:url(/img/sub/wz_image/wz_calendar.png) center no-repeat;
-    background-size:contain;
-    transform: translateY(2px);
-  }
-  .wZ_general .wZ_top h3 a{
-    color:#000;
-  }
-  .wZ_general .wZ_bottom p:nth-of-type(1):after{
-    content:"";
-    margin-left:1rem;
-    width:2px;
-    height:14px;
-    display:inline-block;
-    background-color:#a3a3a3;
-  }
-  
-  .wZ_general .wZ_bottom p:nth-of-type(3)::before{
-    content:"";
-    margin-right:0.5rem;
-    display:inline-block;
-    width:15px;
-    height:15px;
-    background:url(/img/sub/wz_image/wz_views.png) center no-repeat;
-    background-size:contain;
-    transform: translateY(1px);
-  }
-  
-  .wZ_general .wZ_bottom p:nth-of-type(2):after{
-    content:"";
-    margin-left:1rem;
-    width:2px;
-    height:14px;
-    display:inline-block;
-    background-color:#a3a3a3;
-  }
+  /*프로필웹진*/
 
 /*웹집상세01*/
 .Wz_DtlWrap{
@@ -1594,20 +1636,19 @@ font-family:"headM";
 
 }
 .userForm input[type=text]{
-    border-radius: 10px 10px 0 0;
-    border:1px solid #999;
+    border:0.5px solid #ccc;
     padding:0.8rem 0;
+    width:100%;
 }
 .userForm input[type=password]{
-    border-radius: 0 0 10px 10px;
-    border:1px solid #999;
+    border:0.5px solid #ccc;
     padding:0.8rem 0;
     margin-top:0.5rem;
+    width:100%;
 }
 .userForm label{
     font-size: 15px;
     margin-top:0.35rem;
-    margin-bottom:1rem;
     text-align: right;
 }
 .userForm label input{
@@ -1626,14 +1667,18 @@ font-family:"headM";
 .userForm>a strong{
     font-weight: 800;
 }
-.snsWrap p{
-    
+.snsWrap p,
+.certiWrap p{
     font-family:'conL';
     text-align: center;
     padding-bottom:0.5rem;
     border-bottom:0.5px solid #555;
     margin-bottom:1rem;
     font-size: 1.2rem;
+}
+.certiWrap .TbtnWrap button.on{
+    background:#000;
+    color:#fff;
 }
 .memberWrap .snsWrap .snsBtnWrap{
     position: relative;
@@ -1694,6 +1739,9 @@ font-family:"headM";
 .join_type_Wrap{
     display: flex;
     justify-content: center;
+}
+.certiTab2{
+    padding:0.75rem 0;
 }
 .joinSlider{
     width:600px;
@@ -1879,11 +1927,9 @@ font-family:"headM";
 .join_type_Wrap .userPsbox,
 .join_type_Wrap .userCobox{
     border:none;
-    padding:0 1.5rem;
-}
-.join_type_Wrap .userCobox{
     padding:0;
 }
+
 .joinFormBtn{
     border:none;
     padding:1.5rem 0;
@@ -1898,7 +1944,7 @@ font-family:"headM";
 .join_type_Wrap .userPsbox {
     gap:2rem;
 }
-.join_type_Wrap .userPsbox .snsWrap p{
+.join_type_Wrap .userPsbox .certiWrap p{
     border-bottom:none;
     text-align: left;
     font-size: 1.25rem;
@@ -1976,6 +2022,411 @@ font-family:"headM";
 /*sub▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 
 
-@media screen and (max-width:px) {
-
+@media screen and (max-width:1300px) {
+/*00. 불릿*/
+/*01.아이콘,배경*/
+/*02.영역*/
+/*03.버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스*/
+/*05.서브메뉴,브레드칼럼*/
+/*06.공유 및 프린트*/
+/*07.콘텐츠상단==타이틀,서칭*/
+/*08.게시판*/
+/*09.웹진*/
+/*10.회원가입,로그인*/
+/*11.콘텐츠 탭*/
+/*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*icon*/
+/*첨부파일*/
+/*BG*/
+/*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*02.영역-------------------------*/
+.cmWrap {
+    width: 95%;
+    padding: 1.5rem 0 3rem;
 }
+/*03.버튼-------------------------*/
+/*라디오버튼*/
+/*버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+/*---서브메뉴&&콘텐츠서비스----*/
+/*05.서브메뉴,브레드칼럼bc_Wrap*/
+/*06.공유 및 프린트 topSvc_Wrap*/
+/*sns공유*/
+/*----07.콘텐츠상단==타이틀,서칭-----*/
+/*----08.게시판-----*/
+/*flex게시판0*/
+/*1*/
+/*게시판상세*/
+.cmTb td.tbDtl_Con {
+    padding: 2rem 0;
+}
+/*----08.폼-----*/
+/*댓글*/
+/*----11.콘텐츠탭-----*/
+/*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*Bd_employ분야별*/
+/*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+  /*사진없는웹진01*/
+  /*프로필웹진02*/
+/*웹집상세01*/
+/*웹진상세02*/
+/*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*login*/
+/*회원가입*/
+/*01*/
+/*기관*/
+}
+@media screen and (max-width:1024px) {
+/*00. 불릿*/
+/*01.아이콘,배경*/
+/*02.영역*/
+/*03.버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스*/
+/*05.서브메뉴,브레드칼럼*/
+/*06.공유 및 프린트*/
+/*07.콘텐츠상단==타이틀,서칭*/
+/*08.게시판*/
+/*09.웹진*/
+/*10.회원가입,로그인*/
+/*11.콘텐츠 탭*/
+/*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*icon*/
+/*첨부파일*/
+/*BG*/
+/*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*02.영역-------------------------*/
+/*03.버튼-------------------------*/
+/*라디오버튼*/
+/*버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+/*---서브메뉴&&콘텐츠서비스----*/
+/*05.서브메뉴,브레드칼럼bc_Wrap*/
+/*06.공유 및 프린트 topSvc_Wrap*/
+/*sns공유*/
+/*----07.콘텐츠상단==타이틀,서칭-----*/
+/*----08.게시판-----*/
+/*flex게시판0*/
+/*1*/
+/*게시판상세*/
+/*----08.폼-----*/
+/*댓글*/
+/*----11.콘텐츠탭-----*/
+/*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*Bd_employ분야별*/
+/*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*사진없는웹진01*/
+    /*프로필웹진02*/
+/*웹집상세01*/
+/*웹진상세02*/
+/*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*login*/
+/*회원가입*/
+/*01*/
+/*기관*/
+}
+@media screen and (max-width:900px) {
+/*00. 불릿*/
+/*01.아이콘,배경*/
+/*02.영역*/
+/*03.버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스*/
+/*05.서브메뉴,브레드칼럼*/
+/*06.공유 및 프린트*/
+/*07.콘텐츠상단==타이틀,서칭*/
+/*08.게시판*/
+/*09.웹진*/
+/*10.회원가입,로그인*/
+/*11.콘텐츠 탭*/
+/*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*icon*/
+/*첨부파일*/
+/*BG*/
+/*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*02.영역-------------------------*/
+/*03.버튼-------------------------*/
+/*라디오버튼*/
+/*버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+/*---서브메뉴&&콘텐츠서비스----*/
+/*05.서브메뉴,브레드칼럼bc_Wrap*/
+/*06.공유 및 프린트 topSvc_Wrap*/
+/*sns공유*/
+/*----07.콘텐츠상단==타이틀,서칭-----*/
+/*----08.게시판-----*/
+/*flex게시판0*/
+/*1*/
+/*게시판상세*/
+/*----08.폼-----*/
+/*댓글*/
+/*----11.콘텐츠탭-----*/
+/*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*Bd_employ분야별*/
+/*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*사진없는웹진01*/
+    /*프로필웹진02*/
+/*웹집상세01*/
+/*웹진상세02*/
+/*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*login*/
+/*회원가입*/
+/*01*/
+/*기관*/
+}
+@media screen and (max-width:768px) {
+/*00. 불릿*/
+/*01.아이콘,배경*/
+/*02.영역*/
+/*03.버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스*/
+/*05.서브메뉴,브레드칼럼*/
+.bc_Wrap {
+    align-items: baseline;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+}
+/*06.공유 및 프린트*/
+/*07.콘텐츠상단==타이틀,서칭*/
+/*08.게시판*/
+/*09.웹진*/
+/*10.회원가입,로그인*/
+/*11.콘텐츠 탭*/
+/*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*icon*/
+/*첨부파일*/
+/*BG*/
+/*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*02.영역-------------------------*/
+/*03.버튼-------------------------*/
+/*라디오버튼*/
+/*버튼*/
+/*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+/*---서브메뉴&&콘텐츠서비스----*/
+/*05.서브메뉴,브레드칼럼bc_Wrap*/
+/*06.공유 및 프린트 topSvc_Wrap*/
+.topSvc_Wrap > button:first-of-type{
+    margin:0;
+}
+/*sns공유*/
+/*----07.콘텐츠상단==타이틀,서칭-----*/
+/*----08.게시판-----*/
+/*flex게시판0*/
+/*1*/
+/*게시판상세*/
+/*----08.폼-----*/
+/*댓글*/
+/*----11.콘텐츠탭-----*/
+/*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*Bd_employ분야별*/
+/*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*사진없는웹진01*/
+/*프로필웹진02*/
+/*웹집상세01*/
+/*웹진상세02*/
+/*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*login*/
+/*회원가입*/
+/*01*/
+/*기관*/
+}
+@media screen and (max-width:900px) {
+    /*00. 불릿*/
+    /*01.아이콘,배경*/
+    /*02.영역*/
+    /*03.버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스*/
+    /*05.서브메뉴,브레드칼럼*/
+    /*06.공유 및 프린트*/
+    /*07.콘텐츠상단==타이틀,서칭*/
+    /*08.게시판*/
+    /*09.웹진*/
+    /*10.회원가입,로그인*/
+    /*11.콘텐츠 탭*/
+    /*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*icon*/
+    /*첨부파일*/
+    /*BG*/
+    /*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*02.영역-------------------------*/
+    /*03.버튼-------------------------*/
+    /*라디오버튼*/
+    /*버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+    /*---서브메뉴&&콘텐츠서비스----*/
+    /*05.서브메뉴,브레드칼럼bc_Wrap*/
+    /*06.공유 및 프린트 topSvc_Wrap*/
+    /*sns공유*/
+    /*----07.콘텐츠상단==타이틀,서칭-----*/
+    /*----08.게시판-----*/
+    /*flex게시판0*/
+    /*1*/
+    /*게시판상세*/
+    /*----08.폼-----*/
+    /*댓글*/
+    /*----11.콘텐츠탭-----*/
+    /*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*Bd_employ분야별*/
+    /*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+        /*사진없는웹진01*/
+        /*프로필웹진02*/
+    /*웹집상세01*/
+    /*웹진상세02*/
+    /*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*login*/
+    /*회원가입*/
+    /*01*/
+    /*기관*/
+    }
+    @media screen and (max-width:480px) {
+    /*00. 불릿*/
+    /*01.아이콘,배경*/
+    /*02.영역*/
+    /*03.버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스*/
+    /*05.서브메뉴,브레드칼럼*/
+    /*06.공유 및 프린트*/
+    /*07.콘텐츠상단==타이틀,서칭*/
+    /*08.게시판*/
+    /*09.웹진*/
+    /*10.회원가입,로그인*/
+    /*11.콘텐츠 탭*/
+    /*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*icon*/
+    /*첨부파일*/
+    /*BG*/
+    /*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*02.영역-------------------------*/
+    /*03.버튼-------------------------*/
+    /*라디오버튼*/
+    /*버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+    /*---서브메뉴&&콘텐츠서비스----*/
+    /*05.서브메뉴,브레드칼럼bc_Wrap*/
+    /*06.공유 및 프린트 topSvc_Wrap*/
+    /*sns공유*/
+    /*----07.콘텐츠상단==타이틀,서칭-----*/
+    /*----08.게시판-----*/
+    /*flex게시판0*/
+    /*1*/
+    /*게시판상세*/
+    /*----08.폼-----*/
+    /*댓글*/
+    /*----11.콘텐츠탭-----*/
+    /*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*Bd_employ분야별*/
+    /*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+        /*사진없는웹진01*/
+        /*프로필웹진02*/
+    /*웹집상세01*/
+    /*웹진상세02*/
+    /*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*login*/
+    /*회원가입*/
+    /*01*/
+    /*기관*/
+    }
+@media screen and (max-width:400px) {
+    /*00. 불릿*/
+    /*01.아이콘,배경*/
+    /*02.영역*/
+    /*03.버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스*/
+    /*05.서브메뉴,브레드칼럼*/
+    /*06.공유 및 프린트*/
+    /*07.콘텐츠상단==타이틀,서칭*/
+    /*08.게시판*/
+    /*09.웹진*/
+    /*10.회원가입,로그인*/
+    /*11.콘텐츠 탭*/
+    /*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*icon*/
+    /*첨부파일*/
+    /*BG*/
+    /*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*02.영역-------------------------*/
+    /*03.버튼-------------------------*/
+    /*라디오버튼*/
+    /*버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+    /*---서브메뉴&&콘텐츠서비스----*/
+    /*05.서브메뉴,브레드칼럼bc_Wrap*/
+    /*06.공유 및 프린트 topSvc_Wrap*/
+    /*sns공유*/
+    /*----07.콘텐츠상단==타이틀,서칭-----*/
+    /*----08.게시판-----*/
+    /*flex게시판0*/
+    /*1*/
+    /*게시판상세*/
+    /*----08.폼-----*/
+    /*댓글*/
+    /*----11.콘텐츠탭-----*/
+    /*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*Bd_employ분야별*/
+    /*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+        /*사진없는웹진01*/
+        /*프로필웹진02*/
+    /*웹집상세01*/
+    /*웹진상세02*/
+    /*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*login*/
+    /*회원가입*/
+    /*01*/
+    /*기관*/
+    }
+@media screen and (max-width:300px) {
+    /*00. 불릿*/
+    /*01.아이콘,배경*/
+    /*02.영역*/
+    /*03.버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스*/
+    /*05.서브메뉴,브레드칼럼*/
+    /*06.공유 및 프린트*/
+    /*07.콘텐츠상단==타이틀,서칭*/
+    /*08.게시판*/
+    /*09.웹진*/
+    /*10.회원가입,로그인*/
+    /*11.콘텐츠 탭*/
+    /*00. 불릿▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*01.아이콘,배경 subVS▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*icon*/
+    /*첨부파일*/
+    /*BG*/
+    /*subCommon▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*02.영역-------------------------*/
+    /*03.버튼-------------------------*/
+    /*라디오버튼*/
+    /*버튼*/
+    /*04.셀렉트박스,메뉴셀렉트박스-------------------------*/
+    /*---서브메뉴&&콘텐츠서비스----*/
+    /*05.서브메뉴,브레드칼럼bc_Wrap*/
+    /*06.공유 및 프린트 topSvc_Wrap*/
+    /*sns공유*/
+    /*----07.콘텐츠상단==타이틀,서칭-----*/
+    /*----08.게시판-----*/
+    /*flex게시판0*/
+    /*1*/
+    /*게시판상세*/
+    /*----08.폼-----*/
+    /*댓글*/
+    /*----11.콘텐츠탭-----*/
+    /*sub Bd▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*Bd_employ분야별*/
+    /*09.웹진▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+        /*사진없는웹진01*/
+        /*프로필웹진02*/
+    /*웹집상세01*/
+    /*웹진상세02*/
+    /*10.회원가입,로그인▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+    /*login*/
+    /*회원가입*/
+    /*01*/
+    /*기관*/
+    }
+    

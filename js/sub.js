@@ -40,22 +40,23 @@ $(document).ready(function () {
         $(this).addClass('on');
     });
 
-    //탭
-    const tabBtn = $('.tabBtnWrap').children('button');
-    const tabCon = $('.tabConWrap').children('div');
+    //탭 상하위관계로 만듬
+    const tabBtn = $('.TbtnWrap').children('button');
+    const tabCon = $('.TconWrap').children('div');
     tabCon.not('.on').hide();
     tabBtn.click(function () {
         const $tabLink = $(this).attr('data-tab');
 
-        tabBtn.removeClass('on');
+        $(this).siblings('button').removeClass('on');
         $(this).addClass('on');
 
-        tabCon.hide();
-        $("#" + $tabLink).show();
+        $(this).parent().next().children().hide();
+        $("." + $tabLink).show();
+
     });
         //비공개 
         const test0 = $('td div.lock');
-        const test1 = test0.parent().parent('tr');
+        // const test1 = test0.parent().parent('tr');
         const test2 = test0.parent().siblings('.toLeft').children('a');
 
         test2.click(function (e) {
@@ -150,7 +151,7 @@ $(document).ready(function () {
 
     setInterval(function () {
         $('.next-btn').click();//3.5초마다 클릭
-    }, 3500);
+    }, 2000);
 
     //페이지 번호 지정
     function pageNumber__Init() {
@@ -174,9 +175,49 @@ $(document).ready(function () {
     };
 
     updateCurrentPageNumber();
+    
+    // // 탭
+    // $(".tab_content").hide();
+
+    // // 첫번째 탭콘텐츠 보이기
+    // $(".tab_container").each(function () {
+    //     $(this).children(".tabs li:first").addClass("active"); //Activate first tab
+    //     $(this).children(".tab_content").first().show();
+    // });
+    // //탭메뉴 클릭 이벤트
+    // $(".tabs li button").click(function () {
+        
+    //     $(this).parent().siblings("li").removeClass("active");
+    //     $(this).parent().addClass("active"); 
+    //     $(this).parent().parent().parent().parent().find(".tab_content").hide();
+    //     $(this).parent().parent().parent().parent().find(".tab_content").find('input').value().remove();
+        
+    //     var activeTab = $(this).attr("rel");
+    //     $("." + activeTab).show();
+       
+    // });
 
 
 });//--------------////////////////jqueryWrapper
+
+//셀렉트박스 
+function statusChange(statusItem) {
+  //  const label = doc.querySelectorAll('.label');
+    const strText = $(statusItem).text();
+    $(statusItem).parent().siblings('.label').text(strText);
+
+    // const $Mustselect = $(statusItem).hasClass("Mustselect");
+
+    // if( $Mustselect === true){
+    //     $(".MustselectCon").css('background','#0000002e');
+    //     $(".MustselectCon").attr('readonly','true');
+    //     $(".MustselectCon").val("");
+    // }else{
+    //     $(".MustselectCon").css('background','none');
+    //     $(".MustselectCon").removeAttr('readonly');
+    // }
+}
+
 // 문의하기
 function inquiry() {
 
@@ -204,23 +245,7 @@ function content_print() {
  }
  window.print();
 }
-//셀렉트박스 
 
-function statusChange(statusItem) {
-    const strText = $(statusItem).text();
-    $("#TextVal").text(strText);
-
-    const $Mustselect = $(statusItem).hasClass("Mustselect");
-
-    if( $Mustselect === true){
-        $(".MustselectCon").css('background','#0000002e');
-        $(".MustselectCon").attr('readonly','true');
-        $(".MustselectCon").val("");
-    }else{
-        $(".MustselectCon").css('background','none');
-        $(".MustselectCon").removeAttr('readonly');
-    }
-}
 //팝업여러개
 function ShowPop(val) {
     const Conpop = $('#ShowPop' + val);
@@ -270,9 +295,10 @@ function SnsPop(val) {
             break;
     }
 }
+
 //로그인,회원가입 값이 없을때 경고창
-function txtFieldCheck(){
-    var txtEle = $(".form label input[type=text]");
+function txtFieldCheck(val){
+    var txtEle = $(".form label input");
     var txtEle2 = $(".form label span");
       
         for(var i = 0; i < txtEle.length; i ++){
@@ -285,62 +311,89 @@ function txtFieldCheck(){
             showAlert(ele_id, label_txt);
             return true;
             }
+            function showAlert(ele_id, label_txt){
+                alert(label_txt + "정보를 입력해주세요.");
+                $("#" + ele_id).focus();
+                return false;
+            } 
         }
     }
-    function showAlert(ele_id, label_txt){
-    alert(label_txt + "정보를 입력해주세요.");
-    $("#" + ele_id).focus();
-    return false;
-    }  
 //로그인 유효성검사
-function login() {   
+function login(val) {   
   
   const strid = document.getElementById('userID');
   const strpw = document.getElementById('userPW');
+  const strbid = document.getElementById('userBID');
+  const strbpw = document.getElementById('userBPW');
   const strpwChk = document.getElementById('userChk');
+
 
   let $id = /^(?=.*[0-9]+)[a-zA-Z][a-zA-Z0-9]{5,20}$/g
   let $pw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{10,20}$/ //최소한개숫자,특문포함
- 
-    if(strid.value == '' || strpw.value == '') {
-        alert('아이디/비밀번호를 입력해주세요');
-        return false;
-        } 
-    if(strid.value.search($id)) {
-        alert('아이디형식이 올바르지 않습니다.');
-        strid.focus();
-        return false;
-        }
-    if(strpw.value.search($pw)) {
-            alert('비밀번호 형식이 올바르지 않습니다.');
-            strpw.focus();
-            return false;
-        }
+
     switch (val) {
-        case 'loginE'://로그인
-            location.href = '../index.html';
-            break;
-        case 'joinper'://개인회원가입
+        case 'loginE'://개인로그인
+        if(strid.value.search($id)) {
+            alert('아이디형식이 올바르지 않습니다.');
+            strid.focus();
+            return false;
+            }
+        if(strpw.value.search($pw)) {
+                alert('비밀번호 형식이 올바르지 않습니다.');
+                strpw.focus();
+                return false;
+            }else{
+                location.href = '../index.html';   
+        } 
+         break;
+         case 'joinper': //개인회원가입
+            var result = txtFieldCheck() == true ? true : false;
+            if(strid.value.search($id)) {
+                alert('아이디형식이 올바르지 않습니다.');
+                strid.focus();
+                return false;
+                }
+            if(strpw.value.search($pw)) {
+                    alert('비밀번호 형식이 올바르지 않습니다.');
+                    strpw.focus();
+                    return false;
+                }
+                
             if(strpw.value != strpwChk.value){
                 alert('비밀번호 확인이 일치하지 않습니다.');
                 return false;
-            }           
-            alert('아이바이오맵 회원가입을 완료하였습니다.'),
-            location.href = '../index.html';            
+            }else{
+                alert('아이바이오맵 회원가입을 완료하였습니다.');
+                location.href = '../index.html';   
+            }
+            break;
+        case 'loginB'://기관로그인
+            if(strbid.value.search($id)) {
+                alert('아이디형식이 올바르지 않습니다.');
+                strbid.focus();
+                return false;
+                }
+            if(strbpw.value.search($pw)) {
+                    alert('비밀번호 형식이 올바르지 않습니다.');
+                    strbpw.focus();
+                    return false;
+                }
+            location.href = '../index.html';
             break;
         default:
             break;
     }
 }
-//회원가입 유효성검사
-function join() {
+
+ //기관회원가입 유효성검사
+function join() { 
     const Email = document.getElementById("mail");//메일
     const CoEmail = document.getElementById("Comail");//대표메일
     const EcertiNum = document.getElementById("EcertiNum");//인증번호
 
     let e_RegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     let c_RegExp = /^[0-9]{4}$/; //이름 유효성검사 정규식
-    var result = txtFieldCheck() == true ? true : false;
+     var result = txtFieldCheck() == true ? true : false;
     if(Email.value.search(e_RegExp) && !Email.value =='')  {
         alert('신청인 이메일 형식이 올바르지 않습니다.');
         Email.focus();
@@ -349,6 +402,11 @@ function join() {
     if(CoEmail.value.search(e_RegExp) && !CoEmail.value =='')  {
         alert('기관대표 이메일 형식이 올바르지 않습니다.');
         CoEmail.focus();
+        return false;
+    }
+     if(EcertiNum.value.search(c_RegExp) && !EcertiNum.value =='')  {
+        alert('인증번호 형식이 올바르지 않습니다.');
+        EcertiNum.focus();
         return false;
     }
     // switch(val){
@@ -361,6 +419,7 @@ function join() {
     // }
 
 }
+
 //이미지전환
 let n = 0;
 const imgs = new Array(

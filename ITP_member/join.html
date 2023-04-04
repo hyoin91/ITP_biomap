@@ -92,7 +92,7 @@
                 </section>
                 <!--회원가입========================================-->
                 <section class="type_Wrap">
-                    <div class="tabBtnWrap">
+                    <div class="tabBtnWrap TbtnWrap">
                         <button data-tab="tab1" class="on">
                             개인회원
                         </button>
@@ -100,14 +100,48 @@
                             기관회원
                         </button>
                     </div>
-                    <div class="tabConWrap">
-                        <div id="tab1" class="userPsbox on">
-                            <button class="joinFormBtn" onclick="location.href='joinPer.html'">
-                                아이바이오맵 개인회원가입
-                            </button>
-                            <div class="snsWrap">
+                    <div class="tabConWrap TconWrap">
+                        <div class="userPsbox tab1 on">
+                            <div class="certiWrap">
                                 <p>
-                                    SNS 간편 회원가입
+                                    본인 인증
+                                </p>
+                                <div class="TbtnWrap">
+                                    <button class="subkeyBtn3" data-tab="">휴대폰 인증</button>
+                                    <button class="subkeyBtn3" data-tab="certiTab2">이메일 인증</button>
+                                </div>
+                                <div class="TconWrap">
+
+                                    <div class="certiTab2 form">
+                                        <div class="Coformbox formBtn_Wrap">
+                                            <label>
+                                                <div class="addBtn_Wrap">
+                                                    <input type="text" Name="mail" id="mail"placeholder="abc123@abcd.com">
+                                                    <button class="subkeyBtn2">
+                                                        메일인증
+                                                    </button>
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <span class="hidden">인증번호</span>
+                                                <div class="Ecerti ECertiWrap">
+                                                    <input id="EcertiNum" type="text" placeholder="">
+                                                    <button class="subkeyBtn2" onclick="sendAuthNum()">
+                                                        인증확인
+                                                    </button>
+                                                </div>
+                                                <div id="timer"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="joinFormBtn" onclick="location.href='joinPer.html'">
+                                아이바이오맵 개인회원가입
+                            </button> -->
+                            <div class="snsWrap certiWrap">
+                                <p>
+                                    SNS 간편 인증
                                 </p>
                                 <div>
                                     <div class="snsBtnWrap">
@@ -128,7 +162,7 @@
                                 이미 계정이 있나요? <a class="bold" href="login.html">로그인</a>
                             </p>
                         </div>
-                        <div id="tab2" class="userCobox">
+                        <div class="userCobox tab2">
                             <div class="imforWrap">
                                 <p class="Bullet">
                                     <strong>
@@ -148,6 +182,7 @@
                                 이미 계정이 있나요? <a class="bold" href="login.html">로그인</a>
                             </p>
                         </div>
+                    </div>
                 </section>
             </div>
             <!--회원가입비주얼========================================-->
@@ -162,7 +197,7 @@
                     </div>
                 </div>
                 <div class="slides">
-                    <div class="bn active">
+                    <div class="bn on">
                         <img src="../img/sub/BGjoin3.jpg">
                     </div>
                     <div class="bn">

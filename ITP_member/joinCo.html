@@ -37,40 +37,45 @@
 
     <!--script==========================================================================================-->
     <script>
-    var Certimer;
-    var isRunning = false;    
-// 인증번호 발송하고 타이머 함수 실행
-function sendAuthNum(){
-	// 남은 시간
-	const leftSec = 180,
-	display = document.querySelector('#timer');
-	// 이미 타이머가 작동중이면 중지
-	if (isRunning){
-	   clearInterval(Certimer);
-	} else {
-    	isRunning = true;
-    }
-     startTimer(leftSec, display);
-} 
-function startTimer(count, display) {
-        var minutes, seconds;
-        timer = setInterval(function () {
-        minutes = parseInt(count / 60, 10);
-        seconds = parseInt(count % 60, 10);
+//     var Certimer;
+//     var isRunning = false;    
+// // 인증번호 발송하고 타이머 함수 실행
+// function sendAuthNum(){
+// 	// 남은 시간
+// 	const leftSec = 180,
+// 	display = document.querySelector('#timer');
+// 	// 이미 타이머가 작동중이면 중지
+// 	if (isRunning){
+// 	    clearInterval(Certimer);
+//         startTimer(leftSec, display);
+// 	     //display.textContent = 0 + ":" + 0;
+// 	     isRunning = false;
+         
+// 	} 
+//     isRunning = true;
+//      startTimer(leftSec, display);
+//      return;
+// } 
+// function startTimer(count, display) {
+//         var minutes, seconds;
+//         timer = setInterval(function () {
+//         minutes = parseInt(count / 60, 10);
+//         seconds = parseInt(count % 60, 10);
  
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
  
-        display.textContent = minutes + ":" + seconds;
+//         display.textContent = minutes + ":" + seconds;
  
-        // 타이머 끝
-        if (--count < 0) {
-	     clearInterval(Certimer);
-	     display.textContent = "";
-	     isRunning = false;
-        }
-    }, 1000);
-} 
+//         // 타이머 끝
+//         if (--count < 0) {
+// 	     clearInterval(Certimer);
+// 	     display.textContent = "";
+// 	     isRunning = false;
+//         }
+//     }, 1000);
+// } 
+
     </script>
     <style>
 
@@ -79,6 +84,7 @@ function startTimer(count, display) {
 <!--body==========================================================================================-->
 
 <body>
+
     <div class="memberWrap">
         <!--INCLUED========================================-->
         <section class="noheaderWrap">
@@ -123,9 +129,6 @@ function startTimer(count, display) {
                 <!--회원가입========================================-->
                 <section class="type_Wrap">
                     <div class="NotabBtnWrap">
-                        <button>
-                            개인회원
-                        </button>
                         <button class="on">
                             기관회원
                         </button>
@@ -140,7 +143,7 @@ function startTimer(count, display) {
                                         <span>회사메일주소</span>
                                         <div class="addBtn_Wrap">
                                             <input type="text" Name="mail" id="mail"placeholder="abc123@abcd.com">
-                                            <button class="subkeyBtn2">
+                                            <button class="subkeyBtn2" onclick="">
                                                 메일인증
                                             </button>
                                         </div>
@@ -149,11 +152,10 @@ function startTimer(count, display) {
                                         <span class="hidden">인증번호</span>
                                         <div class="Ecerti ECertiWrap">
                                             <input id="EcertiNum" type="text" placeholder="">
-                                            <button class="subkeyBtn2" onclick="sendAuthNum()">
+                                            <button class="subkeyBtn2">
                                                 인증확인
                                             </button>
                                         </div>
-                                        <div id="timer"></div>
                                     </label>
                                 </div>
                                 <label>
@@ -208,12 +210,15 @@ function startTimer(count, display) {
                                     <input class="" type="text" placeholder="">
                                 </label>
                                 <div class="formBtn_Wrap">
-                                    <span>주소</span>
-                                    <label class="addBtn_Wrap">
-                                        <input class="" type="text" placeholder="">
-                                        <button  class="subkeyBtn2">
-                                            주소검색
-                                        </button>
+                                    
+                                    <label >
+                                        <span>주소</span>
+                                        <div class="addBtn_Wrap">
+                                            <input class="" type="text" placeholder="">
+                                            <button  class="subkeyBtn2">
+                                                주소검색
+                                            </button>
+                                        </div>
                                     </label>
                                     <input class="" type="text" placeholder="상세주소를 입력해주세요.">
                                 </div>

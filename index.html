@@ -34,10 +34,7 @@
     <!--script==========================================================================================-->
     <script>
         $(document).ready(function(){
-            $(".best_k li").on("mousemove",function(){
-                $(".best_k li").removeClass("on")
-                $(this).addClass("on")
-            });
+
         })
     </script>
 </head>
@@ -45,11 +42,11 @@
 
 <body>
     <!--BGpopup========================================-->
-    <!-- <div class="popup_mask"></div> -->
+    <div class="popup_mask"></div>
     <!--설문조사 팝업-->
-    <!-- <div class="popupDiv_Wrap on"> -->
+    <div class="popupDiv_Wrap on">
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv">
+        <div class="popupDiv">
             <div class="popupDivCon">
 
             </div>
@@ -66,7 +63,7 @@
                     </button>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
         <!-- <div class="popupDiv" style="display: none;">
             <div class="popupDivCon noimgBox">
@@ -111,30 +108,24 @@
     <!--INCLUED========================================-->
     <header data-include="include/header.html"></header>
     <!--INCLUED========================================-->
-    <div class="inquiry">
-        <div class="inquiry_circle">
-            <a href="#">
-                <img src="/img/sub/main_image/call_i.svg" alt="1:1문의 이미지">
-                <p>코디네이터<br>연락처</p>
-            </a>
-        </div>
-    </div>
+    <button class="call_Inquiry">
+        <a href="#">
+            <div>1:1 문의 <br>연락</div>
+            <div class="call_img"><img src="/img/sub/main_image/call_i.png"></div>
+        </a>
+    </button>
 
     <div class="qr_code">
-        <div class="qr_text">
-            <strong>Scan Me</strong>
-            <div><img src="/img/sub/main_image/under_double_allow.svg" alt="Scan Me 화살표 아이콘"></div>
-        </div>
-        <div class="qr_info">
-            <ul>
-                <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="안드로이드 전용 QR코드"></a></button></li>
-                <li>Android</li>
-            </ul>
-            <ul>
-                <li><button><a href="#"><img src="/img/sub/main_image/qrcode.svg" alt="아이폰 전용 QR코드"></a></button></li>
-                <li>Iphone</li>
-            </ul>
-        </div>
+        <strong>Scan Me</strong>
+        <div><img src="/img/sub/main_image/double right.png" alt="Scan Me 화살표 아이콘"></div>
+        <ul>
+            <li><button><a href="#"><img src="/img/sub/main_image/QRcode.png" alt="안드로이드 전용 QR코드"></a></button></li>
+            <li>Android</li>
+        </ul>
+        <ul>
+            <li><button><a href="#"><img src="/img/sub/main_image/QRcode.png" alt="아이폰 전용 QR코드"></a></button></li>
+            <li>Iphone</li>
+        </ul>
     </div>
 
     <div class="visual">
@@ -163,7 +154,7 @@
                 <div class="community">
                     <div class="cm_title">
                         <h2>커뮤니티</h2>
-                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.png" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
                     <ul class="cm_k">
                         <li class="on">
@@ -186,110 +177,110 @@
                         <li class="on">
                             <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>      
                             <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="/ITP_sub/Bd_noti.html">
                                 <h4>2023</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
                         <li>
                             <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>                            
                             <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="/ITP_sub/Bd_employ.html">
                                 <h4>2024</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <h4>2025</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2025</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>                            
                             <a href="#">
                                 <h4>2025</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2025</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <h4>2026</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2026</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>                            
                             <a href="#">
                                 <h4>2026</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2026</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <h4>2027</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2027</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>                            
                             <a href="#">
                                 <h4>2027</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                             <a href="#">
                                 <h4>2027</h4>
-                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판</p>
                                 <div><img src="/img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
                             </a>
                         </li>
@@ -306,7 +297,7 @@
                 <div class="bio_codi">
                     <div class="cm_title">
                         <h2>바이오 코디네이션</h2>
-                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.png" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
                     <ul class="bioc_k">
                         <li class="on">
@@ -412,41 +403,41 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="bioc_i"><img src="/img/sub/main_image/bio_ci.svg" alt="바이오 코디네이션 이미지"></div>
+                    <div class="bioc_i"><img src="/img/sub/main_image/bio_ci.png" alt="바이오 코디네이션 이미지"></div>
                 </div>
                 
                 <div class="best_search">
                     <div class="cm_title">
                         <h2><span>BEST</span> 추천검색어</h2>
-                        <div class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></div>
+                        <div class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.png" alt="플러스 아이콘(바로가기 아이콘)"></a></div>
                     </div>
                     <ul class="best_k">
                         <li class="on">
                             <a href="#">
                                 <div>01</div>
                                 <p>세포파쇄기</p>
-                                <div><img src="/img/sub/main_image/best_si.svg" alt="추천검색어 아이콘"></div>
+                                <div><img src="/img/sub/main_image/best_si.png" alt="추천검색어 아이콘"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <div>02</div>
                                 <p>고성능액체크로마토그래</p>
-                                <div><img src="/img/sub/main_image/best_si.svg" alt="추천검색어 아이콘"></div>
+                                <div><img src="/img/sub/main_image/best_si.png" alt="추천검색어 아이콘"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <div>03</div>
                                 <p>연속원심분리기</p>
-                                <div><img src="/img/sub/main_image/best_si.svg" alt="추천검색어 아이콘"></div>
+                                <div><img src="/img/sub/main_image/best_si.png" alt="추천검색어 아이콘"></div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <div>04</div>
                                 <p>한와여과기</p>
-                                <div><img src="/img/sub/main_image/best_si.svg" alt="추천검색어 아이콘"></div>
+                                <div><img src="/img/sub/main_image/best_si.png" alt="추천검색어 아이콘"></div>
                             </a>
                         </li>
                     </ul>
@@ -462,7 +453,7 @@
                                 <h4>연구개발 Q&A</h4>
                                 <p><span>Biomap</span>질문 확인하기</p>
                             </div>
-                            <div><img src="/img/sub/main_image/qa_i.svg" alt="연구개발 Q&A 아이콘"></div>
+                            <div><img src="/img/sub/main_image/qa_i.png" alt="연구개발 Q&A 아이콘"></div>
                         </a>
                     </li>
                     <li>
@@ -471,7 +462,7 @@
                                 <h4>시설/장비 등록</h4>       
                                 <p><span>Biomap</span>시설 장비 등록</p>
                             </div>
-                            <div><img src="/img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘"></div>
+                            <div><img src="/img/sub/main_image/br_i.png" alt="시설/장비 등록 아이콘"></div>
                         </a>
                     </li>
                     <li>
@@ -480,7 +471,7 @@
                                 <h4>기관인력정보</h4>  
                                 <p><span>Biomap</span>검색 정보확인</p>
                             </div>
-                            <div><img src="/img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘"></div>
+                            <div><img src="/img/sub/main_image/bc_i.png" alt="바이오 코디네이션 아이콘"></div>
                         </a>
                     </li>
                 </ul>
@@ -492,13 +483,13 @@
                         <ul class="bi_1">
                             <li>
                                 <a href="#">
-                                    <div><img src="/img/sub/main_image/patent_i.svg" alt="특허정보 아이콘"></div>
+                                    <div><img src="/img/sub/main_image/patent _i.png" alt="특허정보 아이콘"></div>
                                     <p>투자 자본</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div><img src="/img/sub/main_image/skill_i.svg" alt="기술정보 아이콘"></div>
+                                    <div><img src="/img/sub/main_image/skill_i.png" alt="기술정보 아이콘"></div>
                                     <p>기술 정보</p>
                                 </a>
                             </li>
@@ -506,19 +497,19 @@
                         <ul class="bi_2">
                             <li>
                                 <a href="#">
-                                    <div><img src="/img/sub/main_image/research_i.svg" alt="연구결과 아이콘"></div>
+                                    <div><img src="/img/sub/main_image/research_i.png" alt="연구결과 아이콘"></div>
                                     <p>연구시설</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div><img src="/img/sub/main_image/facility_i.svg" alt="시설정보 아이콘"></div>
+                                    <div><img src="/img/sub/main_image/facility_i.png" alt="시설정보 아이콘"></div>
                                     <p>서비스 정보</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <div><img src="/img/sub/main_image/equipment_i.svg" alt="장비정보 아이콘"></div>
+                                    <div><img src="/img/sub/main_image/equipment_i.png" alt="장비정보 아이콘"></div>
                                     <p>장비 정보</p>
                                 </a>
                             </li>
@@ -531,7 +522,7 @@
                                 <span class="current">1</span>/<span class="all">3
                             </div>
                         </div>
-                        <div class="ez_subtext">바이오 행사명을 입력하세요.</div>
+                        <div class="ez_subtext">바이오 행사 관련 설명을 입력하세요.</div>
                         <div class="event_picture swiper-containerStop">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -567,12 +558,12 @@
                             <input type="search" placeholder="시설 및 장비를 검색해보세요.">
                             <input type="submit">
                         </form>
-                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        <button type="button">더보기</button>
                     </div>
                     <div class="map_icon_list">
-                        <button type="button"><img src="/img/sub/main_image/map_location_i.svg" alt="지도 전체보기 아이콘"></button>
-                        <button type="button"><img src="/img/sub/main_image/map_add.svg" alt="지도 확대 아이콘"></button>
-                        <button type="button"><img src="/img/sub/main_image/map_minus.svg" alt="지도 축소 아이콘"></button>
+                        <button type="button"><img src="/img/sub/main_image/map_location_i.png" alt="지도 전체보기 아이콘"></button>
+                        <button type="button"><img src="/img/sub/main_image/map_add.png" alt="지도 확대 아이콘"></button>
+                        <button type="button"><img src="/img/sub/main_image/map_minus.png" alt="지도 축소 아이콘"></button>
                     </div>
                     <div class="recommend_list">
                         <ul>

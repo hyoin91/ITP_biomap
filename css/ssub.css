@@ -25,10 +25,11 @@
 }
 
 .total_search_view .num_select{
-  width:7rem;
-  border-radius:0.5rem;
-  font-size:0.8rem;
-  font-family:'spoqaR';
+  width: 7rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-family: 'spoqaR';
+  height: 30px;
 }
 
 .total_search_view span{

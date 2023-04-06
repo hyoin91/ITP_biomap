@@ -165,23 +165,25 @@
                         <h2>커뮤니티</h2>
                         <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
-                    <ul class="cm_k">
-                        <li class="on">
-                            <button>동향뉴스</button>
-                        </li>
-                        <li>
-                            <button>바이오행사</button>
-                        </li>
-                        <li>
-                            <button>자유게시판</button>
-                        </li>
-                        <li>
-                            <button>연구개발</button>
-                        </li>
-                        <li>
-                            <button>공지사항</button>
-                        </li>
-                    </ul>
+                    <nav class="cm_scroll">
+                        <ul class="cm_k">
+                            <li class="on">
+                                <button>동향뉴스</button>
+                            </li>
+                            <li>
+                                <button>바이오행사</button>
+                            </li>
+                            <li>
+                                <button>자유게시판</button>
+                            </li>
+                            <li>
+                                <button>연구개발</button>
+                            </li>
+                            <li>
+                                <button>공지사항</button>
+                            </li>
+                        </ul>
+                    </nav>
                     <ul class="cm_t">
                         <li class="on">
                             <a href="/ITP_sub/Bd_noti.html">
@@ -462,7 +464,9 @@
                                 <h4>연구개발 Q&A</h4>
                                 <p><span>Bio</span>질문 확인하기</p>
                             </div>
-                            <div><img src="/img/sub/main_image/qa_i.svg" alt="연구개발 Q&A 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/qa_i.svg" alt="연구개발 Q&A 아이콘">
+                            </div>
                         </a>
                     </li>
                     <li>
@@ -471,7 +475,9 @@
                                 <h4>시설/장비 등록</h4>       
                                 <p><span>Bio</span>시설 장비 등록</p>
                             </div>
-                            <div><img src="/img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘">
+                            </div>
                         </a>
                     </li>
                     <li>
@@ -480,7 +486,9 @@
                                 <h4>기관인력정보</h4>  
                                 <p><span>Bio</span>검색 정보확인</p>
                             </div>
-                            <div><img src="/img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘">
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -565,11 +573,13 @@
                             <option value="list2">하위옵션2</option>
                             <option value="list3">하위옵션3</option>
                         </select>
-                        <form action="">
-                            <input type="search" placeholder="시설 및 장비를 검색해보세요.">
-                            <input type="submit">
-                        </form>
-                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        <div class="map_info_search">
+                            <form action="">
+                                <input type="search" placeholder="시설 및 장비를 검색해보세요.">
+                                <input type="submit">
+                            </form>
+                            <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        </div>
                     </div>
                     <div class="map_icon_list">
                         <button type="button"><img src="/img/sub/main_image/map_location_i.svg" alt="지도 전체보기 아이콘"></button>
@@ -596,6 +606,10 @@
         <div class="container_backcolor">
             <div class="shadow_color"></div>
         </div>
+    </div>
+
+    <div class="bottom_menu">
+        
     </div>
     <!--INCLUED========================================-->
     <footer data-include="include/footer.html"></footer>

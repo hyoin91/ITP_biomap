@@ -66,7 +66,7 @@ $(document).ready(function(){
         slidesPerView: 1.25,  
         spaceBetween: 0,
         slidesOffsetAfter:0,
-        slidesOffsetBefore :20, // 슬라이드 시작 부분 여백
+        slidesOffsetBefore : 0, // 슬라이드 시작 부분 여백
     },
   640:{//브라우저가 640보다 클 때
       slidesPerView: 1.1,

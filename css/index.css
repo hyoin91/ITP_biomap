@@ -26,19 +26,19 @@
 /*1:1문의 연락===============================*/
 .inquiry{
   position:fixed;
-  right:0; top:38rem;
+  right:0; top:30rem;
   z-index:10;
 
-  padding:0.4rem;
+  padding:0.2rem;
   background-color:#85bdfd;
-  border-radius:1rem;
+  border-radius:1rem 0 0 1rem;
 }
 
 .inquiry_circle a{
   display:block;
 
   margin:0px auto;
-  padding:0.3rem;
+  padding:0.2rem;
   background-color:#fff;
   border-radius:50%;
 
@@ -53,7 +53,7 @@
 /*QR코드===============================*/
 .qr_code{
   position:fixed;
-  right:0; top:20rem;
+  right:0; top:13rem;
 
   width:95px;
 
@@ -774,8 +774,18 @@
   height:100%;
 }
 
-.event_zone .custom-fraction{
-  margin-right:0.7rem;
+.custom-fraction{
+  transform:translateX(-25px);
+}
+
+.custom-fraction .current{
+  color:#85bdfd;
+}
+
+.swiper_button_wrap{
+  position:absolute;
+  right:5%; top:14%;
+  width:100px;
 }
 
 .event_zone .swiper-slide{
@@ -783,22 +793,9 @@
   background-size:120px;
 }
 
-.event_zone .swiper-button-next, .event_picture .swiper-button-prev{
-  position:absolute;
-  top:45px;
-}
-
 .event_zone .swiper-button-next:after, .event_zone .swiper-button-prev:after{
   font-size:1rem;
   color:#000;
-}
-
-.event_zone .swiper-button-prev{
-  left:265px;
-}
-
-.event_zone .swiper-button-next{
-  right:18px;
 }
 /*바이오 행사===============================*/
 /*챕터2===============================*/
@@ -843,6 +840,12 @@
 
 .map_info_input select:focus{
   outline:0;
+}
+
+.map_info_search{
+  width:100%;
+  height:100%;
+  display:flex;
 }
 
 .map_info_input form{
@@ -930,7 +933,7 @@
 .recommend_list{
   position:absolute;
   left:10%; bottom:10%;
-  width:50%;
+  width:55%;
   display:flex;
   flex-direction:column;
   gap:0.5rem;
@@ -985,6 +988,20 @@
 /*메인페이지 container 반응형▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 
 @media screen and (max-width:1400px) {
+  /* QR code */
+  .qr_code{
+    width:80px;
+  }
+
+  .qr_text {
+    padding: 0.7rem 0 0.3rem;
+  }
+
+  .qr_info{
+    gap:0.6rem;
+  }
+  /* QR code */
+
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
   .visual_wrap{
     max-width:90%;
@@ -1011,6 +1028,19 @@
     width:29%;
   }
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+   /* 바이오 지도 */
+   .container .con_sec3 .con_wrap{
+    max-width:90%;
+    width:90%;
+   }
+
+   .shadow_color{
+    max-width:90%;
+    width:90%;
+    height:10px;
+   }
+   /* 바이오 지도 */
 }
 
 @media screen and (max-width:1300px) {
@@ -1018,27 +1048,77 @@
 }
 
 @media screen and (max-width:1250px) {
-  .com_button_kind1 h4{
-    padding:0.1rem 1rem;
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .con_sec2 .con_wrap{
+    flex-direction:column;
+    gap:2rem;
   }
 
-  .com_button_kind1 span{
+  .com_button_kind1{
+    width:100%;
+    flex-direction:row;
+    gap:1.5rem;
+  }
+
+  .com_button_kind1 li{
+    width:100%;
+  }
+
+  .info_event{
+    width:100%;
+    gap:1.5rem;
+  }
+
+  .bio_information{
+    width:100%;
+    padding:2rem 1.5rem;
+  }
+  
+  .bi_1 li a{
+    flex-direction:column;
+    gap:0;
     font-size:1rem;
   }
 
-  .com_button_kind1 span::after{
-    margin:0 0.3rem;
+  .bi_2 li a{
+    gap:0;
+    font-size:1rem;
   }
+
+  .swiper_button_wrap{
+    right:4%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+}
+
+@media screen and (max-width:1100px) {
+  /* 바이오 지도 */
+  .recommend_list{
+    width:60%;
+  }
+  /* 바이오 지도 */
 }
 
 @media screen and (max-width:1024px) {
+  /*QR코드===============================*/
+  .qr_code{
+    display:none;
+  }
+  /*QR코드===============================*/
+
+  /*1:1문의===============================*/
+  .inquiry{
+    top:12rem;
+  }
+  /*1:1문의===============================*/
+
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
   .visual{
     height:750px;
   }
 
   .visual_wrap{
-    padding:1rem 0;
+    padding:2rem 0;
     flex-direction:column;
     gap:1rem;
   }
@@ -1095,28 +1175,325 @@
   /* 바이오 코디네이션 & 추천검색어 */
 
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .bi_1 li a{
+    flex-direction:row;
+    gap:1rem;
+    font-size:1.05rem;
+  }
 
+  .bi_2 li a{
+    font-size:1.05rem;
+  }
+
+  .swiper_button_wrap{
+    right:4.5%;
+  }
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .recommend_list{
+    width:70%;
+  }
+  /* 바이오 지도 */
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:930px) {
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .com_button_ibox{
+    display:none;
+  }
 
+  .com_button_kind1 li a, .com_button_kind2 li a{
+    justify-content:center;
+  }
+
+  .swiper_button_wrap{
+    right:5.5%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .recommend_list{
+    width:80%;
+  }
+  /* 바이오 지도 */
 }
 
 @media screen and (max-width:768px) {
+  /* 바이오 지도 */
+  .recommend_list{
+    width:95%;
+  }
 
+  .recommend_list ul:nth-of-type(1){
+    width:90%;
+    flex-wrap:wrap;
+  }
+
+  .recommend_list ul:nth-of-type(1) li{
+    margin-top:0.5rem;
+    width:45%;
+  }
+
+  .recommend_list ul:nth-of-type(2){
+    display:none;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:700px) {
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .com_button_kind1{
+    flex-direction:column;
+  }
+
+  .com_button_ibox{
+    display:block;
+  }
+
+  .com_button_kind1 li a, .com_button_kind2 li a{
+    justify-content:space-between;
+  }
+
+  .info_event{
+    flex-direction:column;
+  }
+
+  .event_zone{
+    width:100%
+  }
+
+  .swiper_button_wrap{
+    right:3%;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+}
+
+@media screen and (max-width:600px) {
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .cm_k li button{
+    font-size:1.1rem;
+  }
+
+  .cm_t h4{
+    font-size:1rem;
+  }
+
+  .cm_t h4::after{
+    padding-left:1rem;
+  }
+
+  .cm_t a{
+    gap:1rem;
+  }
+
+  .cm_t p{
+    font-size:1rem;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+
+  /* 바이오 코디네이션 & 추천검색어 */
+  .cm_title h2{
+    font-size:1.4rem;
+  }
+
+  .bioc_k li{
+    font-size:1rem;
+  }
+
+  .best_k div:nth-of-type(1){
+    font-size:1rem;
+  }
+
+  .best_k li p{
+    font-size:1rem;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .swiper_button_wrap{
+    right:4%;
+  }
+
+  .ez_subtext{
+    font-size:1rem;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .map_info_input{
+    width:90%;
+    height:auto;
+  }
+
+  .map_info_input{
+    flex-direction:column;
+  }
+
+  .map_info_input select{
+    width:100%;
+  }
+
+  .map_info_search{
+    gap:0.5rem;
+  }
+
+  .map_icon_list button{
+    width:35px;
+    height:35px;
+  }
+
+  .map_icon_list button img{
+    width:100%;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:550px) {
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .visual_wrap{
+    max-width:100%;
+    width:100%;
+  }
+
+  .slide_banner{
+    border-radius:0;
+  }
+
+  .sb1{
+    border-radius:0;
+  }
+
+  .sb1 button{
+    border-radius:0 1rem 0 0;
+  }
+
+  .community{
+    border-radius:0;
+  }
+
+  .cm_scroll{
+    overflow-x:auto;
+  }
+
+  .cm_k{
+    min-width:500px;
+
+    margin:0;
+    padding:1.5rem 0;
+  }
+
+  .cm_t{
+    margin-top:1.1rem;
+  }
+
+  .cm_t > li.on{
+    gap:1.4rem;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  
+  /* 바이오 코디네이션 & 추천검색어 */
+  .bio_codi{
+    display:none;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
 }
 
 @media screen and (max-width:480px) {
+    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+    .swiper_button_wrap{
+      right:5.5%;
+    }
+     /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
 
+  /* 바이오 지도 */
+  .recommend_list ul a{
+    font-size:1rem;
+  }
+  /* 바이오 지도 */
 }
 
 @media screen and (max-width:400px) {
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .bio_information{
+    padding:0;
+    height:auto;
 
+    background-color:transparent;
+  }
+
+  .bi_1 li{
+    background-color:#F9F9F9;
+  }
+
+  .bi_1 li a{
+    flex-direction:column;
+    gap:0.5rem;
+
+    font-size:0.9rem;
+  }
+
+  .bi_2{
+    flex-wrap:wrap;
+    gap:0;
+  }
+
+  .bi_2 li{
+    flex:inherit;
+    width:47%;
+    background-color:#F9F9F9;
+  }
+
+  .bi_2 li:last-child{
+    margin-top:1rem;
+    width:100%;
+  }
+
+  .bi_2 li a{
+    flex-direction:column;
+    gap:0.5rem;
+
+    font-size:0.9rem;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+
+
+  .recommend_list ul:nth-of-type(1) li:nth-child(3),
+  .recommend_list ul:nth-of-type(1) li:nth-child(4){
+    display:none;
+  }
+  /* 바이오 지도 */
 }
 
 @media screen and (max-width:300px) {
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+   .com_button_kind1 h4{
+    padding:0.1rem 0.5rem;
+   }
+   
+   .com_button_kind1 span{
+    font-size:1rem;
+   }
 
+   .com_button_kind1 p{
+    font-size:0.9rem;
+   }
+
+  .com_button_ibox{
+    width:55px;
+    height:55px;
+  }
+
+  .com_button_ibox img{
+    width:100%;
+  }
+
+  .swiper_button_wrap{
+    right:7%;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
 }
 
 /*메인페이지 container 반응형▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/

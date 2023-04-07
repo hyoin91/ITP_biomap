@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--css==========================================================================================-->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="css/include.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -45,67 +46,57 @@
 
 <body>
     <!--BGpopup========================================-->
-    <!-- <div class="popup_mask"></div> -->
+    <div class="popup_mask"></div>
     <!--설문조사 팝업-->
-    <!-- <div class="popupDiv_Wrap on"> -->
+    <div class="popupDiv_Wrap on">
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv">
-            <div class="popupDivCon">
+        <div class="popupDiv top_popup">
+            <div class="top_popup_wrap">
+                <div class="popupDivCon">
+                    <p>인천테느코파크는 Biopmap과 함께합니다.</p>
+               </div>
+               <button class="popCloseBtn">
 
+               </button>
             </div>
-            <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
-                <div>
-                    <button class="checkedBtn">
-                        오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                </div>
-            </div>
-        </div> -->
+        </div>
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv" style="display: none;">
+        <div class="popupDiv center_popup" style="display: none;">
             <div class="popupDivCon noimgBox">
+
             </div>
 
             <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
                 <div>
-                    <button class="checkedBtn">
+                    <button class="popCloseBtn">
                         오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
                     </button>
                     <button class="popCloseBtn">
                         창닫기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                </div>
-            </div>
-        </div> -->
-        <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv" style="display: none;">
-            <div class="popupDivCon noimgBox">
-            </div>
-
-            <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
-                <div>
-                    <button class="checkedBtn">
-                        오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                        <sapn class="checkedWrap"></span>
                     </button>
                 </div>
             </div>
         </div>
-    </div> -->
+        <!--기본팝업 ////주석해제시 팝업위치 변경-->
+        <!-- <div class="popupDiv" style="display: none;">
+            <div class="popupDivCon noimgBox">
+            </div>
+
+            <div class="popupDivClose">
+                <img src="/image/logo.png" alt="logo">
+                <div>
+                    <button class="checkedBtn">
+                        오늘하루 열지않기
+                        <span class="checkedWrap"></span>
+                    </button>
+                    <button class="popCloseBtn">
+                        창닫기
+                        <span class="checkedWrap"></span>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+    </div>
     <!--BGpopup========================================-->
 
     <!--INCLUED========================================-->
@@ -171,18 +162,60 @@
                                 <button>동향뉴스</button>
                             </li>
                             <li>
-                                <button>바이오행사</button>
+                                <button>일정</button>
                             </li>
                             <li>
-                                <button>자유게시판</button>
+                                <button>자유</button>
                             </li>
                             <li>
-                                <button>연구개발</button>
+                                <button>연구개발Q&A</button>
                             </li>
                             <li>
-                                <button>공지사항</button>
+                                <button>공지/새소식</button>
                             </li>
                         </ul>
+                        <div class="combo selectBox cm_k_mobile">
+                            <button class="label" id="TextVal">
+                                ::전체::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        ::전체::
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        동향
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        사업공고
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        일정
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        교육
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        채용
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        공지
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                     <ul class="cm_t">
                         <li class="on">
@@ -608,8 +641,27 @@
         </div>
     </div>
 
-    <div class="bottom_menu">
-        
+    <div class="mobile_bottom_menu">
+        <ul class="mobile_bottom_menu_wrap">
+            <li class="sv_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>서비스 신청</p>
+                </button>
+            </li>
+            <li class="bc_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>바이오맵 확인</p>
+                </button>
+            </li>
+            <li class="eq_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>장비 등록관리</p>
+                </button>
+            </li>
+        </ul>
     </div>
     <!--INCLUED========================================-->
     <footer data-include="include/footer.html"></footer>

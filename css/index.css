@@ -23,11 +23,119 @@
   color:#494949;
 }
 /*index.html 공통css===============================*/
+/* 모바일 하단 메뉴 숨김 */
+.mobile_bottom_menu{
+  display:none;
+}
+/* 모바일 하단 메뉴 숨김 */
+
+/* 상단팝업 */
+.top_popup{
+  background-color:#d7e8ff;
+}
+
+.top_popup_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:0px auto;
+  padding:0.5rem 0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.top_popup_wrap .popupDivCon{
+  flex:1;
+
+  color:#737373;
+  font-size:1rem;
+  text-align:center;
+}
+
+.top_popup_wrap .popCloseBtn {
+  width:12px;
+  height:12px;
+  background:url(/img/sub/main_image/top_popup_close.svg) no-repeat center;
+  background-size:cover;
+  border:0;
+}
+/* 상단팝업 */
+
+/* 센터팝업 */
+.center_popup{
+  position:fixed;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  display:flex;
+  flex-direction:column;
+
+  width:400px;
+  height:450px;
+
+  border-radius:1rem;
+  overflow:hidden;
+  z-index:1000;
+}
+
+.center_popup .popupDivCon{
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+
+  flex:1;
+}
+
+.center_popup .popupDivClose div{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:relative;
+}
+
+.center_popup .popupDivClose div::after{
+  position: absolute;
+  left:50%; top:50%;
+  transform: translate(-50%,-50%);
+
+  content:"";
+  display:block;
+  width:1px;
+  height:10px;
+  background-color:#fff;
+  
+  z-index: 10000000;
+}
+
+.center_popup .popupDivClose button{
+  flex:1;
+  padding:0.7rem 0;
+  color:#fff;
+  background-color:#3d3d3d;
+  border:0;
+}
+/* 센터팝업 */
+
+/* 센터팝업 작동시 전체배경 */
+.popup_mask{ 
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: none; 
+  background-color:#000;
+  opacity: 0.3;
+  z-index: 1000;
+}
+/* 센터팝업 작동시 전체배경 */
+
 /*1:1문의 연락===============================*/
 .inquiry{
   position:fixed;
-  right:0; top:30rem;
-  z-index:10;
+  right:0; top:32rem;
+  z-index:20;
 
   padding:0.2rem;
   background-color:#85bdfd;
@@ -50,6 +158,7 @@
   font-size:0.9rem;
 }
 /*1:1문의 연락===============================*/
+
 /*QR코드===============================*/
 .qr_code{
   position:fixed;
@@ -122,6 +231,7 @@
   outline:0;
 }
 /*QR코드===============================*/
+
 /*visual▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 .visual{
   height:400px;
@@ -218,6 +328,8 @@
   width:100%;
   height:100%;
 }
+/*슬라이드 배너 나열===============================*/
+
 /*슬라이드1===============================*/
 .sb1{
   padding:2rem;
@@ -275,20 +387,25 @@
   right:5%; top:0;
 }
 /*슬라이드1===============================*/
+
 /*슬라이드2,3===============================*/
 .sb2{
-  background:url(/img/sub/main_image/test_img1.jpg) no-repeat center;
-  background-size:cover;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
 }
 
 .sb3{
-  background:url(/img/sub/main_image/test_img2.jpg) no-repeat center;
-  background-size:cover;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
 }
 /*슬라이드2,3===============================*/
 /*슬라이드 배너===============================*/
 
 /*커뮤니티===============================*/
+.cm_k_mobile{
+  display:none;  
+}
+
 .community{
   padding:1.8rem;
   width:48%;
@@ -789,7 +906,7 @@
 }
 
 .event_zone .swiper-slide{
-  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #f0f0f0;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
   background-size:120px;
 }
 
@@ -813,8 +930,8 @@
   position:relative;
   width:100%;
   height:400px;
-  background:url(/img/sub/main_image/bio_map.png) no-repeat center;
-  background-size:cover;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
   border-radius:1rem;
 }
 
@@ -1041,6 +1158,13 @@
     height:10px;
    }
    /* 바이오 지도 */
+
+   /* 상단팝업 */
+   .top_popup_wrap{
+    max-width:90%;
+    width:90%;
+   }
+   /* 상단팝업 */
 }
 
 @media screen and (max-width:1300px) {
@@ -1100,6 +1224,17 @@
 }
 
 @media screen and (max-width:1024px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:40%;
+    height:55%;
+  }
+
+  .center_popup .popupDivClose{
+    font-size:1rem;
+  }
+  /* 센터팝업 */
+
   /*QR코드===============================*/
   .qr_code{
     display:none;
@@ -1198,6 +1333,12 @@
 }
 
 @media screen and (max-width:930px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:50%;
+  }
+  /* 센터팝업 */
+
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
   .com_button_ibox{
     display:none;
@@ -1220,6 +1361,91 @@
 }
 
 @media screen and (max-width:768px) {
+
+
+  /* 상단팝업 */
+  .top_popup_wrap .popupDivCon{
+    font-size:0.9rem;
+  }
+  /* 상단팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu{
+    display:block;
+    
+    position:fixed;
+    left:0; bottom:0;
+
+    width:100%;
+    padding:1rem 0;
+    background-color:#54AAFD;
+    border-radius:1rem 1rem 0 0;
+    z-index:1000;
+  }
+
+  .mobile_bottom_menu_wrap{
+    width:80%;
+    margin:0px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:4rem;
+  }
+
+  .mobile_bottom_menu_wrap button{
+    border:0;
+    background-color:transparent;
+
+    display:flex;
+    align-items:center;
+    gap:0.3rem;
+  }
+
+  .sv_button button, .eq_button button{
+    flex-direction:column;
+  }
+
+  .bc_button{
+    flex:1;
+
+    padding:1rem 0;
+    background-color:#fff;
+    border-radius:2rem;
+  }
+
+  .bc_button button{
+    justify-content:center;
+    gap:1rem;
+
+    width:100%;
+  }
+
+  .sv_button, .eq_button{
+    color:#fff;
+  }
+
+  .mobile_bottom_menu_wrap div{
+    width:30px;
+    height:30px;
+  }
+
+  .sv_button div{
+    background:url(/img/sub/main_image/bottom_menu_sevice.svg) center no-repeat;
+    background-size:contain;
+  }
+
+  .bc_button div{
+    background:url(/img/sub/main_image/bottom_menu_map.svg) center no-repeat;
+    background-size:contain;
+  }
+
+  .eq_button div{
+    background:url(/img/sub/main_image/bottom_menu_eq.svg) center no-repeat;
+    background-size:contain;
+  }
+  /* 모바일 하단 메뉴 */
+
   /* 바이오 지도 */
   .recommend_list{
     width:95%;
@@ -1242,6 +1468,17 @@
 }
 
 @media screen and (max-width:700px) {
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    width:90%;
+    gap:3rem;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:1rem;
+  }
+  /* 모바일 하단 메뉴 */
+
    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
   .com_button_kind1{
     flex-direction:column;
@@ -1270,6 +1507,13 @@
 }
 
 @media screen and (max-width:600px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:70%;
+    height:50%;
+  }
+  /* 센터팝업 */
+
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
   .cm_k li button{
     font-size:1.1rem;
@@ -1350,6 +1594,55 @@
 }
 
 @media screen and (max-width:550px) {
+  /* 모바일 커뮤니티 시작 */
+  .cm_k{
+    display:none;
+  }
+
+  .cm_k_mobile{
+    display:block;
+
+    margin:1.2rem 0;
+
+    z-index:10;
+  }
+
+  .community .cm_k_mobile button{
+    height:40px;
+  }
+
+  .community .combo ul li{
+    padding:0.3rem 1rem
+  }
+  /* 모바일 커뮤니티 시작 */
+
+  /* 상단메뉴 */
+  .top_popup_wrap{
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  .top_popup_wrap .popCloseBtn{
+    width:10px;
+    height:10px;
+  }
+  /* 상단메뉴 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:2rem;
+  }
+
+  .mobile_bottom_menu_wrap div{
+    width:25px;
+    height:25px;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:0.9rem;
+  }
+  /* 모바일 하단 메뉴 */
+
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
   .visual_wrap{
     max-width:100%;
@@ -1370,10 +1663,6 @@
 
   .community{
     border-radius:0;
-  }
-
-  .cm_scroll{
-    overflow-x:auto;
   }
 
   .cm_k{
@@ -1400,11 +1689,25 @@
 }
 
 @media screen and (max-width:480px) {
-    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
-    .swiper_button_wrap{
-      right:5.5%;
-    }
-     /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  /* 상단팝업 */
+
+
+  .top_popup_wrap .popupDivCon{
+    font-size:0.8rem;
+  }
+  /* 상단팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1.5rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .swiper_button_wrap{
+    right:5.5%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
 
   /* 바이오 지도 */
   .recommend_list ul a{
@@ -1414,6 +1717,35 @@
 }
 
 @media screen and (max-width:400px) {
+   /* 센터팝업 */
+   .center_popup{
+    width:90%;
+    height:40%;
+  }
+
+  .center_popup .popupDivClose{
+    font-size:0.9rem;
+  }
+  /* 센터팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1.5rem;
+  }
+
+  .bc_button{
+    padding:0.6rem 0;
+  }
+
+  .bc_button button{
+    gap:0;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:0.6rem;
+  }
+  /* 모바일 하단 메뉴 */
+
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
   .bio_information{
     padding:0;
@@ -1468,6 +1800,12 @@
 }
 
 @media screen and (max-width:300px) {
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1rem;
+  }
+  /* 모바일 하단 메뉴 */
+
    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
    .com_button_kind1 h4{
     padding:0.1rem 0.5rem;

@@ -11,7 +11,7 @@ body.active{
   width:90%;
   height:100vh;
   background-color:rgba(0,0,0,0.9);
-  z-index:100;
+  z-index:1100;
   overflow-y:auto;
 }
 
@@ -119,13 +119,13 @@ body.active{
 .layer_search_wrap{
   position:relative;
   width:100%;
-  padding:4rem;
+  padding:4rem 0;
   background-color:#fff;
   z-index:200;
 }
 
 .layer_search_box{
-  width:50%;
+  width:70%;
   margin:0 auto;
 }
 
@@ -182,7 +182,7 @@ body.active{
 .search_content{
   display:flex;
   align-items:center;
-  gap:2rem;
+  gap:1.5rem;
 }
 
 .search_content h3{
@@ -221,6 +221,8 @@ body.active{
 .search_close_btn{
   position:absolute;
   left:50%; bottom:-5rem;
+  transform:translateX(-50%);
+
   width:50px;
   height:50px;
   border:0;
@@ -706,6 +708,7 @@ footer{
     font-size:0.95rem;
   }
   /*header lnb&gnb===============================*/
+
 }
 
 @media screen and (max-width:1000px) {
@@ -875,6 +878,35 @@ footer{
 }
 
 @media screen and (max-width: 750px) {
+  /*Biomap 전체검색===============================*/
+  .search_input input[type=search]{
+    padding:0.8rem 1rem;
+  }
+
+  .search_input input[type=submit]{
+    right:4%;
+    width:20px;
+    height:20PX;
+  }
+
+  .search_content h3{
+    display:none;
+  }
+
+  .search_content ul{
+    flex-wrap:wrap;
+  }
+
+  .search_content ul a{
+    font-size:0.95rem;
+  }
+
+  .search_close_btn{
+    width:40px;
+    height:40px;
+  }
+  /*Biomap 전체검색===============================*/
+    
   /*footer===============================*/
   .ft_wrap{
     display:flex;

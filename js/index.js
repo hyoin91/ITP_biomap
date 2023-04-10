@@ -66,7 +66,7 @@ $(document).ready(function(){
         slidesPerView: 1.25,  
         spaceBetween: 0,
         slidesOffsetAfter:0,
-        slidesOffsetBefore :20, // 슬라이드 시작 부분 여백
+        slidesOffsetBefore : 0, // 슬라이드 시작 부분 여백
     },
   640:{//브라우저가 640보다 클 때
       slidesPerView: 1.1,
@@ -341,9 +341,9 @@ function ShowTabex(val){
 //바이오맵 메인페이지 기능
 $(document).ready(function () {
   //메인 슬라이드
-  var slideBanner = $(`.slide_banner`);
-  var slides = slideBanner.find(`.slide_items li`),
-  pager = slideBanner.find(`.sb_nav li`),
+  var slideBanner = $(".slide_banner");
+  var slides = slideBanner.find(".slide_items li"),
+  pager = slideBanner.find(".sb_nav li"),
   currentIdx = 0,
   timer;
   
@@ -372,8 +372,8 @@ $(document).ready(function () {
 
       currentIdx = i;
       //모든 페이저에서 active제거 현재 번호에 맞는 요소에 active 추가
-      pager.removeClass(`active`);
-      pager.eq(currentIdx).addClass(`active`);
+      pager.removeClass("active");
+      pager.eq(currentIdx).addClass("active");
   }
   
   
@@ -390,7 +390,7 @@ $(document).ready(function () {
   autoSlide();
 
   slideBanner.mouseenter(function(){
-      clearInterval(timer)
+      clearInterval(timer);
   });
 
   slideBanner.mouseleave(function(){
@@ -398,29 +398,32 @@ $(document).ready(function () {
   });
 
   // 커뮤니티 Tab 박스 on 클릭 이벤트
-  $(`.cm_k > li`).on('click',function(){
-      const numc = $(`.cm_k > li`).index($(this));
+  $(".cm_k > li").on("click",function(){
+      const numc = $(".cm_k > li").index($(this));
 
-      $(`.cm_k > li`).removeClass(`on`);
-      $(`.cm_t > li`).removeClass(`on`);
+      $(".cm_k > li").removeClass("on");
+      $(".cm_t > li").removeClass("on");
 
-      $(`.cm_k > li`).eq(numc).addClass(`on`);
-      $(`.cm_t > li`).eq(numc).addClass(`on`);
-  })
+      $(".cm_k > li").eq(numc).addClass("on");
+      $(".cm_t > li").eq(numc).addClass("on");
+  });
+
+    // 커뮤니티 모바일 Tab 박스 on 클릭 이벤트
+    $(".cm_k_mobile li").on("click",function(){
+      const numc = $(".cm_k_mobile li").index($(this));
+
+      $(".cm_t > li").removeClass("on");
+      $(".cm_t > li").eq(numc).addClass("on");
+  });
 
   // 바이오 코디네이션 Tab 박스 on 클릭 이벤트
-  $(`.bioc_k > li`).on(`click`,function(){
-      const numb = $(`.bioc_k > li`).index($(this));
+  $(".bioc_k > li").on("click",function(){
+      const numb = $(".bioc_k > li").index($(this));
 
-      $(`.bioc_k > li`).removeClass(`on`);
-      $(`.bioc_t > li`).removeClass(`on`);
+      $(".bioc_k > li").removeClass("on");
+      $(".bioc_t > li").removeClass("on");
 
-      $(`.bioc_k > li`).eq(numb).addClass(`on`);
-      $(`.bioc_t > li`).eq(numb).addClass(`on`);
-  })
-
-  // sns 이벤트
-  $(`.sns_btn`).on('click',function(){
-    $(`.sns`).toggleClass(`on`)
-  })
+      $(".bioc_k > li").eq(numb).addClass("on");
+      $(".bioc_t > li").eq(numb).addClass("on");
+  });
 });

@@ -92,8 +92,8 @@
                     <div class="bg"></div>
                     <ul class="sub_lnb">
                         <li><a href="/ITP_sub/Wz_news.html">동향/뉴스</a></li>
-                        <li><a href="/ITP_sub/Wz.schedule.html">일정게시판</a></li>
-                        <li><a href="/ITP_sub/Bd_free.html">자유게시판</a></li>
+                        <li><a href="/ITP_sub/Wz.schedule.html">일정</a></li>
+                        <li><a href="/ITP_sub/Bd_free.html">자유</a></li>
                         <li><a href="/ITP_sub/Bd_bioQna.html">연구개발Q&A</a></li>
                         <li><a href="/ITP_sub/Bd_inquiry.html">1:1문의</a></li>
                         <li><a href="/ITP_sub/Bd_noti.html">공지/새소식</a></li>
@@ -105,7 +105,7 @@
                     <ul class="sub_lnb">
                         <li><a href="#">정부사업</a></li>
                         <li><a href="#">지자체사업</a></li>
-                        <li><a href="/ITP_sub/Bd_employ.html">채용게시판</a></li>
+                        <li><a href="/ITP_sub/Bd_employ.html">채용</a></li>
                     </ul>
                 </li>
                 <li>
@@ -186,8 +186,8 @@
                     <div class="show_sslnb">
                         <ul class="full_sslnb">
                             <li><a href="#">동향뉴스</a></li>
-                            <li><a href="#">일정게시판</a></li>
-                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">일정</a></li>
+                            <li><a href="#">자유</a></li>
                             <li><a href="#">연구개발Q&A</a></li>
                             <li><a href="#">1:1문의</a></li>
                             <li><a href="#">공지/새소식</a></li>
@@ -200,7 +200,7 @@
                         <ul class="full_sslnb">
                             <li><a href="#">정부사업</a></li>
                             <li><a href="#">지자체사업</a></li>
-                            <li><a href="#">채용게시판</a></li>
+                            <li><a href="#">채용</a></li>
                         </ul>
                     </div>
                 </li>
@@ -231,10 +231,10 @@
                 <div class="search_content">
                     <h3>자주찾는 검색어</h3>
                     <ul>
-                        <li><a href="#">코디네이션</a></li>
-                        <li><a href="#">커뮤니티</a></li>
-                        <li><a href="#">포토존</a></li>
-                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">#코디네이션</a></li>
+                        <li><a href="#">#커뮤니티</a></li>
+                        <li><a href="#">#포토존</a></li>
+                        <li><a href="#">#Q&A</a></li>
                     </ul>
                 </div>
             </div>
@@ -245,43 +245,43 @@
 <script>
     $(document).ready(function(){
         // Snb background 생성 
-        $(`.lnb_text li`).mouseenter(function(){
-            $(`.lnb`).addClass(`on`);
+        $(".lnb_text li").mouseenter(function(){
+            $(".lnb").addClass("on");
         });
 
-        $('.lnb').mouseleave(function(){
-            $(`.lnb`).removeClass(`on`);
+        $(".lnb").mouseleave(function(){
+            $(".lnb").removeClass("on");
         });
 
         // Lnb hover 글자색 변경 글자 아래 Border 추가
-        $('.lnb_text > li').mouseenter(function(){
+        $(".lnb_text > li").mouseenter(function(){
             $(this).children().eq(1).stop().animate({"width":"100%"});
             $(this).children().eq(0).css({"color":"#54AAFD"});
         })
 
-        $('.lnb_text > li').mouseleave(function(){
+        $(".lnb_text > li").mouseleave(function(){
             $(this).children().eq(1).stop().animate({"width":"0%"});
             $(this).children().eq(0).css({"color":"#000000"});
         })
 
          // Lnb Search Icon 클릭 시 검색 박스 슬라이드 업다운
-        $(`.search_menu_icon button`).on(`click`,function(){
-            $(`.layer_search`).addClass(`on`)
-            $(`body`).addClass(`active`);
+        $(".search_menu_icon button").on("click",function(){
+            $(".layer_search").addClass("on");
+            $("body").addClass("active");
         })
 
-        $(`.search_close_btn`).on(`click`,function(){
-            $(`.layer_search`).removeClass(`on`)
-            $(`body`).removeClass(`active`);
+        $(".search_close_btn").on("click",function(){
+            $(".layer_search").removeClass("on");
+            $("body").removeClass("active");
         })
 
         // full_menu icon 클릭 시 full_menu 슬라이드 업다운
-        $(`.full_menu_icon button`).on('click',function(){
-            $(`.full_menu`).animate({"right":"0%"},600)
+        $(".full_menu_icon button").on("click",function(){
+            $(".full_menu").animate({"right":"0%"},600);
         })
 
-        $(`.full_close_box`).on('click',function(){
-            $(`.full_menu`).animate({"right":"-90%"},600)
+        $(".full_close_box").on("click",function(){
+            $(".full_menu").animate({"right":"-90%"},600);
         })
 
         // 모바일 화면 lnb 슬라이드 업 다운

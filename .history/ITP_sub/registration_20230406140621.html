@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인천시 바이오맵</title>
+    <link rel=" shortcut icon" href="image/favicon1.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+    <!--mata======================================================================================-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--css==========================================================================================-->
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/include.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!--fonts==========================================================================================-->
+    <link rel="stylesheet" href="../fonts/바른공군체Bold.woff"><!--head-->
+    <link rel="stylesheet" href="../fonts/바른공군체Medium.woff"><!--head-->
+    <link rel="stylesheet" href="../fonts/한수원_한돋음_R.woff"><!--con-->
+    <link rel="stylesheet" href="../fonts/한수원_한돋음_B.woff"><!--con-->
+    <!--js==========================================================================================-->
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="../vendor/js/swiper-bundle.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
+    <script>Kakao.init('08602e869d4eb9173fabd255da6adecd');</script>
+    <!--script==========================================================================================-->
+    <script>
+
+    </script>
+    <style>
+    </style>
+</head>
+<!--body==========================================================================================-->
+
+<body>
+    <div class="subWrap">
+        <!--INCLUED========================================-->
+        <header class="" data-include="../include/header.html"></header>
+        <!--INCLUED========================================-->
+        <div class="cmWrap">
+            <!--서브메뉴&&콘텐츠서비스========================================-->
+            <div class="conWrap">
+                <section class="bc_Wrap TitleWrap">
+                    <ul class="bc">
+                        <li class="depth_Wrap selectBox">
+                            <a class="label noMenue">
+                                기관정보
+                            </a>
+                        </li>
+                        <li class="depth_Wrap selectBox">
+                            <a class="label">
+                                등록관리
+                            </a>
+                            <div class="optionList">
+                                <a class="optionItem">
+                                    바이오맵
+                                </a>
+                                <a class="optionItem" href="Wz_institution.html">
+                                    기관정보
+                                </a>
+                                <a class="optionItem" href="Wz_worker.html">
+                                    인력정보
+                                </a>
+                                <a class="optionItem" href="registration.html">
+                                    등록관리
+                                </a>
+                            </div>
+                        </li>
+                        <li class="depth_Wrap selectBox">
+                            <a class="label">
+                               
+                            </a>
+                            <div class="optionList">
+                                <a class="optionItem">
+                                    바이오맵
+                                </a>
+                                <a class="optionItem" href="Wz_institution.html">
+                                    기관정보
+                                </a>
+                                <a class="optionItem" href="Wz_worker.html">
+                                    인력정보
+                                </a>
+                                <a class="optionItem" href="registration.html">
+                                    등록관리
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="topSvc_Wrap">
+                        <button onClick="clip();">
+                        </button>
+                        <div class="selectBox snsWrap">
+                            <button class="label">
+                            </button>
+                            <div class="optionList snsBtnWrap">
+                                <button onClick="SnsPop('Tw')" id="SnsPopTw" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Fb')" id="SnsPopFb" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                            </div>
+                        </div>
+                        <button onClick="ShowPop('0')">
+                        </button>
+                        <!-- <div id="ShowPop0" class="ShowPopCon">
+                            <div class="snsBtnWrap">
+                                <button onClick="SnsPop('Tw')" id="SnsPopTw" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Fb')" id="SnsPopFb" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                            </div>
+                        </div> -->
+                        <!-- <div id="ShowPop1" class="ShowPopCon">
+    
+                        </div> -->
+                    </div>
+
+                </section>
+                <!--콘텐츠상단==타이틀,서칭==========================================-->
+            </div>
+            <!--콘텐츠========================================-->
+            <div class="conWrap" id="printWrap">
+
+                <section class="TitleWrap">
+                    <h2>
+                        시설/장비 등록
+                    </h2>
+                    <div class="imforWrap">
+                        <p class="H_Bullet">
+                            고정자산관리번호는 장비를 보유한 기관에서 장비를 관리하기 위래 부여하는 고유번호입니다.
+                        </p>
+                        <p>
+                            고정자산관리번호가 '0'처럼 의미없는 값을 기재하였다고 판단되면, 승인되지 않습니다.
+                        </p>
+                        <strong class="keyColor">
+                            이외, 승인되지 않는 사유가 있을 수 있으며 등록 승인은 신청일로 부터 2-4일 소요될 수있습니다.
+                            <button onClick="Bd_Qna.html" class="SmallBtn subkeyBtn2">
+                                FAQ
+                            </button>
+                        </strong>
+                    </div>
+                </section>
+                <section>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                시설장비분류
+                            </span>
+                        </div>
+                        <div class="inquiry_value form_Half">
+                            <div class="rdoWrap">
+                                <label>
+                                    <span>연구장비</span>
+                                    <input type="radio" name="Private" checked>
+                                </label>
+                                <label>
+                                    <span>비공개</span>
+                                    <input type="radio"name="Private">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                이름
+                            </span>
+                        </div>
+                        <div class="inquiry_value">
+                            <input type="text" value="맵동이">
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                이메일
+                            </span>
+                        </div>
+                        <div class="inquiry_value">
+                            <input type="text" value="sdan@sdmfkl.sdf">
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                연락처
+                            </span>
+                        </div>
+                        <div class="inquiry_value">
+                            <input type="text" value="01022223333">
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                첨부파일
+                            </span>
+                        </div>
+                        <div class="inquiry_value fileBox" id="fileForm">
+                            <a href="" id="fileDrop" class="fileDrop" onClick="return false;"></a>
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                제목
+                            </span>
+                        </div>
+                        <div class="inquiry_value">
+                            <input type="text" class="MustselectCon">
+                        </div>
+                    </div>
+                    <div class="inquiry_form">
+                        <div class="inquiry_label">
+                            <span>
+                                내용
+                            </span>
+                        </div>
+                        <div class="inquiry_value">
+                            <textarea id="textA" class="MustselectCon"></textarea>
+                        </div>
+                    </div>
+                    <label class="check_One">
+                        <span>개인정보수집 및 이용 <strong>동의</strong></span>
+                        <input type="checkbox">
+                    </label>
+                </section>
+                <div class="BtnWrap BtnsWra
+                <div class="BtnWrap BtnsWrap">
+                    <button class="commonBtn subkeyBtn2">
+                        취소
+                    </button>
+                    <button class="commonBtn keyBtn" onClick="inquiry()">
+                        등록하기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--INCLUED========================================-->
+        <footer data-include="../include/footer.html"></footer>
+        <!--INCLUED========================================-->
+    </div>
+</body>
+<!--==========================================================================================-->
+
+</html>

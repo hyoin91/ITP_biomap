@@ -2,6 +2,7 @@
 .search_sort{
   display:flex;
 }
+
 /*총 검색 개수-------------------------*/
 .total_search_view{
   margin:3rem 0 0.5rem;
@@ -36,6 +37,7 @@
   color:#6AA8F3;
 }
 /*총 검색 개수-------------------------*/
+
 .wZine_gallery{
   width:100%;
   border-top:2px solid #000;
@@ -218,6 +220,7 @@
   align-items:center;
 }
 /*바이오 연구시설 웹진게시판-------------------------*/
+
 /*바이오 서비스 웹진게시판-------------------------*/
 .wZbio_service{
   width:100%;
@@ -257,6 +260,7 @@
   align-items:center;
 }
 /*바이오 서비스 웹진게시판-------------------------*/
+
 /*바이오 장비 웹진게시판-------------------------*/
 .searchWrap .equipment_classification,
 .searchWrap .location_classification,
@@ -320,3 +324,316 @@
   align-items:center;
 }
 /*바이오 장비 웹진게시판-------------------------*/
+
+/*바이오맵(Biomap)-------------------------*/
+/*바이오맵(Biomap) 전체사이즈-------------------------*/
+.biomap{
+  width:100%;
+  height:100vh;
+
+  display:flex;
+  overflow:hidden;
+}
+/*바이오맵(Biomap) 전체사이즈-------------------------*/
+/*바이오맵(Biomap) 좌측 검색-------------------------*/
+.map_search_box{
+  padding:1rem 2rem;
+  width:25%;
+  height:100%;
+
+  background-color:#fff;
+  box-sizing:border-box;
+
+  overflow-y:auto;
+}
+/*바이오맵(Biomap) 좌측 검색 로고-------------------------*/
+.search_logo{
+  margin-bottom:1rem;
+  width:100%;
+  height:70px;
+
+  display:flex;
+  align-items:center;
+}
+
+.search_logo .logo{
+  width:110px;
+}
+
+.search_logo img{
+  width:100%;
+}  
+/*바이오맵(Biomap) 좌측 검색 로고-------------------------*/
+/*바이오맵(Biomap) 좌측 검색 input-------------------------*/
+.search_box{
+  position:relative;
+
+  width:100%;
+}
+
+.search_box input[type=search]{
+  width:100%;
+  padding:0.7rem 1rem;
+  border:1px solid #ccc;
+  border-radius:0.5rem;
+}
+
+.search_box input[type=submit]{
+  position: absolute;
+  right:5%;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  background:url(/img/sub/main_image/search.svg) no-repeat center;
+  background-size:contain;
+  border:0;
+  text-indent:-1000rem
+}
+/*바이오맵(Biomap) 좌측 검색 input-------------------------*/
+/*바이오맵(Biomap) 좌측 검색 input image-------------------------*/
+.search_ibox{
+  margin:1.5rem 0;
+
+  width:100%;
+  height:200px;
+  border-radius:0.5rem;
+  background-color:#F6F6F6;
+}
+
+.search_title_box{
+  width:100%;
+}
+/*바이오맵(Biomap) 좌측 검색 input image-------------------------*/
+/*바이오맵(Biomap) 좌측 검색 타이틀-------------------------*/
+.search_title_info{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.top_title li:nth-of-type(1){
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.top_title li:nth-of-type(1) button{
+  padding:0.4rem 1.2rem;
+  font-size:0.9rem;
+  color:#fff;
+  border:0;
+  border-radius:0.3rem;
+  background-color:#54AAFD;
+}
+
+.top_title li:nth-of-type(2){
+  margin:0.5rem 0 0.1rem;
+}
+
+.top_title_info{
+  display:flex;
+  flex-direction:column;
+  gap:0.2rem;
+}
+
+.equipment_event_wrap{
+  margin:1.5rem 0;
+}
+
+.institution_equipment_wrap{
+  border-top:1px solid #959595;
+  padding:1.5rem 0;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+
+.institution_equipment_wrap ul{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.institution_equipment_wrap li{
+  flex:1;
+}
+
+.institution_equipment_wrap a{
+  color:#222;
+}
+
+.equipment_ibox{
+  margin-bottom:0.5rem;
+  height:100px;
+  background-color:#F6F6F6;
+  border-radius:0.5rem;
+}
+
+.institution_event_wrap{
+  border-top:1px solid #959595;
+  padding:1.5rem 0 2rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+
+.institution_event_wrap ul{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.institution_event_wrap li{
+  flex:1;
+}
+
+.institution_event_wrap a{
+  color:#222;
+}
+
+.event_ibox{
+  margin-bottom:0.5rem;
+  height:100px;
+  background-color:#F6F6F6;
+  border-radius:0.5rem;
+}
+
+.map_info_button{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+
+.map_info_button button{
+  flex:1;
+  padding:0.6rem 0;
+  border:0;
+  border-radius:0.5rem;
+}
+/*바이오맵(Biomap) 좌측 검색 타이틀-------------------------*/
+/*바이오맵(Biomap) 좌측 검색-------------------------*/
+/*바이오맵(Biomap) 우측 지도-------------------------*/
+.map_box{
+  position:relative;
+
+  padding:1rem 2rem;
+  width:75%;
+
+  background-color:#cde4ff;
+  box-sizing:border-box;
+}
+
+.map_box button{
+  cursor:pointer;
+}
+
+.map_top{
+  width:100%;
+  height:70px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:1rem;
+}
+
+.map_top ul{
+  display:flex;
+  gap:1rem;
+}
+
+.map_top ul button{
+  width:100px;
+  height:40px;
+  background-color:#fff;
+  border:0;
+  border-radius:0.5rem;
+}
+
+.biomap_full_menu{
+  width:45px;
+  height:45px;
+  background-color:#fff;
+  border:0;
+  border-radius:0.5rem;
+  line-height:50px;
+}
+
+.biomap_full_menu button{
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  border:0;
+}
+
+.biomap_full_menu img{
+  width:50%;
+}
+
+.biomap_plmi{
+  position:absolute;
+  right:2rem; top:20%;
+  display:flex;
+  flex-direction:column;
+}
+
+.biomap_plmi li{
+  width:45px;
+  height:45px;
+  background-color:#fff;
+}
+
+.biomap_plmi li button{
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  border:0;
+}
+
+.biomap_plmi img{
+  width:100%;
+}
+
+.biomap_plmi li:nth-of-type(1){
+  margin-bottom:1rem;
+  border-radius:0.5rem;
+}
+
+.biomap_plmi li:nth-of-type(2){
+  border-radius:0.5rem 0.5rem 0 0;
+}
+
+.biomap_plmi li:nth-of-type(3){
+  border-radius:0 0 0.5rem 0.5rem;
+}
+
+.biomap_navigation{
+  position:absolute;
+  right:2rem; bottom:2rem;
+
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+
+.biomap_navigation li{
+  width:45px;
+  height:45px;
+  background-color:#fff;
+  border-radius:0.5rem;
+}
+
+.biomap_navigation li button{
+  width:100%;
+  height:100%;
+  border:0;
+  background-color:transparent;
+}
+
+.biomap_navigation img{
+  width:100%;
+}
+/*바이오맵(Biomap) 우측 지도-------------------------*/
+/*바이오맵(Biomap)-------------------------*/

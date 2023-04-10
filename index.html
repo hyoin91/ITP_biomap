@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--css==========================================================================================-->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="css/include.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -45,67 +46,57 @@
 
 <body>
     <!--BGpopup========================================-->
-    <!-- <div class="popup_mask"></div> -->
+    <div class="popup_mask"></div>
     <!--설문조사 팝업-->
-    <!-- <div class="popupDiv_Wrap on"> -->
+    <div class="popupDiv_Wrap on">
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv">
-            <div class="popupDivCon">
+        <div class="popupDiv top_popup">
+            <div class="top_popup_wrap">
+                <div class="popupDivCon">
+                    <p>인천테느코파크는 Biopmap과 함께합니다.</p>
+               </div>
+               <button class="popCloseBtn">
 
+               </button>
             </div>
-            <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
-                <div>
-                    <button class="checkedBtn">
-                        오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                </div>
-            </div>
-        </div> -->
+        </div>
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv" style="display: none;">
+        <div class="popupDiv center_popup" style="display: none;">
             <div class="popupDivCon noimgBox">
+
             </div>
 
             <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
                 <div>
-                    <button class="checkedBtn">
+                    <button class="popCloseBtn">
                         오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
                     </button>
                     <button class="popCloseBtn">
                         창닫기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                </div>
-            </div>
-        </div> -->
-        <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv" style="display: none;">
-            <div class="popupDivCon noimgBox">
-            </div>
-
-            <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
-                <div>
-                    <button class="checkedBtn">
-                        오늘하루 열지않기
-                        <sapn class="checkedWrap"></span>
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                        <sapn class="checkedWrap"></span>
                     </button>
                 </div>
             </div>
         </div>
-    </div> -->
+        <!--기본팝업 ////주석해제시 팝업위치 변경-->
+        <!-- <div class="popupDiv" style="display: none;">
+            <div class="popupDivCon noimgBox">
+            </div>
+
+            <div class="popupDivClose">
+                <img src="/image/logo.png" alt="logo">
+                <div>
+                    <button class="checkedBtn">
+                        오늘하루 열지않기
+                        <span class="checkedWrap"></span>
+                    </button>
+                    <button class="popCloseBtn">
+                        창닫기
+                        <span class="checkedWrap"></span>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+    </div>
     <!--BGpopup========================================-->
 
     <!--INCLUED========================================-->
@@ -165,23 +156,67 @@
                         <h2>커뮤니티</h2>
                         <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
-                    <ul class="cm_k">
-                        <li class="on">
-                            <button>동향뉴스</button>
-                        </li>
-                        <li>
-                            <button>바이오행사</button>
-                        </li>
-                        <li>
-                            <button>자유게시판</button>
-                        </li>
-                        <li>
-                            <button>연구개발</button>
-                        </li>
-                        <li>
-                            <button>공지사항</button>
-                        </li>
-                    </ul>
+                    <nav class="cm_scroll">
+                        <ul class="cm_k">
+                            <li class="on">
+                                <button>동향뉴스</button>
+                            </li>
+                            <li>
+                                <button>일정</button>
+                            </li>
+                            <li>
+                                <button>자유</button>
+                            </li>
+                            <li>
+                                <button>연구개발Q&A</button>
+                            </li>
+                            <li>
+                                <button>공지/새소식</button>
+                            </li>
+                        </ul>
+                        <div class="combo selectBox cm_k_mobile">
+                            <button class="label" id="TextVal">
+                                ::전체::
+                            </button>
+                            <ul class="optionList">
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        ::전체::
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        동향
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        사업공고
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        일정
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        교육
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        채용
+                                    </button>
+                                </li>
+                                <li onclick="statusChange(this)">
+                                    <button>
+                                        공지
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                     <ul class="cm_t">
                         <li class="on">
                             <a href="/ITP_sub/Bd_noti.html">
@@ -310,16 +345,16 @@
                     </div>
                     <ul class="bioc_k">
                         <li class="on">
-                            <button type="button">정부사업공고</button>
+                            <button type="button">정부사업</button>
                         </li>
                         <li>
-                            <button type="button">지자체사업공고</button>
+                            <button type="button">지자체사업</button>
                         </li>
                         <li>
-                            <button type="button">채용공고</button>
+                            <button type="button">채용</button>
                         </li>
                         <li>
-                            <button type="button">교육프로그램공고</button>
+                            <button type="button">교육프로그램</button>
                         </li>
                     </ul>
                     <ul class="bioc_t">
@@ -460,27 +495,33 @@
                         <a href="#">
                             <div>
                                 <h4>연구개발 Q&A</h4>
-                                <p><span>Biomap</span>질문 확인하기</p>
+                                <p><span>Bio</span>질문 확인하기</p>
                             </div>
-                            <div><img src="/img/sub/main_image/qa_i.svg" alt="연구개발 Q&A 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/qa_i.svg" alt="연구개발 Q&A 아이콘">
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <div>
                                 <h4>시설/장비 등록</h4>       
-                                <p><span>Biomap</span>시설 장비 등록</p>
+                                <p><span>Bio</span>시설 장비 등록</p>
                             </div>
-                            <div><img src="/img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘">
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <div>
                                 <h4>기관인력정보</h4>  
-                                <p><span>Biomap</span>검색 정보확인</p>
+                                <p><span>Bio</span>검색 정보확인</p>
                             </div>
-                            <div><img src="/img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘"></div>
+                            <div class="com_button_ibox">
+                                <img src="/img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘">
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -546,8 +587,10 @@
                                 </div>
                             </div>
                             <!-- 방향 버튼 상황에 따라 추가 삭제가능 -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper_button_wrap">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -563,11 +606,13 @@
                             <option value="list2">하위옵션2</option>
                             <option value="list3">하위옵션3</option>
                         </select>
-                        <form action="">
-                            <input type="search" placeholder="시설 및 장비를 검색해보세요.">
-                            <input type="submit">
-                        </form>
-                        <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        <div class="map_info_search">
+                            <form action="">
+                                <input type="search" placeholder="시설 및 장비를 검색해보세요.">
+                                <input type="submit">
+                            </form>
+                            <button class="plus_icon"><a href="#"><img src="/img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                        </div>
                     </div>
                     <div class="map_icon_list">
                         <button type="button"><img src="/img/sub/main_image/map_location_i.svg" alt="지도 전체보기 아이콘"></button>
@@ -594,6 +639,29 @@
         <div class="container_backcolor">
             <div class="shadow_color"></div>
         </div>
+    </div>
+
+    <div class="mobile_bottom_menu">
+        <ul class="mobile_bottom_menu_wrap">
+            <li class="sv_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>서비스 신청</p>
+                </button>
+            </li>
+            <li class="bc_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>바이오맵 확인</p>
+                </button>
+            </li>
+            <li class="eq_button">
+                <button>
+                    <div class="bottom_ibox"></div>
+                    <p>장비 등록관리</p>
+                </button>
+            </li>
+        </ul>
     </div>
     <!--INCLUED========================================-->
     <footer data-include="include/footer.html"></footer>

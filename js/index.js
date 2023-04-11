@@ -412,8 +412,11 @@ $(document).ready(function () {
     $(".cm_k_mobile li").on("click",function(){
       const numc = $(".cm_k_mobile li").index($(this));
 
-      $(".cm_t > li").removeClass("on");
-      $(".cm_t > li").eq(numc).addClass("on");
+      $(".cm_k_mobile li").removeClass("on");
+      $(".cm_t_mobile li").removeClass("on");
+
+      $(".cm_k_mobile li").eq(numc).addClass("on");
+      $(".cm_t_mobile li").eq(numc).addClass("on");
   });
 
   // 바이오 코디네이션 Tab 박스 on 클릭 이벤트
@@ -421,9 +424,9 @@ $(document).ready(function () {
       const numb = $(".bioc_k > li").index($(this));
 
       $(".bioc_k > li").removeClass("on");
-      $(".bioc_t > li").removeClass("on");
+      $(".cm_t_mobile > li").removeClass("on");
 
       $(".bioc_k > li").eq(numb).addClass("on");
-      $(".bioc_t > li").eq(numb).addClass("on");
+      $(".cm_t_mobile > li").eq(numb).addClass("on");
   });
 });

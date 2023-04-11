@@ -406,6 +406,10 @@
   display:none;  
 }
 
+.sub_cm_k_mobile{
+  display:none;
+}
+
 .community{
   padding:1.8rem;
   width:48%;
@@ -487,6 +491,10 @@
   display:flex;
   flex-direction:column;
   gap:1.8rem;
+}
+
+.cm_t_mobile{
+  display:none;
 }
 /*커뮤니티===============================*/
 /*visual▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
@@ -1594,28 +1602,6 @@
 }
 
 @media screen and (max-width:550px) {
-  /* 모바일 커뮤니티 시작 */
-  .cm_k{
-    display:none;
-  }
-
-  .cm_k_mobile{
-    display:block;
-
-    margin:1.2rem 0;
-
-    z-index:10;
-  }
-
-  .community .cm_k_mobile button{
-    height:40px;
-  }
-
-  .community .combo ul li{
-    padding:0.3rem 1rem
-  }
-  /* 모바일 커뮤니티 시작 */
-
   /* 상단메뉴 */
   .top_popup_wrap{
     flex-direction:column;
@@ -1644,9 +1630,15 @@
   /* 모바일 하단 메뉴 */
 
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .visual{
+    height:auto;
+  }
+
   .visual_wrap{
+    padding:0;
     max-width:100%;
     width:100%;
+    gap:0;
   }
 
   .slide_banner{
@@ -1662,7 +1654,14 @@
   }
 
   .community{
+    margin-top:2rem;
+    padding:0;
+    height:auto;
     border-radius:0;
+  }
+
+  .visual_back::after{
+    background-color:transparent;
   }
 
   .cm_k{
@@ -1680,10 +1679,133 @@
     gap:1.4rem;
   }
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
+
+  /* 모바일 커뮤니티 시작 */
+  .cm_k{
+    display:none;
+  }
+
+  .cm_t{
+    display:none;
+  }
+
+  .community .cm_title{
+    display:none;
+  }
+
+  .cm_k_mobile{
+    display:flex;
+    justify-content:space-around;
+    margin:0;
+    background:#156dca;
+  }
+  
+  .cm_k_mobile li{
+    padding:0.2rem 0;
+  }
+
+  .cm_k_mobile li button{
+    padding:0.5rem 0;
+    font-family:"spoqaM";
+    font-size:1rem;
+    color:#fff;
+  }
+  
+  .cm_k_mobile li.on button{
+    color:#fff;
+  }
+  
+  .cm_k_mobile button{
+    border:0;
+    background-color:transparent;
+  }
+  
+  .cm_k_mobile button:focus{
+    outline:0;
+  }
+
+  .sub_cm_k_mobile{
+    display:block;
+  }
+
+  .sub_cm_k_mobile .combo{
+    border:0;
+    border-bottom:1px solid #ccc;
+  }
+
+  .sub_cm_k_mobile .combo>button{
+    height:40px;
+    font-size:1rem;
+  }
+
+  .sub_cm_k_mobile .optionList{
+    border:0;
+  }
+
+  .sub_cm_k_mobile .optionList li{
+    font-size:1rem;
+  }
+
+  .cm_t_mobile{
+    display:block;
+  }
+
+  .cm_t_mobile a{
+    padding:1.2rem 0;
+    display:flex;
+    justify-content:space-around;
+    gap:0.5rem;
+    color:#000;
+    border-bottom:1px solid #ccc;
+  }
+  
+  .cm_t_mobile h4{
+    font-family:"spoqaR";
+    font-size:1rem;
+  }
+  
+  .cm_t_mobile p{
+    display:block;
+    width:360px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align: left;
+  
+    font-family:"spoqaL";
+    font-size:1rem;
+  }
+  
+  .cm_t_mobile h4::after{
+    display:none;
+  }
+  
+  .cm_t_mobile > li{
+    display:none;
+  }
+  
+  .cm_t_mobile > li.on{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  /* 모바일 커뮤니티 시작 */
   
   /* 바이오 코디네이션 & 추천검색어 */
   .bio_codi{
     display:none;
+  }
+
+  .cm_title h2{
+    font-size:1.3rem;
+  }
+
+  .con_sec1 .con_wrap{
+    margin:2rem auto;    
+  }
+
+  .best_search .cm_title span{
+    font-size:1.1rem;
   }
   /* 바이오 코디네이션 & 추천검색어 */
 }

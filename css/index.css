@@ -131,7 +131,7 @@
 }
 /* 센터팝업 작동시 전체배경 */
 
-/*1:1문의 연락===============================*/
+/*바이오 코디네이션 fixed===============================*/
 .inquiry{
   position:fixed;
   right:0; top:32rem;
@@ -157,80 +157,7 @@
 .inquiry_circle p{
   font-size:0.9rem;
 }
-/*1:1문의 연락===============================*/
-
-/*QR코드===============================*/
-.qr_code{
-  position:fixed;
-  right:0; top:13rem;
-
-  width:95px;
-
-  background-color:#fff;
-  border:1px solid #61abff;
-  border-right:0;
-  border-radius:0.5rem 0 0 0.5rem;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  z-index:10;
-
-  text-align: center;
-  overflow:hidden;
-}
-
-.qr_text{
-  padding:1rem 0 0.8rem;
-
-  width:100%;
-  color:#fff;
-  background-color:#61abff;
-}
-
-.qr_code strong{
-  font-family:"spoqaR";
-  font-size:1rem;
-}
-
-.qr_text div{
-  margin-top:0.5rem;
-}
-
-.qr_info{
-  padding:1rem 0;
-}
-
-.qr_info{
-  display:flex;
-  flex-direction:column;
-  gap:0.7rem;
-}
-
-.qr_info ul li:nth-of-type(1) a{
-  display:block;
-  width:50px;
-  height:50px;
-}
-
-.qr_code ul li img{
-  width:100%;
-}
-
-.qr_code ul li{
-  font-family:"spoqaL";
-  font-size:0.9rem;
-}
-
-.qr_code button{
-  border:0;
-  background-color:transparent;
-}
-
-.qr_code button:focus{
-  outline:0;
-}
-/*QR코드===============================*/
+/*바이오 코디네이션 fixed===============================*/
 
 /*visual▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
 .visual{

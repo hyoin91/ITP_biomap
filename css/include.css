@@ -751,7 +751,12 @@ footer{
     justify-content:end;
   }
 
+  .lnb_wrap > div{
+    flex-basis:80px;
+  }
+
   .lnb_wrap{
+    height:80px;
     justify-content:space-between;
   }
 
@@ -761,6 +766,10 @@ footer{
 
   .lnb_wrap > ul:nth-of-type(1) > li > a{
     display:none;
+  }
+
+  .lnb_wrap ul:nth-of-type(2){
+    gap:1.4rem;
   }
 
   .lnb.on .sub_lnb{

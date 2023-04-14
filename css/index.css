@@ -56,7 +56,7 @@
 .top_popup_wrap .popCloseBtn {
   width:12px;
   height:12px;
-  background:url(/img/sub/main_image/top_popup_close.svg) no-repeat center;
+  background:url(../img/sub/main_image/top_popup_close.svg) no-repeat center;
   background-size:cover;
   border:0;
 }
@@ -158,18 +158,6 @@
 
   color:#85bdfd;
   text-align:center;
-}
-
-.inquiry_circle a:nth-of-type(2){
-  display:flex;
-  flex-direction:column;
-  gap:0.2rem;
-
-  color:#fff;
-}
-
-.inquiry_circle a:nth-of-type(2) div{
-  font-size:0.9rem;
 }
 
 .inquiry_circle p{
@@ -365,7 +353,7 @@
   display:inline-block;
   width:25px;
   height:25px;
-  background:url(/img/sub/main_image/message_icon.svg) no-repeat center;
+  background:url(../img/sub/main_image/message_icon.svg) no-repeat center;
   background-size:contain;
   transform:translate(8px,2px);
 }
@@ -524,7 +512,7 @@
   margin-right:1rem;
   width:20px;
   height:20px;
-  background:url(/img/sub/main_image/bio_bullet.svg) no-repeat center;
+  background:url(../img/sub/main_image/bio_bullet.svg) no-repeat center;
   background-size:cover;
   vertical-align:middle;
 }
@@ -717,7 +705,7 @@
   margin-left:0.5rem;
   width:20px;
   height:20px;
-  background:url(/img/sub/main_image/stack_i.png) no-repeat center;
+  background:url(../img/sub/main_image/stack_i.png) no-repeat center;
   transform:translateY(2px);
 }
 
@@ -938,7 +926,7 @@
   transform:translateY(-50%);
   width:20px;
   height:20px;
-  background:url(/img/sub/main_image/search.svg) no-repeat center;
+  background:url(../img/sub/main_image/search.svg) no-repeat center;
   background-size:contain;
   border:0;
   text-indent:-1000rem;
@@ -1377,20 +1365,24 @@
   }
 
   .sv_button div{
-    background:url(/img/sub/main_image/bottom_menu_sevice.svg) center no-repeat;
+    background:url(../img/sub/main_image/bottom_menu_sevice.svg) center no-repeat;
     background-size:contain;
   }
 
   .bc_button div{
-    background:url(/img/sub/main_image/bottom_menu_map.svg) center no-repeat;
+    background:url(../img/sub/main_image/bottom_menu_map.svg) center no-repeat;
     background-size:contain;
   }
 
   .eq_button div{
-    background:url(/img/sub/main_image/bottom_menu_eq.svg) center no-repeat;
+    background:url(../img/sub/main_image/bottom_menu_eq.svg) center no-repeat;
     background-size:contain;
   }
   /* 모바일 하단 메뉴 */
+
+  .con_sec2 .con_wrap{
+    margin-bottom:0;
+  }
 
   /* 바이오 지도 */
   .recommend_list{
@@ -1424,6 +1416,10 @@
     font-size:1rem;
   }
   /* 모바일 하단 메뉴 */
+
+  .con_sec2 .con_wrap{
+    margin-bottom:0;
+  }
 
    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
   .com_button_kind1{
@@ -1597,7 +1593,7 @@
 
   .community{
     padding:0;
-    height:350px;
+    height:370px;
   }
 
   .community .cm_title{
@@ -1724,6 +1720,16 @@
   }
   /* 모바일 하단 메뉴 */
 
+  /* 커뮤니티 */
+  .cm_k li button{
+    font-size:0.9rem;
+  }
+
+  .mobile_menu div{
+    font-size:0.9rem;
+  }
+  /* 커뮤니티 */
+
   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
   .bio_information{
     padding:0;
@@ -1787,6 +1793,7 @@
    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
    .com_button_kind1 h4{
     padding:0.1rem 0.5rem;
+    font-size:1rem;
    }
    
    .com_button_kind1 span{

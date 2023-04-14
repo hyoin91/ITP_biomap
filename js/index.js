@@ -367,8 +367,8 @@ $(document).ready(function () {
 
       //다음슬라이드 순간 left 100%, animate 0%
       //현재슬라이드 순간 left 0%, animate -100%
-      nextSlide.css({left:`100%`}).animate({left:`0%`});
-      currentSlide.css({left:`0%`}).animate({left:`-100%`});
+      nextSlide.stop().css({left:`100%`}).animate({left:`0%`});
+      currentSlide.stop().css({left:`0%`}).animate({left:`-100%`});
 
       currentIdx = i;
       //모든 페이저에서 active제거 현재 번호에 맞는 요소에 active 추가
@@ -424,9 +424,9 @@ $(document).ready(function () {
       const numb = $(".bioc_k > li").index($(this));
 
       $(".bioc_k > li").removeClass("on");
-      $(".cm_t_mobile > li").removeClass("on");
+      $(".bioc_t > li").removeClass("on");
 
       $(".bioc_k > li").eq(numb).addClass("on");
-      $(".cm_t_mobile > li").eq(numb).addClass("on");
+      $(".bioc_t > li").eq(numb).addClass("on");
   });
 });

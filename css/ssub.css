@@ -5,10 +5,11 @@
 
 /*총 검색 개수-------------------------*/
 .total_search_view{
-  margin:3rem 0 0.5rem;
+  padding:0.5rem 0;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  clear:both;
 }
 
 .total_search_view P{

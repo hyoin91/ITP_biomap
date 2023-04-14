@@ -1318,6 +1318,7 @@
     var style
 
     if (window.getComputedStyle) {
+      
       style = window.getComputedStyle(el, null)
     }
 

@@ -1,4 +1,3 @@
-
 /* ========== header,footer,snb Include 관련 ========== */
 function includeHTML(){
     var includeArea = $('[data-include]');
@@ -23,6 +22,3 @@ $('#btn_toTop').click(function(){
 });//click
 
 });//DOMContentLoaded
-
-
-

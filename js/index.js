@@ -367,8 +367,8 @@ $(document).ready(function () {
 
       //다음슬라이드 순간 left 100%, animate 0%
       //현재슬라이드 순간 left 0%, animate -100%
-      nextSlide.css({left:`100%`}).animate({left:`0%`});
-      currentSlide.css({left:`0%`}).animate({left:`-100%`});
+      nextSlide.stop().css({left:`100%`}).animate({left:`0%`});
+      currentSlide.stop().css({left:`0%`}).animate({left:`-100%`});
 
       currentIdx = i;
       //모든 페이저에서 active제거 현재 번호에 맞는 요소에 active 추가
@@ -412,8 +412,11 @@ $(document).ready(function () {
     $(".cm_k_mobile li").on("click",function(){
       const numc = $(".cm_k_mobile li").index($(this));
 
-      $(".cm_t > li").removeClass("on");
-      $(".cm_t > li").eq(numc).addClass("on");
+      $(".cm_k_mobile li").removeClass("on");
+      $(".cm_t_mobile li").removeClass("on");
+
+      $(".cm_k_mobile li").eq(numc).addClass("on");
+      $(".cm_t_mobile li").eq(numc).addClass("on");
   });
 
   // 바이오 코디네이션 Tab 박스 on 클릭 이벤트

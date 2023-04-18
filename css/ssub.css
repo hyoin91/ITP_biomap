@@ -5,10 +5,11 @@
 
 /*총 검색 개수-------------------------*/
 .total_search_view{
-  margin:3rem 0 0.5rem;
+  padding:0.5rem 0;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  clear:both;
 }
 
 .total_search_view P{
@@ -398,7 +399,8 @@
   width:100%;
   height:200px;
   border-radius:0.5rem;
-  background-color:#F6F6F6;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #F6F6F6;
+  background-size:120px;
 }
 
 .search_title_box{
@@ -437,6 +439,18 @@
   gap:0.2rem;
 }
 
+.top_title_info .FilelistWrap{
+  float:none;
+}
+
+.top_title_info a{
+  color:#555;
+}
+
+.top_title_info p{
+  margin-left:1.5rem;
+}
+
 .equipment_event_wrap{
   margin:1.5rem 0;
 }
@@ -447,6 +461,17 @@
   display:flex;
   flex-direction:column;
   gap:0.5rem;
+}
+
+.eq_title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.eq_title button{
+  border:0;
+  background-color:transparent;
 }
 
 .institution_equipment_wrap ul{
@@ -466,7 +491,8 @@
 .equipment_ibox{
   margin-bottom:0.5rem;
   height:100px;
-  background-color:#F6F6F6;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #F6F6F6;
+  background-size:80px;
   border-radius:0.5rem;
 }
 
@@ -476,6 +502,17 @@
   display:flex;
   flex-direction:column;
   gap:0.5rem;
+}
+
+.event_title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.event_title button{
+  border:0;
+  background-color:transparent;
 }
 
 .institution_event_wrap ul{
@@ -495,7 +532,8 @@
 .event_ibox{
   margin-bottom:0.5rem;
   height:100px;
-  background-color:#F6F6F6;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #F6F6F6;
+  background-size:80px;
   border-radius:0.5rem;
 }
 
@@ -506,9 +544,14 @@
   gap:1rem;
 }
 
-.map_info_button button{
+.map_info_button a{
   flex:1;
+  color:#555;
+}
+
+.map_info_button a button{
   padding:0.6rem 0;
+  width:100%;
   border:0;
   border-radius:0.5rem;
 }
@@ -552,6 +595,11 @@
   border-radius:0.5rem;
 }
 
+.map_top ul li.on button{
+  color:#fff;
+  background-color: #54AAFD;
+}
+
 .biomap_full_menu{
   width:45px;
   height:45px;
@@ -566,10 +614,6 @@
   height:100%;
   background-color:transparent;
   border:0;
-}
-
-.biomap_full_menu img{
-  width:50%;
 }
 
 .biomap_plmi{
@@ -590,10 +634,6 @@
   height:100%;
   background-color:transparent;
   border:0;
-}
-
-.biomap_plmi img{
-  width:100%;
 }
 
 .biomap_plmi li:nth-of-type(1){
@@ -630,10 +670,6 @@
   height:100%;
   border:0;
   background-color:transparent;
-}
-
-.biomap_navigation img{
-  width:100%;
 }
 /*바이오맵(Biomap) 우측 지도-------------------------*/
 /*바이오맵(Biomap)-------------------------*/

@@ -335,7 +335,7 @@
 /*슬라이드 배너===============================*/
 
 /*커뮤니티===============================*/
-.mobile_menu{
+.mo_community{
   display:none;
 }
 
@@ -1295,8 +1295,6 @@
 }
 
 @media screen and (max-width:768px) {
-
-
   /* 상단팝업 */
   .top_popup_wrap .popupDivCon{
     font-size:0.9rem;
@@ -1592,40 +1590,46 @@
   }
 
   .community{
-    padding:0;
-    height:370px;
-  }
-
-  .community .cm_title{
     display:none;
   }
 
-  .cm_k{
+  .mo_community{
+    display:block;
+    padding:0;
+    width:100%;
+    height:370px;
+  }
+
+  .mo_community .cm_title{
+    display:none;
+  }
+
+  .mo_community .cm_k{
     margin:1.5rem 0 0;
     padding:0.8rem 0;
     justify-content:space-around;
     background-color:#add0ff;
   }
 
-  .cm_k li.on button{
+  .mo_community .cm_k li.on button{
     color:#fff;
     font-weight:bold;
   }
 
-  .cm_k li button{
+  .mo_community .cm_k li button{
     color:#fff;
   }
 
-  .cm_t > li.on{
+  .mo_community .cm_t > li.on{
     gap:0;
   }
 
-  .cm_t a{
+  .mo_community .cm_t a{
     padding:1.2rem 0;
     border-bottom:1px solid #ccc;
   }
 
-  .mobile_menu{
+  .mo_community .mobile_menu{
     padding:0.5rem 1.2rem;
     display:flex;
     justify-content:space-between;
@@ -1633,12 +1637,12 @@
     border-bottom:1px solid #ccc;;
   }
 
-  .mobile_menu .plus_icon a{
+  .mo_community .mobile_menu .plus_icon a{
     width:30px;
     height:30px;
   }
 
-  .mobile_menu .plus_icon a img{
+  .mo_community .mobile_menu .plus_icon a img{
     width:100%;
   }
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
@@ -1660,6 +1664,17 @@
     font-size:1.1rem;
   }
   /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 버튼 */
+  .com_button_kind1 li:nth-of-type(2),
+  .com_button_kind1 li:nth-of-type(3){
+    display:none;
+  }
+
+  .info_event{
+    flex-direction:column-reverse;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 버튼 */
 }
 
 @media screen and (max-width:480px) {
@@ -1721,11 +1736,11 @@
   /* 모바일 하단 메뉴 */
 
   /* 커뮤니티 */
-  .cm_k li button{
+  .mo_community .cm_k li button{
     font-size:0.9rem;
   }
 
-  .mobile_menu div{
+  .mo_community .mobile_menu div{
     font-size:0.9rem;
   }
   /* 커뮤니티 */

@@ -432,7 +432,7 @@ body.active{
   background:#fff;
   border-top:1px solid #ccc;
   border-bottom:1px solid #ccc;
-  z-index:2;
+  z-index:10;
 }
 
 .lnb::after{
@@ -441,7 +441,7 @@ body.active{
 /*SUB_LNB 배경===============================*/
 .sub_lnb{
   display:none;
-  z-index:3;
+  z-index:20;
 }
 
 .lnb.on .sub_lnb{
@@ -884,6 +884,12 @@ footer{
     display:none;
   }
   /*full_menu===============================*/
+}
+
+@media screen and (max-width:768px) {
+  .ft_wrap{
+    padding-bottom:7rem;
+  }
 }
 
 @media screen and (max-width: 750px) {

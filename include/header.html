@@ -85,6 +85,9 @@
                                 <li><a href="#">-보유기술현황</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#">기술 등록</a>
+                        </li>
                         <li><a href="../research/Wz_education.html">교육 프로그램</a></li>
                         <li>
                             <a href="../research/Bd_startUp.html">바이오사업</a>
@@ -182,6 +185,9 @@
                                     <li><a href="#">-특허</a></li>
                                     <li><a href="#">-보유기술현황</a></li>
                                 </ul>
+                            </li>
+                            <li class="most_lnb_wrap">
+                                <a href="#">기술 등록</a>
                             </li>
                             <li><a href="../research/Wz_education.html">교육프로그램</a></li>
                             <li class="most_lnb_wrap">
@@ -299,7 +305,7 @@
 
         // 모바일 화면 lnb 슬라이드 업 다운
         $(".full_slnb > a").on("click",function(){
-            $(this).parent(".show_sslnb").toggleClass("on");
+            $(this).parent(".full_slnb ").toggleClass("on");
             $(this).next(".show_sslnb").slideToggle();
         });
 

@@ -429,6 +429,4 @@ $(document).ready(function () {
       $(".bioc_k > li").eq(numb).addClass("on");
       $(".bioc_t > li").eq(numb).addClass("on");
   });
-
-  
 });

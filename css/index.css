@@ -134,34 +134,48 @@
 /*바이오 코디네이션 fixed===============================*/
 .inquiry{
   position:fixed;
-  right:0; top:32rem;
+  right:-135px; top:32rem;
   z-index:20;
 
-  padding:0.2rem;
-  background-color:#85bdfd;
-  border-radius:1rem 0 0 1rem;
+  transition:all 0.3s;
+}
+
+.inquiry.move{
+  right:0;
 }
 
 .inquiry_circle{
   display:flex;
   align-items:center;
-  gap:0.5rem;
+  gap:0.7rem;
+  
+  padding:0.4rem;
+  color:#fff;
+  background-color:#85bdfd;
+  text-align:
+  justify;
+  border-radius:0.9rem 0 0 0.9rem;
 }
 
-.inquiry_circle a:nth-of-type(1){
-  display:block;
+.inquiry.move .inquiry_circle button{
+  transform:rotate(-180deg);
+}
 
-  margin:0px auto;
-  padding:0.2rem;
+.inquiry_circle button{
+  width:15px;
+  height:15px;
+
+  background:url(../img/sub/main_image/allow_right_white.svg) center no-repeat;
+  background-size:contain;
+
+  border:0;
+}
+
+.inquiry_circle div{
+  padding:0.5rem;
+
   background-color:#fff;
   border-radius:50%;
-
-  color:#85bdfd;
-  text-align:center;
-}
-
-.inquiry_circle p{
-  font-size:0.9rem;
 }
 /*바이오 코디네이션 fixed===============================*/
 

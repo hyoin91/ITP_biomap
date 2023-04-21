@@ -26,17 +26,9 @@
     <script src="js/include.js"></script>
     <!--script==========================================================================================-->
     <script>
-        /**/
-        $(document).ready(function () {
-            $(".best_k li").on("mousemove", function () {
-                $(".best_k li").removeClass("on")
-                $(this).addClass("on")
-            });
-
-            $(".inquiry").on("click", function () {
-                var offset = $(".codi_info").offset();
-
-                $('html').animate({ scrollTop: offset.top }, 400);
+        $(document).ready(function(){
+            $(".inquiry button").on("click",function(){
+                $(".inquiry").toggleClass("move")
             });
         });
     </script>
@@ -103,10 +95,9 @@
     <!--INCLUED========================================-->
     <div class="inquiry">
         <div class="inquiry_circle">
-            <a href="#">
-                <img src="img/sub/main_image/call_i.svg" alt="1:1문의 이미지">
-                <p>코디네이터<br>연락처</p>
-            </a>
+            <button type="button"></button>
+            <div><img src="img/sub/main_image/call_i.svg" alt="1:1문의 이미지"></div>
+            <p>코디네이션 연락처<br>010-0000-0000</p>
         </div>
     </div>
 

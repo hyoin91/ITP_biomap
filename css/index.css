@@ -431,10 +431,43 @@
 }
 
 .cm_t > li.on{
+  position:relative;
+
   display:flex;
   flex-direction:column;
   gap:1.8rem;
 }
+
+/* 크롤링 준비중 클래스 추가시 나타남 */
+.ready_crawling > li.on::after{
+  content:"현재 크롤링 준비중입니다.";
+
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  color:#fff;
+  text-align:center;
+  z-index:10;
+
+  font-family:'spoqaM';
+  font-size:1.1rem;
+}
+
+.ready_crawling > li.on::before{
+  position:absolute;
+
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+  border-radius:0.5rem;
+  
+  z-index:5;
+}
+/* 크롤링 준비중 클래스 추가시 나타남 */
+
 /*커뮤니티===============================*/
 /*visual▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 
@@ -491,6 +524,10 @@
 
 .bioc_k button:focus{
   outline:0;
+}
+
+.bioc_t{
+  position: relative;
 }
 
 .bioc_t li{
@@ -1632,6 +1669,10 @@
 
   .mo_community .cm_k li button{
     color:#fff;
+  }
+
+  .mo_community .cm_t{
+    position:relative;
   }
 
   .mo_community .cm_t > li.on{

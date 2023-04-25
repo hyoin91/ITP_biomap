@@ -327,6 +327,27 @@
 /*바이오 장비 웹진게시판-------------------------*/
 
 /*바이오맵(Biomap)-------------------------*/
+/* 버이오맵 좌측 게시판 형태 */
+.biomap .wZ{
+  padding:20px 0;
+}
+
+.biomap .wZ > li:nth-of-type(1){
+  width:100%;
+  height:auto;
+}
+
+.biomap .wZ_equipment{
+  height:auto;
+  gap:1rem;
+}
+
+.biomap .wZ_top_title{
+  width:100%;
+  justify-content:space-between;
+}
+/* 버이오맵 좌측 게시판 형태 */
+
 /*바이오맵(Biomap) 전체사이즈-------------------------*/
 .biomap{
   width:100%;
@@ -346,14 +367,7 @@
   box-sizing:border-box;
 
   overflow-y:auto;
-}
-/*바이오맵(Biomap) 좌측 검색 로고-------------------------*/
-.search_logo{
-  margin-bottom:1rem;
-  width:100%;
-  height:70px;
-
-  display:flex;
+  
   align-items:center;
 }
 
@@ -452,7 +466,7 @@
 }
 
 .equipment_event_wrap{
-  margin:1.5rem 0;
+  margin:1.5rem 0 0;
 }
 
 .institution_equipment_wrap{
@@ -460,7 +474,7 @@
   padding:1.5rem 0;
   display:flex;
   flex-direction:column;
-  gap:0.5rem;
+  gap:1rem;
 }
 
 .eq_title{
@@ -501,7 +515,7 @@
   padding:1.5rem 0 2rem;
   display:flex;
   flex-direction:column;
-  gap:0.5rem;
+  gap:1rem;
 }
 
 .event_title{
@@ -673,3 +687,132 @@
 }
 /*바이오맵(Biomap) 우측 지도-------------------------*/
 /*바이오맵(Biomap)-------------------------*/
+
+/* 이용약관 */
+.condition_nav{
+  display:flex;
+}
+
+.condition_nav li{
+  padding:1rem;
+  border:1px solid #ccc;
+}
+
+.condition_nav li.on{
+  border:1px solid #90C9FF;
+}
+
+.condition_nav li a{
+  color:#555;
+}
+
+.condition_nav li.on a{
+  color:#90C9FF;
+}
+
+.condition_nav button{
+  border:0;
+  background:transparent;
+}
+
+/* 이용약관 탭버튼 */
+.condition_tbox{
+  display:none;
+}
+
+.condition_tbox.on{
+  display:flex;
+  flex-direction:column;
+  gap:2.5rem;
+
+  padding:2rem 2.5rem;
+  background:#F8F8F8;
+}
+/* 이용약관 탭버튼 */
+
+.condition_tbox h4{
+  display:inline-block;
+  background:#ffcb90;
+  color:#fff;
+  padding:0.1rem 0.5rem;
+}
+
+.condition_tbox > ul{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+}
+
+.condition_tbox > ul > ul{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.condition_title{
+  position:relative;
+
+  font-size:1.2rem;
+  font-family:'spoqaB';
+}
+
+.condition_title::before{
+  content:"";
+
+  position:absolute;
+  left:-0.8rem; top:50%;
+  transform:translateY(-50%);
+
+  display:inline-block;
+  width:4px;
+  height:16px;
+  background:url(../img/sub/sub_han/bio_bullet.svg) center no-repeat;
+  background-size:contain;
+}
+
+.condition_sub_title{
+  font-family:'spoqaR';
+  font-size:1.1rem;
+}
+
+.condition_sub_title p{
+  margin-top:0.5rem;
+}
+
+.condition_text{
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+}
+/* 이용약관 */
+
+/* 개인정보의 수집 및 이용 목적 */
+.processing_policy_tbox{
+  display:none;
+}
+
+.processing_policy_tbox > ul{
+  gap:0.7rem;
+}
+
+.processing_policy_tbox.on{
+  display:flex;
+  flex-direction:column;
+  gap:2.5rem;
+
+  padding:2rem 2.5rem;
+  background:#F8F8F8;
+}
+
+.processing_policy > ul{
+  gap:0.8rem;
+}
+
+.processing_policy{
+  margin-top:1rem;
+}
+
+.processing_policy span{
+  color:#FF7777;
+}
+/* 개인정보의 수집 및 이용 목적 */

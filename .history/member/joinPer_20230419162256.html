@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인천시 바이오맵</title>
+    <link rel=" shortcut icon" href="image/favicon1.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+    <!--mata======================================================================================-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--css==========================================================================================-->
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/include.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!--js==========================================================================================-->
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="../vendor/js/swiper-bundle.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- XEIcon 폰트 불러오기 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <!--script==========================================================================================-->
+    <script>
+    //  window.addEventListener('load', function(){
+    //   var c = document.querySelector('.header'); 
+    //   var pc = c.parentNode.parentNode.querySelector('.dd'); 
+      
+    //   console.log(pc);
+    // });
+    </script>
+    <style>
+
+    </style>
+<!--body==========================================================================================-->
+
+<body>
+    <div class="memberWrap">
+        <!--INCLUED========================================-->
+        <section class="noheaderWrap">
+            <div class="headerWrap">
+                <h1 class="logoWrap">
+                    <a href="../index.html">
+
+                    </a>
+                </h1>
+                <span>
+                    회원가입
+                </span>
+            </div>
+        </section>
+        <section class="joincm_Wrap">
+            <!-- 회원가입01========================================-->
+            <div class="join_type_Wrap">
+                <!--회원가입비주얼========================================-->
+                <section class="Vs_Wrap">
+                    <div class="toptxt">
+                        <h1 class="logoWrap">
+                            <a href="../index.html">
+                            </a>
+                        </h1>
+                        <p>
+                            <strong>
+                                아이바이오맵
+                            </strong>
+                            은<br>
+                            인천시의 바이오 정보들이 모인<br>
+                            자원공유시스템입니다.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="info">
+                            아이바이오맵은 회원가입시,<br>
+                            개인회원과 기관회원으로 구분되며<br>
+                            회원 유형에 따라 가입 절차에 차이가 있습니다.
+                        </p>
+                    </div>
+                </section>
+                <!--회원가입========================================-->
+                <section class="type_Wrap">
+                    <div class="NotabBtnWrap">
+                        <button class="on">
+                            개인회원
+                        </button>
+                    </div>
+                    <div class="tabConWrap">
+                        <div class="userPsbox on">
+                            <div class="imforWrap">
+                                <p class="Bullet">
+                                    <strong>
+                                        개인회원가입에 필요한 모든 정보입력은 필수입니다.
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="form userCobox on">
+
+                                <!-- <div class="Coformbox">
+                                    <h4 class="line_Bullet">신청인 정보</h4>
+                                    <div class="formBtn_Wrap">
+                                        <label>
+                                            <span>회사메일주소</span>
+                                            <div class="addBtn_Wrap">
+                                                <input type="text" Name="mail" id="mail"placeholder="abc123@abcd.com">
+                                                <button class="subkeyBtn2">
+                                                    메일인증
+                                                </button>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <span class="hidden">인증번호</span>
+                                            <div class="Ecerti ECertiWrap">
+                                                <input id="EcertiNum" type="text" placeholder="">
+                                                <button class="subkeyBtn2" onclick="sendAuthNum()">
+                                                    인증확인
+                                                </button>
+                                            </div>
+                                            <div id="timer"></div>
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <span>이름</span>
+                                        <input id="name" class="" type="text" placeholder="">
+                                    </label>
+                                    <label>
+                                        <span>소속 부서</span>
+                                        <input id="part" class="" type="text" placeholder="">
+                                    </label>
+                                </div> -->
+                                <div class="Coformbox">
+                                    <h4 class="line_Bullet">개인 정보</h4>
+                                    <div>
+                                        <span>기관</span>
+                                        <select class="combo">
+                                            <option>
+                                                등록된 기관명
+                                            </option>
+                                            <option>
+                                                학계
+                                            </option>
+                                            <option>
+                                                연구기관
+                                            </option>
+                                            <option>
+                                                병원
+                                            </option>
+                                            <option>
+                                                관공서
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <span>기관유형</span>
+                                        <select class="combo">
+                                            <option>
+                                                산업계
+                                            </option>
+                                            <option>
+                                                학계
+                                            </option>
+                                            <option>
+                                                연구기관
+                                            </option>
+                                            <option>
+                                                병원
+                                            </option>
+                                            <option>
+                                                관공서
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <span>기관세부유형</span>
+                                        <select class="combo">
+                                            <option>
+                                                기업/기업연구소
+                                            </option>
+                                            <option>
+                                                병원/대학병원
+                                            </option>
+                                            <option>
+                                                대학/대학연구소
+                                            </option>
+                                            <option>
+                                                정부/지자체 기관
+                                            </option>
+                                            <option>
+                                                정부출연연구기관
+                                            </option>
+                                            <option>
+                                                연구소
+                                            </option>
+                                            <option>
+                                                기타
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <label>
+                                        <span>기관명</span>
+                                        <input id="" type="text" placeholder="">
+                                    </label>
+                                    <label>
+                                        <span>아이디</span>
+                                        <input id="userID" type="text" placeholder="영문,숫자포함 6-10자리까지 가능">
+                                        <button>
+                                            중복확인
+                                        </button>
+                                    </label>
+                                    <label>
+                                        <span>비밀번호</span>
+                                        <input id="userPW" type="password" placeholder="영문,숫자,특수문자를 포함하여 20자리까지 가능">
+                                    </label>
+                                    <label>
+                                        <span>비밀번호 확인</span>
+                                        <input id="userChk" type="password" placeholder="영문,숫자,특수문자를 포함하여 10자리이상 가능">
+                                    </label>
+
+                                </div> 
+    
+                                <button class="joinFormBtn" onClick="login('joinper');">
+                                    아이바이오맵 회원가입
+                                </button>
+                            </div>
+                        </div>`
+                </section>
+            </div>
+            <!--회원가입비주얼========================================-->
+            <div class="joinSlider">
+                <div class="page-btns">
+                    <button class="page-btn prev-btn"><i class="xi-angle-left"></i></button>
+                    <button class="page-btn next-btn"><i class="xi-angle-right"></i></button>
+                    <div class="page-no">
+                        <span class="current-slide-no"></span>
+                        <span class="slash">/</span>
+                        <span class="total-slide-no"></span>
+                    </div>
+                </div>
+                <div class="slides">
+                    <div class="bn on">
+                        <img src="../img/sub/BGjoin3.jpg">
+                    </div>
+                    <div class="bn">
+                        <img src="../img/sub/BGjoin1.jpg">
+                    </div>
+                    <div class="bn">
+                        <img src="../img/sub/BGjoin2.jpg">
+                    </div>
+                    <div class="bn">
+                        <img src="../img/sub/BGjoin0.jpg">
+                    </div>
+                    <div class="bn">
+                        <img src="../img/sub/BGjoin4.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<!--==========================================================================================-->
+
+</html>

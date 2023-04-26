@@ -689,6 +689,7 @@
 /*바이오맵(Biomap)-------------------------*/
 
 /* 이용약관 */
+/* 이용약관 탭버튼 */
 .condition_nav{
   display:flex;
 }
@@ -714,7 +715,6 @@
   border:0;
   background:transparent;
 }
-
 /* 이용약관 탭버튼 */
 .condition_tbox{
   display:none;
@@ -728,7 +728,6 @@
   padding:2rem 2.5rem;
   background:#F8F8F8;
 }
-/* 이용약관 탭버튼 */
 
 .condition_tbox h4{
   display:inline-block;
@@ -791,28 +790,291 @@
   display:none;
 }
 
-.processing_policy_tbox > ul{
-  gap:0.7rem;
-}
-
 .processing_policy_tbox.on{
   display:flex;
   flex-direction:column;
-  gap:2.5rem;
+  gap:1.5rem;
 
   padding:2rem 2.5rem;
   background:#F8F8F8;
 }
 
-.processing_policy > ul{
-  gap:0.8rem;
+.processing_policy_tbox h4{
+  display:inline-block;
+  background:#ffcb90;
+  color:#fff;
+  padding:0.1rem 0.5rem;
 }
 
-.processing_policy{
-  margin-top:1rem;
+.processing_policy_tbox ul{
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
 }
 
-.processing_policy span{
-  color:#FF7777;
+.processing_policy_tbox .condition_sub_title{
+  margin-top:0.5rem;
 }
 /* 개인정보의 수집 및 이용 목적 */
+
+/* 바이오맵 소개 */
+.biomap_introduce_wrap{
+  display:flex;
+  flex-direction:column;
+  gap:3rem;
+}
+
+.info_one li:nth-of-type(1), .info_two li:nth-of-type(1){
+  display:inline-block;
+  padding:0.4rem 1.5rem;
+  color:#fff;
+  background-color:#54AAFD;
+  border-radius:0.3rem 0.3rem 0 0;
+}
+
+.info_one li:nth-of-type(2), .info_two li:nth-of-type(2){
+  padding:1.5rem;
+  background-color:#f7f7f7;
+  border-radius:0 0.5rem 0.5rem 0.5rem;
+}
+
+.info_three{
+  display:flex;
+  flex-direction:column;
+  gap:50px;
+
+  text-align:center;
+}
+
+.info_three li:nth-of-type(1){
+  position:relative;
+
+  height:60px;
+  line-height:60px;
+  color:#fff;
+  background-color:#83C2FF;
+  border-radius:0.5rem;
+}
+
+.info_three li:nth-of-type(2)::before{
+  position:absolute;
+  left:50%;
+  transform:translate(-50%,-35px);
+  content:"";
+  display:block;
+  width:20px;
+  height:20px;
+  background:url(../img/sub/sub_han/introduce_allow.svg) center no-repeat;
+  background-size:cover ;
+}
+
+.info_three li:nth-of-type(2){
+  position:relative;
+}
+
+.info_three li:nth-of-type(2)::after{
+  position:absolute;
+  left:50%;
+  transform:translate(-50%, 75px);
+  content:"";
+  display:block;
+  width:20px;
+  height:20px;
+  background:url(../img/sub/sub_han/introduce_allow.svg) center no-repeat;
+  background-size:cover;
+}
+
+.info_three li:nth-of-type(2), .info_three li:nth-of-type(3){
+  display:flex;
+  gap:50px;
+}
+
+.info_three li:nth-of-type(2) div{
+  flex:1;
+  height:60px;
+  line-height:60px;
+  color:#fff;
+  background-color:#83C2FF;
+  border-radius:0.5rem;
+}
+
+.info_three li:nth-of-type(3) div{
+  flex:1;
+}
+
+.sub_info_three div:nth-of-type(1){
+  height:60px;
+  line-height:60px;
+  color:#fff;
+  background-color:#FFC88C;
+  border-radius:0.5rem 0.5rem 0 0;
+}
+
+.sub_info_three div:nth-of-type(2){
+  position:relative;
+  height:100px;
+  background-color:#f3f3f3;
+}
+
+.sub_info_three div:nth-of-type(2) p{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.info_three li:nth-of-type(4){
+  height:60px;
+  line-height:60px;
+  color:#fff;
+  background-color:#FFC88C;
+  border-radius:0.5rem;
+}
+/* 바이오맵 소개 */
+
+/* 찾아오시는 길 */
+.come_on_wrap{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+}
+
+.come_on_title{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.come_on_title div{
+  width:80px;
+  height:5px;
+  background-color:#54AAFD;
+}
+
+.come_on_map{
+  display:flex;
+  flex-direction:column;
+  gap:1rem
+}
+
+.come_on_map div{
+  height:400px;
+  border-radius:1rem;
+
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #F6F6F6;
+  background-size:120px;
+}
+
+.come_on_address{
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+}
+
+.come_on_address li{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+
+  padding:1.5rem 0;
+
+  border-top:1px solid #555;
+  border-bottom:1px solid #ccc;
+}
+/* 찾아오시는 길 */
+
+/* 전체검색(검색 엔진) 서브페이지 */
+.search_engine_wrap{
+  display:flex;
+  flex-direction:column;
+  gap:3.5rem;
+}
+
+.search_engine_wrap h2 span{
+  color:#54AAFD;
+}
+
+.search_engine_nav ul{
+  display:flex;
+
+  text-align:center;
+}
+
+.search_engine_nav li{
+  flex:1;
+
+  padding:0.7rem 1rem;
+  color:#8a8a8a;
+  background:#f1f1f1;
+  border:1px solid #ebebeb;
+}
+
+.search_engine_nav li:hover{
+  color:#fff;
+  background:#54AAFD;
+}
+
+.search_engine_nav button{
+  width:100%;
+  height:100%;
+
+  background:transparent;
+  border:0;
+}
+
+.noraml_list_title, .webzine_list_title{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+
+.noraml_list, .webzine_list{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.normal_board ul{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+
+  padding:20px 0;
+  border-bottom:1px solid #ccc;
+}
+
+.normal_board ul a{
+  font-family:'spoqaB';
+  color:#000;
+  font-size:1.2rem;
+}
+
+.normal_board ul a:hover{
+  border-bottom:2px solid #000;
+}
+
+.normal_board li:nth-of-type(1){
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.normal_board li:nth-of-type(1) div:first-child:before{
+  content:"";
+}
+
+.normal_board li:nth-of-type(1) div::before{
+  content:">";
+  margin-right:1rem;
+}
+
+.noraml_list .normal_board ul:nth-of-type(1),
+.webzine_list .wZ:nth-of-type(1){
+  border-top:1px solid #000;
+}
+
+.webzine_list .wZ{
+  padding-left:0;
+}
+/* 전체검색(검색 엔진) 서브페이지 */

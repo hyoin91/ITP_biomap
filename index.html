@@ -24,19 +24,14 @@
     <script src="js/index.js"></script>
     <script src="js/sub.js"></script>
     <script src="js/include.js"></script>
+    <!-- KAKAO Maps API -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6e1a9d4aa6efcc8138e229029463a705"></script>
+    <!-- KAKAO Maps API -->
     <!--script==========================================================================================-->
     <script>
-        /**/
-        $(document).ready(function () {
-            $(".best_k li").on("mousemove", function () {
-                $(".best_k li").removeClass("on")
-                $(this).addClass("on")
-            });
-
-            $(".inquiry").on("click", function () {
-                var offset = $(".codi_info").offset();
-
-                $('html').animate({ scrollTop: offset.top }, 400);
+        $(document).ready(function(){
+            $(".inquiry button").on("click",function(){
+                $(".inquiry").toggleClass("move")
             });
         });
     </script>
@@ -45,7 +40,7 @@
 
 <body>
     <!--BGpopup========================================-->
-    <div class="popup_mask"></div>
+    <!-- <div class="popup_mask"></div> -->
     <!--설문조사 팝업-->
     <div class="popupDiv_Wrap on">
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
@@ -60,7 +55,7 @@
             </div>
         </div>
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <div class="popupDiv center_popup" style="display: none;">
+        <!-- <div class="popupDiv center_popup" style="display: none;">
             <div class="popupDivCon noimgBox">
 
             </div>
@@ -75,7 +70,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
         <!-- <div class="popupDiv" style="display: none;">
             <div class="popupDivCon noimgBox">
@@ -95,7 +90,7 @@
                 </div>
             </div>
         </div> -->
-    </div>
+    <!-- </div> -->
     <!--BGpopup========================================-->
 
     <!--INCLUED========================================-->
@@ -103,10 +98,9 @@
     <!--INCLUED========================================-->
     <div class="inquiry">
         <div class="inquiry_circle">
-            <a href="#">
-                <img src="img/sub/main_image/call_i.svg" alt="1:1문의 이미지">
-                <p>코디네이터<br>연락처</p>
-            </a>
+            <button type="button"></button>
+            <div><img src="img/sub/main_image/call_i.svg" alt="1:1문의 이미지"></div>
+            <p>코디네이션 연락처<br>010-0000-0000</p>
         </div>
     </div>
 
@@ -159,12 +153,7 @@
                         </ul>
                     </nav>
 
-                    <div class="mobile_menu">
-                        <div>모바일 메뉴</div>
-                        <button class="plus_icon"><a href="community/Bd_noti.html"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
-                    </div>
-
-                    <ul class="cm_t">
+                    <ul class="cm_t ready_crawling">
                         <li class="on">
                             <a href="community/Wz_news.html">
                                 <h4>2023.01</h4>
@@ -282,6 +271,180 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- 모바일 커뮤니티 -->
+
+                <div class="mo_community">
+                    <div class="cm_title">
+                        <h2>커뮤니티</h2>
+                        <button class="plus_icon"><a href="community/Wz_news.html"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                    </div>
+
+                    <nav class="cm_scroll">
+                        <ul class="cm_k">
+                            <li class="on">
+                                <button>동향</button>
+                            </li>
+                            <li>
+                                <button>사업공고</button>
+                            </li>
+                            <li>
+                                <button>일정</button>
+                            </li>
+                            <li>
+                                <button>교육</button>
+                            </li>
+                            <li>
+                                <button>채용</button>
+                            </li>
+                            <li>
+                                <button>공지</button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="mobile_menu">
+                        <div>모바일 메뉴</div>
+                        <button class="plus_icon"><a href="community/Bd_noti.html"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
+                    </div>
+
+                    <ul class="cm_t ready_crawling">
+                        <li class="on">
+                            <a href="community/Wz_news.html">
+                                <h4>2023.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz_news.html">
+                                <h4>2023.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz_news.html">
+                                <h4>2023.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz_news.html">
+                                <h4>2023.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="community/Wz.schedule.html">
+                                <h4>2024.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz.schedule.html">
+                                <h4>2024.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz.schedule.html">
+                                <h4>2024.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Wz.schedule.html">
+                                <h4>2024.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="community/Bd_free.html">
+                                <h4>2025.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_free.html">
+                                <h4>2025.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_free.html">
+                                <h4>2025.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_free.html">
+                                <h4>2025.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="community/Bd_bioQna.html">
+                                <h4>2026.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_bioQna.html">
+                                <h4>2026.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_bioQna.html">
+                                <h4>2026.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_bioQna.html">
+                                <h4>2026.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="community/Bd_noti.html">
+                                <h4>2027.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2027.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2027.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2027.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="community/Bd_noti.html">
+                                <h4>2028.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2028.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2028.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                            <a href="community/Bd_noti.html">
+                                <h4>2028.01</h4>
+                                <p>인천테크노파크 바이오맵 새소식 커뮤니티 게시판에 원하는 내용을 입력해 알려주세요.</p>
+                                <div><img src="img/sub/main_image/arrow_right2.png" alt="오른쪽 화살표(바로가기)"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 모바일 커뮤니티 -->
             </div>
             <div class="visual_limg"><img src="img/sub/main_image/vg_li.png" alt="visual 왼쪽 배경 이미지"></div>
         </div>
@@ -309,7 +472,7 @@
                             <button type="button">교육프로그램</button>
                         </li>
                     </ul>
-                    <ul class="bioc_t">
+                    <ul class="bioc_t ready_crawling">
                         <li class="on">
                             <a href="#">
                                 <p>[재공고] 2023년 인천테크노파크 계약직 2차 채용 최종합격자 및 예비합격자 발표</p>
@@ -549,7 +712,7 @@
         </div>
         <div class="con_sec3">
             <div class="con_wrap">
-                <div class="bio_map">
+                <div id="map" class="bio_map">
                     <div class="map_info_input">
                         <select name="map_info" id="map_info_list">
                             <option value="">분류</option>
@@ -566,12 +729,18 @@
                             <button class="plus_icon"><a href="Institutional/Map_Biomap.html"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                         </div>
                     </div>
-                    <div class="map_icon_list">
+
+                    <!-- 지도 컨트롤러 아이콘 -->
+
+                    <!-- <div class="map_icon_list">
                         <button type="button"><img src="img/sub/main_image/map_location_i.svg"
                                 alt="지도 전체보기 아이콘"></button>
                         <button type="button"><img src="img/sub/main_image/map_add.svg" alt="지도 확대 아이콘"></button>
                         <button type="button"><img src="img/sub/main_image/map_minus.svg" alt="지도 축소 아이콘"></button>
-                    </div>
+                    </div> -->
+
+                    <!-- 지도 컨트롤러 아이콘 -->
+
                     <div class="recommend_list">
                         <ul>
                             <li><a href="#">#아미노산조정분석기</a></li>
@@ -616,6 +785,72 @@
             </li>
         </ul>
     </div>
+
+
+
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+    // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+    var positions = [
+        {
+            content: '<div>카카오</div>', 
+            latlng: new kakao.maps.LatLng(33.450705, 126.570677)
+        },
+        {
+            content: '<div>생태연못</div>', 
+            latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+        },
+        {
+            content: '<div>텃밭</div>', 
+            latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+        },
+        {
+            content: '<div>근린공원</div>',
+            latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+        }
+    ];
+
+    for (var i = 0; i < positions.length; i ++) {
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng // 마커의 위치
+        });
+
+        // 마커에 표시할 인포윈도우를 생성합니다 
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].content // 인포윈도우에 표시할 내용
+        });
+
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }  
+</script>
+
     <!--INCLUED========================================-->
     <footer data-include="include/footer.html"></footer>
     <!--INCLUED========================================-->

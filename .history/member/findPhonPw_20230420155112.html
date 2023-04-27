@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인천시 바이오맵</title>
+    <link rel=" shortcut icon" href="image/favicon1.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+    <!--mata======================================================================================-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--css==========================================================================================-->
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/include.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!--js==========================================================================================-->
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="../vendor/js/swiper-bundle.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"></script>
+    <!--script==========================================================================================-->
+    <script>
+        			var intervalVar = undefined;
+			var timeSecond = undefined;
+			var authenticationCode = undefined;
+
+			function doTimer() {
+				$('#btn').prop('value', '인증번호 재전송');
+				
+				authenticationCode = '123456';
+				$('#authenticationcode').prop('value', authenticationCode);
+			
+				timeSecond = 30;
+				$('#timer').prop('value', getTimeString(timeSecond));
+
+				if (intervalVar != undefined) {
+					clearInterval(intervalVar);
+				}
+
+				intervalVar = setInterval(function() {
+				   if (timeSecond != 0) {
+					   timeSecond = timeSecond - 1;
+					   $('#timer').prop('value', getTimeString(timeSecond));
+				   } else {
+					   clearInterval(intervalVar);
+					   intervalVar = false;
+				   }
+			   }, 1000);
+			}
+
+			function getTimeString(second) {
+				var minute = '' + (Math.floor(second / 60));
+				var dividedSec = second % 60;
+				if (dividedSec < 10) {
+					dividedSec = '0' + dividedSec;
+				}
+				// ex) 3:00 -> 3분
+				return minute + ":" + dividedSec;
+			}
+			
+			function doCodeCheck() {
+				if (!$('#typingcode').prop('value')) {
+                    alert('인증번호를 입력하세요.');
+                    return;
+                }
+                if (timeSecond == 0 || intervalVar == false) {
+                    alert('인증번호 유효시간이 초과하였습니다. 인증번호를 재전송 해주세요.');
+                    return;
+                }
+				if ($('#authenticationcode').prop('value') == $('#typingcode').prop('value')) {
+				} else {
+					alert('인증번호가 동일하지 않습니다.');
+				}
+			}
+        //  function enterNxt(){
+        //     if(window.event.keyCode == 13){
+        //         login();
+        //     }
+        //  }
+        $(document).ready(function () {
+
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<!--body==========================================================================================-->
+
+<body onload="rotate()">
+    <div class="memberWrap">
+        <!--INCLUED========================================-->
+        <section class="noheaderWrap">
+            <div class="headerWrap">
+                <h1 class="logoWrap">
+                    <a href="../index.html">
+
+                    </a>
+                </h1>
+                <span>
+                    로그인
+                </span>
+            </div>
+        </section>
+        <!--INCLUED========================================-->
+        <div class="loginWrap">
+            <!--로그인비주얼========================================-->
+            <section class="Vs_Wrap">
+                <div class="slide">
+                    <img id="change">
+                </div>
+            </section>
+            <!--로그인========================================-->
+            <section class="login_form_Wrap findWrap">
+                <div class="tabBtnWrap TbtnWrap">
+                    <button data-tab="tab1" class="on per">
+                        개인회원
+                    </button>
+                    <button data-tab="tab2" class="co">
+                        기관회원
+                    </button>
+                </div>
+                <div class="tabConWrap TconWrap">
+                    <div class="userPsbox tab1 on">
+                        <h1 class="logoWrap">
+                            <a href="../index.html">
+
+                            </a>
+                        </h1>
+                        <div class="form userForm">
+                            <label>
+                                <span style="display:none;">아이디</span>
+                                <input id="userID" type="text" placeholder="아이디" value="">
+                            </label>
+                            <label>
+                                <span style="display:none;">이름</span>
+                                <input id="userPW" type="password" placeholder="이름">
+                            </label>
+                            <label>
+                                <span style="display:none;">이메일주소</span>
+                                <input type="text" placeholder="등록된 이메일주소" value="">
+                            </label>
+                            <label>
+                                <span style="display:none;">인증번호</span>
+                                <div class="addBtn_Wrap">
+                                <input type="text" placeholder="인증번호" value="">
+                                <button id="btn" class="subkeyBtn" onclick="doTimer()">
+                                    전송
+                                </button>
+                                </div>
+                            </label> 
+                            
+                            <input type="text" id="timer" name="timer" value=""/>
+                           <br/>
+인증번호 <input type="text" maxlength="6" id="authenticationcode" name="authenticationcode" value="" readonly/><br/>
+인증번호 입력 <input type="text" id="typingcode" name="typingcode" value=""/>
+<input type="button" value="확인" onclick="doCodeCheck()"/>
+
+                          
+                            <a>
+                                <strong>아이디</strong>를 잊으셨나요?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="userPsbox tab2">
+                        <h1 class="logoWrap">
+                            <a href="../index.html">
+
+                            </a>
+                        </h1>
+                        <div class="userForm">
+                            <input id="userBID" type="text" placeholder="아이디 입력" value="">
+                            <input id="userBPW" type="password" placeholder="비밀번호 입력">
+                            <label>
+                                로그인상태유지
+                                <input type="checkbox">
+                            </label>
+                            <button class="keyBtn" onClick="login('loginB')">
+                                로그인
+                            </button>
+                            <a>
+                                <strong>아이디 비밀번호</strong>를 잊으셨나요?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="joinBtn" href="join01.html">
+                    <p>
+                        지금 인천,<br>
+                        <strong>바이오 온라인 플랫폼</strong>을<br>
+                        시작해보세요.
+                    </p>
+                    <span>회원가입</span>
+                </a>
+            </section>
+        </div>
+    </div>
+</body>
+<!--==========================================================================================-->
+
+</html>

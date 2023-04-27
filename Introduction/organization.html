@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인천시 바이오맵</title>
+    <link rel=" shortcut icon" href="image/favicon1.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+    <!--mata======================================================================================-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--css==========================================================================================-->
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/ssub.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/include.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!--js==========================================================================================-->
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="../vendor/js/swiper-bundle.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/include.js"></script>
+    <!--script==========================================================================================-->
+    <script>
+
+    </script>
+</head>
+<!--body==========================================================================================-->
+
+<body>
+    <div class="subWrap">
+        <!--INCLUED========================================-->
+        <header class="" data-include="../include/header.html"></header>
+        <!--INCLUED========================================-->
+        <div class="cmWrap">
+            <!--서브메뉴&&콘텐츠서비스========================================-->
+            <div class="conWrap">
+                <section class="bc_Wrap TitleWrap">
+                    <ul class="bc">
+                        <li>
+
+                        </li>
+                        <li class="depth_Wrap selectBox">
+                            <a class="label noMenue">
+                                바이오맵 소개
+                            </a>
+                        </li>
+                        <li class="depth_Wrap selectBox">
+                            <a class="label">
+                              바이오맵 소개
+                            </a>
+                            <div class="optionList">
+                                <a class="optionItem" href="biomap_introduce.html"><!--게시판목록이 공지사항과 같음 Bd_noti.html-->
+                                  바이오맵 소개
+                                </a>
+                                <a class="optionItem" href=""><!--게시판목록이 공지사항과 같음 Bd_noti.html-->
+                                    운영조직
+                                </a>
+                                <a class="optionItem" href="">
+                                    이용정보
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="topSvc_Wrap">
+                        <button onClick="clip();">
+                        </button>
+                        <div class="selectBox snsWrap">
+                            <button class="label">
+                            </button>
+                            <div class="optionList snsBtnWrap">
+                                <button onClick="SnsPop('Tw')" id="SnsPopTw" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Fb')" id="SnsPopFb" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                                <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                                </button>
+                            </div>
+                        </div>
+                        <button onClick="javascript:content_print();">
+                        </button>
+                        <!-- <div id="ShowPop0" class="ShowPopCon">
+                        <div class="snsBtnWrap">
+                            <button onClick="SnsPop('Tw')" id="SnsPopTw" class="snsBtn">
+                            </button>
+                            <button onClick="SnsPop('Fb')" id="SnsPopFb" class="snsBtn">
+                            </button>
+                            <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                            </button>
+                            <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                            </button>
+                            <button onClick="SnsPop('Ks')" id="SnsPopKs" class="snsBtn">
+                            </button>
+                        </div>
+                    </div> -->
+                        <!-- <div id="ShowPop1" class="ShowPopCon">
+
+                    </div> -->
+                    </div>
+
+                </section>
+                <!--콘텐츠상단==타이틀,서칭==========================================-->
+            </div>
+            <!--콘텐츠========================================-->
+            <div class="conWrap" id="printWrap">
+                <section class="TitleWrap">
+                    <h2>
+                        아이바이오맵(Ibiomap) 운영조직
+                    </h2>
+                </section>
+                <section>
+                  <div class="biomap_organization_wrap">
+                    <div class="organization_text">
+                      <ul>
+                        <li class="bio_director">
+                          <div>센터장</div>
+                        </li>
+                        <li class="bio_department_wrap">
+
+                          <div class="bio_department">
+                            <div class="bio_sub_department bio_sub_department1">
+                              <p>연구자원<br>(코디네이터)</p>
+                            </div>
+
+                            <ul class="bio_ssub_department">
+                              <li>시설·장비·기술</li>
+                              <li>교육·정책·제도</li>
+                              <li>지원사업</li>
+                            </ul>
+                          </div>
+
+                          <div class="bio_department">
+                            <div class="bio_sub_department bio_sub_department2">
+                              <p>시스템관리</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+            </div>
+        </div>
+
+        <!--INCLUED========================================-->
+        <footer data-include="../include/footer.html"></footer>
+        <!--INCLUED========================================-->
+    </div>
+</body>
+<!--==========================================================================================-->
+
+</html>

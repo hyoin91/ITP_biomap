@@ -120,6 +120,16 @@
   flex:1;
 }
 
+/* 웹진 본문 text-overflow */
+.wz_middle_overhide{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* 웹진 본문 text-overflow */
+
 .wZ_general .wZ_middle p{
   height:63px;
   overflow:hidden;
@@ -195,13 +205,31 @@
   gap:0.5rem;
 }
 
-.wZ_top_title div{
+/* 웹진 스티커 모음 */
+.wZ_sticker1{
   background-color:#8abfff;
   color:#fff;
   padding:0.3rem 0.5rem;
   border-radius:0.3rem;
   font-size:0.8rem
 }
+
+.wZ_sticker2{
+  background-color:#FFBB71;
+  color:#fff;
+  padding:0.3rem 0.5rem;
+  border-radius:0.3rem;
+  font-size:0.8rem
+}
+
+.wZ_sticker3{
+  background-color:#4882B6;
+  color:#fff;
+  padding:0.3rem 0.5rem;
+  border-radius:0.3rem;
+  font-size:0.8rem
+}
+/* 웹진 스티커 모음 */
 
 .wZbio_research .wZ_top a{
   color:#000;
@@ -1078,3 +1106,152 @@
   padding-left:0;
 }
 /* 전체검색(검색 엔진) 서브페이지 */
+
+/* 바이오맵 운영조직 */
+.organization_text{
+  margin-top:6rem;
+  text-align:center;
+}
+
+.organization_text > ul{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.bio_director{
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+}
+
+.bio_director::after{
+  position:absolute;
+  left:50%; top:100%;
+
+  content:"";
+  display:block;
+  width:1px;
+  height:63px;
+  background-color:#ccc;
+}
+
+.bio_director div{
+  width:200px;
+  height:60px;
+  line-height:60px;
+  color:#fff;
+  background-color:#54AAFD;
+  border-radius:0 1rem 0 1rem;
+}
+
+.bio_department_wrap{
+  display:flex;
+}
+
+.bio_department{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4rem;
+}
+
+.bio_sub_department1::after{
+  position:absolute;
+  left:100%; top:50%;
+  transform: translateY(-50%);
+
+  content:"";
+  display:block;
+  width:205px;
+  height:1px;
+  background-color:#ccc;
+}
+
+.bio_sub_department2::after{
+  position:absolute;
+  right:100%; top:50%;
+  transform: translateY(-50%);
+
+  content:"";
+  display:block;
+  width:205px;
+  height:1px;
+  background-color:#ccc;
+}
+
+.bio_sub_department{
+  position:relative;
+
+  width:200px;
+  height:60px;
+  color:#fff;
+  background-color:#FAAC56;
+  border-radius:0 1rem 0 1rem;
+}
+
+.bio_sub_department p{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.bio_ssub_department{
+  display:flex;
+  gap:2rem;
+}
+
+.bio_ssub_department li{
+  position:relative;
+
+  width:150px;
+  height:60px;
+  line-height:60px;
+  border:1px solid #ccc;
+  border-radius:0 1rem 0 1rem;
+}
+
+.bio_ssub_department li::after{
+  position:absolute;
+  left:50%; bottom:100%;
+  transform:translateX(-50%);
+
+  content:"";
+  display:block;
+  width:1px;
+  height:40px;
+  background-color:#ccc;
+}
+
+.bio_ssub_department li:nth-of-type(1)::before{
+  content:"";
+
+  position:absolute;
+  left:50%; top:-66%;
+
+  display:block;
+  width:184.5px;
+  height:1px;
+  background-color:#ccc;
+}
+
+
+.bio_ssub_department li:nth-of-type(3)::before{
+  content:"";
+
+  position:absolute;
+  right:50%; top:-66%;
+
+  display:block;
+  width:184.5px;
+  height:1px;
+  background-color:#ccc;
+}
+
+.bio_ssub_department li:nth-of-type(2)::after{
+  height:65px;
+}
+/* 바이오맵 운영조직 */

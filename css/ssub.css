@@ -74,10 +74,11 @@
   flex-direction:column;
   justify-content:space-between;
   gap:1rem;
-  
 }
 
 .wZ_general .wZ_top{
+  width:100%;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -355,6 +356,50 @@
 /*바이오 장비 웹진게시판-------------------------*/
 
 /*바이오맵(Biomap)-------------------------*/
+/* 바이오맵 좌측 검색창 첫 화면*/
+.biomap_search_pop{
+  padding:0.5rem 0;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.5rem;
+
+  text-align:center;
+  background-color:#eceef2;
+}
+
+.biomap_search_pop button{
+  width:10px;
+  height:10px;
+
+  background:url(../img/sub/main_image/top_popup_close.svg) no-repeat center;
+  border:0;
+}
+
+.biomap_list .wZ{
+  text-align:center;
+}
+
+.biomap_list .wZ li{
+  position:relative;
+}
+
+.biomap_list .wZ li::before{
+  content:"";
+
+  position:absolute;
+  left:95px; top:50%;
+  transform:translateY(-50%);
+
+  display:block;
+  width:15px;
+  height:15px;
+  background:url(../img/sub/main_image/search.svg) no-repeat center;
+  background-size:cover;
+}
+/* 바이오맵 좌측 검색창 첫 화면*/
+
 /* 버이오맵 좌측 게시판 형태 */
 .biomap .wZ{
   padding:20px 0;
@@ -1038,6 +1083,11 @@
   border:1px solid #ebebeb;
 }
 
+.search_engine_nav li.on{
+  color:#fff;
+  background:#54AAFD;
+}
+
 .search_engine_nav li:hover{
   color:#fff;
   background:#54AAFD;
@@ -1051,13 +1101,13 @@
   border:0;
 }
 
-.noraml_list_title, .webzine_list_title{
+.noraml_list_title{
   display:flex;
   align-items:center;
   gap:0.5rem;
 }
 
-.noraml_list, .webzine_list{
+.noraml_list{
   display:flex;
   flex-direction:column;
   gap:1rem;
@@ -1097,13 +1147,8 @@
   margin-right:1rem;
 }
 
-.noraml_list .normal_board ul:nth-of-type(1),
-.webzine_list .wZ:nth-of-type(1){
+.noraml_list .normal_board ul:nth-of-type(1){
   border-top:1px solid #000;
-}
-
-.webzine_list .wZ{
-  padding-left:0;
 }
 /* 전체검색(검색 엔진) 서브페이지 */
 

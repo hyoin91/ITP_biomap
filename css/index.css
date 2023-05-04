@@ -439,7 +439,7 @@
 }
 
 /* 크롤링 준비중 클래스 추가시 나타남 */
-.ready_crawling > li.on::after{
+.ready_crawling::after{
   content:"현재 크롤링 준비중입니다.";
 
   position:absolute;
@@ -454,7 +454,7 @@
   font-size:1.1rem;
 }
 
-.ready_crawling > li.on::before{
+.ready_crawling::before{
   position:absolute;
 
   content:"";
@@ -483,6 +483,18 @@
   justify-content:space-between;
 }
 /*바이오코디네이션===============================*/
+/* 바이오 코디네이션 list number 추가 */
+.bioc_number{
+  text-align:center;
+
+  width:20px;
+  height:20px;
+  background:#54AAFD;
+  color:#fff;
+
+  border-radius:50%;
+}
+/* 바이오 코디네이션 list number 추가 */
 .bio_codi{
   position:relative;
   width:66%;
@@ -571,6 +583,14 @@
 .bioc_i{
   position:absolute;
   left:-5%; top:-8%;
+}
+
+.ready_crawling p{
+  display:block;
+  width:550px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 /*바이오코디네이션===============================*/
 /*추천검색어===============================*/
@@ -1290,10 +1310,6 @@
 
   .bio_codi{
     width:100%;
-  }
-
-  .bioc_t li a{
-    justify-content:space-between;
   }
 
   .best_search{

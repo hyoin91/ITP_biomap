@@ -1084,6 +1084,9 @@ height: 45px;
    background:#faac56; 
    margin-right:0.5rem;
 }
+.waitBtn{
+    background:#faac56; 
+}
 /*----08.게시판-----*/
 .cmTb{
     width:100%;

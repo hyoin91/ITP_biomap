@@ -1,0 +1,1899 @@
+@charset "UTF-8";
+/*index.html 공통css===============================*/
+.cm_title{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.plus_icon{
+  border:0;
+  background-color:transparent;
+}
+
+.plus_icon a{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.cm_title h2{
+  font-family:"spoqaB";
+  font-size:1.5rem;
+  color:#494949;
+}
+/*index.html 공통css===============================*/
+/* 모바일 하단 메뉴 숨김 */
+.mobile_bottom_menu{
+  display:none;
+}
+/* 모바일 하단 메뉴 숨김 */
+
+/* 상단팝업 */
+.top_popup{
+  background-color:#d7e8ff;
+}
+
+.top_popup_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:0px auto;
+  padding:0.5rem 0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.top_popup_wrap .popupDivCon{
+  flex:1;
+
+  color:#737373;
+  font-size:1rem;
+  text-align:center;
+}
+
+.top_popup_wrap .popCloseBtn {
+  width:12px;
+  height:12px;
+  background:url(../img/sub/main_image/top_popup_close.svg) no-repeat center;
+  background-size:cover;
+  border:0;
+}
+/* 상단팝업 */
+
+/* 센터팝업 */
+.center_popup{
+  position:fixed;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  display:flex;
+  flex-direction:column;
+
+  width:400px;
+  height:450px;
+
+  border-radius:1rem;
+  overflow:hidden;
+  z-index:1000;
+}
+
+.center_popup .popupDivCon{
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+
+  flex:1;
+}
+
+.center_popup .popupDivClose div{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:relative;
+}
+
+.center_popup .popupDivClose div::after{
+  position: absolute;
+  left:50%; top:50%;
+  transform: translate(-50%,-50%);
+
+  content:"";
+  display:block;
+  width:1px;
+  height:10px;
+  background-color:#fff;
+  
+  z-index: 10000000;
+}
+
+.center_popup .popupDivClose button{
+  flex:1;
+  padding:0.7rem 0;
+  color:#fff;
+  background-color:#3d3d3d;
+  border:0;
+}
+/* 센터팝업 */
+
+/* 센터팝업 작동시 전체배경 */
+.popup_mask{ 
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: none; 
+  background-color:#000;
+  opacity: 0.3;
+  z-index: 1000;
+}
+/* 센터팝업 작동시 전체배경 */
+
+/*바이오 코디네이션 fixed===============================*/
+.inquiry{
+  position:fixed;
+  right:-135px; top:32rem;
+  z-index:20;
+
+  transition:all 0.3s;
+}
+
+.inquiry.move{
+  right:0;
+}
+
+.inquiry_circle{
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+  
+  padding:0.4rem;
+  color:#fff;
+  background-color:#85bdfd;
+  text-align:
+  justify;
+  border-radius:0.9rem 0 0 0.9rem;
+}
+
+.inquiry.move .inquiry_circle button{
+  transform:rotate(-180deg);
+}
+
+.inquiry_circle button{
+  width:15px;
+  height:15px;
+
+  background:url(../img/sub/main_image/allow_right_white.svg) center no-repeat;
+  background-size:contain;
+
+  border:0;
+}
+
+.inquiry_circle div{
+  padding:0.5rem;
+
+  background-color:#fff;
+  border-radius:50%;
+}
+/*바이오 코디네이션 fixed===============================*/
+
+/*visual▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.visual{
+  height:400px;
+}
+/*visual 배경 좌측 이미지===============================*/
+.visual_back{
+  position:relative;
+  width:100%;
+  height:100%;
+  display:flex;
+}
+
+.visual_back::before{
+  position:absolute;
+  left:0; top:0;
+  content:"";
+  display:block;
+  width:30%;
+  height:100%;
+  background-color:#fff;
+  z-index:-1;
+}
+
+.visual_back::after{
+  position:absolute;
+  right:0; top:0;
+  content:"";
+  display:block;
+  width:70%;
+  height:100%;
+  background-color:rgb(206 230 255);
+  z-index:-1;
+}
+
+.visual_limg{
+  position:absolute;
+  content:"";
+  display:block;
+  height:100%;
+  z-index:-1;
+}
+/*visual 배경 좌측 이미지===============================*/
+.visual_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:0px auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+}
+/*슬라이드 배너===============================*/
+.slide_banner{
+  position:relative;
+  width:48%;
+  height:350px;
+  border-radius:1rem;
+  overflow:hidden;
+}
+/*슬라이드 배너 이동경로 circle===============================*/
+.sb_nav{
+  position:absolute;
+  left:2rem; top:2rem;
+  display:flex;
+  gap:0.5rem;
+  z-index:1;
+}
+
+.sb_nav button{
+  width:18px;
+  height:18px;
+  background-color:#fff;
+  border:0;
+  border-radius:18px;
+}
+
+.sb_nav button:focus{
+  outline:0;
+}
+
+.sb_nav li.active button{
+  background-color:#77BCFF;
+}
+/*슬라이드 배너 이동경로 circle===============================*/
+/*슬라이드 배너 나열===============================*/
+.slide_items{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.slide_items li{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+/*슬라이드 배너 나열===============================*/
+
+/*슬라이드1===============================*/
+.sb1{
+  padding:2rem;
+  color:#fff;
+  background:linear-gradient(to bottom right, #F1FFFB, #238DFF);
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.sb1 div:nth-of-type(1){
+  margin-top:7.2rem;
+  padding:0.4rem;
+  display:inline-block;
+  background-color:#54AAFD;
+  border-radius:0.4rem;
+
+  font-family:"spoqaM";
+  font-size:0.8rem;
+}
+
+.sb1 div:nth-of-type(2) h2{
+  margin:1rem 0 0.5rem;
+  font-family:"spoqaM";
+  font-size:1.5rem;
+  letter-spacing:0.1rem;
+}
+
+.sb1 div:nth-of-type(2) p{
+  font-family:"spoqaR";
+  font-size:1rem;
+}
+
+.sb1 button{
+  position:absolute;
+  left:0; bottom:0;
+  width:130px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  background-color:#707070;
+  border:0;
+  border-radius:0rem 1rem 0 1rem;
+}
+
+.sb1 button a{
+  color:#fff;
+}
+
+.sb1 button:focus{
+  outline:0;
+}
+
+.sb1 .sb1_i{
+  position:absolute;
+  right:5%; top:0;
+}
+/*슬라이드1===============================*/
+
+/*슬라이드2,3===============================*/
+.sb2{
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+}
+
+.sb3{
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+}
+/*슬라이드2,3===============================*/
+/*슬라이드 배너===============================*/
+
+/*커뮤니티===============================*/
+.mo_community{
+  display:none;
+}
+
+.community{
+  padding:1.8rem;
+  width:48%;
+  height:350px;
+  background-color:#fff;
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.community .cm_title h2::after{
+  content:"";
+  display:inline-block;
+  width:25px;
+  height:25px;
+  background:url(../img/sub/main_image/message_icon.svg) no-repeat center;
+  background-size:contain;
+  transform:translate(8px,2px);
+}
+
+.cm_k{
+  display:flex;
+  justify-content:space-between;
+  margin:1.5rem 0 2rem;
+}
+
+.cm_k li button{
+  padding:0;
+  font-family:"spoqaM";
+  font-size:1.1rem;
+  color:#C7C7C7;
+}
+
+.cm_k li.on button{
+  color:#000;
+}
+
+.cm_k button{
+  border:0;
+  background-color:transparent;
+}
+
+.cm_k button:focus{
+  outline:0;
+}
+
+.cm_t a{
+  display:flex;
+  gap:2rem;
+  color:#000;
+}
+
+.cm_t h4{
+  font-family:"spoqaR";
+  font-size:1.05rem;
+}
+
+.cm_t p{
+  display:block;
+  width:360px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align: left;
+
+  font-family:"spoqaL";
+  font-size:1.2rem;
+}
+
+.cm_t h4::after{
+  content:"|";
+  padding-left:1.5rem;
+}
+
+.cm_t > li{
+  display:none;
+}
+
+.cm_t > li.on{
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+  gap:1.8rem;
+}
+
+/* 크롤링 준비중 클래스 추가시 나타남 */
+.ready_crawling > li.on::after{
+  content:"현재 크롤링 준비중입니다.";
+
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  color:#fff;
+  text-align:center;
+  z-index:10;
+
+  font-family:'spoqaM';
+  font-size:1.1rem;
+}
+
+.ready_crawling > li.on::before{
+  position:absolute;
+
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+  border-radius:0.5rem;
+  
+  z-index:5;
+}
+/* 크롤링 준비중 클래스 추가시 나타남 */
+
+/*커뮤니티===============================*/
+/*visual▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*container▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*챕터1===============================*/
+.con_sec1 .con_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:2.5rem auto;
+
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+/*바이오코디네이션===============================*/
+.bio_codi{
+  position:relative;
+  width:66%;
+  height:360px;
+  padding:2rem;
+  background-color:#F9F9F9;
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.bioc_k{
+  display:flex;
+  margin:1.7rem 0;
+  color:#C7C7C7;
+}
+
+.bioc_k li{
+  padding:0.5rem 1.2rem;
+  border-right:1px solid #C7C7C7;
+  background-color:#fff;
+  color:#C7C7C7
+}
+
+.bioc_k li:last-child{
+  border:0;
+}
+
+.bioc_k li.on{
+  color:#fff;
+  background-color:#77BCFF
+}
+
+.bioc_k button{
+  font-family:"spoqaM";
+  font-size:1.1rem;
+  border:0;
+  background-color:transparent;
+}
+
+.bioc_k button:focus{
+  outline:0;
+}
+
+.bioc_t{
+  position: relative;
+}
+
+.bioc_t li{
+  display:none;
+}
+
+.bioc_t li.on{
+  display:flex;
+  flex-direction:column;
+  gap:0.9rem;
+}
+
+.bioc_t li a{
+  display:flex;
+  gap:2rem;
+  font-family:"spoqaR";
+  font-size:1rem;
+  color:#000;
+}
+
+.bioc_t li p:first-child{
+  display:block;
+  width:640px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align: left;
+}
+
+.bioc_t li p:first-child:before{
+  content:"";
+  display:inline-block;
+  margin-right:1rem;
+  width:20px;
+  height:20px;
+  background:url(../img/sub/main_image/bio_bullet.svg) no-repeat center;
+  background-size:cover;
+  vertical-align:middle;
+}
+
+.bioc_i{
+  position:absolute;
+  left:-5%; top:-8%;
+}
+/*바이오코디네이션===============================*/
+/*추천검색어===============================*/
+.best_search{
+  width:30%;
+  height:360px;
+  display:flex;
+  flex-direction:column;
+  border-radius:1rem;
+}
+
+.best_search .cm_title{
+  padding-bottom:1rem;
+  border-bottom:1px solid #000;
+}
+
+.best_search .cm_title span{
+  margin-right:0.2rem;
+  font-size:1.2rem;
+  color:#89C5FF;
+}
+
+.best_k{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.best_k li{
+  height:100%;
+  border-bottom:1px solid #ccc;
+}
+
+.best_k li:nth-child(1) a{
+  border-bottom:1px solid #3d3d3d;
+  font-family:"spoqaB";
+  font-size:1.15rem;
+  color:#3d3d3d;
+}
+
+.best_k li a:hover{
+  border-bottom:1px solid #3d3d3d;
+  font-family:"spoqaB";
+  font-size:1.15rem;
+  color:#3d3d3d;
+}
+
+.best_k li a{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  height:100%;
+
+  font-family:"spoqaR";
+  font-size:1.15rem;
+  color:#969696;
+}
+
+.best_k div:nth-of-type(1){
+  margin-right:1.2rem;
+  padding:0.5rem 1.2rem;
+  background:#F6F6F6;
+  border-radius:0.5rem;
+}
+
+.best_k li p{
+  flex:1;
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align:left;
+}
+/*추천검색어===============================*/
+/*챕터1===============================*/
+
+/*챕터2===============================*/
+.con_sec2 .con_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:1rem auto ;
+
+  display:flex;
+  justify-content:space-between;
+}
+/*커뮤니티 종류===============================*/
+.com_button_kind1{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:27%;
+}
+
+.com_button_kind1 li a, .com_button_kind2 li a{
+  padding:1rem 1.5rem;
+  
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+
+}
+
+.com_button_kind1 a, .com_button_kind2 a{
+  color:#5B5B5B
+}
+
+.com_button_kind1 li{
+  
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.com_button_kind1 h4{
+  margin-bottom:0.6rem;
+  padding:0.1rem 1rem;
+  display:inline-block;
+  border-radius:0.2rem;
+  font-size:1.1rem;
+  font-family:"spoqaL";
+  color:#fff;
+}
+
+.com_button_kind1 span{
+  font-family:"spoqaM";
+  font-size:1.1rem;
+}
+
+.com_button_kind1 span::after{
+  content:"|";
+  margin:0 0.5rem;
+}
+
+.com_button_kind1 p{
+  font-family:"spoqaR";
+  font-size:1rem;
+  color:#777777;
+}
+
+.com_button_kind1 li:nth-of-type(1) h4{
+  background-color:#7DDBFF;
+}
+
+.com_button_kind1 li:nth-of-type(1){
+  background-color:#DAF2FB;
+}
+
+.com_button_kind1 li:nth-of-type(2) h4{
+  background-color:#FFBF77;
+}
+
+.com_button_kind1 li:nth-of-type(2){
+  background-color:#FBE8D3;
+}
+
+.com_button_kind1 li:nth-of-type(3) h4{
+  background-color:#77BCFF;
+}
+
+.com_button_kind1 li:nth-of-type(3){
+  background-color:#DDEBFA;
+}
+/*커뮤니티 종류===============================*/
+.info_event{
+  display:flex;
+  justify-content:space-between;
+  width:68%;
+}
+/*바이오 정보===============================*/
+.bio_information{
+  padding:2rem;
+  width:50%;
+  height:320px;
+  background-color:#F9F9F9;
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.bio_information h2::after{
+  content:"";
+  display:inline-block;
+  margin-left:0.5rem;
+  width:20px;
+  height:20px;
+  background:url(../img/sub/main_image/stack_i.png) no-repeat center;
+  transform:translateY(2px);
+}
+
+.bio_information li{
+  font-family:"spoqaR";
+  font-size:1.1rem;
+}
+
+.bio_information li:hover{
+  background-color: #ebf5ff;
+}
+
+.bi_1{
+  margin:1rem 0;
+  display:flex;
+  gap:1rem;
+}
+
+.bi_1 li{
+  text-align:center;
+  flex:1;
+  height:100px;
+  background-color:#fff;
+  border-radius:1rem;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bi_1 li a{
+  width:100%;
+  height:100%;
+
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:center;
+  align-items:center;
+  gap:1rem;
+  color:#000;
+}
+
+.bi_2{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.bi_2 li{
+  position:relative;
+  flex:1;
+  height:100px;
+  background-color:#fff;
+  border-radius:1rem;
+  text-align:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bi_2 li a{
+  width:100%;
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:0.5rem;
+  color:#000;
+}
+/*바이오 정보===============================*/
+/*바이오 행사===============================*/
+.event_zone{
+  position:relative;
+  padding:2rem;
+  width:44%;
+  height:320px;
+  background-color:#F9F9F9;
+  border-radius:1rem;
+  box-sizing:border-box;
+}
+
+.ez_subtext{
+  margin:0.5rem 0;
+  width:295px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align:left;
+  font-family:"spoqaL";
+}
+
+.event_picture{
+  width:100%;
+  height:200px;
+  border-radius:1rem;
+  overflow:hidden;
+}
+
+.event_picture ul{
+  width:100%;
+  height:100%;
+}
+
+.event_picture li{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+.event_picture a{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.custom-fraction{
+  transform:translateX(-25px);
+}
+
+.custom-fraction .current{
+  color:#85bdfd;
+}
+
+.swiper_button_wrap{
+  position:absolute;
+  right:5%; top:14%;
+  width:100px;
+}
+
+.event_zone .swiper-slide{
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+}
+
+.event_zone .swiper-button-next:after, .event_zone .swiper-button-prev:after{
+  font-size:1rem;
+  color:#000;
+}
+/*바이오 행사===============================*/
+/*챕터2===============================*/
+
+/*챕터3===============================*/
+/*바이오맵===============================*/
+.container .con_sec3 .con_wrap{
+  max-width:1200px;
+  width:1200px;
+  margin:0 auto;
+  transform: translateY(2.2rem);
+}
+
+.bio_map{
+  position:relative;
+  width:100%;
+  height:400px;
+  background:url(../img/sub/noimg.svg) no-repeat 50% 50% #cccccc;
+  background-size:120px;
+  border-radius:1rem;
+}
+
+.map_info_input{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+
+  display:flex;
+  flex-direction:row;
+  gap:0.5rem;
+  margin:0rem auto;
+  padding-top:1.5rem;
+  width:70%;
+  height:35px;
+
+  z-index:5;
+}
+
+.map_info_input select{
+  padding-left:0.3rem;
+  width:120px;
+  height:35px;
+  border:0;
+  border-radius:0.3rem;
+  font-family:"spoqaR";
+  font-size:0.95rem;
+}
+
+.map_info_input select:focus{
+  outline:0;
+}
+
+.map_info_search{
+  width:100%;
+  height:100%;
+  display:flex;
+  gap:0.3rem;
+}
+
+.map_info_input form{
+  position:relative;
+  flex:1;
+}
+
+.map_info_input label{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.map_info_input input{
+  width:100%;
+  height:100%;
+  padding-left:1rem;
+  border:0;
+  border-radius:0.5rem;
+  font-family:"spoqaR";
+  font-size:0.95rem;
+}
+
+.map_info_input input[type=submit]{
+  position:absolute;
+  right:2%; top:50%;
+  transform:translateY(-50%);
+  width:20px;
+  height:20px;
+  background:url(../img/sub/main_image/search.svg) no-repeat center;
+  background-size:contain;
+  border:0;
+  text-indent:-1000rem;
+}
+
+.map_info_input input:focus{
+  outline:0;
+}
+
+.map_info_input button:focus{
+  outline:0;
+}
+
+.map_info_input .plus_icon img{
+  width:100%;
+  height:100%;
+}
+
+.map_icon_list{
+  position:absolute;
+  left:10px; top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+}
+
+.map_icon_list button{
+  padding:0;
+  width:40px;
+  height:40px;
+  background:none;
+  border:0;
+}
+
+.map_icon_list button:focus{
+  outline:0; 
+}
+
+.map_icon_list button:nth-of-type(1){
+  margin-bottom:0.5rem;
+}
+
+.map_icon_list button:nth-of-type(1) img{
+  border-radius:0.4rem;
+}
+
+.map_icon_list button:nth-of-type(2) img{
+  border-radius:0.4rem 0.4rem 0 0 ;
+}
+
+.map_icon_list button:nth-of-type(3) img{
+  border-radius:0 0 0.4rem 0.4rem ;
+}
+
+.recommend_list{
+  position:absolute;
+  left:10%; bottom:10%;
+  width:55%;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  font-family:"spoqaR";
+  font-size:1.1rem;
+  z-index:5;
+}
+
+.recommend_list ul{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.recommend_list ul a{
+  color:#555;
+}
+/*바이오맵===============================*/
+/*바이오맵 검색창 자동 X 지우기===============================*/
+.map_info_input input::-ms-clear,
+
+.map_info_input input::-ms-reveal {display:none; width :0; height:0;}
+
+.map_info_input input::-webkit-search-decoration,
+
+.map_info_input input::-webkit-search-cancel-button,
+
+.map_info_input input::-webkit-search-results-button,
+
+.map_info_input input::-webkit-search-results-decoration {display:none;}
+/*바이오맵 검색창 자동 X 지우기===============================*/
+/*바이오맵 배경===============================*/
+.container_backcolor{
+  position:relative;
+  height:150px;
+  background-color:#E9EFFF;
+  z-index:-1;
+}
+
+.shadow_color{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  width:1200px;
+  height:15px;
+  background-color:#dee6ff;
+  border-radius:50%;
+}
+/*바이오맵 배경===============================*/
+/*챕터3===============================*/
+/*container▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*메인페이지 container 반응형▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+
+@media screen and (max-width:1400px) {
+  /* QR code */
+  .qr_code{
+    width:80px;
+  }
+
+  .qr_text {
+    padding: 0.7rem 0 0.3rem;
+  }
+
+  .qr_info{
+    gap:0.6rem;
+  }
+  /* QR code */
+
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .visual_wrap{
+    max-width:90%;
+    width:90%;
+
+    padding:0.4rem 0;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+
+  /* 바이오 코디네이션 & 추천검색어 */
+  .con_sec1 .con_wrap{
+    max-width:90%;
+    width:90%;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .con_sec2 .con_wrap{
+    max-width:90%;
+    width:90%;
+  }
+
+  .com_button_kind1{
+    width:29%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+   /* 바이오 지도 */
+   .container .con_sec3 .con_wrap{
+    max-width:90%;
+    width:90%;
+   }
+
+   .shadow_color{
+    max-width:90%;
+    width:90%;
+    height:10px;
+   }
+   /* 바이오 지도 */
+
+   /* 상단팝업 */
+   .top_popup_wrap{
+    max-width:90%;
+    width:90%;
+   }
+   /* 상단팝업 */
+}
+
+@media screen and (max-width:1300px) {
+
+}
+
+@media screen and (max-width:1250px) {
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .con_sec2 .con_wrap{
+    flex-direction:column;
+    gap:2rem;
+  }
+
+  .com_button_kind1{
+    width:100%;
+    flex-direction:row;
+    gap:1.5rem;
+  }
+
+  .com_button_kind1 li{
+    width:100%;
+  }
+
+  .info_event{
+    width:100%;
+    gap:1.5rem;
+  }
+
+  .bio_information{
+    width:100%;
+    padding:2rem 1.5rem;
+  }
+  
+  .bi_1 li a{
+    flex-direction:column;
+    gap:0;
+    font-size:1rem;
+  }
+
+  .bi_2 li a{
+    gap:0;
+    font-size:1rem;
+  }
+
+  .swiper_button_wrap{
+    right:4%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+}
+
+@media screen and (max-width:1100px) {
+  /* 바이오 지도 */
+  .recommend_list{
+    width:60%;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:1024px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:40%;
+    height:55%;
+  }
+
+  .center_popup .popupDivClose{
+    font-size:1rem;
+  }
+  /* 센터팝업 */
+
+  /*QR코드===============================*/
+  .qr_code{
+    display:none;
+  }
+  /*QR코드===============================*/
+
+  /*1:1문의===============================*/
+  .inquiry{
+    top:12rem;
+  }
+  /*1:1문의===============================*/
+
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .visual{
+    height:750px;
+  }
+
+  .visual_wrap{
+    padding:2rem 0;
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  .visual_back::before{
+    width:100%;
+  }
+
+  .visual_back::after{
+    top:auto;
+    bottom:0;
+    width:100%;
+    height:450px;
+  }
+
+  .visual_limg{
+    display:none;
+  }
+
+  .slide_banner{
+    width:100%;
+  }
+
+  .community{
+    width:100%;
+  }
+
+  .cm_k li button{
+    font-size:1.2rem;
+  }
+
+  .cm_t p{
+    width:80%;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+
+  /* 바이오 코디네이션 & 추천검색어 */
+  .con_sec1 .con_wrap{
+    flex-direction:column;
+    gap:2rem;
+  }
+
+  .bio_codi{
+    width:100%;
+  }
+
+  .bioc_t li a{
+    justify-content:space-between;
+  }
+
+  .best_search{
+    width:100%;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .bi_1 li a{
+    flex-direction:row;
+    gap:1rem;
+    font-size:1.05rem;
+  }
+
+  .bi_2 li a{
+    font-size:1.05rem;
+  }
+
+  .swiper_button_wrap{
+    right:4.5%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .recommend_list{
+    width:70%;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:930px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:50%;
+  }
+  /* 센터팝업 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .com_button_ibox{
+    display:none;
+  }
+
+  .com_button_kind1 li a, .com_button_kind2 li a{
+    justify-content:center;
+  }
+
+  .swiper_button_wrap{
+    right:5.5%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .recommend_list{
+    width:80%;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:768px) {
+  /* 상단팝업 */
+  .top_popup_wrap .popupDivCon{
+    font-size:0.9rem;
+  }
+  /* 상단팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu{
+    display:block;
+    
+    position:fixed;
+    left:0; bottom:0;
+
+    width:100%;
+    padding:1rem 0;
+    background-color:#54AAFD;
+    border-radius:1rem 1rem 0 0;
+    z-index:1000;
+  }
+
+  .mobile_bottom_menu_wrap{
+    width:80%;
+    margin:0px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:4rem;
+  }
+
+  .mobile_bottom_menu_wrap button{
+    border:0;
+    background-color:transparent;
+
+    display:flex;
+    align-items:center;
+    gap:0.3rem;
+  }
+
+  .sv_button button, .eq_button button{
+    flex-direction:column;
+  }
+
+  .bc_button{
+    flex:1;
+
+    padding:1rem 0;
+    background-color:#fff;
+    border-radius:2rem;
+  }
+
+  .bc_button button{
+    justify-content:center;
+    gap:1rem;
+
+    width:100%;
+  }
+
+  .sv_button, .eq_button{
+    color:#fff;
+  }
+
+  .mobile_bottom_menu_wrap div{
+    width:30px;
+    height:30px;
+  }
+
+  .sv_button div{
+    background:url(../img/sub/main_image/bottom_menu_sevice.svg) center no-repeat;
+    background-size:contain;
+  }
+
+  .bc_button div{
+    background:url(../img/sub/main_image/bottom_menu_map.svg) center no-repeat;
+    background-size:contain;
+  }
+
+  .eq_button div{
+    background:url(../img/sub/main_image/bottom_menu_eq.svg) center no-repeat;
+    background-size:contain;
+  }
+  /* 모바일 하단 메뉴 */
+
+  .con_sec2 .con_wrap{
+    margin-bottom:0;
+  }
+
+  /* 바이오 지도 */
+  .recommend_list{
+    width:95%;
+  }
+
+  .recommend_list ul:nth-of-type(1){
+    width:90%;
+    flex-wrap:wrap;
+  }
+
+  .recommend_list ul:nth-of-type(1) li{
+    margin-top:0.5rem;
+    width:45%;
+  }
+
+  .recommend_list ul:nth-of-type(2){
+    display:none;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:700px) {
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    width:90%;
+    gap:3rem;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:1rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+  .con_sec2 .con_wrap{
+    margin-bottom:0;
+  }
+
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .com_button_kind1{
+    flex-direction:column;
+  }
+
+  .com_button_ibox{
+    display:block;
+  }
+
+  .com_button_kind1 li a, .com_button_kind2 li a{
+    justify-content:space-between;
+  }
+
+  .info_event{
+    flex-direction:column;
+  }
+
+  .event_zone{
+    width:100%
+  }
+
+  .swiper_button_wrap{
+    right:3%;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+}
+
+@media screen and (max-width:600px) {
+  /* 센터팝업 */
+  .center_popup{
+    width:70%;
+    height:50%;
+  }
+  /* 센터팝업 */
+
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .cm_k li button{
+    font-size:1.1rem;
+  }
+
+  .cm_t h4{
+    font-size:1rem;
+  }
+
+  .cm_t h4::after{
+    padding-left:1rem;
+  }
+
+  .cm_t a{
+    gap:1rem;
+  }
+
+  .cm_t p{
+    font-size:1rem;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+
+  /* 바이오 코디네이션 & 추천검색어 */
+  .cm_title h2{
+    font-size:1.4rem;
+  }
+
+  .bioc_k li{
+    font-size:1rem;
+  }
+
+  .best_k div:nth-of-type(1){
+    font-size:1rem;
+  }
+
+  .best_k li p{
+    font-size:1rem;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .swiper_button_wrap{
+    right:4%;
+  }
+
+  .ez_subtext{
+    font-size:1rem;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .map_info_input{
+    width:90%;
+    height:auto;
+  }
+
+  .map_info_input{
+    flex-direction:column;
+  }
+
+  .map_info_input select{
+    width:100%;
+  }
+
+  .map_info_search{
+    gap:0.5rem;
+  }
+
+  .map_icon_list button{
+    width:35px;
+    height:35px;
+  }
+
+  .map_icon_list button img{
+    width:100%;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:550px) {
+  /* 상단메뉴 */
+  .top_popup_wrap{
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  .top_popup_wrap .popCloseBtn{
+    width:10px;
+    height:10px;
+  }
+  /* 상단메뉴 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:2rem;
+  }
+
+  .mobile_bottom_menu_wrap div{
+    width:25px;
+    height:25px;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:0.9rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  .visual{
+    height:auto;
+  }
+
+  .visual_wrap{
+    padding:0;
+    max-width:100%;
+    width:100%;
+    gap:0;
+  }
+
+  .slide_banner{
+    border-radius:0;
+  }
+
+  .sb1{
+    border-radius:0;
+  }
+
+  .sb1 button{
+    border-radius:0 1rem 0 0;
+  }
+
+  .visual_back::after{
+    background-color:transparent;
+  }
+
+  .community{
+    display:none;
+  }
+
+  .mo_community{
+    display:block;
+    padding:0;
+    width:100%;
+    height:370px;
+  }
+
+  .mo_community .cm_title{
+    display:none;
+  }
+
+  .mo_community .cm_k{
+    margin:1.5rem 0 0;
+    padding:0.8rem 0;
+    justify-content:space-around;
+    background-color:#add0ff;
+  }
+
+  .mo_community .cm_k li.on button{
+    color:#fff;
+    font-weight:bold;
+  }
+
+  .mo_community .cm_k li button{
+    color:#fff;
+  }
+
+  .mo_community .cm_t{
+    position:relative;
+  }
+
+  .mo_community .cm_t > li.on{
+    gap:0;
+  }
+
+  .mo_community .cm_t a{
+    padding:1.2rem 0;
+    border-bottom:1px solid #ccc;
+  }
+
+  .mo_community .mobile_menu{
+    padding:0.5rem 1.2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ccc;;
+  }
+
+  .mo_community .mobile_menu .plus_icon a{
+    width:30px;
+    height:30px;
+  }
+
+  .mo_community .mobile_menu .plus_icon a img{
+    width:100%;
+  }
+  /* visual 이미지 & 커뮤니티 게시판 반응형 */
+  
+  /* 바이오 코디네이션 & 추천검색어 */
+  .bio_codi{
+    display:none;
+  }
+
+  .cm_title h2{
+    font-size:1.3rem;
+  }
+
+  .con_sec1 .con_wrap{
+    margin:2rem auto;    
+  }
+
+  .best_search .cm_title span{
+    font-size:1.1rem;
+  }
+  /* 바이오 코디네이션 & 추천검색어 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 버튼 */
+  .com_button_kind1 li:nth-of-type(2),
+  .com_button_kind1 li:nth-of-type(3){
+    display:none;
+  }
+
+  .info_event{
+    flex-direction:column-reverse;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 버튼 */
+}
+
+@media screen and (max-width:480px) {
+  /* 상단팝업 */
+
+
+  .top_popup_wrap .popupDivCon{
+    font-size:0.8rem;
+  }
+  /* 상단팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1.5rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .swiper_button_wrap{
+    right:5.5%;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+  .recommend_list ul a{
+    font-size:1rem;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:400px) {
+   /* 센터팝업 */
+   .center_popup{
+    width:90%;
+    height:40%;
+  }
+
+  .center_popup .popupDivClose{
+    font-size:0.9rem;
+  }
+  /* 센터팝업 */
+
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1.5rem;
+  }
+
+  .bc_button{
+    padding:0.6rem 0;
+  }
+
+  .bc_button button{
+    gap:0;
+  }
+
+  .mobile_bottom_menu_wrap p{
+    font-size:0.6rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+  /* 커뮤니티 */
+  .mo_community .cm_k li button{
+    font-size:0.9rem;
+  }
+
+  .mo_community .mobile_menu div{
+    font-size:0.9rem;
+  }
+  /* 커뮤니티 */
+
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+  .bio_information{
+    padding:0;
+    height:auto;
+
+    background-color:transparent;
+  }
+
+  .bi_1 li{
+    background-color:#F9F9F9;
+  }
+
+  .bi_1 li a{
+    flex-direction:column;
+    gap:0.5rem;
+
+    font-size:0.9rem;
+  }
+
+  .bi_2{
+    flex-wrap:wrap;
+    gap:0;
+  }
+
+  .bi_2 li{
+    flex:inherit;
+    width:47%;
+    background-color:#F9F9F9;
+  }
+
+  .bi_2 li:last-child{
+    margin-top:1rem;
+    width:100%;
+  }
+
+  .bi_2 li a{
+    flex-direction:column;
+    gap:0.5rem;
+
+    font-size:0.9rem;
+  }
+  /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+
+  /* 바이오 지도 */
+
+
+  .recommend_list ul:nth-of-type(1) li:nth-child(3),
+  .recommend_list ul:nth-of-type(1) li:nth-child(4){
+    display:none;
+  }
+  /* 바이오 지도 */
+}
+
+@media screen and (max-width:300px) {
+  /* 모바일 하단 메뉴 */
+  .mobile_bottom_menu_wrap{
+    gap:1rem;
+  }
+  /* 모바일 하단 메뉴 */
+
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+   .com_button_kind1 h4{
+    padding:0.1rem 0.5rem;
+    font-size:1rem;
+   }
+   
+   .com_button_kind1 span{
+    font-size:1rem;
+   }
+
+   .com_button_kind1 p{
+    font-size:0.9rem;
+   }
+
+  .com_button_ibox{
+    width:55px;
+    height:55px;
+  }
+
+  .com_button_ibox img{
+    width:100%;
+  }
+
+  .swiper_button_wrap{
+    right:7%;
+  }
+   /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
+}
+
+/*메인페이지 container 반응형▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/

@@ -25,33 +25,10 @@
     <script src="../js/index.js"></script>
     <script src="../js/sub.js"></script>
     <script src="../js/include.js"></script>
-    <!-- KAKAO Maps API -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6e1a9d4aa6efcc8138e229029463a705&libraries=services"></script>
-    <!-- KAKAO Maps API -->
     <!--script==========================================================================================-->
     <script>
-      $(document).ready(function(){
-        $(".condition_nav li").on("click", function(){
-          // 이용약과 개인정보 수집 및 이용 선택 번호 받기
-          const navc = $(".condition_nav li").index($(this));
-          // 이용약과 개인정보 수집 및 이용 선택 번호 받기
 
-          // 이용약과 개인정보 수집 및 이용 버튼 탭 색변경
-          $(".condition_nav li").removeClass("on");
-          $(this).addClass("on");
-          // 이용약과 개인정보 수집 및 이용 버튼 탭 색변경
-
-          // 이용약과 개인정보 수집 및 이용 버튼 클릭 시 본문 내용 none, block
-          $(".condition_policy_twrap nav").removeClass("on");
-          $(".condition_policy_twrap nav").eq(navc).addClass("on");
-          // 이용약과 개인정보 수집 및 이용 버튼 클릭 시 본문 내용 none, block
-        });
-      });
     </script>
-    <style>
-
-    </style>
-
 </head>
 <!--body==========================================================================================-->
 
@@ -70,8 +47,24 @@
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label noMenue">
-                                찾아오시는 길
+                                바이오맵 소개
                             </a>
+                        </li>
+                        <li class="depth_Wrap selectBox">
+                            <a class="label">
+                              바이오맵 소개
+                            </a>
+                            <div class="optionList">
+                                <a class="optionItem" href="biomap_introduce.html"><!--게시판목록이 공지사항과 같음 Bd_noti.html-->
+                                  바이오맵 소개
+                                </a>
+                                <a class="optionItem" href=""><!--게시판목록이 공지사항과 같음 Bd_noti.html-->
+                                    운영조직
+                                </a>
+                                <a class="optionItem" href="">
+                                    이용정보
+                                </a>
+                            </div>
                         </li>
                     </ul>
                     <div class="topSvc_Wrap">
@@ -121,84 +114,42 @@
             <div class="conWrap" id="printWrap">
                 <section class="TitleWrap">
                     <h2>
-                        찾아오시는 길
+                        아이바이오맵(Ibiomap) 운영조직
                     </h2>
                 </section>
                 <section>
-                  <div class="come_on_wrap">
-                    <div class="come_on_title">
-                      <p>인천테크노파크 바이오맵은 방문객을 환영합니다.</p>
-                      <div></div>
+                  <div class="biomap_organization_wrap">
+                    <div class="organization_text">
+                      <ul>
+                        <li class="bio_director">
+                          <div>센터장</div>
+                        </li>
+                        <li class="bio_department_wrap">
+
+                          <div class="bio_department">
+                            <div class="bio_sub_department bio_sub_department1">
+                              <p>연구자원<br>(코디네이터)</p>
+                            </div>
+
+                            <ul class="bio_ssub_department">
+                              <li>시설·장비·기술</li>
+                              <li>교육·정책·제도</li>
+                              <li>지원사업</li>
+                            </ul>
+                          </div>
+
+                          <div class="bio_department">
+                            <div class="bio_sub_department bio_sub_department2">
+                              <p>시스템관리</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-  
-                    <div class="come_on_map">
-                      <div>
-  
-                      </div>
-                      <div class="id">
-  
-                      </div>
-                    </div>
-  
-                    <ul class="come_on_address">
-                      <li>
-                        <strong>ADDRESS</strong>
-                        <p>21999 인천광역시 연수구 갯벌로 12(송도동)</p>
-                      </li>
-                      <li>
-                        <strong>TEL / FAX</strong>
-                        <p>010-0000-0000 /  032-260-0897</p>
-                      </li>
-                      <li>
-                        <strong>Email</strong>
-                        <p>Eamil@itp.or.kr</p>
-                      </li>
-                    </ul>
                   </div>
                 </section>
             </div>
         </div>
-
-        <!-- kakao map 지도 생성 스크립트 -->
-        <script>
-          var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-          mapOption = {
-              center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-              level: 3 // 지도의 확대 레벨
-          };  
-      
-          // 지도를 생성합니다    
-          var map = new kakao.maps.Map(mapContainer, mapOption);
-      
-          // 주소-좌표 변환 객체를 생성합니다
-          var geocoder = new kakao.maps.services.Geocoder();
-      
-          // 주소로 좌표를 검색합니다
-          geocoder.addressSearch('서울 금천구 가산디지털2로 165', function(result, status) {
-          
-              // 정상적으로 검색이 완료됐으면 
-              if (status === kakao.maps.services.Status.OK) {
-          
-                  var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-          
-                  // 결과값으로 받은 위치를 마커로 표시합니다
-                  var marker = new kakao.maps.Marker({
-                      map: map,
-                      position: coords
-                  });
-          
-                  // 인포윈도우로 장소에 대한 설명을 표시합니다
-                  var infowindow = new kakao.maps.InfoWindow({
-                      content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
-                  });
-                  infowindow.open(map, marker);
-          
-                  // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                  map.setCenter(coords);
-              } 
-          });    
-        </script>
-        <!-- kakao map 지도 생성 스크립트 -->
 
         <!--INCLUED========================================-->
         <footer data-include="../include/footer.html"></footer>

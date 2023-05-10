@@ -1300,3 +1300,12 @@
   height:65px;
 }
 /* 바이오맵 운영조직 */
+.Full_subCombo{
+  width:100%;
+
+  display:flex;
+}
+
+.searchWrap .Full_subCombo .combo{
+  width:calc(100%/3);
+}

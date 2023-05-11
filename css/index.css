@@ -110,7 +110,7 @@
 
 .center_popup .popupDivClose button{
   flex:1;
-  padding:0.7rem 0;
+  padding:0.5rem 0;
   color:#fff;
   background-color:#3d3d3d;
   border:0;
@@ -732,27 +732,27 @@
 }
 
 .com_button_kind1 li:nth-of-type(1) h4{
-  background-color:#7DDBFF;
-}
-
-.com_button_kind1 li:nth-of-type(1){
-  background-color:#DAF2FB;
-}
-
-.com_button_kind1 li:nth-of-type(2) h4{
   background-color:#FFBF77;
 }
 
-.com_button_kind1 li:nth-of-type(2){
+.com_button_kind1 li:nth-of-type(1){
   background-color:#FBE8D3;
 }
 
-.com_button_kind1 li:nth-of-type(3) h4{
+.com_button_kind1 li:nth-of-type(2) h4{
   background-color:#77BCFF;
 }
 
-.com_button_kind1 li:nth-of-type(3){
+.com_button_kind1 li:nth-of-type(2){
   background-color:#DDEBFA;
+}
+
+.com_button_kind1 li:nth-of-type(3) h4{
+  background-color:#7DDBFF;
+}
+
+.com_button_kind1 li:nth-of-type(3){
+  background-color:#DAF2FB;
 }
 /*커뮤니티 종류===============================*/
 .info_event{
@@ -790,7 +790,6 @@
 }
 
 .bi_1{
-  margin:1rem 0;
   display:flex;
   gap:1rem;
 }
@@ -820,6 +819,7 @@
 }
 
 .bi_2{
+  margin:1rem 0;
   display:flex;
   justify-content:space-between;
   gap:1rem;

@@ -55,42 +55,44 @@
             </div>
         </div>
         <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv center_popup" style="display: none;">
-            <div class="popupDivCon noimgBox">
-
-            </div>
-
-            <div class="popupDivClose">
-                <div>
-                    <button class="popCloseBtn">
-                        오늘하루 열지않기
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                    </button>
+        <div> <!-- 담당자 div 사용-->
+            <div class="popupDiv center_popup" style="display: none;">
+                <div class="popupDivCon noimgBox">
+                    
+                </div>
+    
+                <div class="popupDivClose">
+                    <div>
+                        <button class="popCloseBtn">
+                            오늘하루 열지않기
+                        </button>
+                        <button class="popCloseBtn">
+                            창닫기
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div> -->
-        <!--기본팝업 ////주석해제시 팝업위치 변경-->
-        <!-- <div class="popupDiv" style="display: none;">
-            <div class="popupDivCon noimgBox">
-            </div>
-
-            <div class="popupDivClose">
-                <img src="/image/logo.png" alt="logo">
-                <div>
-                    <button class="checkedBtn">
-                        오늘하루 열지않기
-                        <span class="checkedWrap"></span>
-                    </button>
-                    <button class="popCloseBtn">
-                        창닫기
-                        <span class="checkedWrap"></span>
-                    </button>
+            <!--기본팝업 ////주석해제시 팝업위치 변경-->
+            <!-- <div class="popupDiv" style="display: none;">
+                <div class="popupDivCon noimgBox">
                 </div>
-            </div>
-        </div> -->
-    <!-- </div> -->
+    
+                <div class="popupDivClose">
+                    <img src="/image/logo.png" alt="logo">
+                    <div>
+                        <button class="checkedBtn">
+                            오늘하루 열지않기
+                            <span class="checkedWrap"></span>
+                        </button>
+                        <button class="popCloseBtn">
+                            창닫기
+                            <span class="checkedWrap"></span>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- 담당자 div 사용-->
+    </div>
     <!--BGpopup========================================-->
 
     <!--INCLUED========================================-->
@@ -130,7 +132,6 @@
                 <div class="community">
                     <div class="cm_title">
                         <h2>커뮤니티</h2>
-                        <button class="plus_icon"><a href="community/Wz_news.html"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
 
                     <nav class="cm_scroll">
@@ -456,7 +457,6 @@
                 <div class="bio_codi">
                     <div class="cm_title">
                         <h2>바이오 코디네이션</h2>
-                        <button class="plus_icon"><a href="#"><img src="img/sub/main_image/add_icon.svg" alt="플러스 아이콘(바로가기 아이콘)"></a></button>
                     </div>
                     <ul class="bioc_k">
                         <li class="on">
@@ -606,7 +606,29 @@
             <div class="con_wrap">
                 <ul class="com_button_kind1">
                     <li>
-                        <a href="community/Bd_bioQna.html">
+                        <a href="/ITP_sub/registration.html">
+                            <div>
+                                <h4>기관 정보</h4>       
+                                <p><span>Bio</span>시설 장비 등록</p>
+                            </div>
+                            <div class="com_button_ibox">
+                                <img src="img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/ITP_sub/Wz_worker.html">
+                            <div>
+                                <h4>인력 정보</h4>  
+                                <p><span>Bio</span>검색 정보확인</p>
+                            </div>
+                            <div class="com_button_ibox">
+                                <img src="img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/ITP_sub/Bd_bioQna.html">
                             <div>
                                 <h4>연구개발 Q&A</h4>
                                 <p><span>Bio</span>질문 확인하기</p>
@@ -616,48 +638,12 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="institutional/registration.html">
-                            <div>
-                                <h4>시설/장비 등록</h4>
-                                <p><span>Bio</span>시설 장비 등록</p>
-                            </div>
-                            <div class="com_button_ibox">
-                                <img src="img/sub/main_image/br_i.svg" alt="시설/장비 등록 아이콘">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="institutional/Wz_worker.html">
-                            <div>
-                                <h4>기관인력정보</h4>
-                                <p><span>Bio</span>검색 정보확인</p>
-                            </div>
-                            <div class="com_button_ibox">
-                                <img src="img/sub/main_image/bc_i.svg" alt="바이오 코디네이션 아이콘">
-                            </div>
-                        </a>
-                    </li>
                 </ul>
                 <div class="info_event">
                     <div class="bio_information">
                         <div class="cm_title">
                             <h2>바이오 정보</h2>
                         </div>
-                        <ul class="bi_1">
-                            <li>
-                                <a href="research/Wz.Investment.html">
-                                    <div><img src="img/sub/main_image/patent_i.svg" alt="특허정보 아이콘"></div>
-                                    <p>투자 자본</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div><img src="img/sub/main_image/skill_i.svg" alt="기술정보 아이콘"></div>
-                                    <p>기술 정보</p>
-                                </a>
-                            </li>
-                        </ul>
                         <ul class="bi_2">
                             <li>
                                 <a href="research/Map_facility.html">
@@ -678,15 +664,29 @@
                                 </a>
                             </li>
                         </ul>
+                        <ul class="bi_1">
+                            <li>
+                                <a href="research/Wz.Investment.html">
+                                    <div><img src="img/sub/main_image/patent_i.svg" alt="특허정보 아이콘"></div>
+                                    <p>투자 자본</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div><img src="img/sub/main_image/skill_i.svg" alt="기술정보 아이콘"></div>
+                                    <p>기술 정보</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="event_zone swiper-containerStop">
                         <div class="cm_title">
-                            <h2>바이오 행사</h2>
+                            <h2>바이오 서비스</h2>
                             <div class="custom-fraction">
                                 <span class="current">1</span>/<span class="all">3
                             </div>
                         </div>
-                        <div class="ez_subtext">바이오 행사명을 입력하세요.</div>
+                        <div class="ez_subtext">바이오 서비스 제목을 입력하세요.</div>
                         <div class="event_picture swiper-containerStop">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -787,7 +787,7 @@
     </div>
 
     <!-- kakao map 지도 생성 스크립트 -->
-    <script>
+    <!-- <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = {
             center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -824,7 +824,7 @@
                 map.setCenter(coords);
             } 
         });    
-    </script>
+    </script> -->
     <!-- kakao map 지도 생성 스크립트 -->
 
     <!--INCLUED========================================-->

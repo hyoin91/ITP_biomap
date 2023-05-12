@@ -23,14 +23,6 @@
     <script src="../js/sub.js"></script>
     <script src="../js/include.js"></script>
     <!--script==========================================================================================-->
-    <script>
-      $(document).ready(function(){
-        $(".search_engine_nav li").on("click",function(){
-          $(".search_engine_nav li").removeClass("on")
-          $(this).addClass("on")
-        });
-      })
-    </script>
 </head>
 <!--body==========================================================================================-->
 
@@ -67,14 +59,14 @@
         <div class="cmWrap">
             <!--서브메뉴&&콘텐츠서비스========================================-->
             <div class="conWrap">
-                <section class="bc_Wrap TitleWrap">
+                <!-- <section class="bc_Wrap TitleWrap">
                     <ul class="bc">
                         <li>
 
                         </li>
                         <li class="depth_Wrap selectBox">
                             <a class="label noMenue">
-                                검색엔진
+                                통합검색
                             </a>
                         </li>
                     </ul>
@@ -101,41 +93,18 @@
                         </button>
                     </div>
 
-                </section>
+                </section> -->
                 <!--콘텐츠상단==타이틀,서칭==========================================-->
             </div>
             <!--콘텐츠========================================-->
-            <div class="conWrap" id="printWrap">
+            <div class="conWrap total_search" id="printWrap">
                 <section class="TitleWrap">
                     <h2>
-                        검색엔진
+                      통합검색
                     </h2>
                     <div class="searchWrap">
                         <div class="search_sort">
                             <div class="searchVS"></div>
-                            <div class="noti_icBox"></div>
-                            <div class="combo selectBox">
-                                <button class="label" id="TextVal">
-                                    ::전체::
-                                </button>
-                                <ul class="optionList">
-                                    <li onclick="statusChange(this)">
-                                        <button>
-                                            ::전체::
-                                        </button>
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        <button>
-                                            제목 + 내용
-                                        </button>
-                                    </li>
-                                    <li onclick="statusChange(this)">
-                                        <button>
-                                            작성자
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
                             <input type="text" placeholder="검색어를 입력하세요.">
                             <button class="searchBtn keyColor_BG" onClick="">
                             </button>
@@ -144,87 +113,381 @@
                 </section>
                 <section>
                     <div class="search_engine_wrap">
-                      <h2><span>"통합검색"</span>에 대한 검색결과 총 <span>6개</span></h2>
-
-                      <div class="search_engine_nav">
-                        <ul>
-                          <li class="on"><button>전체</button></li>
-                          <li><button>자유</button></li>
-                          <li><button>공지</button></li>
-                          <li><button>새소식</button></li>
-                        </ul>
+                      <div class="search_total">
+                        <h2>검색결과 총 <span>6건</span></h2>
                       </div>
 
-                      <div class="noraml_list">
+                      <!-- 웹진형 게시판 -->
+                      <div class="Wz_list noraml_list">
                         <div class="noraml_list_title">
-                          <h3>일반 게시물 검색결과</h3>
+                          <h2>바이오시설</h2>
                           <span>총 3건</span>
                         </div>
-                        <div class="normal_board">
-                          <ul>
-                            <li>
-                              <div><img src="../img/sub/ic_home.svg" alt="홈 이미지"></div>
-                              <div>이용안내</div>
-                              <div>통합검색</div>
-                            </li>
-                            <li>
-                              <a href="#">2023년 인천테크노파크 바이오맵 출시 기념 통합 검색어입니다.</a>
-                            </li>
-                            <li>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </li>
-                            <li>
-                              <p>2023.00.00</p>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <div><img src="../img/sub/ic_home.svg" alt="홈 이미지"></div>
-                              <div>이용안내</div>
-                              <div>통합검색</div>
-                            </li>
-                            <li>
-                              <a href="#">2023년 인천테크노파크 바이오맵 출시 기념 통합 검색어입니다.</a>
-                            </li>
-                            <li>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </li>
-                            <li>
-                              <p>2023.00.00</p>
+                        <div class="Wz_board wZine_gallery">
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
                             </li>
                           </ul>
-                          <ul>
-                            <li>
-                              <div><img src="../img/sub/ic_home.svg" alt="홈 이미지"></div>
-                              <div>이용안내</div>
-                              <div>통합검색</div>
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                  <p>
+                                      AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                      일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                      다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                  </p>
+                              </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
                             </li>
-                            <li>
-                              <a href="#">2023년 인천테크노파크 바이오맵 출시 기념 통합 검색어입니다.</a>
-                            </li>
-                            <li>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </li>
-                            <li>
-                              <p>2023.00.00</p>
+                          </ul>
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                  <p>
+                                      AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                      일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                      다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                  </p>
+                              </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
                             </li>
                           </ul>
                         </div>
+                        <div class="the_more">
+                          <a href="#">더보기 ></a>
+                        </div>
                       </div>
-                    </div>
+                      <!-- 웹진형 게시판 -->
+                      
+                      <!-- 웹진형 게시판 -->
+                      <div class="Wz_list noraml_list">
+                        <div class="noraml_list_title">
+                          <h2>바이오장비</h2>
+                          <span>총 3건</span>
+                        </div>
+                        <div class="Wz_board wZine_gallery">
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                  <p>
+                                      AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                      일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                      다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                  </p>
+                              </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
+                            </li>
+                          </ul>
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                  <p>
+                                      AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                      일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                      다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                  </p>
+                              </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
+                            </li>
+                          </ul>
+                          <ul class="wZ">
+                            <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                            <li class="wZ_equipment">
+                                <div class="wZ_top">
+                                    <div class="wZ_top_title">
+                                      <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                    </div>
+                                    <div class="views">
+                                      <span>
+                                          10000
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="wZ_middle">
+                                  <p>
+                                      AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                      일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                      다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                  </p>
+                              </div>
+                                <div class="wZ_bottom">
+                                      <p>인천테크노파크</p>
+                                      <b>한국전자기술연구원</b>
+                                </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="the_more">
+                          <a href="#">더보기 ></a>
+                        </div>
+                      </div>
+                      <!-- 웹진형 게시판 -->
 
-                    <div class="PGnation">
-                        <a class="PGarrow">〈</a>
-                        <a class="PGarrow">《</a>
-                        <a class="on">1</a>
-                        <a>2</a>
-                        <a class="PGarrow">〉</a>
-                        <a class="PGarrow">》</a>
+                      <!-- 웹진형 게시판 -->
+                      <div class="Wz_list noraml_list">
+                        <div class="noraml_list_title">
+                          <h2>기관정보</h2>
+                          <span>총 3건</span>
+                        </div>
+                          <div class="Wz_board wZine_gallery">
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="the_more">
+                          <a href="#">더보기 ></a>
+                        </div>
+                      </div>
+                      <!-- 웹진형 게시판 -->
+
+                      <!-- 웹진형 게시판 -->
+                      <div class="Wz_list noraml_list">
+                        <div class="noraml_list_title">
+                          <h2>인력정보</h2>
+                          <span>총 3건</span>
+                        </div>
+                        <div class="Wz_board wZine_gallery">
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                            <ul class="wZ">
+                              <li><a href="/ITP_sub/Wz_equipmentDtl.html"><img src="/img/sub/main_image/test_img1.jpg" alt="웹진형 게시판 이미지3"></a></li>
+                              <li class="wZ_equipment">
+                                  <div class="wZ_top">
+                                      <div class="wZ_top_title">
+                                        <h3><a href="/ITP_sub/Wz_equipmentDtl.html">홈페이지 웹진형 게시판입니다.</a></h3>
+                                      </div>
+                                      <div class="views">
+                                        <span>
+                                            10000
+                                        </span>
+                                      </div>
+                                  </div>
+                                  <div class="wZ_middle">
+                                    <p>
+                                        AI 반도체는 인공신경망 연산을 메모리 효율적이면서 고속으로 처리하는 하드웨어 처리장치로써, 전용의 최적화된 컴파
+                                        일러 및 소프트웨어 라이브러리를 통해 AI 시스템으로 완성되는 핵심 기반 기술이다. 최근 <b class="emphasis">인공신경망</b> 학습 규모가 해마
+                                        다 10배씩 상승함에 따라 학습을 위한 메모리 사용량과 AI 반도체의 개수도 점차 증가하고 있다
+                                    </p>
+                                </div>
+                                  <div class="wZ_bottom">
+                                        <p>인천테크노파크</p>
+                                        <b>한국전자기술연구원</b>
+                                  </div>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="the_more">
+                          <a href="#">더보기 ></a>
+                        </div>
+                      </div>
+                      <!-- 웹진형 게시판 -->
                     </div>
                 </section>
             </div>
         </div>
-
         <!--INCLUED========================================-->
         <footer data-include="../include/footer.html"></footer>
         <!--INCLUED========================================-->

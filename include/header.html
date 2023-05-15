@@ -268,6 +268,15 @@
             <button class="search_close_btn"><img src="../img/sub/main_image/search_close.svg" alt=""></button>
         </div>
     </div>
+
+    <div class="top_button">
+        <button type="button">
+            <div class="top_itbox">
+                <img src="../img/sub/main_image/top_scroll.svg" alt="top_scroll 이미지">
+                <p>Top</p>
+            </div>
+        </button>
+    </div>
 </section>
 <script>
     $(document).ready(function(){
@@ -315,6 +324,12 @@
         $(".full_slnb > a").on("click",function(){
             $(this).parent(".full_slnb ").toggleClass("on");
             $(this).next(".show_sslnb").slideToggle();
+        });
+
+        // top이동 스크롤
+        $('.top_button').click(function(){
+            $('html, body').animate({scrollTop:0},200);
+            return false;
         });
 
         // // full_menu icon 클릭 시 body에 스크롤 제거

@@ -1058,84 +1058,89 @@
 /* 찾아오시는 길 */
 
 /* 전체검색(검색 엔진) 서브페이지 */
-.search_engine_wrap{
+/* 통합검색 검색창 */
+.total_search_result .searchWrap{
+  width:50rem;
+  margin:0px auto;
+  padding:2rem 0 0;
+  background-color:transparent;
+}
+
+.total_search_result .search_sort{
+  border:1px solid #ccc;
+  border-radius:2rem;
+} 
+
+.total_search_result input[type="text"]{
+  padding:0 2rem;
+  height:4rem;
+  border:0;
+  background-color:transparent;
+}
+
+.total_search_result input:focus{
+  outline:none !important;
+}
+
+.total_search_result .searchBtn{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+}
+
+.total_search_result .good_search{
   display:flex;
-  flex-direction:column;
-  gap:3.5rem;
+  align-items:center;
+  gap:1.5rem;
+}
+
+.total_search_result .good_search div{
+  font-size:1.2rem;
+}
+
+.total_search_result .good_search_list{
+  display:flex;
+  gap:1.5rem;
+}
+/* 통합검색 검색창 */
+/* 검색한 내용 건수 */
+.total_search_result .search_total{
+  padding:2rem 0;
+  border-top:2px solid #000;
+  font-size:0.89rem;
+  text-align:center;
 }
 
 .search_engine_wrap h2 span{
   color:#54AAFD;
 }
-
-.search_engine_nav ul{
+/* 검색한 내용 건수 */
+/* 웹진 리스트 */
+.search_engine_wrap{
   display:flex;
-
-  text-align:center;
+  flex-direction:column;
+  gap:3rem;
 }
 
-.search_engine_nav li{
-  flex:1;
-
-  padding:0.7rem 1rem;
-  color:#8a8a8a;
-  background:#f1f1f1;
-  border:1px solid #ebebeb;
+.Wz_list{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
 }
 
-.noraml_list_title{
+.Wz_list_title{
   display:flex;
   align-items:center;
-  gap:0.5rem;
+  gap:1rem;
 }
 
-.noraml_list_title h2{
+.Wz_list_title h2{
   font-family:'spoqaR';
   font-size:1.8rem;
 }
 
-.noraml_list{
-  display:flex;
-  flex-direction:column;
-  gap:1rem;
-}
-
-.normal_board ul{
-  display:flex;
-  flex-direction:column;
-  gap:1rem;
-
-  padding:20px 0;
-  border-bottom:1px solid #ccc;
-}
-
-.normal_board ul a{
-  font-family:'spoqaB';
-  color:#000;
-  font-size:1.2rem;
-}
-
-.normal_board ul a:hover{
-  border-bottom:2px solid #000;
-}
-
-.normal_board li:nth-of-type(1){
-  display:flex;
-  align-items:center;
-  gap:1rem;
-}
-
-.normal_board li:nth-of-type(1) div:first-child:before{
-  content:"";
-}
-
-.normal_board li:nth-of-type(1) div::before{
-  content:">";
-  margin-right:1rem;
-}
-
-.noraml_list .normal_board ul:nth-of-type(1){
-  border-top:1px solid #000;
+.Wz_board{
+  border-top:1px solid #ccc;
 }
 
 .the_more{
@@ -1145,11 +1150,29 @@
 .emphasis{
   color:#FAAC56;
 }
+/* 웹진 리스트 */
+/* 웹진 검색 결과없습니다. */
+.search_no{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.5rem;
 
-.total_search .searchWrap{
-  padding:3.5rem 1rem;
-  background-color:#eaf5ff;
+  padding:5rem 0;
+  border:1px solid #ccc;
+  border-radius:1rem;
+
+  font-size:1.2rem;
 }
+
+.search_no_i{
+  width:50px;
+  height:50px;
+
+  background:url(../img/sub/sub_han/search_no.svg) no-repeat center;
+  background-size: contain;
+}
+/* 웹진 검색 결과없습니다. */
 /* 전체검색(검색 엔진) 서브페이지 */
 
 /* 바이오맵 운영조직 */

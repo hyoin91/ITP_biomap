@@ -476,6 +476,34 @@ body.active{
   color:#000;
 }
 /*서서브 LNB===============================*/
+/* top_scroll */
+.top_button{
+  position:fixed;
+  right:20px; top:40rem;
+
+  width:65px;
+  height:65px;
+  background-color:#54AAFD;
+  border-radius:50%;
+}
+
+.top_button button{
+  position:relative;
+  width:100%;
+  height:100%;
+
+  border:0;
+  background-color:transparent;
+}
+
+.top_itbox{
+  position: absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  color:#fff;
+}
+/* top_scroll */
 /*header===============================*/
 
 /*footer===============================*/

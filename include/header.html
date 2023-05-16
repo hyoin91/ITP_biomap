@@ -252,7 +252,7 @@
                 <form action="">
                     <div class="search_input">
                         <input type="search" placeholder="검색어를 입력해주세요.">
-                        <input type="submit">
+                        <button type="button">
                     </div>
                 </form>
                 <div class="search_content">
@@ -304,12 +304,21 @@
         $(".search_menu_icon button").on("click",function(){
             $(".layer_search").addClass("on");
             $("body").addClass("active");
+        },function(){
+            
         })
 
         $(".search_close_btn").on("click",function(){
             $(".layer_search").removeClass("on");
             $("body").removeClass("active");
         })
+
+        // $('html').click(function(e){
+        //     if($(e.target).parents('.layer_search_wrap').length < 1){
+        //         $(".layer_search").removeClass("on");
+        //         $("body").removeClass("active");
+        //     }
+        // });
 
         // full_menu icon 클릭 시 full_menu 슬라이드 업다운
         $(".full_menu_icon button").on("click",function(){

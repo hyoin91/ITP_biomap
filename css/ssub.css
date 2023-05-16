@@ -1148,7 +1148,8 @@
 }
 
 .emphasis{
-  color:#FAAC56;
+  background-color:#FAAC56;
+  color:#fff;
 }
 /* 웹진 리스트 */
 /* 웹진 검색 결과없습니다. */

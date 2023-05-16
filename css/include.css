@@ -167,7 +167,7 @@ body.active{
 
 .search_input input::-webkit-search-results-decoration {display:none;}
 /*search 검색창 자동 X 지우기===============================*/
-.search_input input[type=submit]{
+.search_input button{
   position:absolute;
   right:2%; top:50%;
   transform:translateY(-50%);

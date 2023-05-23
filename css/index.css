@@ -132,7 +132,7 @@
 /* 센터팝업 작동시 전체배경 */
 
 /*바이오 코디네이션 fixed===============================*/
-.inquiry{
+/* .inquiry{
   position:fixed;
   right:-135px; top:32rem;
   z-index:20;
@@ -176,7 +176,7 @@
 
   background-color:#fff;
   border-radius:50%;
-}
+} */
 /*바이오 코디네이션 fixed===============================*/
 
 /*visual▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
@@ -1254,9 +1254,9 @@
   /*QR코드===============================*/
 
   /*1:1문의===============================*/
-  .inquiry{
+  /* .inquiry{
     top:12rem;
-  }
+  } */
   /*1:1문의===============================*/
 
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
@@ -1299,6 +1299,14 @@
 
   .cm_t p{
     width:80%;
+  }
+
+  .custom-fraction{
+    font-size:0.9rem;
+  }
+
+  .ez_subtext{
+    width:180px;
   }
   /* visual 이미지 & 커뮤니티 게시판 반응형 */
 
@@ -1907,7 +1915,11 @@
   }
 
   .swiper_button_wrap{
-    right:7%;
+    right:5%;
+  }
+
+  .custom-fraction{
+    transform:translateX(-22px);
   }
    /* 연구개발 Q&A, 시설/장비 등록, 기관인력정보 & 바이오정보 & 바이오 행사 */
 }

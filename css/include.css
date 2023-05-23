@@ -485,6 +485,8 @@ body.active{
   height:65px;
   background-color:#54AAFD;
   border-radius:50%;
+
+  z-index:15;
 }
 
 .top_button button{

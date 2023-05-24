@@ -1679,7 +1679,7 @@
     display:block;
     padding:0;
     width:100%;
-    height:370px;
+    height:auto;
   }
 
   .mo_community .cm_title{
@@ -1839,6 +1839,15 @@
     background-color:transparent;
   }
 
+  .bi_wrap{
+    display:flex;
+    flex-direction:column-reverse;
+  }
+
+  .bi_1{
+  	margin-top:1rem;
+  }
+
   .bi_1 li{
     background-color:#F9F9F9;
   }
@@ -1853,6 +1862,8 @@
   .bi_2{
     flex-wrap:wrap;
     gap:0;
+
+    margin-bottom:0;
   }
 
   .bi_2 li{

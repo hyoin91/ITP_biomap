@@ -918,116 +918,247 @@
 /* 개인정보의 수집 및 이용 목적 */
 
 /* 바이오맵 소개 */
-.biomap_introduce_wrap{
-  display:flex;
-  flex-direction:column;
-  gap:3rem;
+.info_01 div, .info_02 div{
+  height:150px;
+  background-color:#f1f1f1;
+  border-radius:0.5rem;
 }
 
-.info_one li:nth-of-type(1), .info_two li:nth-of-type(1){
-  display:inline-block;
-  padding:0.4rem 1.5rem;
-  color:#fff;
+.info_02{
+  margin-top:3rem;
+}
+
+.info_01 h3, .info_02 h3{
+  margin-top:1.2rem;
+
+  font-family:'spoqaB';
+  font-size:1.4rem;
+}
+
+.info_01 h3::after, .info_02 h3::after{
+  content:"";
+
+  margin-left:0.5rem;
+
+  display: inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
   background-color:#54AAFD;
-  border-radius:0.3rem 0.3rem 0 0;
 }
 
-.info_one li:nth-of-type(2), .info_two li:nth-of-type(2){
-  padding:1.5rem;
-  background-color:#f7f7f7;
-  border-radius:0 0.5rem 0.5rem 0.5rem;
+.info_01 p, .info_02 p{
+  margin-top:1rem;
+
+  display:flex;
+  align-items:center;
+  gap:1rem;
+
+  font-family:'spoqaR';
+  font-size:1.1rem;
 }
 
-.info_three{
+.info_01 p::before, .info_02 p::before{
+  content:">";
+  
+  display:block;
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+.info_02_process{
+  margin-top:3rem;
+
   display:flex;
   flex-direction:column;
-  gap:50px;
+  gap:1.8rem;
 
+  font-family:'spoqaR';
+}
+
+.info_t2{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.info_t1::after{
+  content:"";
+
+  position:absolute;
+  left:50%; bottom:-50%;
+  transform:translateX(-50%);
+  display:block;
+
+  background:url(../img/sub/sub_han/bio_info_allow1.svg) no-repeat center;
+  background-size:cover;
+  width:18px;
+  height:18px;
+}
+
+.info_t1,
+.info_t2_1,
+.info_t2_2{
+  position:relative;
+
+  flex:1;
+
+  height:60px;
+  line-height:60px;
+  background:linear-gradient(45deg, rgba(41,150,255,1), rgba(97,177,255,1));
+  border-radius:2rem;
+
+  color:#fff;
   text-align:center;
 }
 
-.info_three li:nth-of-type(1){
-  position:relative;
-
-  height:60px;
-  line-height:60px;
-  color:#fff;
-  background-color:#83C2FF;
-  border-radius:0.5rem;
-}
-
-.info_three li:nth-of-type(2)::before{
-  position:absolute;
-  left:50%;
-  transform:translate(-50%,-35px);
+.info_t2_1:after{
   content:"";
-  display:block;
-  width:20px;
-  height:20px;
-  background:url(../img/sub/sub_han/introduce_allow.svg) center no-repeat;
-  background-size:cover ;
-}
 
-.info_three li:nth-of-type(2){
-  position:relative;
-}
-
-.info_three li:nth-of-type(2)::after{
   position:absolute;
-  left:50%;
-  transform:translate(-50%, 75px);
-  content:"";
+  right:-1rem; top:50%;
+  transform: translateY(-50%);
   display:block;
-  width:20px;
-  height:20px;
-  background:url(../img/sub/sub_han/introduce_allow.svg) center no-repeat;
-  background-size:cover;
+  width:1rem;
+  height:1px;
+  background-color:#FAAC56;
 }
 
-.info_three li:nth-of-type(2), .info_three li:nth-of-type(3){
-  display:flex;
-  gap:50px;
+.info_t2_2:before{
+  content:"";
+
+  position:absolute;
+  left:-1rem; top:50%;
+  transform: translateY(-50%);
+  display:block;
+  width:1rem;
+  height:1px;
+  background-color:#FAAC56;
 }
 
-.info_three li:nth-of-type(2) div{
-  flex:1;
-  height:60px;
-  line-height:60px;
-  color:#fff;
-  background-color:#83C2FF;
-  border-radius:0.5rem;
-}
-
-.info_three li:nth-of-type(3) div{
-  flex:1;
-}
-
-.sub_info_three div:nth-of-type(1){
-  height:60px;
-  line-height:60px;
-  color:#fff;
-  background-color:#FFC88C;
-  border-radius:0.5rem 0.5rem 0 0;
-}
-
-.sub_info_three div:nth-of-type(2){
+.info_t2 .process_bioi{
   position:relative;
-  height:100px;
-  background-color:#f3f3f3;
+
+  width:30px;
+  height:30px;
+
+  background-color:#FAAC56;
+  border-radius:50%;
 }
 
-.sub_info_three div:nth-of-type(2) p{
+.info_t2 .process_bioi img{
   position:absolute;
   left:50%; top:50%;
   transform:translate(-50%,-50%);
 }
 
-.info_three li:nth-of-type(4){
+.info_t3{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.info_t3::before{
+  content:"";
+
+  position:absolute;
+  left:50%; top:-50%;
+  transform:translate(-50%, 25%);
+  display:block;
+
+  background:url(../img/sub/sub_han/bio_info_allow2.svg) no-repeat center;
+  background-size:cover;
+  width:18px;
+  height:18px;
+}
+
+.info_t3_1,
+.info_t3_2{
+  position:relative;
+
+  flex:1;
+
   height:60px;
   line-height:60px;
+  background: linear-gradient(90deg, rgba(255,153,41,1), rgba(255,179,95,1));
+  border-radius:2rem;
+
   color:#fff;
-  background-color:#FFC88C;
-  border-radius:0.5rem;
+  text-align:center;
+}
+
+.info_t3_1:after{
+  content:"";
+
+  position:absolute;
+  right:-1rem; top:50%;
+  transform: translateY(-50%);
+  display:block;
+  width:1rem;
+  height:1px;
+  background-color:#54AAFD;
+}
+
+.info_t3_2:before{
+  content:"";
+
+  position:absolute;
+  left:-1rem; top:50%;
+  transform: translateY(-50%);
+  display:block;
+  width:1rem;
+  height:1px;
+  background-color:#54AAFD;
+}
+
+.info_t3 .process_bioi{
+  position:relative;
+
+  width:30px;
+  height:30px;
+
+  background-color:#54AAFD;
+  border-radius:50%;
+}
+
+.info_t3 .process_bioi img{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.info_s3{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+
+  text-align:center;
+}
+
+.info_s3_1,
+.info_s3_2{
+  flex:1;
+
+  padding:1.8rem 0 0; 
+}
+
+.info_s3 .process_bioi{
+  width:30px;
+  height:30px;
+}
+
+.info_t4{
+  position:relative;
+
+  height:60px;
+  line-height:60px;
+  background: linear-gradient(90deg, rgba(255,153,41,1), rgba(255,179,95,1));
+  border-radius:2rem;
+
+  color:#fff;
+  text-align:center;
 }
 /* 바이오맵 소개 */
 

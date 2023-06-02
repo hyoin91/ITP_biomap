@@ -1001,15 +1001,25 @@
 .info_t2_2{
   position:relative;
 
-  flex:1;
-
   height:60px;
-  line-height:60px;
   background:linear-gradient(45deg, rgba(41,150,255,1), rgba(97,177,255,1));
   border-radius:2rem;
 
   color:#fff;
   text-align:center;
+}
+
+.info_t2_1,
+.info_t2_2{
+  flex:1;
+}
+
+.info_t1 p,
+.info_t2_1 p,
+.info_t2_2 p{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
 }
 
 .info_t2_1:after{
@@ -1081,12 +1091,18 @@
   flex:1;
 
   height:60px;
-  line-height:60px;
   background: linear-gradient(90deg, rgba(255,153,41,1), rgba(255,179,95,1));
   border-radius:2rem;
 
   color:#fff;
   text-align:center;
+}
+
+.info_t3_1 p,
+.info_t3_2 p{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
 }
 
 .info_t3_1:after{
@@ -1153,12 +1169,17 @@
   position:relative;
 
   height:60px;
-  line-height:60px;
   background: linear-gradient(90deg, rgba(255,153,41,1), rgba(255,179,95,1));
   border-radius:2rem;
 
   color:#fff;
   text-align:center;
+}
+
+.info_t4 p{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
 }
 /* 바이오맵 소개 */
 
@@ -1333,155 +1354,390 @@
 }
 /* 웹진 검색 결과없습니다. */
 /* 전체검색(검색 엔진) 서브페이지 */
-
 /* 바이오맵 운영조직 */
-.organization_text{
-  margin-top:6rem;
-  text-align:center;
+.organization{
+  font-family:'spoqaR';
 }
 
-.organization_text > ul{
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
-}
+.director_of_the_center{
+  margin:0px auto;
 
-.bio_director{
   position:relative;
+
+  width:190px;
+  height:190px;
+  background-color:#CCE6FF;
+  border-radius:50%;
+}
+
+.director_of_the_center::before{
+  content:"";
+
+  position:absolute;
+  left:50%; top:100%;
+  transform:translateX(-50%);
+  display:block;
+
+  width:10px;
+  height:10px;
+
+  background-color:#54AAFD;
+  border-radius:50%;
+
+  z-index:1;
+}
+
+.director_of_the_center::after{
+  content:"";
+
+  position:absolute;
+  left:50%; top:100%;
+  transform:translateX(-50%);
+  display:block;
+
+  width:1px;
+  height:calc(40px + 35px);
+  background-color:#E6E6E6;
+}
+
+.director_of_the_center div{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+
+  width:150px;
+  height:150px;
+  
+  background-color:#54AAFD;
+  border-radius:50%;
+
+  text-align:center;
+  line-height:150px;
+  color:#fff;
+}
+
+.director_of_the_center img{
+  position:absolute;
+  left:50%; bottom:40px;
+  transform:translateX(-50%);
+}
+
+.department{
+  margin-top:40px;
 
   display:flex;
   justify-content:center;
 }
 
-.bio_director::after{
-  position:absolute;
-  left:50%; top:100%;
+.department li{
+  width:50%;
+}
 
+.department > li:nth-of-type(1)::after{
   content:"";
-  display:block;
-  width:1px;
-  height:63px;
-  background-color:#ccc;
-}
 
-.bio_director div{
-  width:200px;
-  height:60px;
-  line-height:60px;
-  color:#fff;
-  background-color:#54AAFD;
-  border-radius:0 1rem 0 1rem;
-}
-
-.bio_department_wrap{
-  display:flex;
-}
-
-.bio_department{
-  flex:1;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:4rem;
-}
-
-.bio_sub_department1::after{
   position:absolute;
-  left:100%; top:50%;
-  transform: translateY(-50%);
-
-  content:"";
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
   display:block;
-  width:205px;
+  width:calc(100% - 150px);
   height:1px;
-  background-color:#ccc;
+  background-color:#E6E6E6;
 }
 
-.bio_sub_department2::after{
-  position:absolute;
-  right:100%; top:50%;
-  transform: translateY(-50%);
-
-  content:"";
-  display:block;
-  width:205px;
-  height:1px;
-  background-color:#ccc;
+.department li:nth-of-type(1){
+  position:relative;
 }
 
-.bio_sub_department{
+.department li > div:nth-of-type(1){
+  margin:0px auto;
+
   position:relative;
 
   width:200px;
-  height:60px;
-  color:#fff;
+  height:70px;
   background-color:#FAAC56;
-  border-radius:0 1rem 0 1rem;
+  color:#fff;
+  text-align:center;
 }
 
-.bio_sub_department p{
+.department li > div:nth-of-type(1) p{
   position:absolute;
   left:50%; top:50%;
   transform:translate(-50%,-50%);
 }
 
-.bio_ssub_department{
-  display:flex;
-  gap:2rem;
+.department li:nth-of-type(1) div::before{
+  content:"";
+
+  position:absolute;
+  left:100%; top:50%;
+  transform:translateY(-50%);
+  display:block;
+
+  width:calc(100% + 10px);
+  height:1px;
+  background-color:#E6E6E6;
 }
 
-.bio_ssub_department li{
+.department li:nth-of-type(1) div::after{
+  content:"";
+
+  position:absolute;
+  left:100%; top:50%;
+  transform:translateY(-50%);
+  display:block;
+
+  width:10px;
+  height:10px;
+  background-color:#FAAC56;
+  border-radius:50%;
+}
+
+.department li:nth-of-type(2) div::before{
+  content:"";
+
+  position:absolute;
+  right:100%; top:50%;
+  transform:translateY(-50%);
+  display:block;
+
+  width:100%;
+  height:1px;
+  background-color:#E6E6E6;
+}
+
+.department li:nth-of-type(2) div::after{
+  content:"";
+
+  position:absolute;
+  right:100%; top:50%;
+  transform:translateY(-50%);
+  display:block;
+
+  width:10px;
+  height:10px;
+  background-color:#FAAC56;
+  border-radius:50%;
+}
+
+.sub_department{
+  position:relative;
+  margin-top:60px;
+
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.sub_department li{
   position:relative;
 
   width:150px;
   height:60px;
-  line-height:60px;
+  background-color:#F5FAFF;
   border:1px solid #ccc;
-  border-radius:0 1rem 0 1rem;
+
+  text-align:center;
 }
 
-.bio_ssub_department li::after{
+.sub_department li::before{
+  content:"";
+  
   position:absolute;
   left:50%; bottom:100%;
   transform:translateX(-50%);
-
-  content:"";
+  
   display:block;
   width:1px;
-  height:40px;
-  background-color:#ccc;
+  height:36px;
+  background-color:#E6E6E6;
 }
 
-.bio_ssub_department li:nth-of-type(1)::before{
+.sub_department li:nth-of-type(2):before{
+  height:100%;
+}
+
+.sub_department li::after{
   content:"";
 
   position:absolute;
-  left:50%; top:-66%;
-
+  left:50%; bottom:100%;
+  transform:translateX(-50%);
   display:block;
-  width:184.5px;
-  height:1px;
-  background-color:#ccc;
+
+  width:10px;
+  height:10px;
+  background-color:#54AAFD;
+  border-radius:50%;
 }
 
-
-.bio_ssub_department li:nth-of-type(3)::before{
-  content:"";
-
+.sub_department p{
   position:absolute;
-  right:50%; top:-66%;
-
-  display:block;
-  width:184.5px;
-  height:1px;
-  background-color:#ccc;
-}
-
-.bio_ssub_department li:nth-of-type(2)::after{
-  height:65px;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
 }
 /* 바이오맵 운영조직 */
+
+/* 바이오맵 이용정보 */
+.usage_info_kind{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.usage_info_kind li:nth-child(odd){
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 20px;
+  width:19%;
+  height:160px;
+  border-radius:1rem;
+  box-shadow:2px 2px 8px rgba(0, 0, 0, 25%);
+
+  font-family:'spoqaR';
+}
+
+.usage_info_kind li span{
+  color:#54AAFD;
+}
+
+.usage_info_kind li:nth-child(even){
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background-color:#54AAFD;
+}
+
+.system_kind{
+  margin:5rem 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:6rem;
+}
+
+.system_kind > li{
+  display:flex;
+  flex-direction:column;
+}
+
+.kind1{
+  display:flex;
+  align-items:center;
+  gap:3rem;
+}
+
+.kind1 .kind_tbox{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  gap:0.7rem;
+
+  text-align:right;
+  font-family:'spoqaR';
+}
+
+.kind1 .kind_ibox{
+  text-align:left;
+}
+
+.kind_tbox div{
+  color:#54AAFD
+}
+
+.system_kind .kind .kind_tbox{
+  text-align:right;
+}
+
+.kind_ibox{
+  flex:1;
+}
+
+.kind_process{
+  display:flex;
+  justify-content:space-evenly;
+  text-align:center;
+}
+
+.kind_process li{
+  margin-top:3.5rem;
+
+  position:relative;
+  width:25%;
+}
+
+.kind_process li::after{
+  position:absolute;
+  right:calc(50% + 45px); top:calc(50% - 10.5px);
+  transform:translateY(-50%);
+
+  content:"";
+
+  display:block;
+  width:calc(50% - 45px);
+  height:1px;
+  background-color:#54AAFD;
+}
+
+.kind_process li::before{
+  position:absolute;
+  left:calc(50% + 45px); top:calc(50% - 10.5px);
+  transform:translateY(-50%);
+
+  content:"";
+
+  display:block;
+  width:calc(50% - 45px);
+  height:1px;
+  background-color:#54AAFD;
+}
+
+.process_ibox{
+  position:relative;
+
+  margin:0px auto;
+  width:90px;
+  height:90px;
+  border:1px solid #54AAFD;
+  border-radius:50%;
+}
+
+.process_ibox img{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.process_tbox{
+  margin-top:0.5rem;
+  font-family:'spoqaR';
+}
+
+.kind2{
+  display:flex;
+  flex-direction:row-reverse;
+  align-items:center;
+  gap:3rem;
+}
+
+.kind2 .kind_tbox{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  gap:0.7rem;
+
+  text-align:left;
+  font-family:'spoqaR';
+}
+
+.kind2 .kind_ibox{
+  text-align:right;
+}
+/* 바이오맵 이용정보 */
 .Full_subCombo{
   width:100%;
 
@@ -1491,7 +1747,6 @@
 .searchWrap .Full_subCombo .combo{
   width:calc(100%/3);
 }
-
 /* ---------------------------------------------------------------------- */
 
 /*서브페이지 반응형▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
@@ -1504,15 +1759,75 @@
 }
 
 @media screen and (max-width:1250px) {
-
+  /* 이용정보 */
+  .usage_info_kind h3{
+    font-size:1.1rem;
+  }
+  /* 이용정보 */
 }
 
 @media screen and (max-width:1100px) {
+  /* 이용정보 */
+  .usage_info_kind{
+    flex-direction:column;
+    gap:1rem
+  }
 
+  .usage_info_kind li:nth-child(odd){
+    width:90%;
+    height:90px;
+  }
+
+  .usage_info_kind img{
+    width:80%;
+  }
+
+  .process_ibox{
+    width:80px;
+    height:80px;
+  }
+
+  .kind_process li::before{
+    left:calc(50% + 40px);
+    width:calc(50% - 40px);
+  }
+
+  .kind_process li::after{
+    right:calc(50% + 40px);
+    width:calc(50% - 40px);
+  }
+  /* 이용정보 */
 }
 
 @media screen and (max-width:1024px) {
+  /* 운영조직 */
+  .department > li:nth-of-type(1)::after{
+    width:69%;
+  }
+  /* 운영조직 */
 
+  /* 이용정보 */
+  .system_kind{
+    margin-top:4rem;
+    gap:5rem;
+  }
+
+  .kind1{
+    gap:1.5rem;
+  }
+
+  .kind_ibox img{
+    width:90%
+  }
+
+  .kind_process li{
+    margin-top:1.5rem;
+  }
+
+  .kind2{
+    gap:1.5rem;
+  }
+  /* 이용정보 */
 }
 
 @media screen and (max-width:930px) {
@@ -1571,6 +1886,46 @@
   gap:0.5rem;
 }
 /* 연구자원 > 교육프로그램 웹진 게시판 반응형 */
+
+/* 바이오맵 소개 */
+.department{
+  flex-direction:column-reverse;
+  align-items:center;
+  gap:1rem;
+}
+
+.department > li{
+  width:90%;
+}
+
+.department li > div:nth-of-type(1){
+  border-radius:0.5rem;
+}
+
+.department > li:nth-of-type(1)::after{
+  width:68%
+}
+
+.sub_department li{
+  width:250px;
+}
+
+.department li:nth-of-type(2) div::before{
+  display:none;
+}
+
+.department li:nth-of-type(1) div::before{
+  display:none;
+}
+
+.department li:nth-of-type(2) div::after{
+  display:none;
+}
+
+.department li:nth-of-type(1) div::after{
+  display:none;
+}
+/* 바이오맵 소개 */
 }
 
 @media screen and (max-width:768px) {
@@ -1618,14 +1973,114 @@
     gap:0.5rem;
   }
 /* 연구자원 > 시설/장비 > 연구시설 웹진 게시판 반응형 */
+
+/* 바이오맵 소개 */
+.info_02_process{
+  gap:1.2rem;
+  font-size:1rem;
+}
+
+.info_s3_1, .info_s3_2{
+  padding-top:1.2rem;
+
+  font-size:0.9rem;
+}
+/* 바이오맵 소개 */
+
+/* 이용정보 */
+.system_kind{
+  gap:3rem;
+}
+/* 이용정보 */
 }
 
 @media screen and (max-width:700px) {
+  /* 바이오맵 소개 */
+  .info_02{
+    margin-top:2rem;
+  }
 
+  .info_02_process{
+    margin-top:2rem;
+  }
+  /* 바이오맵 소개 */
+
+  /* 이용정보 */
+  .system_kind{
+    margin-top:3rem;
+  }
+
+  .kind1{
+    flex-direction:column-reverse;
+  }
+
+  .kind1 .kind_ibox{
+    text-align:center;
+  }
+
+  .kind1 .kind_tbox{
+    text-align:center;
+  }
+
+  .process_ibox{
+    width:70px;
+    height:70px;
+  }
+
+  .process_ibox img{
+    width:50%;
+  }
+
+  .kind_process li::before{
+    left:calc(50% + 35px);
+    width:calc(50% - 35px)
+  }
+
+  .kind_process li::after{
+    right:calc(50% + 35px);
+    width:calc(50% - 35px)
+  }
+
+  .kind2{
+    flex-direction:column-reverse;
+  }
+
+  .kind2 .kind_ibox{
+    text-align:center;
+  }
+
+  .kind2 .kind_tbox{
+    text-align:center;
+  }
+  /* 이용정보 */
 }
 
 @media screen and (max-width:600px) {
+  /* 바이오맵 소개 */
+  .info_02_process{
+    font-size:0.9rem;
+  }
 
+  .info_t1, .info_t2_1, .info_t2_2{
+    height:80px;
+  }
+
+  .info_t3_1, .info_t3_2{
+    height:80px;
+  }
+
+  .info_t4{
+    height:80px;
+  }
+
+  .info_t1::after{
+    transform:translate(-50%,-50%);
+  }
+
+  .info_t3::before{
+    transform:translate(-50%, 100%);
+  }
+  /* 바이오맵 소개 */
 }
 
 @media screen and (max-width:550px) {
@@ -1638,10 +2093,6 @@
     font-size:1rem;
   }
 /* 연구자원 > 시설/장비 > 연구시설 웹진 게시판 반응형 */
-
-/* 연구자원 > 시설/장비 > 바이오장비 웹진 게시판 반응형 */
-
-/* 연구자원 > 시설/장비 > 바이오장비 웹진 게시판 반응형 */
 }
 
 @media screen and (max-width:480px) {
@@ -1681,13 +2132,112 @@
 .wZ_general .wZ_middle p{
   font-size:1rem;
 }
-
-
 /* 연구자원 > 교육프로그램 웹진 게시판 반응형 */
+
+/* 바이오맵 소개 */
+.sub_department{
+  margin-top:35px;
+
+  flex-direction:column;
+  align-items:center;
+  gap:2rem;
+}
+
+.sub_department li::before{
+  height:35px;
+}
+
+.sub_department li:nth-of-type(2):before{
+  height:35px;
+}
+
+.department > li:nth-of-type(1)::after{
+  display:none;
+}
+/* 바이오맵 소개 */
+
+/* 이용정보 */
+.system_kind{
+  gap:2rem;
+}
+
+.kind_tbox{
+  font-size:1rem;
+}
+
+.process_ibox{
+  width:50px;
+  height:50px;
+}
+
+.kind_process li::before{
+  left:calc(50% + 25px);
+  width:calc(50% - 25px)
+}
+
+.kind_process li::after{
+  right:calc(50% + 25px);
+  width:calc(50% - 25px)
+}
+
+.process_tbox{
+  font-size:0.9rem;
+}
+/* 이용정보 */
 }
 
 @media screen and (max-width:400px) {
+  /* 바이오맵 소개 */
+  .info_02{
+    margin-top:1.3rem;
+  }
 
+  .info_01 h3, .info_02 h3{
+    margin-top:1rem;
+    font-size:1.2rem;
+  }
+
+  .info_01 h3::after, .info_02 h3::after{
+    margin-left:0.3rem;
+
+    width:7px;
+    height:7px;
+  }
+
+  .info_01 p, .info_02 p{
+    margin-top:0.7rem;
+    font-size:1rem;
+  }
+
+  .info_01 p::before, .info_02 p::before{
+    font-size:1rem;
+  }
+
+  .info_02_process{
+    gap:1rem;
+  }
+
+  .info_t1, .info_t2_1, .info_t2_2{
+    height:100px;
+    border-radius:1rem;
+  }
+
+  .info_t3_1, .info_t3_2{
+    padding-top:1rem;
+
+    height:100px;
+    border-radius:1rem;
+  }
+
+  .info_t4{
+    height:100px;
+    border-radius:1rem;
+  }
+
+  .info_t3::before{
+    top:-25%;
+  }
+  /* 바이오맵 소개 */
 }
 
 @media screen and (max-width:300px) {
